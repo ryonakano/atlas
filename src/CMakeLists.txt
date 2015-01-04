@@ -6,6 +6,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     ${CONFIG_FILE}
     Window.vala
     Geocode.vala
+    View/SearchOptionSelector.vala
 PACKAGES
     gtk+-3.0
     granite

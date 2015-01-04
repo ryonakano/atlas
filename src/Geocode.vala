@@ -53,7 +53,7 @@ namespace Atlas {
 		// public abstract async void stop () throws IOError;
 	}
 	
-	public class Info {
+	public class GeoClue {
 		
 		public signal void location_changed (Atlas.Location loc);
 		
@@ -65,7 +65,7 @@ namespace Atlas {
 		private double minimal_distance;
 		public Location? geo_location {get; private set; default = null;}
 				
-		public Info () {
+		public GeoClue () {
 			country_code = null;
 			minimal_distance = 1000.0d;
 		}
@@ -104,8 +104,7 @@ namespace Atlas {
 			}
 			
 			client.desktop_id = DESKTOP_ID;
-			//TODO Change for higher accuracy
-			client.requested_accuracy_level = AccuracyLevel.STREET;
+			client.requested_accuracy_level = AccuracyLevel.EXACT;
 			
 			client.location_updated.connect ((old_path, new_path) => {
 				on_location_updated.begin (old_path, new_path, (obj, res) => {

@@ -4,3 +4,4 @@ Name=Atlas
 GenericName=Maps
 Comment=View maps
 Exec=atlas-maps
+Icon=atlas.png

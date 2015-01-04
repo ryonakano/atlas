@@ -22,11 +22,15 @@ public class Atlas.Window : Gtk.Window {
 
 	private GtkChamplain.Embed champlain;
 	private Gtk.SearchEntry search;
+	private Gtk.Button user_location;
 	private GLib.Cancellable search_cancellable;
 	private Gtk.EntryCompletion location_completion;
+	private Gtk.ToggleButton button_search_options;
+	private View.SearchOptionSelector option_selector;
 	private Gtk.ListStore location_store;
+	private Champlain.MarkerLayer poi_layer;
 	private Atlas.LocationMarker point;
-	private Atlas.Info info;
+	private Atlas.GeoClue geo_clue;
 	
     public Window () {
         var headerbar = new Gtk.HeaderBar ();
@@ -35,8 +39,18 @@ public class Atlas.Window : Gtk.Window {
         search = new Gtk.SearchEntry ();
         search.placeholder_text = _("Search Location");
         search.hexpand = true;
+        
+        button_search_options = new Gtk.ToggleButton ();
+        button_search_options.image = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR);
+        button_search_options.tooltip_text = _("Search Options");
+        
+        user_location = new Gtk.Button();
+        user_location.label = "location";
+        user_location.tooltip_text = _("Current Location");
 
+		headerbar.pack_end (button_search_options);
         headerbar.pack_end (search);
+        headerbar.pack_start (user_location);
         
         set_titlebar (headerbar);
         title = _("Atlas");
@@ -61,8 +75,9 @@ public class Atlas.Window : Gtk.Window {
         var view = champlain.champlain_view;
         var factory = Champlain.MapSourceFactory.dup_default ();
         view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_MAPQUEST);
- //       view.set_min_zoom_level (1);
- //       view.set_max_zoom_level (10);
+        
+        poi_layer = new Champlain.MarkerLayer.full (Champlain.SelectionMode.SINGLE);
+        view.add_layer (poi_layer);
         
         point = new Atlas.LocationMarker ();
         
@@ -77,12 +92,21 @@ public class Atlas.Window : Gtk.Window {
         
         add (champlain);
         
-        info = new Atlas.Info ();
-        info.location_changed.connect ((loc) => {
+        geo_clue = new Atlas.GeoClue ();
+        
+        geo_clue.location_changed.connect ((loc) => {
         	view.center_on (loc.latitude, loc.longitude);
         	view.zoom_level = 12;
         });
-        info.seek.begin ();
+        
+        user_location.clicked.connect (() => {
+        	view.center_on (geo_clue.geo_location.latitude, geo_clue.geo_location.longitude);
+        	view.zoom_level = 12;
+        });
+        
+        button_search_options.clicked.connect (on_search_options_clicked);
+        
+        geo_clue.seek.begin ();
         show_all ();
     }
     
@@ -105,11 +129,26 @@ public class Atlas.Window : Gtk.Window {
 		
 		champlain.champlain_view.go_to (point.latitude, point.longitude);
 		
-		var marker_layer = new Champlain.MarkerLayer.full (Champlain.SelectionMode.SINGLE);
-    	marker_layer.add_marker (point);
-    	champlain.champlain_view.add_layer (marker_layer);
+		poi_layer.remove_all ();
+    	poi_layer.add_marker (point);
     	
-    	champlain.champlain_view.zoom_level = 10;
+    	champlain.champlain_view.zoom_level = 6;
+    }
+    
+    private void on_search_options_clicked (Gtk.Widget widget) {
+    	if (option_selector == null) {
+    		option_selector = new View.SearchOptionSelector ();
+    		option_selector.set_relative_to (widget);
+    		option_selector.hide.connect (() => {
+    			button_search_options.active = false;
+    			option_selector.visible = false;
+    		});
+    	}
+    	
+    	if (option_selector.visible == false)
+    		option_selector.show_all ();
+    	else
+    		option_selector.hide ();
     }
     
     private async void compute_location (string loc) {
@@ -203,4 +242,24 @@ public class Atlas.LocationMarker : Champlain.Marker {
             critical (e.message);
         }
     }
+}
+
+public class Atlas.UserLocation : Champlain.Marker {
+	public UserLocation () {
+		try {
+			Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("%s/LocationMarker.svg".printf (Build.PKGDATADIR));
+            Clutter.Image image = new Clutter.Image ();
+            image.set_data (pixbuf.get_pixels (),
+                          pixbuf.has_alpha ? Cogl.PixelFormat.RGBA_8888 : Cogl.PixelFormat.RGB_888,
+                          pixbuf.width,
+                          pixbuf.height,
+                          pixbuf.rowstride);
+            content = image;
+            set_size (pixbuf.width, pixbuf.height);
+            translation_x = -pixbuf.width/2;
+            translation_y = -pixbuf.height;
+        } catch (Error e) {
+            critical (e.message);
+        }
+	}
 }
