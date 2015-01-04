@@ -1,3 +1,2 @@
 install (FILES atlas.desktop DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/applications)
 install (FILES icons/LocationMarker.svg DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/${CMAKE_PROJECT_NAME})
-install (FILES icons/atlas.png DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons/hicolor/apps/${CMAKE_PROJECT_NAME})
