@@ -1,0 +1,18 @@
+                               Compile and Run                                    
+--------------------------------------------------------------------------------
+
+• Build and run Atlas Maps
+
+  If you don't have the source yet:
+  bzr branch lp:atlas-maps
+  cd atlas-maps
+  mkdir install; cd install
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+  make
+  ./atlas-maps
+
+• Bugs
+
+  If you find bugs in this installation guide or in Writer itself, please report them at
+  https://launchpad.net/atlas-maps/+filebug
+
