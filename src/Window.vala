@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2014 Dexter Contacts Developers (https://launchpad.net/dexter-contacts)
+ * Copyright (c) 2014 Atlas Developers (https://launchpad.net/atlas-maps)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Authored by: Corentin Noël <corentin@elementaryos.org>
+ * Authored by: Steffen Schuhmann <dev@sschuhmann.de>
  */
 
 public class Atlas.Window : Gtk.Window {
@@ -26,6 +26,7 @@ public class Atlas.Window : Gtk.Window {
 	private Gtk.EntryCompletion location_completion;
 	private Gtk.ListStore location_store;
 	private Atlas.LocationMarker point;
+	private Atlas.Info info;
 	
     public Window () {
         var headerbar = new Gtk.HeaderBar ();
@@ -40,7 +41,7 @@ public class Atlas.Window : Gtk.Window {
         set_titlebar (headerbar);
         title = _("Atlas");
         window_position = Gtk.WindowPosition.CENTER;
-        set_default_size (600, 400);
+        set_default_size (800, 600);
         
         location_store = new Gtk.ListStore(2, typeof(Geocode.Place), typeof (string));
         location_completion = new Gtk.EntryCompletion ();
@@ -58,14 +59,14 @@ public class Atlas.Window : Gtk.Window {
         
         champlain = new GtkChamplain.Embed ();
         var view = champlain.champlain_view;
-//        var marker_layer = new Champlain.MarkerLayer.full (Champlain.SelectionMode.SINGLE);
         var factory = Champlain.MapSourceFactory.dup_default ();
         view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_MAPQUEST);
-//        view.add_layer (marker_layer);
+ //       view.set_min_zoom_level (1);
+ //       view.set_max_zoom_level (10);
         
         point = new Atlas.LocationMarker ();
         
-        view.zoom_level = 8;
+        view.zoom_level = 4;
         view.center_on (point.latitude, point.longitude);
         
         destroy.connect (() => {
@@ -76,6 +77,12 @@ public class Atlas.Window : Gtk.Window {
         
         add (champlain);
         
+        info = new Atlas.Info ();
+        info.location_changed.connect ((loc) => {
+        	view.center_on (loc.latitude, loc.longitude);
+        	view.zoom_level = 12;
+        });
+        info.seek.begin ();
         show_all ();
     }
     
@@ -87,18 +94,22 @@ public class Atlas.Window : Gtk.Window {
     	Value place;
     	
     	model.get_value (iter, 0, out place);
-    	point.latitude = ((Geocode.Place)place).location.latitude;
-    	point.longitude = ((Geocode.Place)place).location.longitude;
-    	champlain.champlain_view.go_to (point.latitude, point.longitude);
-    	var marker_layer = new Champlain.MarkerLayer.full (Champlain.SelectionMode.SINGLE);
-    	marker_layer.add_marker (point);
-    	champlain.champlain_view.add_layer (marker_layer);
+    	center_map ((Geocode.Place)place);
     	
     	return false;
     }
     
     private void center_map (Geocode.Place loc) {
+		point.latitude = loc.location.latitude;
+		point.longitude = loc.location.longitude;
+		
+		champlain.champlain_view.go_to (point.latitude, point.longitude);
+		
+		var marker_layer = new Champlain.MarkerLayer.full (Champlain.SelectionMode.SINGLE);
+    	marker_layer.add_marker (point);
+    	champlain.champlain_view.add_layer (marker_layer);
     	
+    	champlain.champlain_view.zoom_level = 10;
     }
     
     private async void compute_location (string loc) {
