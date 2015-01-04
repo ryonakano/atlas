@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Atlas
+GenericName=Maps
+Comment=View maps
+Exec=atlas-maps
