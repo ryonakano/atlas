@@ -5,7 +5,7 @@ configure_file (${CMAKE_CURRENT_SOURCE_DIR}/config.vala.cmake ${CONFIG_FILE})
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     ${CONFIG_FILE}
     Window.vala
-    Geocode.vala
+    GeoClue.vala
     View/SearchOptionSelector.vala
 PACKAGES
     gtk+-3.0

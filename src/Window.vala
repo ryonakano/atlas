@@ -45,7 +45,7 @@ public class Atlas.Window : Gtk.Window {
         button_search_options.tooltip_text = _("Search Options");
         
         user_location = new Gtk.Button();
-        user_location.label = "location";
+        user_location.image = new Gtk.Image.from_icon_name ("mark-location-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
         user_location.tooltip_text = _("Current Location");
 
 		headerbar.pack_end (button_search_options);
@@ -125,7 +125,7 @@ public class Atlas.Window : Gtk.Window {
     
     private void center_map (Geocode.Place loc) {
 		point.latitude = loc.location.latitude;
-		point.longitude = loc.location.longitude;
+		point.longitude = loc.location.longitude;;
 		
 		champlain.champlain_view.go_to (point.latitude, point.longitude);
 		
@@ -151,7 +151,9 @@ public class Atlas.Window : Gtk.Window {
     		option_selector.hide ();
     }
     
+    //TODO Move to GeoCode
     private async void compute_location (string loc) {
+    //TODO Use search options
     	if (search_cancellable != null)
     		search_cancellable.cancel ();
     	search_cancellable = new GLib.Cancellable ();
