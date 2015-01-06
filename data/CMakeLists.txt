@@ -5,3 +5,5 @@ install (FILES icons/48/atlas.png DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/
 install (FILES icons/64/atlas.png DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons/hicolor/64x64/apps)
 install (FILES icons/128/atlas.png DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons/hicolor/128x128/apps)
 install (FILES icons/256/atlas.png DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons/hicolor/256x256/apps)
+
+add_subdirectory (schemas)

@@ -31,6 +31,7 @@ public class Atlas.Window : Gtk.Window {
 	private Champlain.MarkerLayer poi_layer;
 	private Atlas.LocationMarker point;
 	private Atlas.GeoClue geo_clue;
+	private SavedState saved_state;
 	
     public Window () {
         var headerbar = new Gtk.HeaderBar ();
@@ -54,8 +55,6 @@ public class Atlas.Window : Gtk.Window {
         
         set_titlebar (headerbar);
         title = _("Atlas");
-        window_position = Gtk.WindowPosition.CENTER;
-        set_default_size (800, 600);
         
         location_store = new Gtk.ListStore(2, typeof(Geocode.Place), typeof (string));
         location_completion = new Gtk.EntryCompletion ();
@@ -81,9 +80,9 @@ public class Atlas.Window : Gtk.Window {
         
         point = new Atlas.LocationMarker ();
         
-        view.zoom_level = 4;
-        view.center_on (point.latitude, point.longitude);
+		setup_window ();
         
+        delete_event.connect (on_delete_window);
         destroy.connect (() => {
         	Gtk.main_quit ();
         });
@@ -94,11 +93,6 @@ public class Atlas.Window : Gtk.Window {
         
         geo_clue = new Atlas.GeoClue ();
         
-        geo_clue.location_changed.connect ((loc) => {
-        	view.center_on (loc.latitude, loc.longitude);
-        	view.zoom_level = 12;
-        });
-        
         user_location.clicked.connect (() => {
         	view.center_on (geo_clue.geo_location.latitude, geo_clue.geo_location.longitude);
         	view.zoom_level = 12;
@@ -108,6 +102,38 @@ public class Atlas.Window : Gtk.Window {
         
         geo_clue.seek.begin ();
         show_all ();
+    }
+    
+    private void setup_window () {
+    	saved_state = new SavedState ();
+    	default_width = saved_state.window_width;
+    	default_height = saved_state.window_height;
+    	move (saved_state.position_x, saved_state.position_y);
+    	
+    	if(saved_state.maximized)
+    		maximize ();
+    		
+    	champlain.champlain_view.go_to (saved_state.langitude, saved_state.longitude);
+    	champlain.champlain_view.zoom_level = saved_state.zoom_level;
+    }
+    
+    private bool on_delete_window () {
+    	int x_pos, y_pos;
+    	if ((get_window ().get_state () & Gdk.WindowState.MAXIMIZED) == 0) {
+			int width, height;
+			get_position (out x_pos, out y_pos);
+			saved_state.position_x = x_pos;
+			saved_state.position_y = y_pos;
+			get_size (out width, out height);
+			saved_state.window_width = width;
+    		saved_state.window_height = height;
+    	}
+
+    	saved_state.langitude = champlain.champlain_view.latitude;
+    	saved_state.longitude = champlain.champlain_view.longitude;
+    	saved_state.zoom_level = (int) champlain.champlain_view.zoom_level;
+    	
+    	return false;
     }
     
     private void on_search (string search_location) {
