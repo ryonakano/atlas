@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+	<schema path="/org/pantheon/atlas-maps/state/" id="org.pantheon.atlasmaps.state">
+		<key type="d" name="langitude">
+			<default>0</default>
+		</key>
+		
+		<key type="d" name="longitude">
+			<default>0</default>
+		</key>
+		
+		<key type="i" name="zoom-level">
+			<default>8</default>
+		</key>
+		
+		<key type="i" name="window-width">
+			<default>650</default>
+		</key>
+		
+		<key type="i" name="window-height">
+			<default>400</default>
+		</key>
+		
+		<key type="i" name="position-x">
+			<default>-1</default>
+		</key>
+		
+		<key type="i" name="position-y">
+			<default>-1</default>
+		</key>
+		
+		<key type="b" name="maximized">
+			<default>false</default>
+		</key>
+	</schema>
+</schemalist>
