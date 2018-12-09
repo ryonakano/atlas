@@ -245,8 +245,8 @@ public class Atlas.App : Granite.Application {
     }
 
     public static int main (string[] args) {
-        Gtk.init (ref args);
         Clutter.init (ref args);
+        Gtk.init (ref args);
         var app = new App ();
         return app.run (args);
     }
