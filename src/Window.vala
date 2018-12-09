@@ -18,7 +18,7 @@
  * Authored by: Steffen Schuhmann <dev@sschuhmann.de>
  */
 
-public class Atlas.Window : Gtk.Window {
+public class Atlas.Window : Gtk.ApplicationWindow {
 
 	private GtkChamplain.Embed champlain;
 	private Gtk.SearchEntry search;
@@ -33,7 +33,13 @@ public class Atlas.Window : Gtk.Window {
 	private Atlas.GeoClue geo_clue;
 	private SavedState saved_state;
 	
-    public Window () {
+    public Window (Gtk.Application app) {
+        Object (
+            application: app
+        );
+    }
+
+    construct {
         var headerbar = new Gtk.HeaderBar ();
         headerbar.show_close_button = true;
         
@@ -83,9 +89,6 @@ public class Atlas.Window : Gtk.Window {
 		setup_window ();
         
         delete_event.connect (on_delete_window);
-        destroy.connect (() => {
-        	Gtk.main_quit ();
-        });
         
         search.search_changed.connect (() => on_search (search.text));
         
@@ -220,10 +223,8 @@ public class Atlas.App : Gtk.Application {
             return;
         }
 
-        window = new Window ();
+        window = new Window (this);
         window.show_all ();
-
-        Gtk.main ();
     }
 
     public static int main (string[] args) {
