@@ -12,7 +12,7 @@ namespace Atlas {
 		public bool maximized 		{get; set;}
 		
 		public SavedState () {
-			base ("org.pantheon.atlasmaps.state");
+			base (Build.PROJECT_NAME);
 		}
 	}
 }

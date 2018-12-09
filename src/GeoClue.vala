@@ -57,7 +57,7 @@ namespace Atlas {
 		
 		public signal void location_changed (Atlas.Location loc);
 		
-		private const string DESKTOP_ID = "org.pantheon.atlas";
+		private const string DESKTOP_ID = Build.PROJECT_NAME;
 		
 		private Manager manager;
 		private Client client;
