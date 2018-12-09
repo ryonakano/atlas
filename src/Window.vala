@@ -73,7 +73,7 @@ public class Atlas.Window : Gtk.Window {
         champlain = new GtkChamplain.Embed ();
         var view = champlain.champlain_view;
         var factory = Champlain.MapSourceFactory.dup_default ();
-        view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_MAPQUEST);
+        view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_MAPNIK);
         
         poi_layer = new Champlain.MarkerLayer.full (Champlain.SelectionMode.SINGLE);
         view.add_layer (poi_layer);
@@ -204,30 +204,12 @@ public class Atlas.Window : Gtk.Window {
    	}
 }
 
-public class Atlas.App : Granite.Application {
+public class Atlas.App : Gtk.Application {
 
     construct {
         // This allows opening files. See the open() method below.
         flags |= ApplicationFlags.HANDLES_OPEN;
-
-        // App info
-        /*build_data_dir = Build.DATADIR;
-        build_pkg_data_dir = Build.PKG_DATADIR;
-        build_release_name = Build.RELEASE_NAME;
-        build_version_info = Build.VERSION_INFO;*/
-        build_version = "0.0.0";
-
-        program_name = "Atlas";
-        exec_name = "atlas-maps";
-
-        app_copyright = "2014";
-        application_id = "org.pantheon.atlas-maps";
-        app_launcher = exec_name+".desktop";
-        app_years = "2014";
-
-        about_authors = {"Steffen Schuhmann <dev@sschuhmann.de>", null};
-
-        about_artists = {null};
+        application_id = Build.PROJECT_NAME;
     }
 
     public Window window;

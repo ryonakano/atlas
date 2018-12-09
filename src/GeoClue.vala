@@ -27,7 +27,7 @@ namespace Atlas {
 
 	[DBus (name = "org.freedesktop.GeoClue2.Manager")]
 	private interface Manager : Object {
-		public abstract async void get_client (out string client_path) throws IOError;
+		public abstract async void get_client (out string client_path) throws Error;
 	}
 
 	[DBus (name = "org.freedesktop.GeoClue2.Location")]
@@ -47,7 +47,7 @@ namespace Atlas {
 
 		public signal void location_updated (ObjectPath old_path, ObjectPath new_path);
 
-		public abstract async void start () throws IOError;
+		public abstract async void start () throws Error;
 
 		// This function belongs to the Geoclue interface, however it is not used here
 		// public abstract async void stop () throws IOError;
@@ -84,7 +84,7 @@ namespace Atlas {
 			
 			try {
 				yield manager.get_client (out client_path);
-			} catch (IOError io) {
+			} catch (Error io) {
 				warning ("Failed to connect to GeoClude2 service");
 				return; 
 			}
@@ -114,7 +114,7 @@ namespace Atlas {
 			
 			try {
 				yield client.start ();
-			} catch (IOError io) {
+			} catch (Error io) {
 				warning ("Failed to start client");
 				return;
 			}
