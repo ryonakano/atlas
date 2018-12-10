@@ -45,7 +45,7 @@ public class Atlas.Window : Gtk.ApplicationWindow {
         
         search = new Gtk.SearchEntry ();
         search.placeholder_text = _("Search Location");
-        search.hexpand = true;
+        search.valign = Gtk.Align.CENTER;
         
         button_search_options = new Gtk.ToggleButton ();
         button_search_options.image = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR);
