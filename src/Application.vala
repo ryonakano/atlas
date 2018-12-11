@@ -20,8 +20,7 @@
 public class Atlas.App : Gtk.Application {
 
     construct {
-        // This allows opening files. See the open() method below.
-        flags |= ApplicationFlags.HANDLES_OPEN;
+        flags = ApplicationFlags.FLAGS_NONE;
         application_id = Build.PROJECT_NAME;
     }
 
