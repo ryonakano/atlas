@@ -18,10 +18,11 @@
 */
 
 public class Atlas.LocationMarker : Champlain.Marker {
-	public LocationMarker () {
+
+    public LocationMarker () {
         try {
-            Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("%s/LocationMarker.svg".printf (Build.PKGDATADIR));
-            Clutter.Image image = new Clutter.Image ();
+            var pixbuf = new Gdk.Pixbuf.from_file ("%s/LocationMarker.svg".printf (Build.PKGDATADIR));
+            var image = new Clutter.Image ();
             image.set_data (pixbuf.get_pixels (),
                           pixbuf.has_alpha ? Cogl.PixelFormat.RGBA_8888 : Cogl.PixelFormat.RGB_888,
                           pixbuf.width,
@@ -35,4 +36,5 @@ public class Atlas.LocationMarker : Champlain.Marker {
             critical (e.message);
         }
     }
+
 }

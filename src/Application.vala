@@ -18,17 +18,18 @@
 */
 
 public class Atlas.App : Gtk.Application {
+    private Window window;
 
-    construct {
-        flags = ApplicationFlags.FLAGS_NONE;
-        application_id = Build.PROJECT_NAME;
+    public App () {
+        Object (
+            flags: ApplicationFlags.FLAGS_NONE,
+            application_id: Build.PROJECT_NAME
+        );
     }
 
-    public Window window;
-    
     protected override void activate () {
         if (get_windows () != null) {
-            get_windows ().data.present (); // present window if app is already running
+            window.present ();
             return;
         }
 
