@@ -13,6 +13,7 @@ You'll need the following dependencies:
 * libchamplain-0.12-dev
 * libchamplain-gtk-0.12-dev
 * libclutter-1.0-dev
+* libgeoclue-2-dev
 * libgeocode-glib-dev
 * libgtk-3.0-dev
 * libgranite-dev
