@@ -31,6 +31,7 @@ executable(
         dependency('champlain-0.12'),
         dependency('clutter-1.0'),
         dependency('geocode-glib-1.0'),
+        dependency('libgeoclue-2.0'),
     ],
     install: true
 )
