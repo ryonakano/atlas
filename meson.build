@@ -19,7 +19,9 @@ executable(
     meson.project_name (),
     config_header,
     'src/View/SearchOptionSelector.vala',
+    'src/Application.vala',
     'src/GeoClue.vala',
+    'src/LocationMarker.vala',
     'src/SavedState.vala',
     'src/Window.vala',
     dependencies: [
