@@ -153,7 +153,7 @@ public class Atlas.Window : Gtk.ApplicationWindow {
 
     private void center_map (Geocode.Place loc) {
         point.latitude = loc.location.latitude;
-        point.longitude = loc.location.longitude;;
+        point.longitude = loc.location.longitude;
 
         champlain.champlain_view.go_to (point.latitude, point.longitude);
 
