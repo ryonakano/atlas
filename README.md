@@ -1,8 +1,8 @@
-# Atlas Maps
+# Atlas
 
-Atlas Maps is a map viewer designed for elementary OS.
+Atlas is a map viewer designed for elementary OS.
 
-This repository is a fork of the [original Atlas Maps](https://launchpad.net/atlas-maps).
+This repository is a fork of [Atlas Maps](https://launchpad.net/atlas-maps).
 
 ## Installation
 
@@ -26,7 +26,7 @@ Run `meson build` to configure the build environment. Change to the build direct
     cd build
     ninja
 
-To install, use `ninja install`, then execute with `com.github.ryonakano.atlas-maps`
+To install, use `ninja install`, then execute with `com.github.ryonakano.atlas`
 
     sudo ninja install
-    com.github.ryonakano.atlas-maps
+    com.github.ryonakano.atlas

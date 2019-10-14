@@ -1,4 +1,4 @@
-project('com.github.ryonakano.atlas-maps', 'vala', 'c')
+project('com.github.ryonakano.atlas', 'vala', 'c')
 
 i18n = import('i18n')
 add_global_arguments(

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-	<schema path="/com/github/ryonakano/atlas-maps/" id="com.github.ryonakano.atlas-maps">
+	<schema path="/com/github/ryonakano/atlas/" id="com.github.ryonakano.atlas">
 		<key type="d" name="langitude">
 			<default>0</default>
 		</key>

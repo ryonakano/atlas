@@ -4,11 +4,11 @@ install_data(
 )
 
 install_data(
-    'com.github.ryonakano.atlas-maps.desktop',
+    'com.github.ryonakano.atlas.desktop',
     install_dir: join_paths(get_option('datadir'), 'applications')
 )
 
 install_data(
-    'schemas/com.github.ryonakano.atlas-maps.gschema.xml',
+    'schemas/com.github.ryonakano.atlas.gschema.xml',
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
 )
