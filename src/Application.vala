@@ -17,10 +17,10 @@
 * Authored by: Steffen Schuhmann <dev@sschuhmann.de>
 */
 
-public class Atlas.App : Gtk.Application {
+public class Atlas.Application : Gtk.Application {
     private Window window;
 
-    public App () {
+    public Application () {
         Object (
             flags: ApplicationFlags.FLAGS_NONE,
             application_id: Build.PROJECT_NAME
@@ -40,7 +40,7 @@ public class Atlas.App : Gtk.Application {
     public static int main (string[] args) {
         Clutter.init (ref args);
         Gtk.init (ref args);
-        var app = new App ();
+        var app = new Application ();
         return app.run (args);
     }
 }
