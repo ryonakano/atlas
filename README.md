@@ -2,6 +2,8 @@
 
 Atlas is a map viewer designed for elementary OS.
 
+![Screenshot](data/Screenshot.png)
+
 This repository is a fork of [Atlas Maps](https://launchpad.net/atlas-maps).
 
 ## Installation
