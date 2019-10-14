@@ -29,7 +29,6 @@ public class Atlas.Window : Gtk.ApplicationWindow {
     private Champlain.MarkerLayer poi_layer;
     private Atlas.LocationMarker point;
     private Atlas.GeoClue geo_clue;
-    private SavedState saved_state;
 
     public Window (Gtk.Application app) {
         Object (
@@ -106,17 +105,16 @@ public class Atlas.Window : Gtk.ApplicationWindow {
     }
 
     private void setup_window () {
-        saved_state = new SavedState ();
-        default_width = saved_state.window_width;
-        default_height = saved_state.window_height;
-        move (saved_state.position_x, saved_state.position_y);
+        default_width = Atlas.Application.settings.get_int ("window-width");
+        default_height = Atlas.Application.settings.get_int ("window-height");
+        move (Atlas.Application.settings.get_int ("position-x"), Atlas.Application.settings.get_int ("position-y"));
 
-        if (saved_state.maximized) {
+        if (Atlas.Application.settings.get_boolean ("maximized")) {
             maximize ();
         }
 
-        champlain.champlain_view.go_to (saved_state.langitude, saved_state.longitude);
-        champlain.champlain_view.zoom_level = saved_state.zoom_level;
+        champlain.champlain_view.go_to (Atlas.Application.settings.get_double ("langitude"), Atlas.Application.settings.get_double ("longitude"));
+        champlain.champlain_view.zoom_level = Atlas.Application.settings.get_int ("zoom-level");
     }
 
     private bool on_delete_window () {
@@ -124,16 +122,16 @@ public class Atlas.Window : Gtk.ApplicationWindow {
         if ((get_window ().get_state () & Gdk.WindowState.MAXIMIZED) == 0) {
             int width, height;
             get_position (out x_pos, out y_pos);
-            saved_state.position_x = x_pos;
-            saved_state.position_y = y_pos;
+            Atlas.Application.settings.set_int ("position-x", x_pos);
+            Atlas.Application.settings.set_int ("position-y", y_pos);
             get_size (out width, out height);
-            saved_state.window_width = width;
-            saved_state.window_height = height;
+            Atlas.Application.settings.set_int ("window-width", width);
+            Atlas.Application.settings.set_int ("window-height", height);
         }
 
-        saved_state.langitude = champlain.champlain_view.latitude;
-        saved_state.longitude = champlain.champlain_view.longitude;
-        saved_state.zoom_level = (int) champlain.champlain_view.zoom_level;
+        Atlas.Application.settings.set_double ("langitude", champlain.champlain_view.latitude);
+        Atlas.Application.settings.set_double ("longitude", champlain.champlain_view.longitude);
+        Atlas.Application.settings.set_int ("zoom-level", (int) champlain.champlain_view.zoom_level);
 
         return false;
     }

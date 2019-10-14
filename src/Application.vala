@@ -19,12 +19,17 @@
 
 public class Atlas.Application : Gtk.Application {
     private Window window;
+    public static Settings settings;
 
     public Application () {
         Object (
             flags: ApplicationFlags.FLAGS_NONE,
             application_id: Build.PROJECT_NAME
         );
+    }
+
+    static construct {
+        settings = new Settings (Build.PROJECT_NAME);
     }
 
     protected override void activate () {

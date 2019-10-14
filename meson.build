@@ -22,7 +22,6 @@ executable(
     'src/Application.vala',
     'src/GeoClue.vala',
     'src/LocationMarker.vala',
-    'src/SavedState.vala',
     'src/Window.vala',
     dependencies: [
         dependency('granite'),
