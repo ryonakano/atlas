@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2014-2018 Atlas Maps Developers
+* Copyright 2014-2019 Atlas Maps Developers
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
