@@ -38,7 +38,23 @@ public class Atlas.Application : Gtk.Application {
             return;
         }
 
+        int x, y, w, h;
+        x = Atlas.Application.settings.get_int ("position-x");
+        y = Atlas.Application.settings.get_int ("position-y");
+        w = Atlas.Application.settings.get_int ("window-width");
+        h = Atlas.Application.settings.get_int ("window-height");
+
         window = new Window (this);
+
+        if (Atlas.Application.settings.get_boolean ("maximized")) {
+            window.maximize ();
+        } else if (x != -1 || y != -1) { // This is not the first time to launch
+            window.move (x, y);
+        } else { // This is the first time to launch
+            window.window_position = Gtk.WindowPosition.CENTER;
+        }
+
+        window.set_default_size (w, h);
         window.show_all ();
     }
 

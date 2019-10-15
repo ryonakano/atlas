@@ -29,6 +29,7 @@ public class Atlas.Window : Gtk.ApplicationWindow {
     private Champlain.MarkerLayer poi_layer;
     private Atlas.LocationMarker point;
     private Atlas.GeoClue geo_clue;
+    private uint configure_id;
 
     public Window (Gtk.Application app) {
         Object (
@@ -83,9 +84,8 @@ public class Atlas.Window : Gtk.ApplicationWindow {
 
         point = new Atlas.LocationMarker ();
 
-        setup_window ();
-
-        delete_event.connect (on_delete_window);
+        champlain.champlain_view.go_to (Atlas.Application.settings.get_double ("langitude"), Atlas.Application.settings.get_double ("longitude"));
+        champlain.champlain_view.zoom_level = Atlas.Application.settings.get_int ("zoom-level");
 
         search.search_changed.connect (() => on_search (search.text));
 
@@ -101,39 +101,36 @@ public class Atlas.Window : Gtk.ApplicationWindow {
         button_search_options.clicked.connect (on_search_options_clicked);
 
         geo_clue.seek.begin ();
-        show_all ();
     }
 
-    private void setup_window () {
-        default_width = Atlas.Application.settings.get_int ("window-width");
-        default_height = Atlas.Application.settings.get_int ("window-height");
-        move (Atlas.Application.settings.get_int ("position-x"), Atlas.Application.settings.get_int ("position-y"));
-
-        if (Atlas.Application.settings.get_boolean ("maximized")) {
-            maximize ();
+    protected override bool configure_event (Gdk.EventConfigure event) {
+        if (configure_id != 0) {
+            GLib.Source.remove (configure_id);
         }
 
-        champlain.champlain_view.go_to (Atlas.Application.settings.get_double ("langitude"), Atlas.Application.settings.get_double ("longitude"));
-        champlain.champlain_view.zoom_level = Atlas.Application.settings.get_int ("zoom-level");
-    }
+        configure_id = Timeout.add (100, () => {
+            configure_id = 0;
 
-    private bool on_delete_window () {
-        int x_pos, y_pos;
-        if ((get_window ().get_state () & Gdk.WindowState.MAXIMIZED) == 0) {
-            int width, height;
-            get_position (out x_pos, out y_pos);
-            Atlas.Application.settings.set_int ("position-x", x_pos);
-            Atlas.Application.settings.set_int ("position-y", y_pos);
-            get_size (out width, out height);
-            Atlas.Application.settings.set_int ("window-width", width);
-            Atlas.Application.settings.set_int ("window-height", height);
-        }
+            Atlas.Application.settings.set_boolean ("maximized", is_maximized);
 
-        Atlas.Application.settings.set_double ("langitude", champlain.champlain_view.latitude);
-        Atlas.Application.settings.set_double ("longitude", champlain.champlain_view.longitude);
-        Atlas.Application.settings.set_int ("zoom-level", (int) champlain.champlain_view.zoom_level);
+            if (!is_maximized) {
+                int x, y, w, h;
+                get_position (out x, out y);
+                get_size (out w, out h);
+                Atlas.Application.settings.set_int ("position-x", x);
+                Atlas.Application.settings.set_int ("position-y", y);
+                Atlas.Application.settings.set_int ("window-width", w);
+                Atlas.Application.settings.set_int ("window-height", h);
+            }
 
-        return false;
+            Atlas.Application.settings.set_double ("langitude", champlain.champlain_view.latitude);
+            Atlas.Application.settings.set_double ("longitude", champlain.champlain_view.longitude);
+            Atlas.Application.settings.set_int ("zoom-level", (int) champlain.champlain_view.zoom_level);
+
+            return false;
+        });
+
+        return base.configure_event (event);
     }
 
     private void on_search (string search_location) {
