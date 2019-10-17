@@ -2,7 +2,7 @@
 Type=Application
 Name=Atlas
 GenericName=Maps
-Comment=View maps
+Comment=View where to go
 Exec=com.github.ryonakano.atlas
 Icon=com.github.ryonakano.atlas
 Categories=GTK;Utility;Maps
