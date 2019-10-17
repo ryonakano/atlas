@@ -17,7 +17,7 @@
 * Authored by: Steffen Schuhmann <dev@sschuhmann.de>
 */
 
-public class Atlas.Window : Gtk.ApplicationWindow {
+public class Atlas.MainWindow : Gtk.ApplicationWindow {
     private GtkChamplain.Embed champlain;
     private Gtk.SearchEntry search;
     private Gtk.Button user_location;
@@ -31,15 +31,16 @@ public class Atlas.Window : Gtk.ApplicationWindow {
     private Atlas.GeoClue geo_clue;
     private uint configure_id;
 
-    public Window (Gtk.Application app) {
+    public MainWindow (Application app) {
         Object (
             application: app
         );
     }
 
     construct {
-        var headerbar = new Gtk.HeaderBar ();
-        headerbar.show_close_button = true;
+        user_location = new Gtk.Button ();
+        user_location.image = new Gtk.Image.from_icon_name ("mark-location-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        user_location.tooltip_text = _("Current Location");
 
         search = new Gtk.SearchEntry ();
         search.placeholder_text = _("Search Location");
@@ -49,16 +50,14 @@ public class Atlas.Window : Gtk.ApplicationWindow {
         button_search_options.image = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR);
         button_search_options.tooltip_text = _("Search Options");
 
-        user_location = new Gtk.Button ();
-        user_location.image = new Gtk.Image.from_icon_name ("mark-location-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
-        user_location.tooltip_text = _("Current Location");
-
+        var headerbar = new Gtk.HeaderBar ();
+        headerbar.show_close_button = true;
+        headerbar.pack_start (user_location);
         headerbar.pack_end (button_search_options);
         headerbar.pack_end (search);
-        headerbar.pack_start (user_location);
+        headerbar.title = _("Atlas");
 
         set_titlebar (headerbar);
-        title = _("Atlas");
 
         location_store = new Gtk.ListStore (2, typeof (Geocode.Place), typeof (string));
         location_completion = new Gtk.EntryCompletion ();

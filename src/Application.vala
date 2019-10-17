@@ -18,7 +18,7 @@
 */
 
 public class Atlas.Application : Gtk.Application {
-    private Window window;
+    private MainWindow window;
     public static Settings settings;
 
     public Application () {
@@ -44,7 +44,7 @@ public class Atlas.Application : Gtk.Application {
         w = Atlas.Application.settings.get_int ("window-width");
         h = Atlas.Application.settings.get_int ("window-height");
 
-        window = new Window (this);
+        window = new MainWindow (this);
 
         if (Atlas.Application.settings.get_boolean ("maximized")) {
             window.maximize ();

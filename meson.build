@@ -22,7 +22,7 @@ executable(
     'src/Application.vala',
     'src/GeoClue.vala',
     'src/LocationMarker.vala',
-    'src/Window.vala',
+    'src/MainWindow.vala',
     dependencies: [
         dependency('granite'),
         dependency('gtk+-3.0'),
