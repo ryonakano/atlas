@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-17 23:07+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:7
+#: data/com.github.ryonakano.atlas.desktop.in:4
+msgid "Atlas"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:8
+#: data/com.github.ryonakano.atlas.desktop.in:6
+msgid "View where to go"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:10
+msgid "A map app that helps you to see where you want to go."
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:50
+msgid "Atlas Developers"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.desktop.in:5
+msgid "Maps"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.desktop.in:8
+msgid "com.github.ryonakano.atlas"
+msgstr ""
