@@ -17,38 +17,22 @@
 * Inspired from https://gitlab.gnome.org/GNOME/gnome-clocks/blob/master/src/geocoding.vala
 */
 
-public class Atlas.GeoClue {
-
-    public signal void location_changed (GClue.Location loc);
-
-    private const string DESKTOP_ID = Build.PROJECT_NAME;
-
-    private GClue.Simple simple;
-    private string country_code;
-    private double minimal_distance;
-    public GClue.Location? geo_location { get; private set; default = null; }
+public class Atlas.GeoClue : Object {
+    private GClue.Simple? simple;
 
     public GeoClue () {
-        country_code = null;
-        minimal_distance = 1000.0d;
     }
 
-    public async void seek () {
-        try {
-            simple = yield new GClue.Simple (DESKTOP_ID, GClue.AccuracyLevel.EXACT, null);
-        } catch (Error e) {
-            warning ("Failed to connect to GeoClue2 service: %s", e.message);
-            return;
+    public async GClue.Location? get_location () {
+        if (simple == null) {
+            try {
+                simple = yield new GClue.Simple (Build.PROJECT_NAME, GClue.AccuracyLevel.EXACT, null);
+            } catch (Error e) {
+                warning ("Failed to connect to GeoClue2 service: %s", e.message);
+                return null;
+            }
         }
 
-        simple.notify["location"].connect (() => {
-            on_location_updated.begin ();
-        });
-
-        on_location_updated.begin ();
-    }
-
-    public async void on_location_updated () {
-        geo_location = simple.get_location ();
+        return simple.get_location ();
     }
 }

@@ -42,6 +42,10 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         user_location.image = new Gtk.Image.from_icon_name ("mark-location-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
         user_location.tooltip_text = _("Current Location");
 
+        var spinner = new Gtk.Spinner ();
+        spinner.tooltip_text = _("Detecting your location…");
+        spinner.no_show_all = true;
+
         search = new Gtk.SearchEntry ();
         search.placeholder_text = _("Search Location");
         search.valign = Gtk.Align.CENTER;
@@ -55,6 +59,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_start (user_location);
         headerbar.pack_end (button_search_options);
         headerbar.pack_end (search);
+        headerbar.pack_end (spinner);
         headerbar.title = _("Atlas");
 
         set_titlebar (headerbar);
@@ -93,13 +98,21 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         geo_clue = new Atlas.GeoClue ();
 
         user_location.clicked.connect (() => {
-            view.center_on (geo_clue.geo_location.latitude, geo_clue.geo_location.longitude);
-            view.zoom_level = 12;
+            user_location.sensitive = false;
+            spinner.show ();
+            spinner.start ();
+
+            geo_clue.get_location.begin ((obj, res) => {
+                var location = geo_clue.get_location.end (res);
+                view.center_on (location.latitude, location.longitude);
+                view.zoom_level = 15;
+                spinner.hide ();
+                spinner.stop ();
+                user_location.sensitive = true;
+            });
         });
 
         button_search_options.clicked.connect (on_search_options_clicked);
-
-        geo_clue.seek.begin ();
     }
 
     protected override bool configure_event (Gdk.EventConfigure event) {
