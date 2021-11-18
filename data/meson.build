@@ -1,3 +1,13 @@
+icon_sizes = ['32', '48', '64', '128', '256']
+
+foreach i : icon_sizes
+    install_data(
+        'icons' / i / 'atlas.png',
+        rename: meson.project_name() + '.png',
+        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps'
+    )
+endforeach
+
 install_data(
     'icons/atlas/LocationMarker.svg',
     install_dir: join_paths(get_option('prefix'), get_option('datadir'))
