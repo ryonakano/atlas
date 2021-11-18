@@ -20,7 +20,6 @@
 public class Atlas.MainWindow : Gtk.ApplicationWindow {
     private GtkChamplain.Embed champlain;
     private Gtk.SearchEntry search;
-    private Gtk.Button user_location;
     private GLib.Cancellable search_cancellable;
     private Gtk.EntryCompletion location_completion;
     private Gtk.ToggleButton button_search_options;
@@ -38,12 +37,12 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        user_location = new Gtk.Button ();
-        user_location.image = new Gtk.Image.from_icon_name ("mark-location-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
-        user_location.tooltip_text = _("Current Location");
+        var current_location = new Gtk.Button ();
+        current_location.image = new Gtk.Image.from_icon_name ("mark-location-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        current_location.tooltip_text = _("Current Location");
 
         var spinner = new Gtk.Spinner ();
-        spinner.tooltip_text = _("Detecting your location…");
+        spinner.tooltip_text = _("Detecting your current location…");
         spinner.no_show_all = true;
 
         search = new Gtk.SearchEntry ();
@@ -56,7 +55,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
         var headerbar = new Gtk.HeaderBar ();
         headerbar.show_close_button = true;
-        headerbar.pack_start (user_location);
+        headerbar.pack_start (current_location);
         headerbar.pack_end (button_search_options);
         headerbar.pack_end (search);
         headerbar.pack_end (spinner);
@@ -97,18 +96,18 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
         geo_clue = new Atlas.GeoClue ();
 
-        user_location.clicked.connect (() => {
-            user_location.sensitive = false;
+        current_location.clicked.connect (() => {
+            current_location.sensitive = false;
             spinner.show ();
             spinner.start ();
 
-            geo_clue.get_location.begin ((obj, res) => {
-                var location = geo_clue.get_location.end (res);
+            geo_clue.get_current_location.begin ((obj, res) => {
+                var location = geo_clue.get_current_location.end (res);
                 view.center_on (location.latitude, location.longitude);
                 view.zoom_level = 15;
                 spinner.hide ();
                 spinner.stop ();
-                user_location.sensitive = true;
+                current_location.sensitive = true;
             });
         });
 

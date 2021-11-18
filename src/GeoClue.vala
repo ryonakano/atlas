@@ -23,7 +23,7 @@ public class Atlas.GeoClue : Object {
     public GeoClue () {
     }
 
-    public async GClue.Location? get_location () {
+    public async GClue.Location? get_current_location () {
         if (simple == null) {
             try {
                 simple = yield new GClue.Simple (Build.PROJECT_NAME, GClue.AccuracyLevel.EXACT, null);
