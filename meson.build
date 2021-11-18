@@ -7,6 +7,7 @@ add_global_arguments(
 )
 
 conf_data = configuration_data()
+conf_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
 conf_data.set_quoted('PKGDATADIR', join_paths(get_option('prefix'), get_option('datadir')))
 conf_data.set_quoted('PROJECT_NAME', meson.project_name())
 config_header = configure_file(

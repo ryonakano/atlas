@@ -14,6 +14,13 @@ public class Atlas.Application : Gtk.Application {
         );
     }
 
+    construct {
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (Build.PROJECT_NAME, Build.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Build.PROJECT_NAME, "UTF-8");
+        Intl.textdomain (Build.PROJECT_NAME);
+    }
+
     static construct {
         settings = new Settings (Build.PROJECT_NAME);
     }
