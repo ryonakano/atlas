@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2014-2021 Steffen Schuhmann <dev@sschuhmann.de>
  */
 
-public class Atlas.MainWindow : Gtk.ApplicationWindow {
+public class Atlas.MainWindow : Hdy.Window {
     private GtkChamplain.Embed champlain;
     private Champlain.View view;
     private GLib.Cancellable search_cancellable;
@@ -22,8 +22,8 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
+        Hdy.init ();
         var geo_clue = new Atlas.GeoClue ();
-
         location_store = new Gtk.ListStore (2, typeof (Geocode.Place), typeof (string));
 
         var location_completion = new Gtk.EntryCompletion () {
@@ -32,7 +32,9 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             text_column = 1
         };
 
-        champlain = new GtkChamplain.Embed ();
+        champlain = new GtkChamplain.Embed () {
+            margin = 3
+        };
         view = champlain.champlain_view;
         var factory = Champlain.MapSourceFactory.dup_default ();
         view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_MAPNIK);
@@ -64,7 +66,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             image = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR)
         };
 
-        var headerbar = new Gtk.HeaderBar () {
+        var headerbar = new Hdy.HeaderBar () {
             title = _("Atlas"),
             show_close_button = true
         };
@@ -72,9 +74,11 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_end (button_search_options);
         headerbar.pack_end (search_entry);
         headerbar.pack_end (spinner);
-        set_titlebar (headerbar);
 
-        add (champlain);
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        main_box.add (headerbar);
+        main_box.add (champlain);
+        add (main_box);
 
         location_completion.set_match_func ((completion, key, iter) => {
             return true;

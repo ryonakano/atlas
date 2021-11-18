@@ -25,13 +25,14 @@ executable(
     'src/LocationMarker.vala',
     'src/MainWindow.vala',
     dependencies: [
-        dependency('granite'),
-        dependency('gtk+-3.0'),
-        dependency('champlain-gtk-0.12'),
         dependency('champlain-0.12'),
+        dependency('champlain-gtk-0.12'),
         dependency('clutter-1.0'),
         dependency('geocode-glib-1.0'),
+        dependency('granite'),
+        dependency('gtk+-3.0'),
         dependency('libgeoclue-2.0'),
+        dependency('libhandy-1')
     ],
     install: true
 )

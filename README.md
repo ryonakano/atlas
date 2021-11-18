@@ -17,8 +17,9 @@ You'll need the following dependencies:
 * libclutter-1.0-dev
 * libgeoclue-2-dev
 * libgeocode-glib-dev
-* libgtk-3.0-dev
 * libgranite-dev
+* libgtk-3.0-dev
+* libhandy-1-dev
 * meson
 * valac
 
