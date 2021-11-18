@@ -1,8 +1,10 @@
 [Desktop Entry]
-Type=Application
 Name=Atlas
-GenericName=Maps
+GenericName=Map
 Comment=View where to go
+Categories=GTK;Utility;Science;Maps;
 Exec=com.github.ryonakano.atlas
 Icon=com.github.ryonakano.atlas
-Categories=GTK;Utility;Maps
+Type=Application
+Terminal=false
+Keywords=Trip;Explore;
