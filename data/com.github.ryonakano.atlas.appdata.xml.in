@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014-2019 Atlas Developers -->
+<!-- Copyright 2014-2021 Atlas Developers -->
 <component type="desktop">
   <id>com.github.ryonakano.atlas</id>
+  <launchable type="desktop-id">com.github.ryonakano.atlas.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <name>Atlas</name>
@@ -10,6 +11,11 @@
     <p>
       A map app that helps you to see where you want to go.
     </p>
+    <p>Features include:</p>
+    <ul>
+      <li>Search any place</li>
+      <li>Jump to your current location instantly</li>
+    </ul>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -18,34 +24,18 @@
   </screenshots>
 
   <content_rating type="oars-1.1">
-    <content_attribute id="violence-cartoon">none</content_attribute>
-    <content_attribute id="violence-fantasy">none</content_attribute>
-    <content_attribute id="violence-realistic">none</content_attribute>
-    <content_attribute id="violence-bloodshed">none</content_attribute>
-    <content_attribute id="violence-sexual">none</content_attribute>
-    <content_attribute id="violence-desecration">none</content_attribute>
-    <content_attribute id="violence-slavery">none</content_attribute>
-    <content_attribute id="violence-worship">none</content_attribute>
-    <content_attribute id="drugs-alcohol">none</content_attribute>
-    <content_attribute id="drugs-narcotics">none</content_attribute>
-    <content_attribute id="drugs-tobacco">none</content_attribute>
-    <content_attribute id="sex-nudity">none</content_attribute>
-    <content_attribute id="sex-themes">none</content_attribute>
-    <content_attribute id="sex-homosexuality">none</content_attribute>
-    <content_attribute id="sex-prostitution">none</content_attribute>
-    <content_attribute id="sex-adultery">none</content_attribute>
-    <content_attribute id="sex-appearance">none</content_attribute>
-    <content_attribute id="language-profanity">none</content_attribute>
-    <content_attribute id="language-humor">none</content_attribute>
-    <content_attribute id="language-discrimination">none</content_attribute>
-    <content_attribute id="social-chat">none</content_attribute>
-    <content_attribute id="social-info">mild</content_attribute>
-    <content_attribute id="social-audio">none</content_attribute>
-    <content_attribute id="social-location">none</content_attribute>
-    <content_attribute id="social-contacts">none</content_attribute>
-    <content_attribute id="money-purchasing">none</content_attribute>
-    <content_attribute id="money-gambling">none</content_attribute>
+    <content_attribute id="social-location">intense</content_attribute>
   </content_rating>
+
+  <releases>
+    <release version="0.1.0" date="2021-11-18">
+      <description>
+        <ul>
+          <li>Initial release</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
 
   <developer_name>Atlas Developers</developer_name>
   <url type="homepage">https://github.com/ryonakano/atlas</url>
@@ -54,7 +44,7 @@
   <url type="translate">https://github.com/ryonakano/atlas</url>
 
   <custom>
-    <value key="x-appcenter-color-primary">#d4d4d4</value>
-    <value key="x-appcenter-color-primary-text">#ffffff</value>
+    <value key="x-appcenter-color-primary">#fe9ab8</value>
+    <value key="x-appcenter-color-primary-text">#1a1a1a</value>
   </custom>
 </component>
