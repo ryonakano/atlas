@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-	<schema path="/com/github/ryonakano/atlas/" id="com.github.ryonakano.atlas">
-		<key type="d" name="langitude">
-			<default>0</default>
-		</key>
-		
-		<key type="d" name="longitude">
-			<default>0</default>
-		</key>
-		
-		<key type="i" name="zoom-level">
-			<default>8</default>
-		</key>
-		
-		<key type="i" name="window-width">
-			<default>1000</default>
-		</key>
-		
-		<key type="i" name="window-height">
-			<default>800</default>
-		</key>
-		
-		<key type="i" name="position-x">
-			<default>-1</default>
-		</key>
-		
-		<key type="i" name="position-y">
-			<default>-1</default>
-		</key>
-		
-		<key type="b" name="maximized">
-			<default>false</default>
-		</key>
+  <schema path="/com/github/ryonakano/atlas/" id="com.github.ryonakano.atlas">
+    <key type="d" name="langitude">
+      <default>0</default>
+      <summary>Langitude</summary>
+      <description>Langitude of the last place viewed</description>
+    </key>
+    <key type="d" name="longitude">
+      <default>0</default>
+      <summary>Longitude</summary>
+      <description>Longitude of the last place viewed</description>
+    </key>    
+    <key type="i" name="zoom-level">
+      <default>8</default>
+      <summary>Zoom level</summary>
+      <description>Zoom level of the map last used</description>
+    </key>
+    <key type="i" name="window-width">
+      <default>1000</default>
+      <summary>Window width</summary>
+      <description>Width of the window last closed</description>
+    </key>
+    <key type="i" name="window-height">
+      <default>800</default>
+      <summary>Window height</summary>
+      <description>Height of the window last closed</description>
+    </key>
+    <key type="i" name="position-x">
+      <default>-1</default>
+      <summary>Window X position</summary>
+      <description>X coordinate of the window last closed</description>
+    </key>
+    <key type="i" name="position-y">
+      <default>-1</default>
+      <summary>Window Y position</summary>
+      <description>Y coordinate of the window last closed</description>
+    </key>
+    <key type="b" name="maximized">
+      <default>false</default>
+      <summary>Maximized window</summary>
+      <description>Whether the window last closed was maximized or not</description>
+    </key>
     <key name="is-prefer-dark" type="b">
       <default>false</default>
       <summary>Prefer dark</summary>
@@ -42,5 +51,5 @@
       <summary>Follow system style</summary>
       <description>Whether to follow system's dark style settings or not</description>
     </key>
- 	</schema>
+   </schema>
 </schemalist>
