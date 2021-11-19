@@ -105,6 +105,12 @@ public class Atlas.MainWindow : Hdy.Window {
         });
 
         button_search_options.clicked.connect (on_search_options_clicked);
+
+        destroy.connect (() => {
+            Atlas.Application.settings.set_double ("langitude", view.latitude);
+            Atlas.Application.settings.set_double ("longitude", view.longitude);
+            Atlas.Application.settings.set_int ("zoom-level", (int) view.zoom_level);
+        });
     }
 
     protected override bool configure_event (Gdk.EventConfigure event) {
@@ -126,10 +132,6 @@ public class Atlas.MainWindow : Hdy.Window {
                 Atlas.Application.settings.set_int ("window-width", w);
                 Atlas.Application.settings.set_int ("window-height", h);
             }
-
-            Atlas.Application.settings.set_double ("langitude", view.latitude);
-            Atlas.Application.settings.set_double ("longitude", view.longitude);
-            Atlas.Application.settings.set_int ("zoom-level", (int) view.zoom_level);
 
             return false;
         });
