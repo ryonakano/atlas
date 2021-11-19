@@ -7,8 +7,6 @@ public class Atlas.MainWindow : Hdy.Window {
     private GtkChamplain.Embed champlain;
     private Champlain.View view;
     private GLib.Cancellable search_cancellable;
-    private Gtk.ToggleButton button_search_options;
-    private View.SearchOptionSelector option_selector;
     private Gtk.ListStore location_store;
     private Champlain.MarkerLayer poi_layer;
     private Atlas.LocationMarker point;
@@ -57,18 +55,52 @@ public class Atlas.MainWindow : Hdy.Window {
             valign = Gtk.Align.CENTER,
             completion = location_completion
         };
-
-        button_search_options = new Gtk.ToggleButton () {
-            tooltip_text = _("Search Options"),
-            image = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR)
+        var mode_switch = new Granite.ModeSwitch.from_icon_name (
+            "display-brightness-symbolic",
+            "weather-clear-night-symbolic"
+        ) {
+            primary_icon_tooltip_text = _("Light background"),
+            secondary_icon_tooltip_text = _("Dark background"),
+            valign = Gtk.Align.CENTER
         };
+
+        ///TRANSLATORS: Whether to follow system's dark style settings
+        var follow_system_label = new Gtk.Label (_("Follow system style:")) {
+            halign = Gtk.Align.END
+        };
+
+        var follow_system_switch = new Gtk.Switch () {
+            halign = Gtk.Align.START
+        };
+
+        var preferences_grid = new Gtk.Grid () {
+            margin = 12,
+            column_spacing = 6,
+            row_spacing = 6
+        };
+        preferences_grid.attach (follow_system_label, 0, 0);
+        preferences_grid.attach (follow_system_switch, 1, 0);
+
+        var preferences_button = new Gtk.ToolButton (
+            new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR), null
+        ) {
+            tooltip_text = _("Preferences")
+        };
+
+        var preferences_popover = new Gtk.Popover (preferences_button);
+        preferences_popover.add (preferences_grid);
+
+        preferences_button.clicked.connect (() => {
+            preferences_popover.show_all ();
+        });
 
         var headerbar = new Hdy.HeaderBar () {
             title = _("Atlas"),
             show_close_button = true
         };
         headerbar.pack_start (current_location);
-        headerbar.pack_end (button_search_options);
+        headerbar.pack_end (preferences_button);
+        headerbar.pack_end (mode_switch);
         headerbar.pack_end (search_entry);
         headerbar.pack_end (spinner);
 
@@ -106,8 +138,6 @@ public class Atlas.MainWindow : Hdy.Window {
                 spinner.disactivate ();
             });
         });
-
-        button_search_options.clicked.connect (on_search_options_clicked);
 
         destroy.connect (() => {
             Atlas.Application.settings.set_double ("langitude", view.latitude);
@@ -153,6 +183,28 @@ public class Atlas.MainWindow : Hdy.Window {
                 }
             }
         });
+
+        var granite_settings = Granite.Settings.get_default ();
+        var gtk_settings = Gtk.Settings.get_default ();
+
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            if (Application.settings.get_boolean ("is-follow-system-style")) {
+                gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+            }
+        });
+
+        follow_system_switch.notify["active"].connect (() => {
+            if (follow_system_switch.active) {
+                gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+            } else {
+                gtk_settings.gtk_application_prefer_dark_theme = Application.settings.get_boolean ("is-prefer-dark");
+            }
+        });
+
+        Application.settings.bind ("is-prefer-dark", mode_switch, "active", SettingsBindFlags.DEFAULT);
+        Application.settings.bind ("is-prefer-dark", gtk_settings, "gtk-application-prefer-dark-theme", SettingsBindFlags.DEFAULT);
+        Application.settings.bind ("is-follow-system-style", follow_system_switch, "active", SettingsBindFlags.DEFAULT);
+        Application.settings.bind ("is-follow-system-style", mode_switch, "sensitive", SettingsBindFlags.INVERT_BOOLEAN);
     }
 
     private bool suggestion_selected (Gtk.TreeModel model, Gtk.TreeIter iter) {
@@ -176,24 +228,6 @@ public class Atlas.MainWindow : Hdy.Window {
 
         poi_layer.remove_all ();
         poi_layer.add_marker (point);
-    }
-
-    private void on_search_options_clicked (Gtk.Widget widget) {
-        if (option_selector == null) {
-            option_selector = new View.SearchOptionSelector () {
-                relative_to = widget
-            };
-            option_selector.hide.connect (() => {
-                button_search_options.active = false;
-                option_selector.visible = false;
-            });
-        }
-
-        if (!option_selector.visible) {
-            option_selector.show_all ();
-        } else {
-            option_selector.hide ();
-        }
     }
 
     // TODO Move to GeoCode

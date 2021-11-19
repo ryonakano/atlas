@@ -19,7 +19,6 @@ config_header = configure_file(
 executable(
     meson.project_name (),
     config_header,
-    'src/View/SearchOptionSelector.vala',
     'src/Application.vala',
     'src/GeoClue.vala',
     'src/LocationMarker.vala',
@@ -30,7 +29,7 @@ executable(
         dependency('champlain-gtk-0.12'),
         dependency('clutter-1.0'),
         dependency('geocode-glib-1.0'),
-        dependency('granite'),
+        dependency('granite', version: '>=5.4.0'),
         dependency('gtk+-3.0'),
         dependency('libgeoclue-2.0'),
         dependency('libhandy-1')
