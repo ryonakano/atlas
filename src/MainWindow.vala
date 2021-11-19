@@ -114,32 +114,45 @@ public class Atlas.MainWindow : Hdy.Window {
             Atlas.Application.settings.set_double ("longitude", view.longitude);
             Atlas.Application.settings.set_int ("zoom-level", (int) view.zoom_level);
         });
-    }
 
-    protected override bool configure_event (Gdk.EventConfigure event) {
-        if (configure_id != 0) {
-            GLib.Source.remove (configure_id);
-        }
-
-        configure_id = Timeout.add (100, () => {
-            configure_id = 0;
-
-            Atlas.Application.settings.set_boolean ("maximized", is_maximized);
-
-            if (!is_maximized) {
-                int x, y, w, h;
-                get_position (out x, out y);
-                get_size (out w, out h);
-                Atlas.Application.settings.set_int ("position-x", x);
-                Atlas.Application.settings.set_int ("position-y", y);
-                Atlas.Application.settings.set_int ("window-width", w);
-                Atlas.Application.settings.set_int ("window-height", h);
+        configure_event.connect ((event) => {
+            if (configure_id != 0) {
+                GLib.Source.remove (configure_id);
             }
 
-            return false;
+            configure_id = Timeout.add (100, () => {
+                configure_id = 0;
+
+                Atlas.Application.settings.set_boolean ("maximized", is_maximized);
+
+                if (!is_maximized) {
+                    int x, y, w, h;
+                    get_position (out x, out y);
+                    get_size (out w, out h);
+                    Atlas.Application.settings.set_int ("position-x", x);
+                    Atlas.Application.settings.set_int ("position-y", y);
+                    Atlas.Application.settings.set_int ("window-width", w);
+                    Atlas.Application.settings.set_int ("window-height", h);
+                }
+
+                return false;
+            });
+
+            return Gdk.EVENT_PROPAGATE;
         });
 
-        return base.configure_event (event);
+        key_press_event.connect ((key) => {
+            if (Gdk.ModifierType.CONTROL_MASK in key.state) {
+                switch (key.keyval) {
+                    case Gdk.Key.q:
+                        destroy ();
+                        break;
+                    case Gdk.Key.f:
+                        search_entry.grab_focus ();
+                        break;
+                }
+            }
+        });
     }
 
     private bool suggestion_selected (Gtk.TreeModel model, Gtk.TreeIter iter) {
