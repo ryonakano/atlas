@@ -50,10 +50,7 @@ public class Atlas.MainWindow : Hdy.Window {
             image = new Gtk.Image.from_icon_name ("mark-location-symbolic", Gtk.IconSize.LARGE_TOOLBAR)
         };
 
-        var spinner = new Gtk.Spinner () {
-            tooltip_text = _("Detecting your current location…"),
-            no_show_all = true
-        };
+        var spinner = new Spinner ();
 
         var search_entry = new Gtk.SearchEntry () {
             placeholder_text = _("Search Location"),
@@ -87,21 +84,27 @@ public class Atlas.MainWindow : Hdy.Window {
 
         current_location.clicked.connect (() => {
             current_location.sensitive = false;
-            spinner.show ();
-            spinner.start ();
+            spinner.activate (_("Detecting your current location…"));
 
             geo_clue.get_current_location.begin ((obj, res) => {
                 var location = geo_clue.get_current_location.end (res);
                 view.center_on (location.latitude, location.longitude);
                 view.zoom_level = 15;
-                spinner.hide ();
-                spinner.stop ();
+                spinner.disactivate ();
                 current_location.sensitive = true;
             });
         });
 
         search_entry.search_changed.connect (() => {
-            compute_location.begin (search_entry.text);
+            if (search_entry.text == "") {
+                return;
+            }
+
+            spinner.activate (_("Searching locations…"));
+
+            compute_location.begin (search_entry.text, (obj, res) => {
+                spinner.disactivate ();
+            });
         });
 
         button_search_options.clicked.connect (on_search_options_clicked);
@@ -160,8 +163,6 @@ public class Atlas.MainWindow : Hdy.Window {
 
         poi_layer.remove_all ();
         poi_layer.add_marker (point);
-
-        view.zoom_level = 6;
     }
 
     private void on_search_options_clicked (Gtk.Widget widget) {
@@ -191,17 +192,17 @@ public class Atlas.MainWindow : Hdy.Window {
 
         search_cancellable = new GLib.Cancellable ();
 
-        var forward = new Geocode.Forward.for_string (loc);
+        var forward = new Geocode.Forward.for_string (loc) {
+            answer_count = 10
+        };
         try {
-            forward.answer_count = 10;
             var places = yield forward.search_async (search_cancellable);
-
-            Gtk.TreeIter location;
             if (places != null) {
                 location_store.clear ();
             }
 
-            foreach (var place in places) {
+            Gtk.TreeIter location;
+            foreach (unowned var place in places) {
                 location_store.append (out location);
                 location_store.set (location, 0, place, 1, place.name);
             }

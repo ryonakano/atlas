@@ -24,6 +24,7 @@ executable(
     'src/GeoClue.vala',
     'src/LocationMarker.vala',
     'src/MainWindow.vala',
+    'src/Spinner.vala',
     dependencies: [
         dependency('champlain-0.12'),
         dependency('champlain-gtk-0.12'),
