@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-17 23:07+0900\n"
+"POT-Creation-Date: 2021-11-19 17:16+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,28 +17,48 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:7
-#: data/com.github.ryonakano.atlas.desktop.in:4
+#: data/com.github.ryonakano.atlas.appdata.xml.in:8
+#: data/com.github.ryonakano.atlas.desktop.in:3
 msgid "Atlas"
 msgstr ""
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:8
-#: data/com.github.ryonakano.atlas.desktop.in:6
+#: data/com.github.ryonakano.atlas.appdata.xml.in:9
+#: data/com.github.ryonakano.atlas.desktop.in:5
 msgid "View where to go"
 msgstr ""
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:10
+#: data/com.github.ryonakano.atlas.appdata.xml.in:11
 msgid "A map app that helps you to see where you want to go."
 msgstr ""
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:50
+#: data/com.github.ryonakano.atlas.appdata.xml.in:14
+msgid "Features include:"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:16
+msgid "Search any place"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:17
+msgid "Jump to your current location instantly"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:34
+msgid "Initial release"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:40
 msgid "Atlas Developers"
 msgstr ""
 
-#: data/com.github.ryonakano.atlas.desktop.in:5
-msgid "Maps"
+#: data/com.github.ryonakano.atlas.desktop.in:4
+msgid "Map"
 msgstr ""
 
 #: data/com.github.ryonakano.atlas.desktop.in:8
 msgid "com.github.ryonakano.atlas"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.desktop.in:11
+msgid "Trip;Explore;"
 msgstr ""
