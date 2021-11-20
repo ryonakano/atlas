@@ -31,5 +31,5 @@ Run `meson build` to configure the build environment. Change to the build direct
 
 To install, use `ninja install`, then execute with `com.github.ryonakano.atlas`
 
-    sudo ninja install
+    ninja install
     com.github.ryonakano.atlas
