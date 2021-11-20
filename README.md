@@ -17,10 +17,10 @@ You'll need the following dependencies:
 * libclutter-1.0-dev
 * libgeoclue-2-dev
 * libgeocode-glib-dev
-* libgranite-dev
+* libgranite-dev (>= 5.4.0)
 * libgtk-3.0-dev
 * libhandy-1-dev
-* meson
+* meson (>= 0.49.0)
 * valac
 
 Run `meson build` to configure the build environment. Change to the build directory and run `ninja` to build
@@ -31,5 +31,5 @@ Run `meson build` to configure the build environment. Change to the build direct
 
 To install, use `ninja install`, then execute with `com.github.ryonakano.atlas`
 
-    sudo ninja install
+    ninja install
     com.github.ryonakano.atlas
