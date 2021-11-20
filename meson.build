@@ -1,4 +1,9 @@
-project('com.github.ryonakano.atlas', 'vala', 'c')
+project(
+    'com.github.ryonakano.atlas',
+    'vala', 'c',
+    version: '0.1.0',
+    meson_version: '>=0.49.0'
+)
 
 i18n = import('i18n')
 add_global_arguments(
@@ -7,23 +12,27 @@ add_global_arguments(
 )
 
 conf_data = configuration_data()
-conf_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
-conf_data.set_quoted('PKGDATADIR', join_paths(get_option('prefix'), get_option('datadir')))
+conf_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
+conf_data.set_quoted('PKGDATADIR', get_option('prefix') / get_option('datadir'))
 conf_data.set_quoted('PROJECT_NAME', meson.project_name())
 config_header = configure_file(
-    input: 'src/config.vala.in',
+    input: 'src' / 'config.vala.in',
     output: 'config.vala',
     configuration: conf_data
+)
+
+sources = files(
+    'src' / 'Application.vala',
+    'src' / 'GeoClue.vala',
+    'src' / 'LocationMarker.vala',
+    'src' / 'MainWindow.vala',
+    'src' / 'Spinner.vala'
 )
 
 executable(
     meson.project_name (),
     config_header,
-    'src/Application.vala',
-    'src/GeoClue.vala',
-    'src/LocationMarker.vala',
-    'src/MainWindow.vala',
-    'src/Spinner.vala',
+    sources,
     dependencies: [
         dependency('champlain-0.12'),
         dependency('champlain-gtk-0.12'),
@@ -40,4 +49,4 @@ executable(
 subdir('data')
 subdir('po')
 
-meson.add_install_script('meson/post_install.py')
+meson.add_install_script('meson' / 'post_install.py')
