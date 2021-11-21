@@ -15,7 +15,7 @@ public class Atlas.MainWindow : Hdy.Window {
     public MainWindow (Application app) {
         Object (
             application: app,
-            title: _("Atlas")
+            title: "Atlas"
         );
     }
 
@@ -95,7 +95,7 @@ public class Atlas.MainWindow : Hdy.Window {
         });
 
         var headerbar = new Hdy.HeaderBar () {
-            title = _("Atlas"),
+            title = "Atlas",
             show_close_button = true
         };
         headerbar.pack_start (current_location);
