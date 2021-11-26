@@ -53,7 +53,6 @@ public class Atlas.Application : Gtk.Application {
 
     public static int main (string[] args) {
         Clutter.init (ref args);
-        Gtk.init (ref args);
         var app = new Application ();
         return app.run (args);
     }
