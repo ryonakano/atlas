@@ -34,6 +34,8 @@ public class Atlas.MainWindow : Hdy.Window {
             margin = 3
         };
         view = champlain.champlain_view;
+        view.horizontal_wrap = true;
+
         var factory = Champlain.MapSourceFactory.dup_default ();
         view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_MAPNIK);
 
