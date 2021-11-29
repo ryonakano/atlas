@@ -16,17 +16,6 @@ public class Atlas.MainWindow : Hdy.Window {
         MAPNIK,
         TRANSPORT_MAP;
 
-        public static string get_champlain_id (MapSource map_source) {
-            switch (map_source) {
-                case MapSource.MAPNIK:
-                    return Champlain.MAP_SOURCE_OSM_MAPNIK;
-                case MapSource.TRANSPORT_MAP:
-                    return Champlain.MAP_SOURCE_OSM_TRANSPORT_MAP;
-                default:
-                    assert_not_reached ();
-            }
-        }
-
         public static string get_display_string (MapSource map_source) {
             switch (map_source) {
                 case MapSource.MAPNIK:
@@ -64,9 +53,7 @@ public class Atlas.MainWindow : Hdy.Window {
         view = champlain.champlain_view;
         view.horizontal_wrap = true;
 
-        var active_map_source = (MapSource) Application.settings.get_enum ("map-source");
         var factory = Champlain.MapSourceFactory.dup_default ();
-        view.map_source = factory.create_cached_source (MapSource.get_champlain_id (active_map_source));
 
         poi_layer = new Champlain.MarkerLayer.full (Champlain.SelectionMode.SINGLE);
         view.add_layer (poi_layer);
@@ -112,6 +99,7 @@ public class Atlas.MainWindow : Hdy.Window {
         mapnik_radio.toggled.connect (() => {
             view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_MAPNIK);
             Application.settings.set_enum ("map-source", MapSource.MAPNIK);
+            view.max_zoom_level = 18; // reset to the original max zoom level
         });
 
         var transport_map_radio = new Gtk.RadioButton.with_label_from_widget (mapnik_radio, MapSource.get_display_string (MapSource.TRANSPORT_MAP)) {
@@ -120,7 +108,15 @@ public class Atlas.MainWindow : Hdy.Window {
         transport_map_radio.toggled.connect (() => {
             view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_TRANSPORT_MAP);
             Application.settings.set_enum ("map-source", MapSource.TRANSPORT_MAP);
+            // It looks like the transport map doesn't work well when the zoom level is bigger than 15
+            view.max_zoom_level = 15;
         });
+
+        if ((MapSource) Application.settings.get_enum ("map-source") == MapSource.MAPNIK) {
+            mapnik_radio.active = true;
+        } else {
+            transport_map_radio.active = true;
+        }
 
         var preferences_grid = new Gtk.Grid () {
             margin = 12,
@@ -160,12 +156,6 @@ public class Atlas.MainWindow : Hdy.Window {
         main_box.add (headerbar);
         main_box.add (champlain);
         add (main_box);
-
-        if (active_map_source == MapSource.MAPNIK) {
-            mapnik_radio.active = true;
-        } else {
-            transport_map_radio.active = true;
-        }
 
         location_completion.set_match_func ((completion, key, iter) => {
             return true;
