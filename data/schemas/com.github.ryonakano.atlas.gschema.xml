@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
+  <enum id="map-sources">
+    <value value="0" nick="mapnik"/>
+    <value value="1" nick="transport_map"/>
+  </enum>
+
   <schema path="/com/github/ryonakano/atlas/" id="com.github.ryonakano.atlas">
     <key type="d" name="langitude">
       <default>0</default>
@@ -15,6 +20,11 @@
       <default>8</default>
       <summary>Zoom level</summary>
       <description>Zoom level of the map last used</description>
+    </key>
+    <key enum="map-sources" name="map-source">
+      <default>'mapnik'</default>
+      <summary>Active map source</summary>
+      <description>The type of the map last used</description>
     </key>
     <key type="i" name="window-width">
       <default>1000</default>
