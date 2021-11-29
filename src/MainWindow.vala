@@ -21,6 +21,7 @@ public class Atlas.MainWindow : Hdy.Window {
 
     construct {
         Hdy.init ();
+
         var geo_clue = new Atlas.GeoClue ();
         location_store = new Gtk.ListStore (2, typeof (Geocode.Place), typeof (string));
 
@@ -75,13 +76,34 @@ public class Atlas.MainWindow : Hdy.Window {
             halign = Gtk.Align.START
         };
 
+        var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+
+        var default_map_radio = new Gtk.RadioButton.with_label_from_widget (null, _("Default"));
+        default_map_radio.toggled.connect (() => {
+            view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_MAPNIK);
+        });
+
+        var cycle_map_radio = new Gtk.RadioButton.with_label_from_widget (default_map_radio, _("Cycle Map"));
+        cycle_map_radio.toggled.connect (() => {
+            view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_CYCLE_MAP);
+        });
+
+        var transport_map_radio = new Gtk.RadioButton.with_label_from_widget (default_map_radio, _("Transport Map"));
+        transport_map_radio.toggled.connect (() => {
+            view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_TRANSPORT_MAP);
+        });
+
         var preferences_grid = new Gtk.Grid () {
             margin = 12,
             column_spacing = 6,
             row_spacing = 6
         };
-        preferences_grid.attach (follow_system_label, 0, 0);
-        preferences_grid.attach (follow_system_switch, 1, 0);
+        preferences_grid.attach (follow_system_label, 0, 0, 1, 1);
+        preferences_grid.attach (follow_system_switch, 1, 0, 1, 1);
+        preferences_grid.attach (separator, 0, 1, 2, 1);
+        preferences_grid.attach (default_map_radio, 0, 3, 2, 1);
+        preferences_grid.attach (cycle_map_radio, 0, 4, 2, 1);
+        preferences_grid.attach (transport_map_radio, 0, 5, 2, 1);
 
         var preferences_button = new Gtk.ToolButton (
             new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR), null
