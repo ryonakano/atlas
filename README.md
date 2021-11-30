@@ -7,7 +7,7 @@ This is a fork of [Atlas Maps](https://launchpad.net/atlas-maps) and wouldn't ex
 
 ## Installation
 ### For Users
-On elementary OS? Click the button to get Reco on AppCenter:
+On elementary OS? Click the button to get Atlas on AppCenter:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.atlas)
 
