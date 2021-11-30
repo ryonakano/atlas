@@ -1,15 +1,17 @@
 # Atlas
-
 Atlas is a map viewer designed for elementary OS.
 
 ![Screenshot](data/Screenshot.png)
 
-This repository is a fork of [Atlas Maps](https://launchpad.net/atlas-maps).
+This is a fork of [Atlas Maps](https://launchpad.net/atlas-maps) and wouldn't exist without work of [Steffen Schuhmann](https://launchpad.net/~sschuhmann).
 
 ## Installation
+### For Users
+On elementary OS? Click the button to get Reco on AppCenter:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.atlas)
 
 ### For Developers
-
 You'll need the following dependencies:
 
 * libchamplain-0.12-dev
