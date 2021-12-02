@@ -59,7 +59,7 @@ public class Atlas.MainWindow : Hdy.Window {
         view.add_layer (poi_layer);
 
         view.go_to (Atlas.Application.settings.get_double ("langitude"), Atlas.Application.settings.get_double ("longitude"));
-        view.zoom_level = Atlas.Application.settings.get_int ("zoom-level");
+        view.zoom_level = Atlas.Application.settings.get_uint ("zoom-level");
 
         var current_location = new Gtk.Button () {
             tooltip_text = _("Current Location"),
@@ -190,7 +190,7 @@ public class Atlas.MainWindow : Hdy.Window {
         destroy.connect (() => {
             Atlas.Application.settings.set_double ("langitude", view.latitude);
             Atlas.Application.settings.set_double ("longitude", view.longitude);
-            Atlas.Application.settings.set_int ("zoom-level", (int) view.zoom_level);
+            Atlas.Application.settings.set_uint ("zoom-level", view.zoom_level);
         });
 
         configure_event.connect ((event) => {
