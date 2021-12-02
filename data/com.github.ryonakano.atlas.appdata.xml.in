@@ -23,11 +23,20 @@
     </screenshot>
   </screenshots>
 
-  <content_rating type="oars-1.1">
-    <content_attribute id="social-location">intense</content_attribute>
-  </content_rating>
+  <content_rating type="oars-1.1" />
 
   <releases>
+    <release version="1.0.0" date="2021-12-02">
+      <description>
+        <ul>
+          <li>Fix the app being introduced as if sharing your location to someone in AppCenter</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Add French translation (thanks to @NathanBnm)</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.0" date="2021-11-30">
       <description>
         <ul>
