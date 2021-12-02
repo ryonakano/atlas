@@ -16,7 +16,7 @@ public class Spinner : Gtk.Spinner {
         start ();
     }
 
-    public void disactivate () {
+    public void deactivate () {
         hide ();
         stop ();
     }

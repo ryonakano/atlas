@@ -170,7 +170,7 @@ public class Atlas.MainWindow : Hdy.Window {
                 var location = geo_clue.get_current_location.end (res);
                 view.center_on (location.latitude, location.longitude);
                 view.zoom_level = 15;
-                spinner.disactivate ();
+                spinner.deactivate ();
                 current_location.sensitive = true;
             });
         });
@@ -183,7 +183,7 @@ public class Atlas.MainWindow : Hdy.Window {
             spinner.activate (_("Searching locations…"));
 
             compute_location.begin (search_entry.text, (obj, res) => {
-                spinner.disactivate ();
+                spinner.deactivate ();
             });
         });
 
