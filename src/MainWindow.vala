@@ -70,6 +70,7 @@ public class Atlas.MainWindow : Hdy.Window {
 
         var search_entry = new Gtk.SearchEntry () {
             placeholder_text = _("Search Location"),
+            tooltip_markup = Granite.markup_accel_tooltip ({"<Control>F"}, _("Search Location")),
             valign = Gtk.Align.CENTER,
             completion = location_completion
         };
