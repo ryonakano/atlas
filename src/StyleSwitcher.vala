@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-License-Identifier: LGPL-3.0-or-later
  * SPDX-FileCopyrightText: 2021 Ryo Nakano <ryonakaknock3@gmail.com>
  * 
  * Some code inspired from elementary/switchboard-plug-pantheon-shell, src/Views/Appearance.vala
