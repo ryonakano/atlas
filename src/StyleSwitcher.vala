@@ -1,6 +1,8 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: 2014-2021 Atlas Developers
+ * 
+ * Some code inspired from elementary/switchboard-plug-pantheon-shell, src/Views/Appearance.vala
  */
 
 public class Atlas.StyleSwitcher : Gtk.Grid {
@@ -22,27 +24,38 @@ public class Atlas.StyleSwitcher : Gtk.Grid {
         granite_settings = Granite.Settings.get_default ();
         gtk_settings = Gtk.Settings.get_default ();
 
-        var styles_label = new Gtk.Label (_("Style option:")) {
+        var style_label = new Gtk.Label (_("Style option:")) {
             halign = Gtk.Align.START
         };
 
-        light_style_radio = new Gtk.RadioButton (null) {
-            tooltip_text = _("Light style"),
-            image = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.BUTTON)
-        };
+        var light_style_image = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.BUTTON);
+        var light_style_grid = new Gtk.Grid ();
+        light_style_grid.attach (light_style_image, 0, 0, 1, 1);
+        light_style_grid.attach (new Gtk.Label (_("Light style")), 0, 1, 1, 1);
 
-        dark_style_radio = new Gtk.RadioButton.from_widget (light_style_radio) {
-            tooltip_text = _("Dark style"),
-            image = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.BUTTON)
-        };
+        light_style_radio = new Gtk.RadioButton (null);
+        light_style_radio.get_style_context ().add_class ("image-button");
+        light_style_radio.add (light_style_grid);
 
-        system_style_radio = new Gtk.RadioButton.from_widget (light_style_radio) {
-            ///TRANSLATORS: Whether to follow system's dark style settings
-            tooltip_text = _("Follow system style"),
-            image = new Gtk.Image.from_icon_name ("emblem-system-symbolic", Gtk.IconSize.BUTTON)
-        };
+        var dark_style_image = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.BUTTON);
+        var dark_style_grid = new Gtk.Grid ();
+        dark_style_grid.attach (dark_style_image, 0, 0, 1, 1);
+        dark_style_grid.attach (new Gtk.Label (_("Dark style")), 0, 1, 1, 1);
 
-        attach (styles_label, 0, 0, 3, 1);
+        dark_style_radio = new Gtk.RadioButton.from_widget (light_style_radio);
+        dark_style_radio.get_style_context ().add_class ("image-button");
+        dark_style_radio.add (dark_style_grid);
+
+        var system_style_image = new Gtk.Image.from_icon_name ("emblem-system-symbolic", Gtk.IconSize.BUTTON);
+        var system_style_grid = new Gtk.Grid ();
+        system_style_grid.attach (system_style_image, 0, 0, 1, 1);
+        system_style_grid.attach (new Gtk.Label (_("System style")), 0, 1, 1, 1);
+
+        system_style_radio = new Gtk.RadioButton.from_widget (light_style_radio);
+        system_style_radio.get_style_context ().add_class ("image-button");
+        system_style_radio.add (system_style_grid);
+
+        attach (style_label, 0, 0, 3, 1);
         attach (light_style_radio, 0, 1, 1, 1);
         attach (dark_style_radio, 1, 1, 1, 1);
         attach (system_style_radio, 2, 1, 1, 1);

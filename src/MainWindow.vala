@@ -79,6 +79,11 @@ public class Atlas.MainWindow : Hdy.Window {
 
         var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
 
+        var layer_label = new Gtk.Label (_("Layer:")) {
+            halign = Gtk.Align.START,
+            margin_top = 6
+        };
+
         var mapnik_radio = new Gtk.RadioButton.with_label_from_widget (null, MapSource.get_display_string (MapSource.MAPNIK)) {
             active = false
         };
@@ -110,7 +115,8 @@ public class Atlas.MainWindow : Hdy.Window {
             row_spacing = 6
         };
         preferences_grid.attach (style_switcher, 0, 0, 1, 1);
-        preferences_grid.attach (separator, 0, 1, 2, 1);
+        preferences_grid.attach (separator, 0, 1, 1, 1);
+        preferences_grid.attach (layer_label, 0, 2, 1, 1);
         preferences_grid.attach (mapnik_radio, 0, 3, 2, 1);
         preferences_grid.attach (transport_map_radio, 0, 4, 2, 1);
 
