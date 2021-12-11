@@ -1,22 +1,28 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2014-2021 Atlas Developers
+ * SPDX-FileCopyrightText: 2021 Ryo Nakano <ryonakaknock3@gmail.com>
  * 
  * Some code inspired from elementary/switchboard-plug-pantheon-shell, src/Views/Appearance.vala
  */
 
 public class Atlas.StyleSwitcher : Gtk.Grid {
+    /**
+     * `TRUE` if you mean to add other preference(s) following to `this` StyleSwitcher.
+     */
+    public bool has_bottom_separator { get; construct; }
+
     private Granite.Settings granite_settings;
     private Gtk.Settings gtk_settings;
+
     private Gtk.RadioButton light_style_radio;
     private Gtk.RadioButton dark_style_radio;
     private Gtk.RadioButton system_style_radio;
 
-    public StyleSwitcher () {
+    public StyleSwitcher (bool has_bottom_separator) {
         Object (
             column_spacing: 6,
             row_spacing: 6,
-            margin_bottom: 6
+            has_bottom_separator: has_bottom_separator
         );
     }
 
@@ -31,7 +37,7 @@ public class Atlas.StyleSwitcher : Gtk.Grid {
         var light_style_image = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.BUTTON);
         var light_style_grid = new Gtk.Grid ();
         light_style_grid.attach (light_style_image, 0, 0, 1, 1);
-        light_style_grid.attach (new Gtk.Label (_("Light style")), 0, 1, 1, 1);
+        light_style_grid.attach (new Gtk.Label (_("Light")), 0, 1, 1, 1);
 
         light_style_radio = new Gtk.RadioButton (null);
         light_style_radio.get_style_context ().add_class ("image-button");
@@ -40,7 +46,7 @@ public class Atlas.StyleSwitcher : Gtk.Grid {
         var dark_style_image = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.BUTTON);
         var dark_style_grid = new Gtk.Grid ();
         dark_style_grid.attach (dark_style_image, 0, 0, 1, 1);
-        dark_style_grid.attach (new Gtk.Label (_("Dark style")), 0, 1, 1, 1);
+        dark_style_grid.attach (new Gtk.Label (_("Dark")), 0, 1, 1, 1);
 
         dark_style_radio = new Gtk.RadioButton.from_widget (light_style_radio);
         dark_style_radio.get_style_context ().add_class ("image-button");
@@ -49,7 +55,7 @@ public class Atlas.StyleSwitcher : Gtk.Grid {
         var system_style_image = new Gtk.Image.from_icon_name ("emblem-system-symbolic", Gtk.IconSize.BUTTON);
         var system_style_grid = new Gtk.Grid ();
         system_style_grid.attach (system_style_image, 0, 0, 1, 1);
-        system_style_grid.attach (new Gtk.Label (_("System style")), 0, 1, 1, 1);
+        system_style_grid.attach (new Gtk.Label (_("System")), 0, 1, 1, 1);
 
         system_style_radio = new Gtk.RadioButton.from_widget (light_style_radio);
         system_style_radio.get_style_context ().add_class ("image-button");
@@ -59,6 +65,14 @@ public class Atlas.StyleSwitcher : Gtk.Grid {
         attach (light_style_radio, 0, 1, 1, 1);
         attach (dark_style_radio, 1, 1, 1, 1);
         attach (system_style_radio, 2, 1, 1, 1);
+
+        if (has_bottom_separator) {
+            var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
+                margin_top = 6,
+                margin_bottom = 6
+            };
+            attach (separator, 0, 2, 3, 1);
+        }
 
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             setup_style ();
