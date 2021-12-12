@@ -35,7 +35,9 @@ public class Atlas.StyleSwitcher : Gtk.Grid {
         };
 
         var light_style_image = new Gtk.Image.from_icon_name ("display-brightness-symbolic", Gtk.IconSize.BUTTON);
-        var light_style_grid = new Gtk.Grid ();
+        var light_style_grid = new Gtk.Grid () {
+            tooltip_text = _("Light style")
+        };
         light_style_grid.attach (light_style_image, 0, 0, 1, 1);
         light_style_grid.attach (new Gtk.Label (_("Light")), 0, 1, 1, 1);
 
@@ -44,7 +46,9 @@ public class Atlas.StyleSwitcher : Gtk.Grid {
         light_style_radio.add (light_style_grid);
 
         var dark_style_image = new Gtk.Image.from_icon_name ("weather-clear-night-symbolic", Gtk.IconSize.BUTTON);
-        var dark_style_grid = new Gtk.Grid ();
+        var dark_style_grid = new Gtk.Grid () {
+            tooltip_text = _("Dark style")
+        };
         dark_style_grid.attach (dark_style_image, 0, 0, 1, 1);
         dark_style_grid.attach (new Gtk.Label (_("Dark")), 0, 1, 1, 1);
 
@@ -53,7 +57,9 @@ public class Atlas.StyleSwitcher : Gtk.Grid {
         dark_style_radio.add (dark_style_grid);
 
         var system_style_image = new Gtk.Image.from_icon_name ("emblem-system-symbolic", Gtk.IconSize.BUTTON);
-        var system_style_grid = new Gtk.Grid ();
+        var system_style_grid = new Gtk.Grid () {
+            tooltip_text = _("Use the same style set in the system")
+        };
         system_style_grid.attach (system_style_image, 0, 0, 1, 1);
         system_style_grid.attach (new Gtk.Label (_("System")), 0, 1, 1, 1);
 
