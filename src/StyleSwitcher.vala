@@ -6,30 +6,21 @@
  */
 
 public class Atlas.StyleSwitcher : Gtk.Grid {
-    /**
-     * `TRUE` if you mean to add other preference(s) following to `this` StyleSwitcher.
-     */
-    public bool has_bottom_separator { get; construct; }
-
-    private Granite.Settings granite_settings;
-    private Gtk.Settings gtk_settings;
+    private Gtk.Settings gtk_settings = Gtk.Settings.get_default ();
+    private Granite.Settings granite_settings = Granite.Settings.get_default ();
 
     private Gtk.RadioButton light_style_radio;
     private Gtk.RadioButton dark_style_radio;
     private Gtk.RadioButton system_style_radio;
 
-    public StyleSwitcher (bool has_bottom_separator) {
+    public StyleSwitcher () {
         Object (
             column_spacing: 6,
-            row_spacing: 6,
-            has_bottom_separator: has_bottom_separator
+            row_spacing: 6
         );
     }
 
     construct {
-        granite_settings = Granite.Settings.get_default ();
-        gtk_settings = Gtk.Settings.get_default ();
-
         var style_label = new Gtk.Label (_("Style:")) {
             halign = Gtk.Align.START
         };
@@ -71,14 +62,6 @@ public class Atlas.StyleSwitcher : Gtk.Grid {
         attach (light_style_radio, 0, 1, 1, 1);
         attach (dark_style_radio, 1, 1, 1, 1);
         attach (system_style_radio, 2, 1, 1, 1);
-
-        if (has_bottom_separator) {
-            var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
-                margin_top = 6,
-                margin_bottom = 6
-            };
-            attach (separator, 0, 2, 3, 1);
-        }
 
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             setup_style ();
