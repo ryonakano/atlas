@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2014-2021 Atlas Developers
+ * SPDX-FileCopyrightText: 2021 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 public class Spinner : Gtk.Spinner {

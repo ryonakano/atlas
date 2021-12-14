@@ -74,25 +74,12 @@ public class Atlas.MainWindow : Hdy.Window {
             valign = Gtk.Align.CENTER,
             completion = location_completion
         };
-        var mode_switch = new Granite.ModeSwitch.from_icon_name (
-            "display-brightness-symbolic",
-            "weather-clear-night-symbolic"
-        ) {
-            primary_icon_tooltip_text = _("Light background"),
-            secondary_icon_tooltip_text = _("Dark background"),
-            valign = Gtk.Align.CENTER
-        };
 
-        ///TRANSLATORS: Whether to follow system's dark style settings
-        var follow_system_label = new Gtk.Label (_("Follow system style:")) {
-            halign = Gtk.Align.END
-        };
+        var style_switcher = new StyleSwitcher (true);
 
-        var follow_system_switch = new Gtk.Switch () {
+        var layer_label = new Gtk.Label (_("Layer:")) {
             halign = Gtk.Align.START
         };
-
-        var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
 
         var mapnik_radio = new Gtk.RadioButton.with_label_from_widget (null, MapSource.get_display_string (MapSource.MAPNIK)) {
             active = false
@@ -124,11 +111,10 @@ public class Atlas.MainWindow : Hdy.Window {
             column_spacing = 6,
             row_spacing = 6
         };
-        preferences_grid.attach (follow_system_label, 0, 0, 1, 1);
-        preferences_grid.attach (follow_system_switch, 1, 0, 1, 1);
-        preferences_grid.attach (separator, 0, 1, 2, 1);
-        preferences_grid.attach (mapnik_radio, 0, 3, 2, 1);
-        preferences_grid.attach (transport_map_radio, 0, 4, 2, 1);
+        preferences_grid.attach (style_switcher, 0, 0, 1, 1);
+        preferences_grid.attach (layer_label, 0, 1, 1, 1);
+        preferences_grid.attach (mapnik_radio, 0, 2, 2, 1);
+        preferences_grid.attach (transport_map_radio, 0, 3, 2, 1);
 
         var preferences_button = new Gtk.ToolButton (
             new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR), null
@@ -149,7 +135,6 @@ public class Atlas.MainWindow : Hdy.Window {
         };
         headerbar.pack_start (current_location);
         headerbar.pack_end (preferences_button);
-        headerbar.pack_end (mode_switch);
         headerbar.pack_end (search_entry);
         headerbar.pack_end (spinner);
 
@@ -232,28 +217,6 @@ public class Atlas.MainWindow : Hdy.Window {
                 }
             }
         });
-
-        var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
-
-        granite_settings.notify["prefers-color-scheme"].connect (() => {
-            if (Application.settings.get_boolean ("is-follow-system-style")) {
-                gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
-            }
-        });
-
-        follow_system_switch.notify["active"].connect (() => {
-            if (follow_system_switch.active) {
-                gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
-            } else {
-                gtk_settings.gtk_application_prefer_dark_theme = Application.settings.get_boolean ("is-prefer-dark");
-            }
-        });
-
-        Application.settings.bind ("is-prefer-dark", mode_switch, "active", SettingsBindFlags.DEFAULT);
-        Application.settings.bind ("is-prefer-dark", gtk_settings, "gtk-application-prefer-dark-theme", SettingsBindFlags.DEFAULT);
-        Application.settings.bind ("is-follow-system-style", follow_system_switch, "active", SettingsBindFlags.DEFAULT);
-        Application.settings.bind ("is-follow-system-style", mode_switch, "sensitive", SettingsBindFlags.INVERT_BOOLEAN);
     }
 
     private bool suggestion_selected (Gtk.TreeModel model, Gtk.TreeIter iter) {

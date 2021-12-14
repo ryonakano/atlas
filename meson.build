@@ -26,7 +26,8 @@ sources = files(
     'src' / 'GeoClue.vala',
     'src' / 'LocationMarker.vala',
     'src' / 'MainWindow.vala',
-    'src' / 'Spinner.vala'
+    'src' / 'Spinner.vala',
+    'src' / 'StyleSwitcher.vala'
 )
 
 executable(
