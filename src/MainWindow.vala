@@ -111,16 +111,14 @@ public class Atlas.MainWindow : Hdy.Window {
             transport_map_radio.active = true;
         }
 
-        var preferences_grid = new Gtk.Grid () {
-            margin = 12,
-            column_spacing = 6,
-            row_spacing = 6
+        var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
+            margin = 12
         };
-        preferences_grid.attach (style_switcher, 0, 0, 1, 1);
-        preferences_grid.attach (separator, 0, 1, 3, 1);
-        preferences_grid.attach (layer_label, 0, 2, 1, 1);
-        preferences_grid.attach (mapnik_radio, 0, 3, 2, 1);
-        preferences_grid.attach (transport_map_radio, 0, 4, 2, 1);
+        preferences_box.add (style_switcher);
+        preferences_box.add (separator);
+        preferences_box.add (layer_label);
+        preferences_box.add (mapnik_radio);
+        preferences_box.add (transport_map_radio);
 
         var preferences_button = new Gtk.ToolButton (
             new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR), null
@@ -129,7 +127,7 @@ public class Atlas.MainWindow : Hdy.Window {
         };
 
         var preferences_popover = new Gtk.Popover (preferences_button);
-        preferences_popover.add (preferences_grid);
+        preferences_popover.add (preferences_box);
 
         preferences_button.clicked.connect (() => {
             preferences_popover.show_all ();
