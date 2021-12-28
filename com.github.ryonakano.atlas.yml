@@ -1,6 +1,6 @@
 app-id: com.github.ryonakano.atlas
 runtime: io.elementary.Platform
-runtime-version: '6'
+runtime-version: '6.1'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.atlas
 finish-args:
@@ -23,6 +23,7 @@ modules:
       - type: git
         url: https://github.com/GNOME/geocode-glib.git
         tag: '3.26.2'
+        commit: 34f420cbe1ff3f45fde9179ba07e0259b9ce505b
   - name: atlas
     buildsystem: meson
     sources:
