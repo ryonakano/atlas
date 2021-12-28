@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>16</title>
+    <defs>
+        <linearGradient x1="48.9045%" y1="0.395456311%" x2="48.9045%" y2="99.9291165%" id="linearGradient-1">
+            <stop stop-color="#FFF9C7" offset="0%"></stop>
+            <stop stop-color="#CCCCCC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#9BDB4D" offset="0%"></stop>
+            <stop stop-color="#68B723" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="49.9999992%" cy="50.0085019%" fx="49.9999992%" fy="50.0085019%" r="149.999996%" gradientTransform="translate(0.500000,0.500085),scale(0.333333,1.000000),translate(-0.500000,-0.500085)" id="radialGradient-3">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <filter x="-66.7%" y="-200.0%" width="233.3%" height="500.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FF8C82" offset="1.74278846%"></stop>
+            <stop stop-color="#C6262E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FAFAFA" stop-opacity="0.296984266" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.10393903" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="9.76491615e-14%" id="linearGradient-7">
+            <stop stop-color="#A10705" offset="0%"></stop>
+            <stop stop-color="#7A0000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50.0000117%" y1="-1.35133155%" x2="50.0000117%" y2="101.351402%" id="linearGradient-8">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.23529412" offset="6.316455%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.15686275" offset="95.056331%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.39215687" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Base-Square-Fill" fill="url(#linearGradient-1)" fill-rule="nonzero" x="2" y="2" width="13.000003" height="13.000003" rx="2"></rect>
+        <path d="M2.34446574,10.7783196 C2.1640439,11.0201447 4.99275244,9.49438571 7.37868552,9.07667932 C8.50000416,8.88036955 9.1699073,9.06099511 9.38839493,9.61855599 C9.77943659,10.621592 10.3487173,11.5454387 11.0674524,12.3469446 L13,14.5011186 L13,14.5011186 C10.6848081,14.3595387 8.95975331,14.3144847 7.82483578,14.3659567 C7.06438677,14.4004454 5.7090854,14.323073 4.22430019,14.5011186 C4.22430019,14.5011186 4.22430019,14.5011186 4.22430019,14.5011186 C3.23451873,14.6198067 2.33592664,13.913646 2.21723859,12.9238645 C2.20250739,12.8010159 2.20044666,12.6769781 2.21108892,12.5537079 C2.21215763,12.54136 2.21269401,12.5351507 2.21270071,12.5350803 C2.31468276,11.4629183 2.41794446,10.6798337 2.34446574,10.7783196 Z" id="Green-Park" fill="url(#linearGradient-2)"></path>
+        <g id="Pin" transform="translate(4.000000, 4.000000)">
+            <ellipse id="Shadow" fill="url(#radialGradient-3)" fill-rule="nonzero" opacity="0.580798921" filter="url(#filter-4)" cx="4.5" cy="8.5" rx="4.5" ry="1.5"></ellipse>
+            <path d="M4.5,0.5 C5.33877791,0.5 6.10059424,0.784306501 6.65111174,1.25209155 C7.16972899,1.69277035 7.5,2.29878812 7.5,2.97401564 C7.5,3.21518389 7.45797241,3.44800805 7.38082551,3.66513179 C7.25896515,4.00257833 7.16372607,4.24012284 7.09255454,4.37548111 C6.6339918,5.24760312 6.22184389,5.85113235 5.92424288,6.28743868 C5.5369824,6.85822133 5.05830462,7.47273029 4.43393906,8.21219036 C3.88560573,7.50854072 3.45727896,6.91764023 3.14869065,6.43770423 C2.70884747,5.76232489 2.31353432,5.15765232 1.91781251,4.38114752 C1.57997064,3.62270849 1.5,3.30632576 1.5,2.97401564 C1.5,2.29878812 1.83027101,1.69277035 2.34888826,1.25209155 C2.89940576,0.784306501 3.66122209,0.5 4.5,0.5 Z" id="Pin-Shape" stroke="url(#linearGradient-6)" fill="url(#linearGradient-5)"></path>
+            <path d="M4.5,-0.5 C5.59421871,-0.5 6.58240239,-0.118550424 7.29863573,0.490046478 C8.04676932,1.12574962 8.5,2.00673967 8.5,2.97401564 C8.5,3.83378715 8.14205995,4.62474939 7.53754628,5.23664552 C7.23887775,5.79342755 6.97410744,6.22408797 6.76477042,6.56434189 C6.28257588,7.35229655 5.66536061,8.213205 4.81300432,9.30728573 C4.67186402,9.48845278 4.53534591,9.66180437 4.40279204,9.82794462 C4.27662629,9.6567194 4.14659958,9.47808282 4.01272699,9.29204181 C3.25587108,8.24024887 2.68436758,7.3801988 2.29853969,6.71487668 C1.95749121,6.13403401 1.71247447,5.71706661 1.45750398,5.231915 C0.855828971,4.62012298 0.5,3.83126587 0.5,2.97401564 C0.5,2.00673967 0.95323068,1.12574962 1.70136427,0.490046478 C2.41759761,-0.118550424 3.40578129,-0.5 4.5,-0.5 Z" id="Pin-Shape" stroke="#C6262E"></path>
+            <circle id="Pin-Oval-Highlight" fill-opacity="0.4" fill="#FFFFFF" cx="4.5" cy="4.5" r="1.5"></circle>
+            <circle id="Pin-Oval" fill="url(#linearGradient-7)" cx="4.5" cy="3.5" r="1.5"></circle>
+            <path d="M4.5,2 C5.32842712,2 6,2.82081129 6,3.83333333 C6,3.86132778 5.99948663,3.88917568 5.99847078,3.91686373 L6,4 C6,2.98747796 5.32842712,2.16666667 4.5,2.16666667 C3.69460759,2.16666667 3.03746792,2.94246665 3.00154659,3.91599755 L3,3.83333333 C3,2.82081129 3.67157288,2 4.5,2 Z" id="Pin-Oval-Inset-2" fill-opacity="0.14" fill="#000000"></path>
+            <path d="M4.5,2 C5.32842712,2 6,2.82052199 6,3.83268715 C6,3.88905221 5.99791738,3.94482296 5.99384103,3.9998908 C5.925155,3.0653955 5.28256069,2.33321585 4.5,2.33321585 C3.71743931,2.33321585 3.074845,3.0653955 3.00608848,3.99965444 C3.00208262,3.94482296 3,3.88905221 3,3.83268715 C3,2.82052199 3.67157288,2 4.5,2 Z" id="Pin-Oval-Inset-1" fill-opacity="0.07" fill="#000000"></path>
+        </g>
+        <rect id="Base-Edge-Highlight" stroke="url(#linearGradient-8)" opacity="0.3" stroke-linecap="round" stroke-linejoin="round" x="3" y="2.9999999" width="11" height="11" rx="1"></rect>
+        <rect id="Base-Square-Border" stroke="#7D7D7D" opacity="0.695079985" stroke-linecap="round" stroke-linejoin="round" x="2" y="2" width="13.000003" height="13.000003" rx="2"></rect>
+    </g>
+</svg>

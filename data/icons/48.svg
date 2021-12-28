@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>48</title>
+    <defs>
+        <radialGradient cx="-0.14038738%" cy="50.0000031%" fx="-0.14038738%" fy="50.0000031%" r="111.267109%" gradientTransform="translate(-0.001404,0.500000),scale(0.900000,1.000000),scale(1.000000,0.450149),translate(0.001404,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#181818" offset="0%"></stop>
+            <stop stop-color="#181818" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="53.7789185%" y1="100.396122%" x2="53.7789185%" y2="-0.00795714233%" id="linearGradient-2">
+            <stop stop-color="#181818" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#181818" offset="50%"></stop>
+            <stop stop-color="#181818" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="48.9045%" y1="0.395456311%" x2="48.9045%" y2="99.9291165%" id="linearGradient-3">
+            <stop stop-color="#FFF9C7" offset="0%"></stop>
+            <stop stop-color="#CCCCCC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#9BDB4D" offset="0%"></stop>
+            <stop stop-color="#68B723" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FFF394" offset="0%"></stop>
+            <stop stop-color="#FFE16B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFF394" offset="0%"></stop>
+            <stop stop-color="#FFE16B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-30.9477844%" y1="50%" x2="100%" y2="50%" id="linearGradient-7">
+            <stop stop-color="#FFC27D" offset="0%"></stop>
+            <stop stop-color="#CC3B02" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="49.9999992%" cy="50.0085019%" fx="49.9999992%" fy="50.0085019%" r="142.857139%" gradientTransform="translate(0.500000,0.500085),scale(0.350000,1.000000),translate(-0.500000,-0.500085)" id="radialGradient-8">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <filter x="-30.0%" y="-85.7%" width="160.0%" height="271.4%" filterUnits="objectBoundingBox" id="filter-9">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-10">
+            <stop stop-color="#FF8C82" offset="1.74278846%"></stop>
+            <stop stop-color="#C6262E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-11">
+            <stop stop-color="#FAFAFA" stop-opacity="0.296984266" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.10393903" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="9.76491615e-14%" id="linearGradient-12">
+            <stop stop-color="#A10705" offset="0%"></stop>
+            <stop stop-color="#7A0000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="90.5404992%" y1="1.35136432%" x2="90.5404992%" y2="98.5011324%" id="linearGradient-13">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.23529412" offset="6.781636%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.15686275" offset="94.694352%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.39215687" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="48" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Base-Shadow" transform="translate(3.000000, 40.250005)" fill-rule="nonzero" opacity="0.6">
+            <rect id="Base-Right-Shadow" fill="url(#radialGradient-1)" x="37" y="5.68434189e-14" width="5" height="4.4999995"></rect>
+            <rect id="Base-Left-Shadow" fill="url(#radialGradient-1)" transform="translate(2.500000, 2.250000) rotate(180.000000) translate(-2.500000, -2.250000) " x="0" y="5.00000112e-07" width="5" height="4.4999995"></rect>
+            <rect id="Base-Middle-Shadow" fill="url(#linearGradient-2)" x="5" y="5.68434189e-14" width="32" height="4.5"></rect>
+        </g>
+        <g id="Base-Square" transform="translate(4.500015, 4.000000)">
+            <rect id="Base-Square-Fill" fill="url(#linearGradient-3)" fill-rule="nonzero" x="0" y="0" width="39" height="39" rx="4"></rect>
+            <rect id="Base-Square-Border" stroke="#7D7D7D" opacity="0.695079985" stroke-linecap="round" stroke-linejoin="round" x="0" y="0" width="39" height="39" rx="4"></rect>
+        </g>
+        <path d="M4.55169698,33.2715366 C4.04412152,33.8281084 12.0020441,30.3165027 18.7143194,29.355132 C22.1147031,28.8681094 24.0395069,29.3890888 24.4887308,30.9180701 C24.9539162,32.4971515 25.8426906,33.9187735 27.0590122,35.028033 L34.5286034,41.8397324 L34.5286034,41.8397324 L9.09539382,42.1325213 C6.89928198,42.1595885 5.09207308,40.4109229 5.04685457,38.2151098 C4.97396569,34.637349 4.80891316,32.9894912 4.55169698,33.2715366 Z" id="Green-Park" fill="url(#linearGradient-4)"></path>
+        <g id="Yellow-Path-1" transform="translate(3.927890, 2.041822)">
+            <polygon id="Shadow-2" fill-opacity="0.07" fill="#000000" transform="translate(18.485970, 9.080223) rotate(-22.000000) translate(-18.485970, -9.080223) " points="0.753977102 7.50498767 29.9301824 7.20873815 37.6676025 10.2075352 -0.695661805 10.9517086"></polygon>
+            <polygon id="Shadow-1" fill-opacity="0.15" fill="#000000" transform="translate(18.147898, 8.847911) rotate(-22.000000) translate(-18.147898, -8.847911) " points="0.75401866 7.27107742 29.3745004 6.97818856 36.9641945 9.97787899 -0.668399203 10.7176338"></polygon>
+            <polygon id="Main-Path" stroke="#F9C440" stroke-width="0.5" fill="url(#linearGradient-5)" transform="translate(17.775411, 8.629697) rotate(-22.000000) translate(-17.775411, -8.629697) " points="0.754064447 7.05110213 28.7622531 6.76191601 36.1891836 9.76259073 -0.638361425 10.4974771"></polygon>
+        </g>
+        <g id="Yellow-Path-2" transform="translate(5.000000, 19.000000)">
+            <polyline id="Shadow-2" fill-opacity="0.07" fill="#000000" points="4.80574049e-15 14.5863739 38 1 38 4.18127504 18.9500588 11.3112253 34.8930343 24 29.3188957 24 14.5962832 12.6029109 6.26403485e-16 17.730395"></polyline>
+            <polyline id="Shadow-1" fill-opacity="0.15" fill="#000000" points="4.80574049e-15 14.5863739 38 1 38 4.18127504 18.9500588 11.3112253 34.8930343 24 29.3188957 24 14.5962832 12.6029109 6.26403485e-16 17.730395"></polyline>
+            <path d="M0,13.5863739 L38,0 L38,3.18127504 L18.9500588,10.3112253 L34.8930343,23 L29.3188957,23 L14.5962832,11.6029109 L0,16.730395" id="Main-Path" stroke="#F9C440" stroke-width="0.5" fill="url(#linearGradient-6)"></path>
+        </g>
+        <g id="Orange-Path" transform="translate(11.000000, 2.000000)">
+            <polygon id="Shadow-2" fill-opacity="0.07" fill="#000000" transform="translate(17.327779, 15.556876) rotate(41.000000) translate(-17.327779, -15.556876) " points="0.24690863 13.4944943 34.9718375 13.652693 38.4945099 17.6192574 -3.8389523 16.9710721"></polygon>
+            <polygon id="Shadow-1" fill-opacity="0.15" fill="#000000" transform="translate(17.452581, 15.334635) rotate(41.000000) translate(-17.452581, -15.334635) " points="0.505155543 13.2722533 34.9587959 13.430452 38.4539474 17.3970165 -3.54878459 16.7488311"></polygon>
+            <path d="M1.13278182,13.6279457 L34.7077065,13.7842142 L37.272244,16.7343771 L-1.73876339,16.1241419 L1.13278182,13.6279457 Z" id="Main-Path" stroke="#CC3B02" fill="url(#linearGradient-7)" transform="translate(17.666034, 15.189456) rotate(41.000000) translate(-17.666034, -15.189456) "></path>
+        </g>
+        <g id="Pin" transform="translate(13.000000, 8.000000)">
+            <ellipse id="Shadow" fill="url(#radialGradient-8)" fill-rule="nonzero" opacity="0.580798921" filter="url(#filter-9)" cx="10" cy="21.5" rx="10" ry="3.5"></ellipse>
+            <path d="M11,0.5 C13.3550919,0.5 15.489315,1.33735792 17.0333956,2.69798601 C18.5531254,4.03715645 19.5,5.88520839 19.5,7.93070837 C19.5,8.67188481 19.3758232,9.38750344 19.1457238,10.0597994 C18.8137783,11.0130798 18.5519815,11.6809707 18.3586082,12.0623605 C17.1605298,14.4253294 16.0842729,16.0609451 15.307876,17.2413566 C14.1746661,18.9734537 12.7415271,20.8555385 10.8059627,23.1978474 C9.09134858,20.9499323 7.77999377,19.094639 6.87277488,17.6313775 C6.7526244,17.4375858 6.62202318,17.2299224 6.48255195,17.0081632 C5.72203696,15.7989442 4.69385752,14.1650633 3.6632963,12.0679484 C3.52770623,11.7920328 3.37288438,11.3992327 3.19690405,10.8903896 C2.74037195,9.94297571 2.5,8.96159818 2.5,7.93070837 C2.5,5.88520839 3.44687458,4.03715645 4.96660439,2.69798601 C6.51068498,1.33735792 8.64490814,0.5 11,0.5 Z" id="Pin-Shape" stroke="url(#linearGradient-11)" fill="url(#linearGradient-10)"></path>
+            <path d="M11,-0.5 C13.6154709,-0.5 15.9812477,0.437991619 17.6945264,1.94771539 C19.432156,3.47889682 20.5,5.59619906 20.5,7.93070837 C20.5,8.7844747 20.3570272,9.608816 20.0901069,10.3886467 C19.7374324,11.4014569 19.4559201,12.1094596 19.250516,12.5145779 C18.0300203,14.9217603 16.9342768,16.5883842 16.144694,17.7888377 C14.9176422,19.6643709 13.345122,21.7142532 11.1748114,24.3199931 C11.0398293,24.4820566 10.9065438,24.641457 10.7749008,24.7975131 C10.6494627,24.6358361 10.5226029,24.4716237 10.3943216,24.3048754 C8.46610053,21.7984496 7.00931126,19.7493536 6.02287135,18.1583159 C5.90377102,17.9662179 5.77430468,17.7603737 5.63605247,17.5405527 C4.86154257,16.3090819 3.81531632,14.6446575 2.76580964,12.50899 C2.61942248,12.2111031 2.45063831,11.7898893 2.26120478,11.2445454 C1.77075235,10.2254299 1.5,9.10591133 1.5,7.93070837 C1.5,5.59619906 2.56784404,3.47889682 4.30547355,1.94771539 C6.01875228,0.437991619 8.38452911,-0.5 11,-0.5 Z" id="Pin-Shape" stroke="#C6262E"></path>
+            <ellipse id="Pin-Oval-Highlight" fill-opacity="0.707577579" fill="#FFFFFF" cx="11" cy="9.5" rx="4" ry="3.5"></ellipse>
+            <ellipse id="Pin-Oval" fill="url(#linearGradient-12)" cx="11" cy="8.5" rx="4" ry="3.5"></ellipse>
+            <path d="M11,5 C13.209139,5 15,6.71285294 15,8.82576413 C15,8.88408369 14.9986356,8.94209848 14.9959358,8.99978087 L15,9.17356086 C15,7.06064968 13.209139,5.34779674 11,5.34779674 C8.8518366,5.34779674 7.09917964,6.96739991 7.00406421,8.99954412 L7,8.82576413 C7,6.71285294 8.790861,5 11,5 Z" id="Pin-Oval-Inset-2" fill-opacity="0.14" fill="#000000"></path>
+            <path d="M11,5 C13.209139,5 15,6.64159195 15,8.66659825 C15,8.77887178 14.9944949,8.8899667 14.9837187,8.99966858 C14.7995213,7.13074006 13.0862853,5.66665423 11,5.66665423 C8.91371466,5.66665423 7.20047873,7.13074006 7.01637943,8.99918488 C7.00550508,8.8899667 7,8.77887178 7,8.66659825 C7,6.64159195 8.790861,5 11,5 Z" id="Pin-Oval-Inset-1" fill-opacity="0.07" fill="#000000"></path>
+        </g>
+        <rect id="Base-Edge-Highlight" stroke="url(#linearGradient-13)" opacity="0.35" x="6.0000153" y="5.5" width="36" height="36" rx="3"></rect>
+    </g>
+</svg>
