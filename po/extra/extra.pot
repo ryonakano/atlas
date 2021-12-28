@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 21:47+0900\n"
+"POT-Creation-Date: 2021-12-28 21:57+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgid "Add the new style switcher"
 msgstr ""
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:35
-msgid "Redesigned &amp; vectored app icon"
+msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr ""
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:37
