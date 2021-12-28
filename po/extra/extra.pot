@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 21:23+0100\n"
+"POT-Creation-Date: 2021-12-28 21:47+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,37 @@ msgstr ""
 msgid "Jump to your current location instantly"
 msgstr ""
 
+#: data/com.github.ryonakano.atlas.appdata.xml.in:32
+msgid ""
+"Fix the app being introduced as if sharing your location to someone in "
+"AppCenter"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:33
+msgid "Show the shortcut key for search entry using tooltip"
+msgstr ""
+
 #: data/com.github.ryonakano.atlas.appdata.xml.in:34
+msgid "Add the new style switcher"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:35
+msgid "Redesigned &amp; vectored app icon"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:37
+msgid "Translation updates:"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:39
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:46
 msgid "Initial release"
 msgstr ""
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:40
+#: data/com.github.ryonakano.atlas.appdata.xml.in:52
 msgid "Atlas Developers"
 msgstr ""
 

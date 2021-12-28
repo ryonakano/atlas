@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-30 21:23+0100\n"
+"POT-Creation-Date: 2021-12-28 21:45+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,31 +25,50 @@ msgstr ""
 msgid "Current Location"
 msgstr ""
 
-#: src/MainWindow.vala:72
+#: src/MainWindow.vala:72 src/MainWindow.vala:73
 msgid "Search Location"
 msgstr ""
 
-#: src/MainWindow.vala:80
-msgid "Light background"
+#: src/MainWindow.vala:85
+msgid "Layer:"
 msgstr ""
 
-#: src/MainWindow.vala:81
-msgid "Dark background"
-msgstr ""
-
-#. TRANSLATORS: Whether to follow system's dark style settings
-#: src/MainWindow.vala:86
-msgid "Follow system style:"
-msgstr ""
-
-#: src/MainWindow.vala:135
+#: src/MainWindow.vala:126
 msgid "Preferences"
 msgstr ""
 
-#: src/MainWindow.vala:167
+#: src/MainWindow.vala:157
 msgid "Detecting your current location…"
 msgstr ""
 
-#: src/MainWindow.vala:183
+#: src/MainWindow.vala:173
 msgid "Searching locations…"
+msgstr ""
+
+#: src/StyleSwitcher.vala:22
+msgid "Style:"
+msgstr ""
+
+#: src/StyleSwitcher.vala:28
+msgid "Light style"
+msgstr ""
+
+#: src/StyleSwitcher.vala:31
+msgid "Light"
+msgstr ""
+
+#: src/StyleSwitcher.vala:35
+msgid "Dark style"
+msgstr ""
+
+#: src/StyleSwitcher.vala:38
+msgid "Dark"
+msgstr ""
+
+#: src/StyleSwitcher.vala:42
+msgid "Use the same style set in the system"
+msgstr ""
+
+#: src/StyleSwitcher.vala:45
+msgid "System"
 msgstr ""
