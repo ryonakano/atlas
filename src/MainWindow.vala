@@ -4,13 +4,17 @@
  */
 
 public class Atlas.MainWindow : Hdy.Window {
+    private Atlas.GeoClue geo_clue;
+    private Gtk.ListStore location_store;
     private GtkChamplain.Embed champlain;
     private Champlain.View view;
-    private GLib.Cancellable search_cancellable;
-    private Gtk.ListStore location_store;
     private Champlain.MarkerLayer poi_layer;
     private Atlas.LocationMarker point;
+    private GLib.Cancellable search_cancellable;
     private uint configure_id;
+
+    private Gtk.Button current_location;
+    private Spinner spinner;
 
     private enum MapSource {
         MAPNIK,
@@ -38,7 +42,7 @@ public class Atlas.MainWindow : Hdy.Window {
     construct {
         Hdy.init ();
 
-        var geo_clue = new Atlas.GeoClue ();
+        geo_clue = new Atlas.GeoClue ();
         location_store = new Gtk.ListStore (2, typeof (Geocode.Place), typeof (string));
 
         var location_completion = new Gtk.EntryCompletion () {
@@ -58,15 +62,21 @@ public class Atlas.MainWindow : Hdy.Window {
         poi_layer = new Champlain.MarkerLayer.full (Champlain.SelectionMode.SINGLE);
         view.add_layer (poi_layer);
 
-        view.go_to (Atlas.Application.settings.get_double ("langitude"), Atlas.Application.settings.get_double ("longitude"));
-        view.zoom_level = Atlas.Application.settings.get_uint ("zoom-level");
-
-        var current_location = new Gtk.Button () {
+        current_location = new Gtk.Button () {
             tooltip_text = _("Current Location"),
             image = new Gtk.Image.from_icon_name ("mark-location-symbolic", Gtk.IconSize.LARGE_TOOLBAR)
         };
 
-        var spinner = new Spinner ();
+        spinner = new Spinner ();
+
+        double langitude = Atlas.Application.settings.get_double ("langitude");
+        double longitude = Atlas.Application.settings.get_double ("longitude");
+        view.go_to (langitude, longitude);
+        view.zoom_level = Atlas.Application.settings.get_uint ("zoom-level");
+
+        if (langitude == 0 && longitude == 0) { // First time launch
+            show_current_location ();
+        }
 
         var search_entry = new Gtk.SearchEntry () {
             placeholder_text = _("Search Location"),
@@ -153,16 +163,7 @@ public class Atlas.MainWindow : Hdy.Window {
         location_completion.match_selected.connect ((model, iter) => suggestion_selected (model, iter));
 
         current_location.clicked.connect (() => {
-            current_location.sensitive = false;
-            spinner.activate (_("Detecting your current location…"));
-
-            geo_clue.get_current_location.begin ((obj, res) => {
-                var location = geo_clue.get_current_location.end (res);
-                view.center_on (location.latitude, location.longitude);
-                view.zoom_level = 15;
-                spinner.deactivate ();
-                current_location.sensitive = true;
-            });
+            show_current_location ();
         });
 
         search_entry.search_changed.connect (() => {
@@ -244,6 +245,19 @@ public class Atlas.MainWindow : Hdy.Window {
 
         poi_layer.remove_all ();
         poi_layer.add_marker (point);
+    }
+
+    private void show_current_location () {
+        current_location.sensitive = false;
+        spinner.activate (_("Detecting your current location…"));
+
+        geo_clue.get_current_location.begin ((obj, res) => {
+            var location = geo_clue.get_current_location.end (res);
+            view.center_on (location.latitude, location.longitude);
+            view.zoom_level = 15;
+            spinner.deactivate ();
+            current_location.sensitive = true;
+        });
     }
 
     // TODO Move to GeoCode

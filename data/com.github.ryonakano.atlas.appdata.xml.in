@@ -33,6 +33,7 @@
           <li>Show the shortcut key for search entry using tooltip</li>
           <li>Add the new style switcher</li>
           <li>Redesigned &amp; vectored app icon (big thanks to @Suzie97)</li>
+          <li>Show your current location if launching the app for the first time</li>
         </ul>
         <p>Translation updates:</p>
         <ul>
