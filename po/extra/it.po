@@ -1,0 +1,96 @@
+# ITALIAN TRANSLATION.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 22:18+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:8
+#: data/com.github.ryonakano.atlas.desktop.in:3
+msgid "Atlas"
+msgstr "Atals"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:9
+#: data/com.github.ryonakano.atlas.desktop.in:5
+msgid "View where to go"
+msgstr "Visualizza dove vuoi andare"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:11
+msgid "A map app that helps you to see where you want to go."
+msgstr "Un'app per mappe che ti aiuta a vedere dove vuoi andare."
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:14
+msgid "Features include:"
+msgstr "Le caratteristiche includono:"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:16
+msgid "Search any place"
+msgstr "Cerca qualsiasi luogo"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:17
+msgid "Jump to your current location instantly"
+msgstr "Passa istantaneamente alla tua posizione attuale"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:32
+msgid ""
+"Fix the app being introduced as if sharing your location to someone in "
+"AppCenter"
+msgstr ""
+"Corretto l'app introdotta come se condividesse la tua posizione con qualcuno in "
+"App Center"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:33
+msgid "Show the shortcut key for search entry using tooltip"
+msgstr "Mostra il tasto di scelta rapida per la voce di ricerca utilizzando la descrizione comando"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:34
+msgid "Add the new style switcher"
+msgstr "Aggiunto il nuovo selettore di stile"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:35
+msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
+msgstr "Ridisegnata &amp; icona dell'app vettoriale (grazie a @Suzie97)"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:36
+msgid "Show your current location if launching the app for the first time"
+msgstr "Mostra la tua posizione attuale se avvii l'app per la prima volta"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:38
+msgid "Translation updates:"
+msgstr "Aggiornamenti di traduzione:"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:40
+msgid "Add French translation (thanks to @NathanBnm)"
+msgstr "Aggiungi la traduzione francese (grazie a @NathanBnm)"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:47
+msgid "Initial release"
+msgstr "Versione iniziale"
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:53
+msgid "Atlas Developers"
+msgstr "Sviluppatori Atlas"
+
+#: data/com.github.ryonakano.atlas.desktop.in:4
+msgid "Map"
+msgstr "Mappa"
+
+#: data/com.github.ryonakano.atlas.desktop.in:8
+msgid "com.github.ryonakano.atlas"
+msgstr "com.github.ryonakano.atlas"
+
+#: data/com.github.ryonakano.atlas.desktop.in:11
+msgid "Trip;Explore;"
+msgstr "Viaggio;Esplora;"
