@@ -30,7 +30,7 @@ msgstr "Cerca posizione"
 
 #: src/MainWindow.vala:85
 msgid "Layer:"
-msgstr ""
+msgstr "Strato:"
 
 #: src/MainWindow.vala:126
 msgid "Preferences"
