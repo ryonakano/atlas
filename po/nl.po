@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 21:45+0900\n"
+"PO-Revision-Date: 2022-02-10 13:45+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: src/MainWindow.vala:24
+msgid "Transport Map"
+msgstr "OV-kaart"
+
+#: src/MainWindow.vala:65
+msgid "Current Location"
+msgstr "Huidige locatie"
+
+#: src/MainWindow.vala:72 src/MainWindow.vala:73
+msgid "Search Location"
+msgstr "Locatie zoeken"
+
+#: src/MainWindow.vala:85
+msgid "Layer:"
+msgstr "Laag:"
+
+#: src/MainWindow.vala:126
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: src/MainWindow.vala:157
+msgid "Detecting your current location…"
+msgstr "Bezig met zoeken naar huidige locatie…"
+
+#: src/MainWindow.vala:173
+msgid "Searching locations…"
+msgstr "Bezig met zoeken naar locaties…"
+
+#: src/StyleSwitcher.vala:22
+msgid "Style:"
+msgstr "Thema:"
+
+#: src/StyleSwitcher.vala:28
+msgid "Light style"
+msgstr "Licht thema"
+
+#: src/StyleSwitcher.vala:31
+msgid "Light"
+msgstr "Licht"
+
+#: src/StyleSwitcher.vala:35
+msgid "Dark style"
+msgstr "Donker thema"
+
+#: src/StyleSwitcher.vala:38
+msgid "Dark"
+msgstr "Donker"
+
+#: src/StyleSwitcher.vala:42
+msgid "Use the same style set in the system"
+msgstr "Systeemthema"
+
+#: src/StyleSwitcher.vala:45
+msgid "System"
+msgstr "Systeemthema"
