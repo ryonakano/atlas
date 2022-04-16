@@ -48,8 +48,8 @@ msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
 msgstr ""
-"このアプリが位置情報を第三者と共有しているかのように AppCenter で紹介さ"
-"れていた不具合を修正"
+"このアプリが位置情報を第三者と共有しているかのように AppCenter で紹介されてい"
+"た不具合を修正"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:33
 msgid "Show the shortcut key for search entry using tooltip"
@@ -61,8 +61,7 @@ msgstr "新しいスタイルスイッチャーを追加"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:35
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-msgstr ""
-"アプリアイコンのデザイン変更とベクター化 (@Suzie97 に大きな拍手を)"
+msgstr "アプリアイコンのデザイン変更とベクター化 (@Suzie97 に大きな拍手を)"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:36
 msgid "Show your current location if launching the app for the first time"

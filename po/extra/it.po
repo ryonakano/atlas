@@ -48,12 +48,14 @@ msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
 msgstr ""
-"Corretto l'app introdotta come se condividesse la tua posizione con qualcuno in "
-"App Center"
+"Corretto l'app introdotta come se condividesse la tua posizione con qualcuno "
+"in App Center"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:33
 msgid "Show the shortcut key for search entry using tooltip"
-msgstr "Mostra il tasto di scelta rapida per la voce di ricerca utilizzando la descrizione comando"
+msgstr ""
+"Mostra il tasto di scelta rapida per la voce di ricerca utilizzando la "
+"descrizione comando"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:34
 msgid "Add the new style switcher"
