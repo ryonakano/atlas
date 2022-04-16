@@ -52,5 +52,5 @@ Click the following graphs to get started:
 
 | Main: Texts in the app itself | Extra: Texts in the desktop entry and the software center |
 | --- | --- |
-| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/atlas-main/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/atlas-main/) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/atlas-extra/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/atlas-extra/) |
+| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/atlas-main/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/atlas-main) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/atlas-extra/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/atlas-extra) |
 
