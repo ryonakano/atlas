@@ -35,3 +35,22 @@ To install, use `ninja install`, then execute with `com.github.ryonakano.atlas`
 
     ninja install
     com.github.ryonakano.atlas
+
+## Contributing
+There are many ways you can contribute, even if you don't know how to code.
+
+### Reporting Bugs or Suggesting Improvements
+Simply [create a new issue](https://github.com/ryonakano/louper/issues/new) describing your problem and how to reproduce or your suggestion. If you are not used to do, [this section](https://docs.elementary.io/contributor-guide/feedback/reporting-issues) is for you.
+
+### Writing Some Code
+We follow [the coding style of elementary OS](https://docs.elementary.io/develop/writing-apps/code-style) and [its Human Interface Guidelines](https://docs.elementary.io/hig/). Try to respect them.
+
+### Translation
+We accept translations of this project through [Weblate](https://weblate.org/). We would appreciate it if you would join our translation work!
+
+Click the following graphs to get started:
+
+| Main: Texts in the app itself | Extra: Texts in the desktop entry and the software center |
+| --- | --- |
+| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/atlas-main/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/atlas-main/) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/atlas-extra/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/atlas-extra/) |
+

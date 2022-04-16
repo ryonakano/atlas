@@ -54,7 +54,7 @@
   <url type="homepage">https://github.com/ryonakano/atlas</url>
   <url type="bugtracker">https://github.com/ryonakano/atlas/issues</url>
   <url type="help">https://github.com/ryonakano/atlas/issues</url>
-  <url type="translate">https://github.com/ryonakano/atlas</url>
+  <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <custom>
     <value key="x-appcenter-color-primary">#fe9ab8</value>
