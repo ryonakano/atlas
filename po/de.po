@@ -7,66 +7,70 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-28 21:45+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-04-19 00:09+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/rosp/atlas-main/"
+"de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: src/MainWindow.vala:24
 msgid "Transport Map"
-msgstr ""
+msgstr "Verkehrskarte"
 
 #: src/MainWindow.vala:65
 msgid "Current Location"
-msgstr ""
+msgstr "Aktueller Standort"
 
 #: src/MainWindow.vala:72 src/MainWindow.vala:73
 msgid "Search Location"
-msgstr ""
+msgstr "Standort suchen"
 
 #: src/MainWindow.vala:85
+#, fuzzy
 msgid "Layer:"
-msgstr ""
+msgstr "Schicht:"
 
 #: src/MainWindow.vala:126
 msgid "Preferences"
-msgstr ""
+msgstr "Einstellungen"
 
 #: src/MainWindow.vala:157
 msgid "Detecting your current location…"
-msgstr ""
+msgstr "Ihr aktueller Standort wird erkennt …"
 
 #: src/MainWindow.vala:173
 msgid "Searching locations…"
-msgstr ""
+msgstr "Suche nach Standorten …"
 
 #: src/StyleSwitcher.vala:22
 msgid "Style:"
-msgstr ""
+msgstr "Stil:"
 
 #: src/StyleSwitcher.vala:28
 msgid "Light style"
-msgstr ""
+msgstr "Heller Stil"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light"
-msgstr ""
+msgstr "Hell"
 
 #: src/StyleSwitcher.vala:35
 msgid "Dark style"
-msgstr ""
+msgstr "Dunkler Stil"
 
 #: src/StyleSwitcher.vala:38
 msgid "Dark"
-msgstr ""
+msgstr "Dunkel"
 
 #: src/StyleSwitcher.vala:42
 msgid "Use the same style set in the system"
-msgstr ""
+msgstr "Verwenden Sie denselben Stil, der im System eingestellt ist"
 
 #: src/StyleSwitcher.vala:45
 msgid "System"
-msgstr ""
+msgstr "System"
