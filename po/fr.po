@@ -3,19 +3,22 @@
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # Nathan Bonnemains (@NathanBnm), 2021.
 #
+# J. Lavoie <j.lavoie@net-c.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-28 21:45+0900\n"
-"PO-Revision-Date: 2021-11-30 21:18+0100\n"
-"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-04-17 02:57+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas-main/"
+"fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: src/MainWindow.vala:24
 msgid "Transport Map"
@@ -31,7 +34,7 @@ msgstr "Rechercher un lieu"
 
 #: src/MainWindow.vala:85
 msgid "Layer:"
-msgstr ""
+msgstr "Couche :"
 
 #: src/MainWindow.vala:126
 msgid "Preferences"
@@ -47,31 +50,31 @@ msgstr "Recherche de lieux…"
 
 #: src/StyleSwitcher.vala:22
 msgid "Style:"
-msgstr ""
+msgstr "Style :"
 
 #: src/StyleSwitcher.vala:28
 msgid "Light style"
-msgstr ""
+msgstr "Style clair"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light"
-msgstr ""
+msgstr "Clair"
 
 #: src/StyleSwitcher.vala:35
 msgid "Dark style"
-msgstr ""
+msgstr "Style sombre"
 
 #: src/StyleSwitcher.vala:38
 msgid "Dark"
-msgstr ""
+msgstr "Sombre"
 
 #: src/StyleSwitcher.vala:42
 msgid "Use the same style set in the system"
-msgstr ""
+msgstr "Utiliser le même ensemble de styles dans le système"
 
 #: src/StyleSwitcher.vala:45
 msgid "System"
-msgstr ""
+msgstr "Système"
 
 #~ msgid "Light background"
 #~ msgstr "Thème clair"
