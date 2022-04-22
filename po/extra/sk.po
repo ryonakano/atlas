@@ -2,91 +2,99 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
+# JohnDumpling <john_dumpling@protonmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-28 22:18+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-04-23 17:08+0000\n"
+"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-extra/"
+"sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.12.1-dev\n"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:8
 #: data/com.github.ryonakano.atlas.desktop.in:3
 msgid "Atlas"
-msgstr ""
+msgstr "Atlas"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:9
 #: data/com.github.ryonakano.atlas.desktop.in:5
 msgid "View where to go"
-msgstr ""
+msgstr "Zobrazte si, kam chcete ísť"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:11
 msgid "A map app that helps you to see where you want to go."
 msgstr ""
+"Mapová aplikácia, ktorá vám pomôže zobraziť si miesto, na ktoré sa chystáte "
+"ísť."
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:14
 msgid "Features include:"
-msgstr ""
+msgstr "Funkcie zahŕňajú:"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:16
 msgid "Search any place"
-msgstr ""
+msgstr "Vyhľadajte akékoľvek miesto"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:17
 msgid "Jump to your current location instantly"
-msgstr ""
+msgstr "Presuňte sa na vašu aktuálnu polohu okamžite jedným klikom"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:32
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
 msgstr ""
+"Oprava chyby, keď sa v AppCentre zobrazovalo upozornenie, že aplikácia s "
+"niekým zdieľa vašu polohu"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:33
 msgid "Show the shortcut key for search entry using tooltip"
-msgstr ""
+msgstr "Zobrazovať klávesovú skratku pre políčko vyhľadávania v popise"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:34
 msgid "Add the new style switcher"
-msgstr ""
+msgstr "Pridaný nový prepínač štýlov"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:35
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-msgstr ""
+msgstr "Prerobená a vektorizovaná ikonka aplikácie (veľká vďaka @Suzie97)"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:36
 msgid "Show your current location if launching the app for the first time"
-msgstr ""
+msgstr "Zobraziť vašu aktuálnu polohu, ak spustíte aplikáciu po prvý raz"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:38
 msgid "Translation updates:"
-msgstr ""
+msgstr "Aktualizácie prekladov:"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:40
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:47
 msgid "Initial release"
-msgstr ""
+msgstr "Prvé vydanie"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:53
 msgid "Atlas Developers"
-msgstr ""
+msgstr "Vývojári Atlas"
 
 #: data/com.github.ryonakano.atlas.desktop.in:4
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 #: data/com.github.ryonakano.atlas.desktop.in:8
 msgid "com.github.ryonakano.atlas"
-msgstr ""
+msgstr "com.github.ryonakano.atlas"
 
 #: data/com.github.ryonakano.atlas.desktop.in:11
 msgid "Trip;Explore;"
-msgstr ""
+msgstr "Výlet;Objaviť;Preskúmať;"
