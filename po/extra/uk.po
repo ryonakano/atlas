@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-28 22:18+0900\n"
-"PO-Revision-Date: 2022-05-23 22:18+0000\n"
+"PO-Revision-Date: 2022-05-27 13:17+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
 "atlas-extra/uk/>\n"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:14
 msgid "Features include:"
-msgstr "Включені функції:"
+msgstr "Особливості включають:"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:16
 msgid "Search any place"
