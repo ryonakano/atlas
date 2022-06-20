@@ -7,86 +7,91 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-28 22:18+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-21 12:18+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
+"atlas-extra/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1-dev\n"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:8
 #: data/com.github.ryonakano.atlas.desktop.in:3
 msgid "Atlas"
-msgstr ""
+msgstr "Atlas"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:9
 #: data/com.github.ryonakano.atlas.desktop.in:5
 msgid "View where to go"
-msgstr ""
+msgstr "Veja para onde ir"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:11
 msgid "A map app that helps you to see where you want to go."
-msgstr ""
+msgstr "Uma aplicação de mapa que o ajuda a ver para onde quer ir."
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:14
 msgid "Features include:"
-msgstr ""
+msgstr "Funcionalidades incluídas:"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:16
 msgid "Search any place"
-msgstr ""
+msgstr "Procurar qualquer lugar"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:17
 msgid "Jump to your current location instantly"
-msgstr ""
+msgstr "Vá instantaneamente para a sua localização atual"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:32
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
 msgstr ""
+"Corrige a aplicação de ser apresentada como se estivesse a partilhar a sua "
+"localização com alguém no Centro de Aplicações"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:33
 msgid "Show the shortcut key for search entry using tooltip"
-msgstr ""
+msgstr "Mostra a tecla de atalho para entrada de pesquisa usando a dica"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:34
 msgid "Add the new style switcher"
-msgstr ""
+msgstr "Adiciona o novo alternador de estilo"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:35
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-msgstr ""
+msgstr "Ícone de aplicação redesenhado e vetorizado (obrigado a @Suzie97)"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:36
 msgid "Show your current location if launching the app for the first time"
-msgstr ""
+msgstr "Mostra a sua localização atual se iniciar a aplicação pela primeira vez"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:38
 msgid "Translation updates:"
-msgstr ""
+msgstr "Atualizações de tradução:"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:40
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:47
 msgid "Initial release"
-msgstr ""
+msgstr "Versão inicial"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:53
 msgid "Atlas Developers"
-msgstr ""
+msgstr "Programadores do Atlas"
 
 #: data/com.github.ryonakano.atlas.desktop.in:4
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 #: data/com.github.ryonakano.atlas.desktop.in:8
 msgid "com.github.ryonakano.atlas"
-msgstr ""
+msgstr "com.github.ryonakano.atlas"
 
 #: data/com.github.ryonakano.atlas.desktop.in:11
 msgid "Trip;Explore;"
-msgstr ""
+msgstr "Trip;Explore;Viagem;Explorar;"
