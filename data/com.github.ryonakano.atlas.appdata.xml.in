@@ -26,6 +26,15 @@
   <content_rating type="oars-1.1" />
 
   <releases>
+    <release version="1.0.1" date="2022-08-16">
+      <description>
+        <ul>
+          <li>Update the dependency geocode-glib from 3.26.2 to 3.26.4</li>
+          <li>Update copyright information</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.0" date="2021-12-28">
       <description>
         <ul>
