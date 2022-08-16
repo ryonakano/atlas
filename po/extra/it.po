@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 22:18+0900\n"
+"POT-Creation-Date: 2022-08-16 10:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,17 +82,19 @@ msgid "Initial release"
 msgstr "Versione iniziale"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:53
-msgid "Atlas Developers"
-msgstr "Sviluppatori Atlas"
+msgid "Ryo Nakano"
+msgstr ""
 
 #: data/com.github.ryonakano.atlas.desktop.in:4
 msgid "Map"
 msgstr "Mappa"
 
-#: data/com.github.ryonakano.atlas.desktop.in:8
-msgid "com.github.ryonakano.atlas"
-msgstr "com.github.ryonakano.atlas"
-
 #: data/com.github.ryonakano.atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "Viaggio;Esplora;"
+
+#~ msgid "Atlas Developers"
+#~ msgstr "Sviluppatori Atlas"
+
+#~ msgid "com.github.ryonakano.atlas"
+#~ msgstr "com.github.ryonakano.atlas"

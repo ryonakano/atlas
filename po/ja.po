@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 21:45+0900\n"
+"POT-Creation-Date: 2022-08-16 10:19+0900\n"
 "PO-Revision-Date: 2021-12-28 21:54+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -17,33 +17,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/MainWindow.vala:24
+#: src/MainWindow.vala:28
 msgid "Transport Map"
 msgstr "交通マップ"
 
-#: src/MainWindow.vala:65
+#: src/MainWindow.vala:66
 msgid "Current Location"
 msgstr "現在地"
 
-#: src/MainWindow.vala:72 src/MainWindow.vala:73
+#: src/MainWindow.vala:82 src/MainWindow.vala:83
 msgid "Search Location"
 msgstr "場所を検索"
 
-#: src/MainWindow.vala:85
+#: src/MainWindow.vala:95
 msgid "Layer:"
 msgstr "レイヤー:"
 
-#: src/MainWindow.vala:126
+#: src/MainWindow.vala:136
 msgid "Preferences"
 msgstr "設定"
 
-#: src/MainWindow.vala:157
-msgid "Detecting your current location…"
-msgstr "現在地を取得しています…"
-
-#: src/MainWindow.vala:173
+#: src/MainWindow.vala:174
 msgid "Searching locations…"
 msgstr "場所を検索しています…"
+
+#: src/MainWindow.vala:252
+msgid "Detecting your current location…"
+msgstr "現在地を取得しています…"
 
 #: src/StyleSwitcher.vala:22
 msgid "Style:"

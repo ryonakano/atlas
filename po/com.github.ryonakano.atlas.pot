@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 21:45+0900\n"
+"POT-Creation-Date: 2022-08-16 10:19+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,32 +17,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:24
+#: src/MainWindow.vala:28
 msgid "Transport Map"
 msgstr ""
 
-#: src/MainWindow.vala:65
+#: src/MainWindow.vala:66
 msgid "Current Location"
 msgstr ""
 
-#: src/MainWindow.vala:72 src/MainWindow.vala:73
+#: src/MainWindow.vala:82 src/MainWindow.vala:83
 msgid "Search Location"
 msgstr ""
 
-#: src/MainWindow.vala:85
+#: src/MainWindow.vala:95
 msgid "Layer:"
 msgstr ""
 
-#: src/MainWindow.vala:126
+#: src/MainWindow.vala:136
 msgid "Preferences"
 msgstr ""
 
-#: src/MainWindow.vala:157
-msgid "Detecting your current location…"
+#: src/MainWindow.vala:174
+msgid "Searching locations…"
 msgstr ""
 
-#: src/MainWindow.vala:173
-msgid "Searching locations…"
+#: src/MainWindow.vala:252
+msgid "Detecting your current location…"
 msgstr ""
 
 #: src/StyleSwitcher.vala:22

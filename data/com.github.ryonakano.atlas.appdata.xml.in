@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014-2021 Atlas Developers -->
+<!-- Copyright 2014-2015 Atlas Developers, 2018-2022 Ryo Nakano -->
 <component type="desktop">
   <id>com.github.ryonakano.atlas</id>
   <launchable type="desktop-id">com.github.ryonakano.atlas.desktop</launchable>
@@ -50,7 +50,7 @@
     </release>
   </releases>
 
-  <developer_name>Atlas Developers</developer_name>
+  <developer_name>Ryo Nakano</developer_name>
   <url type="homepage">https://github.com/ryonakano/atlas</url>
   <url type="bugtracker">https://github.com/ryonakano/atlas/issues</url>
   <url type="help">https://github.com/ryonakano/atlas/issues</url>

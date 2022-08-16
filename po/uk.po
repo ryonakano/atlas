@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 21:45+0900\n"
+"POT-Creation-Date: 2022-08-16 10:19+0900\n"
 "PO-Revision-Date: 2022-05-23 22:18+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
-"atlas-main/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/atlas-"
+"main/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,33 +19,33 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13-dev\n"
 
-#: src/MainWindow.vala:24
+#: src/MainWindow.vala:28
 msgid "Transport Map"
 msgstr "Транспортна мапа"
 
-#: src/MainWindow.vala:65
+#: src/MainWindow.vala:66
 msgid "Current Location"
 msgstr "Поточне місцеперебування"
 
-#: src/MainWindow.vala:72 src/MainWindow.vala:73
+#: src/MainWindow.vala:82 src/MainWindow.vala:83
 msgid "Search Location"
 msgstr "Пошук розташування"
 
-#: src/MainWindow.vala:85
+#: src/MainWindow.vala:95
 msgid "Layer:"
 msgstr "Шар:"
 
-#: src/MainWindow.vala:126
+#: src/MainWindow.vala:136
 msgid "Preferences"
 msgstr "Налаштування"
 
-#: src/MainWindow.vala:157
-msgid "Detecting your current location…"
-msgstr "Визначення поточного місцеперебування…"
-
-#: src/MainWindow.vala:173
+#: src/MainWindow.vala:174
 msgid "Searching locations…"
 msgstr "Пошук розташувань…"
+
+#: src/MainWindow.vala:252
+msgid "Detecting your current location…"
+msgstr "Визначення поточного місцеперебування…"
 
 #: src/StyleSwitcher.vala:22
 msgid "Style:"

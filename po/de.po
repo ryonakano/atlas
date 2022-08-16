@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 21:45+0900\n"
+"POT-Creation-Date: 2022-08-16 10:19+0900\n"
 "PO-Revision-Date: 2022-04-19 00:09+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/rosp/atlas-main/"
@@ -18,34 +18,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
-#: src/MainWindow.vala:24
+#: src/MainWindow.vala:28
 msgid "Transport Map"
 msgstr "Verkehrskarte"
 
-#: src/MainWindow.vala:65
+#: src/MainWindow.vala:66
 msgid "Current Location"
 msgstr "Aktueller Standort"
 
-#: src/MainWindow.vala:72 src/MainWindow.vala:73
+#: src/MainWindow.vala:82 src/MainWindow.vala:83
 msgid "Search Location"
 msgstr "Standort suchen"
 
-#: src/MainWindow.vala:85
+#: src/MainWindow.vala:95
 #, fuzzy
 msgid "Layer:"
 msgstr "Schicht:"
 
-#: src/MainWindow.vala:126
+#: src/MainWindow.vala:136
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: src/MainWindow.vala:157
-msgid "Detecting your current location…"
-msgstr "Ihr aktueller Standort wird erkennt …"
-
-#: src/MainWindow.vala:173
+#: src/MainWindow.vala:174
 msgid "Searching locations…"
 msgstr "Suche nach Standorten …"
+
+#: src/MainWindow.vala:252
+msgid "Detecting your current location…"
+msgstr "Ihr aktueller Standort wird erkennt …"
 
 #: src/StyleSwitcher.vala:22
 msgid "Style:"
