@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-16 10:20+0900\n"
+"POT-Creation-Date: 2022-08-16 10:30+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,6 +44,18 @@ msgid "Jump to your current location instantly"
 msgstr "Passa istantaneamente alla tua posizione attuale"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:32
+msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:33
+msgid "Update copyright information"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:34
+msgid "Update translations"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:41
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
@@ -51,37 +63,37 @@ msgstr ""
 "Corretto l'app introdotta come se condividesse la tua posizione con qualcuno "
 "in App Center"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:33
+#: data/com.github.ryonakano.atlas.appdata.xml.in:42
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr ""
 "Mostra il tasto di scelta rapida per la voce di ricerca utilizzando la "
 "descrizione comando"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:34
+#: data/com.github.ryonakano.atlas.appdata.xml.in:43
 msgid "Add the new style switcher"
 msgstr "Aggiunto il nuovo selettore di stile"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:35
+#: data/com.github.ryonakano.atlas.appdata.xml.in:44
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr "Ridisegnata &amp; icona dell'app vettoriale (grazie a @Suzie97)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:36
+#: data/com.github.ryonakano.atlas.appdata.xml.in:45
 msgid "Show your current location if launching the app for the first time"
 msgstr "Mostra la tua posizione attuale se avvii l'app per la prima volta"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:38
+#: data/com.github.ryonakano.atlas.appdata.xml.in:47
 msgid "Translation updates:"
 msgstr "Aggiornamenti di traduzione:"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:40
+#: data/com.github.ryonakano.atlas.appdata.xml.in:49
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Aggiungi la traduzione francese (grazie a @NathanBnm)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:47
+#: data/com.github.ryonakano.atlas.appdata.xml.in:56
 msgid "Initial release"
 msgstr "Versione iniziale"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:53
+#: data/com.github.ryonakano.atlas.appdata.xml.in:62
 msgid "Ryo Nakano"
 msgstr ""
 

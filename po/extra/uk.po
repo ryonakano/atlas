@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-16 10:20+0900\n"
+"POT-Creation-Date: 2022-08-16 10:30+0900\n"
 "PO-Revision-Date: 2022-06-22 17:20+0000\n"
 "Last-Translator: Artem <artem@molotov.work>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/atlas-"
@@ -49,6 +49,18 @@ msgid "Jump to your current location instantly"
 msgstr "Миттєвий перехід до свого поточного місцеперебування"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:32
+msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:33
+msgid "Update copyright information"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:34
+msgid "Update translations"
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:41
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
@@ -56,36 +68,36 @@ msgstr ""
 "Виправлено проблему, через яку здавалося, ніби застосунок поширює ваше "
 "місцеперебування з кимось у центрі застосунків"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:33
+#: data/com.github.ryonakano.atlas.appdata.xml.in:42
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr "Показ клавіші швидкого доступу для пошуку за допомогою підказки"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:34
+#: data/com.github.ryonakano.atlas.appdata.xml.in:43
 msgid "Add the new style switcher"
 msgstr "Додано новий перемикач стилів"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:35
+#: data/com.github.ryonakano.atlas.appdata.xml.in:44
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr ""
 "Оновлена й перероблена у векторну піктограма застосунку (спасибі @Suzie97)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:36
+#: data/com.github.ryonakano.atlas.appdata.xml.in:45
 msgid "Show your current location if launching the app for the first time"
 msgstr "Показ поточного місцеперебування, якщо застосунок запускається вперше"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:38
+#: data/com.github.ryonakano.atlas.appdata.xml.in:47
 msgid "Translation updates:"
 msgstr "Оновлення перекладів:"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:40
+#: data/com.github.ryonakano.atlas.appdata.xml.in:49
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Додано переклад французькою мовою (завдяки @NathanBnm)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:47
+#: data/com.github.ryonakano.atlas.appdata.xml.in:56
 msgid "Initial release"
 msgstr "Початковий випуск"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:53
+#: data/com.github.ryonakano.atlas.appdata.xml.in:62
 msgid "Ryo Nakano"
 msgstr ""
 
