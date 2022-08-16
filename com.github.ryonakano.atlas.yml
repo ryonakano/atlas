@@ -14,14 +14,15 @@ modules:
   - name: champlain
     buildsystem: meson
     sources:
-      - type: archive
-        url: https://download-fallback.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.20.tar.xz
-        sha256: 0232b4bfcd130a1c5bda7b6aec266bf2d06e701e8093df1886f1e26bc1ba3066
+      - type: git
+        url: https://gitlab.gnome.org/GNOME/libchamplain
+        tag: 'LIBCHAMPLAIN_0_12_20'
+        commit: 145e417f32e507b63c21ad4e915b808a6174099e
   - name: geocode-glib
     buildsystem: meson
     sources:
       - type: git
-        url: https://github.com/GNOME/geocode-glib.git
+        url: https://gitlab.gnome.org/GNOME/geocode-glib.git
         tag: '3.26.2'
         commit: 34f420cbe1ff3f45fde9179ba07e0259b9ce505b
   - name: atlas
