@@ -23,8 +23,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/geocode-glib.git
-        tag: '3.26.2'
-        commit: 34f420cbe1ff3f45fde9179ba07e0259b9ce505b
+        tag: '3.26.4'
+        commit: 210abe69d68e38947106f4680631c369b0c23189
   - name: atlas
     buildsystem: meson
     sources:
