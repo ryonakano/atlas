@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 22:18+0900\n"
+"POT-Creation-Date: 2022-08-16 10:20+0900\n"
 "PO-Revision-Date: 2022-04-23 17:08+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-extra/"
@@ -84,17 +84,19 @@ msgid "Initial release"
 msgstr "Prvé vydanie"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:53
-msgid "Atlas Developers"
-msgstr "Vývojári Atlas"
+msgid "Ryo Nakano"
+msgstr ""
 
 #: data/com.github.ryonakano.atlas.desktop.in:4
 msgid "Map"
 msgstr "Mapa"
 
-#: data/com.github.ryonakano.atlas.desktop.in:8
-msgid "com.github.ryonakano.atlas"
-msgstr "com.github.ryonakano.atlas"
-
 #: data/com.github.ryonakano.atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "Výlet;Objaviť;Preskúmať;"
+
+#~ msgid "Atlas Developers"
+#~ msgstr "Vývojári Atlas"
+
+#~ msgid "com.github.ryonakano.atlas"
+#~ msgstr "com.github.ryonakano.atlas"

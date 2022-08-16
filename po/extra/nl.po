@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 22:18+0900\n"
+"POT-Creation-Date: 2022-08-16 10:20+0900\n"
 "PO-Revision-Date: 2022-02-10 13:47+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -79,17 +79,19 @@ msgid "Initial release"
 msgstr "Eerste uitgave"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:53
-msgid "Atlas Developers"
-msgstr "Atlas-ontwikkelaars"
+msgid "Ryo Nakano"
+msgstr ""
 
 #: data/com.github.ryonakano.atlas.desktop.in:4
 msgid "Map"
 msgstr "Kaart"
 
-#: data/com.github.ryonakano.atlas.desktop.in:8
-msgid "com.github.ryonakano.atlas"
-msgstr "com.github.ryonakano.atlas"
-
 #: data/com.github.ryonakano.atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "Reis;Verkennen;Kaart;"
+
+#~ msgid "Atlas Developers"
+#~ msgstr "Atlas-ontwikkelaars"
+
+#~ msgid "com.github.ryonakano.atlas"
+#~ msgstr "com.github.ryonakano.atlas"
