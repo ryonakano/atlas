@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-16 10:30+0900\n"
-"PO-Revision-Date: 2022-06-22 17:20+0000\n"
-"Last-Translator: Artem <artem@molotov.work>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/atlas-"
-"extra/uk/>\n"
+"PO-Revision-Date: 2022-08-17 13:20+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/"
+"atlas-extra/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:8
 #: data/com.github.ryonakano.atlas.desktop.in:3
@@ -50,15 +50,15 @@ msgstr "Миттєвий перехід до свого поточного мі�
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:32
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr ""
+msgstr "Оновлення залежності geocode-glib з версії 3.26.2 до версії 3.26.4"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:33
 msgid "Update copyright information"
-msgstr ""
+msgstr "Оновлення даних про авторські права"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:34
 msgid "Update translations"
-msgstr ""
+msgstr "Оновлені переклади"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:41
 msgid ""
@@ -99,7 +99,7 @@ msgstr "Початковий випуск"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:62
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/com.github.ryonakano.atlas.desktop.in:4
 msgid "Map"
