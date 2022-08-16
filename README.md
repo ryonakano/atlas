@@ -14,14 +14,9 @@ On elementary OS? Click the button to get Atlas on AppCenter:
 ### For Developers
 You'll need the following dependencies:
 
-* libchamplain-0.12-dev
-* libchamplain-gtk-0.12-dev
-* libclutter-1.0-dev
-* libgeoclue-2-dev
-* libgeocode-glib-dev
-* libgranite-dev (>= 5.4.0)
-* libgtk-3.0-dev
-* libhandy-1-dev
+* libshumate-dev
+* libgranite-7-dev
+* libgtk4-dev
 * meson (>= 0.57.0)
 * valac
 

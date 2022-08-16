@@ -1,6 +1,6 @@
 app-id: com.github.ryonakano.atlas
 runtime: io.elementary.Platform
-runtime-version: '6.1'
+runtime-version: '7'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.atlas
 finish-args:
@@ -11,19 +11,14 @@ finish-args:
   - '--device=dri'
   - '--system-talk-name=org.freedesktop.GeoClue2'
 modules:
-  - name: champlain
+  - name: libshumate
     buildsystem: meson
-    sources:
-      - type: archive
-        url: https://download-fallback.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.20.tar.xz
-        sha256: 0232b4bfcd130a1c5bda7b6aec266bf2d06e701e8093df1886f1e26bc1ba3066
-  - name: geocode-glib
-    buildsystem: meson
+    config-opts:
+      - '-Dgtk_doc=false'
     sources:
       - type: git
-        url: https://github.com/GNOME/geocode-glib.git
-        tag: '3.26.2'
-        commit: 34f420cbe1ff3f45fde9179ba07e0259b9ce505b
+        url: https://github.com/GNOME/libshumate.git
+        branch: main
   - name: atlas
     buildsystem: meson
     sources:

@@ -25,11 +25,11 @@ config_header = configure_file(
 
 sources = files(
     'src' / 'Application.vala',
-    'src' / 'GeoClue.vala',
-    'src' / 'LocationMarker.vala',
+    # 'src' / 'GeoClue.vala',
+    # 'src' / 'LocationMarker.vala',
     'src' / 'MainWindow.vala',
-    'src' / 'Spinner.vala',
-    'src' / 'StyleSwitcher.vala'
+    # 'src' / 'Spinner.vala',
+    # 'src' / 'StyleSwitcher.vala'
 )
 
 executable(
@@ -37,14 +37,9 @@ executable(
     config_header,
     sources,
     dependencies: [
-        dependency('champlain-0.12'),
-        dependency('champlain-gtk-0.12'),
-        dependency('clutter-1.0'),
-        dependency('geocode-glib-1.0'),
-        dependency('granite', version: '>=5.4.0'),
-        dependency('gtk+-3.0'),
-        dependency('libgeoclue-2.0'),
-        dependency('libhandy-1')
+        dependency('gio-2.0'),
+        dependency('shumate-1.0'),
+        dependency('gtk4')
     ],
     install: true
 )
