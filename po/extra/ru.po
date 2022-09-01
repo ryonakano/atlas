@@ -7,94 +7,101 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-16 10:30+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-09-03 04:18+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/atlas-extra/"
+"ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:8
 #: data/com.github.ryonakano.atlas.desktop.in:3
 msgid "Atlas"
-msgstr ""
+msgstr "Atlas"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:9
 #: data/com.github.ryonakano.atlas.desktop.in:5
 msgid "View where to go"
-msgstr ""
+msgstr "Смотрите куда идти"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:11
 msgid "A map app that helps you to see where you want to go."
-msgstr ""
+msgstr "Карта, которая помогает вам смотреть куда вы хотите пойти."
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:14
 msgid "Features include:"
-msgstr ""
+msgstr "Функции:"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:16
 msgid "Search any place"
-msgstr ""
+msgstr "Ищите любое место"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:17
 msgid "Jump to your current location instantly"
-msgstr ""
+msgstr "Мгновенно переместитесь к вашему текущему местоположению"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:32
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr ""
+msgstr "Обновлена зависимость geocode-glib с 3.26.2 до 3.26.4"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:33
 msgid "Update copyright information"
-msgstr ""
+msgstr "Обновлена информация об авторских правах"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:34
 msgid "Update translations"
-msgstr ""
+msgstr "Обновлены переводы"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:41
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
 msgstr ""
+"Исправлена проблема, когда казалось, что приложение делится вашим "
+"местоположением с кем-то в AppCenter"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:42
 msgid "Show the shortcut key for search entry using tooltip"
-msgstr ""
+msgstr "Сочетание клавиш для поиска теперь показано во всплывающей подсказке"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:43
 msgid "Add the new style switcher"
-msgstr ""
+msgstr "Добавлен переключатель стиля"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:44
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr ""
+"Переработана и сделана векторной иконка приложения (большое спасибо @Suzie97)"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:45
 msgid "Show your current location if launching the app for the first time"
-msgstr ""
+msgstr "Показ вашего текущего местоположения при первом запуске"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:47
 msgid "Translation updates:"
-msgstr ""
+msgstr "Обновления переводов:"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:49
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Добавлен перевод на французский язык (спасибо @NathanBnm)"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:56
 msgid "Initial release"
-msgstr ""
+msgstr "Начальный выпуск"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:62
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/com.github.ryonakano.atlas.desktop.in:4
 msgid "Map"
-msgstr ""
+msgstr "Карта"
 
 #: data/com.github.ryonakano.atlas.desktop.in:11
 msgid "Trip;Explore;"
-msgstr ""
+msgstr "Путешествие;Исследовать;"
