@@ -2,20 +2,22 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021.
-#
-#, fuzzy
+# albanobattistella <albano_battistella@hotmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-16 10:30+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-09-03 04:18+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/atlas-extra/"
+"it/>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:8
 #: data/com.github.ryonakano.atlas.desktop.in:3
@@ -45,15 +47,15 @@ msgstr "Passa istantaneamente alla tua posizione attuale"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:32
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr ""
+msgstr "Aggiornata la dipendenza geocode-glib da 3.26.2 a 3.26.4"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:33
 msgid "Update copyright information"
-msgstr ""
+msgstr "Aggiornate le informazioni sul copyright"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:34
 msgid "Update translations"
-msgstr ""
+msgstr "Aggiornate le traduzioni"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:41
 msgid ""
@@ -95,7 +97,7 @@ msgstr "Versione iniziale"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:62
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/com.github.ryonakano.atlas.desktop.in:4
 msgid "Map"
