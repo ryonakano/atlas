@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-16 10:30+0900\n"
+"POT-Creation-Date: 2022-09-27 21:08+0900\n"
 "PO-Revision-Date: 2022-08-16 09:18+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
-"atlas-extra/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas-"
+"extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,19 +44,25 @@ msgstr "場所を検索できます"
 msgid "Jump to your current location instantly"
 msgstr "現在地をすぐに表示できます"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:32
+#: data/com.github.ryonakano.atlas.appdata.xml.in:19
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+
+#: data/com.github.ryonakano.atlas.appdata.xml.in:35
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
 msgstr "geocode-glib を 3.26.2 から 3.26.4 に更新"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:33
+#: data/com.github.ryonakano.atlas.appdata.xml.in:36
 msgid "Update copyright information"
 msgstr "著作権情報を更新"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:34
+#: data/com.github.ryonakano.atlas.appdata.xml.in:37
 msgid "Update translations"
 msgstr "翻訳を更新"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:41
+#: data/com.github.ryonakano.atlas.appdata.xml.in:44
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
@@ -64,35 +70,35 @@ msgstr ""
 "このアプリが位置情報を第三者と共有しているかのように AppCenter で紹介されてい"
 "た不具合を修正"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:42
+#: data/com.github.ryonakano.atlas.appdata.xml.in:45
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr "ツールチップを使用して検索欄にショートカットキーを表示"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:43
+#: data/com.github.ryonakano.atlas.appdata.xml.in:46
 msgid "Add the new style switcher"
 msgstr "新しいスタイルスイッチャーを追加"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:44
+#: data/com.github.ryonakano.atlas.appdata.xml.in:47
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr "アプリアイコンのデザイン変更とベクター化 (@Suzie97 に大きな拍手を)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:45
+#: data/com.github.ryonakano.atlas.appdata.xml.in:48
 msgid "Show your current location if launching the app for the first time"
 msgstr "アプリの初回起動時は現在地を表示するように修正"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:47
+#: data/com.github.ryonakano.atlas.appdata.xml.in:50
 msgid "Translation updates:"
 msgstr "翻訳の更新:"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:49
+#: data/com.github.ryonakano.atlas.appdata.xml.in:52
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "フランス語翻訳を追加 (貢献者: @NathanBnm)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:56
+#: data/com.github.ryonakano.atlas.appdata.xml.in:59
 msgid "Initial release"
 msgstr "最初のリリース"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:62
+#: data/com.github.ryonakano.atlas.appdata.xml.in:65
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
