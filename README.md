@@ -20,7 +20,7 @@ You'll need the following dependencies:
 * libgeoclue-2-dev
 * libgeocode-glib-dev
 * libgranite-dev (>= 5.4.0)
-* libgtk-3.0-dev
+* libgtk-3-dev
 * libhandy-1-dev
 * meson (>= 0.57.0)
 * valac
