@@ -16,6 +16,9 @@
       <li>Search any place</li>
       <li>Jump to your current location instantly</li>
     </ul>
+    <p>
+      This is a fork of "Atlas Maps" and wouldn't exist without work of Steffen Schuhmann.
+    </p>
   </description>
   <screenshots>
     <screenshot type="default">
