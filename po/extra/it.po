@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-27 21:08+0900\n"
-"PO-Revision-Date: 2022-09-03 04:18+0000\n"
+"PO-Revision-Date: 2022-10-17 12:59+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/atlas-extra/"
 "it/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:8
 #: data/com.github.ryonakano.atlas.desktop.in:3
@@ -50,6 +50,8 @@ msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
+"Questo è un fork di \"Atlas Maps\" e non esisterebbe senza il lavoro di "
+"Steffen Schuhmann."
 
 #: data/com.github.ryonakano.atlas.appdata.xml.in:35
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
