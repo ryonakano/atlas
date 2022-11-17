@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014-2015 Atlas Developers, 2018-2022 Ryo Nakano -->
-<component type="desktop">
+<component type="desktop-application">
   <id>com.github.ryonakano.atlas</id>
   <launchable type="desktop-id">com.github.ryonakano.atlas.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
+
   <name>Atlas</name>
   <summary>View where to go</summary>
   <description>
@@ -20,13 +21,33 @@
       This is a fork of "Atlas Maps" and wouldn't exist without work of Steffen Schuhmann.
     </p>
   </description>
+
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/ryonakano/atlas/master/data/Screenshot.png</image>
+      <caption>Search where to go</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/atlas/1.0.1/data/Screenshot.png</image>
     </screenshot>
   </screenshots>
 
+  <branding>
+    <color type="primary">#fe9ab8</color>
+    <color type="primary" schema_preference="light">#cc5e7f</color>
+    <color type="primary" schema_preference="dark">#f0a5bc</color>
+  </branding>
+
   <content_rating type="oars-1.1" />
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+
+  <url type="homepage">https://github.com/ryonakano/atlas</url>
+  <url type="bugtracker">https://github.com/ryonakano/atlas/issues</url>
+  <url type="help">https://github.com/ryonakano/atlas/issues</url>
+  <url type="translate">https://hosted.weblate.org/projects/rosp</url>
+
+  <developer_name>Ryo Nakano</developer_name>
 
   <releases>
     <release version="1.0.1" date="2022-08-16">
@@ -38,6 +59,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.0" date="2021-12-28">
       <description>
         <ul>
@@ -53,6 +75,7 @@
         </ul>
       </description>
     </release>
+
     <release version="0.1.0" date="2021-11-30">
       <description>
         <ul>
@@ -62,14 +85,4 @@
     </release>
   </releases>
 
-  <developer_name>Ryo Nakano</developer_name>
-  <url type="homepage">https://github.com/ryonakano/atlas</url>
-  <url type="bugtracker">https://github.com/ryonakano/atlas/issues</url>
-  <url type="help">https://github.com/ryonakano/atlas/issues</url>
-  <url type="translate">https://hosted.weblate.org/projects/rosp</url>
-
-  <custom>
-    <value key="x-appcenter-color-primary">#fe9ab8</value>
-    <value key="x-appcenter-color-primary-text">#1a1a1a</value>
-  </custom>
 </component>
