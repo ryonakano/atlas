@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-18 19:36+0900\n"
-"PO-Revision-Date: 2022-10-10 18:02+0000\n"
+"PO-Revision-Date: 2022-11-20 23:51+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas-extra/"
-"tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/"
+"atlas-metadata/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: data/atlas.metainfo.xml.in:9 data/atlas.desktop.in:3
 msgid "Atlas"
@@ -52,10 +52,8 @@ msgstr ""
 "çalışmaları olmadan var olamazdı."
 
 #: data/atlas.metainfo.xml.in:27
-#, fuzzy
-#| msgid "View where to go"
 msgid "Search where to go"
-msgstr "Nereye gideceğinizi görün"
+msgstr "Nereye gideceğinizi arayın"
 
 #: data/atlas.metainfo.xml.in:50
 msgid "Ryo Nakano"
