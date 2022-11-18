@@ -5,6 +5,8 @@ project(
     meson_version: '>=0.57.0'
 )
 
+app_nickname = 'atlas'
+
 gnome = import('gnome')
 i18n = import('i18n')
 
