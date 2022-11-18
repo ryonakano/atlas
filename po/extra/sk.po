@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-27 21:08+0900\n"
+"POT-Creation-Date: 2022-11-18 19:36+0900\n"
 "PO-Revision-Date: 2022-04-23 17:08+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-extra/"
@@ -19,53 +19,61 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.12.1-dev\n"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:8
-#: data/com.github.ryonakano.atlas.desktop.in:3
+#: data/atlas.metainfo.xml.in:9 data/atlas.desktop.in:3
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:9
-#: data/com.github.ryonakano.atlas.desktop.in:5
+#: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:5
 msgid "View where to go"
 msgstr "Zobrazte si, kam chcete ísť"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:11
+#: data/atlas.metainfo.xml.in:12
 msgid "A map app that helps you to see where you want to go."
 msgstr ""
 "Mapová aplikácia, ktorá vám pomôže zobraziť si miesto, na ktoré sa chystáte "
 "ísť."
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:14
+#: data/atlas.metainfo.xml.in:15
 msgid "Features include:"
 msgstr "Funkcie zahŕňajú:"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:16
+#: data/atlas.metainfo.xml.in:17
 msgid "Search any place"
 msgstr "Vyhľadajte akékoľvek miesto"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:17
+#: data/atlas.metainfo.xml.in:18
 msgid "Jump to your current location instantly"
 msgstr "Presuňte sa na vašu aktuálnu polohu okamžite jedným klikom"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:19
+#: data/atlas.metainfo.xml.in:20
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:35
+#: data/atlas.metainfo.xml.in:27
+#, fuzzy
+#| msgid "View where to go"
+msgid "Search where to go"
+msgstr "Zobrazte si, kam chcete ísť"
+
+#: data/atlas.metainfo.xml.in:50
+msgid "Ryo Nakano"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:56
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
 msgstr ""
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:36
+#: data/atlas.metainfo.xml.in:57
 msgid "Update copyright information"
 msgstr ""
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:37
+#: data/atlas.metainfo.xml.in:58
 msgid "Update translations"
 msgstr ""
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:44
+#: data/atlas.metainfo.xml.in:66
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
@@ -73,43 +81,39 @@ msgstr ""
 "Oprava chyby, keď sa v AppCentre zobrazovalo upozornenie, že aplikácia s "
 "niekým zdieľa vašu polohu"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:45
+#: data/atlas.metainfo.xml.in:67
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr "Zobrazovať klávesovú skratku pre políčko vyhľadávania v popise"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:46
+#: data/atlas.metainfo.xml.in:68
 msgid "Add the new style switcher"
 msgstr "Pridaný nový prepínač štýlov"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:47
+#: data/atlas.metainfo.xml.in:69
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr "Prerobená a vektorizovaná ikonka aplikácie (veľká vďaka @Suzie97)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:48
+#: data/atlas.metainfo.xml.in:70
 msgid "Show your current location if launching the app for the first time"
 msgstr "Zobraziť vašu aktuálnu polohu, ak spustíte aplikáciu po prvý raz"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:50
+#: data/atlas.metainfo.xml.in:72
 msgid "Translation updates:"
 msgstr "Aktualizácie prekladov:"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:52
+#: data/atlas.metainfo.xml.in:74
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:59
+#: data/atlas.metainfo.xml.in:82
 msgid "Initial release"
 msgstr "Prvé vydanie"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:65
-msgid "Ryo Nakano"
-msgstr ""
-
-#: data/com.github.ryonakano.atlas.desktop.in:4
+#: data/atlas.desktop.in:4
 msgid "Map"
 msgstr "Mapa"
 
-#: data/com.github.ryonakano.atlas.desktop.in:11
+#: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "Výlet;Objaviť;Preskúmať;"
 
