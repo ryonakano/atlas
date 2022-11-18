@@ -14,7 +14,7 @@ install_data(
 )
 
 i18n.merge_file(
-    input: meson.project_name() + '.desktop.in',
+    input: app_nickname + '.desktop.in',
     output: meson.project_name() + '.desktop',
     po_dir: meson.project_source_root() / 'po' / 'extra',
     type: 'desktop',
@@ -31,6 +31,6 @@ i18n.merge_file(
 )
 
 install_data(
-    'schemas' / 'com.github.ryonakano.atlas.gschema.xml',
+    app_nickname + '.gschema.xml',
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
 )
