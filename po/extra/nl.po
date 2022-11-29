@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-18 19:36+0900\n"
-"PO-Revision-Date: 2022-11-23 18:48+0000\n"
+"PO-Revision-Date: 2022-11-30 10:48+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/"
 "atlas-metadata/nl/>\n"
@@ -47,12 +47,12 @@ msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
+"Dit project is een afsplitsing van Atlas Maps en zou niet bestaan hebben "
+"zonder het werk van Steffen Schuhmann."
 
 #: data/atlas.metainfo.xml.in:27
-#, fuzzy
-#| msgid "View where to go"
 msgid "Search where to go"
-msgstr "Bekijk waar je heen moet"
+msgstr "Zoek je bestemming"
 
 #: data/atlas.metainfo.xml.in:50
 msgid "Ryo Nakano"
@@ -60,11 +60,11 @@ msgstr "Ryo Nakano"
 
 #: data/atlas.metainfo.xml.in:56
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr ""
+msgstr "Bijgewerkt: geocode-glib van 3.26.2 naar 3.26.4"
 
 #: data/atlas.metainfo.xml.in:57
 msgid "Update copyright information"
-msgstr ""
+msgstr "Bijgewerkt: copyrightinformatie"
 
 #: data/atlas.metainfo.xml.in:58
 msgid "Update translations"
@@ -75,22 +75,24 @@ msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
 msgstr ""
+"Opgelost: de toepassing kon worden gebruikt om een locatie te delen in "
+"AppCenter"
 
 #: data/atlas.metainfo.xml.in:67
 msgid "Show the shortcut key for search entry using tooltip"
-msgstr ""
+msgstr "Nieuw: de sneltoets van het zoekvak wordt getoond in de hulpballon"
 
 #: data/atlas.metainfo.xml.in:68
 msgid "Add the new style switcher"
-msgstr ""
+msgstr "Verbeterd: nieuwe schakelaar"
 
 #: data/atlas.metainfo.xml.in:69
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-msgstr ""
+msgstr "Opnieuw ontworpen vector-toepassingspictogram (veel dank aan @Suzie97!)"
 
 #: data/atlas.metainfo.xml.in:70
 msgid "Show your current location if launching the app for the first time"
-msgstr ""
+msgstr "Nieuw: je huidige locatie wordt getoond na de eerste opstart"
 
 #: data/atlas.metainfo.xml.in:72
 msgid "Translation updates:"
