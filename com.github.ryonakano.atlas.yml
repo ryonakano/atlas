@@ -18,7 +18,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/GNOME/libshumate.git
-        branch: main
+        tag: '1.0.3'
+        commit: 55d89e24de5086404b996a73e94cd56ee2e9541a
   - name: atlas
     buildsystem: meson
     sources:
