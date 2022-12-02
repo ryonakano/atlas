@@ -30,8 +30,8 @@ sources = files(
     # 'src' / 'GeoClue.vala',
     # 'src' / 'LocationMarker.vala',
     'src' / 'MainWindow.vala',
-    # 'src' / 'Spinner.vala',
-    # 'src' / 'StyleSwitcher.vala'
+    'src' / 'Spinner.vala',
+    'src' / 'StyleSwitcher.vala'
 )
 
 executable(
@@ -40,6 +40,7 @@ executable(
     sources,
     dependencies: [
         dependency('gio-2.0'),
+        dependency('granite-7'),
         dependency('shumate-1.0'),
         dependency('gtk4')
     ],
