@@ -3,93 +3,125 @@
 # This file is distributed under the same license as the extra package.
 # Nathan Bonnemains (@NathanBnm), 2021.
 #
+# rene-coty <irenee.thirion@e.email>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-16 10:20+0900\n"
-"PO-Revision-Date: 2021-11-30 21:18+0100\n"
-"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2022-11-18 19:36+0900\n"
+"PO-Revision-Date: 2022-09-25 10:22+0000\n"
+"Last-Translator: rene-coty <irenee.thirion@e.email>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas-extra/"
+"fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:8
-#: data/com.github.ryonakano.atlas.desktop.in:3
+#: data/atlas.metainfo.xml.in:9 data/atlas.desktop.in:3
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:9
-#: data/com.github.ryonakano.atlas.desktop.in:5
+#: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:5
 msgid "View where to go"
 msgstr "Visualisez où vous souhaitez vous rendre"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:11
+#: data/atlas.metainfo.xml.in:12
 msgid "A map app that helps you to see where you want to go."
 msgstr ""
 "Une application de cartes pour vous aider à visualiser les lieux ou vous "
 "souhaitez vous rendre."
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:14
+#: data/atlas.metainfo.xml.in:15
 msgid "Features include:"
 msgstr "Fonctionnalités incluses :"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:16
+#: data/atlas.metainfo.xml.in:17
 msgid "Search any place"
 msgstr "Recherchez n'importe quel lieu"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:17
+#: data/atlas.metainfo.xml.in:18
 msgid "Jump to your current location instantly"
 msgstr "Affichez votre position actuelle en un instant"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:32
+#: data/atlas.metainfo.xml.in:20
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:27
+#, fuzzy
+#| msgid "View where to go"
+msgid "Search where to go"
+msgstr "Visualisez où vous souhaitez vous rendre"
+
+#: data/atlas.metainfo.xml.in:50
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/atlas.metainfo.xml.in:56
+msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+msgstr ""
+"Mise à jour de la dépendance geocode-glib de la version 3.26.2 à 3.26.4"
+
+#: data/atlas.metainfo.xml.in:57
+msgid "Update copyright information"
+msgstr "Mise à jour des informations Copyright"
+
+#: data/atlas.metainfo.xml.in:58
+msgid "Update translations"
+msgstr "Mise à jour des traductions"
+
+#: data/atlas.metainfo.xml.in:66
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
 msgstr ""
+"Correction de l’anomalie qui présentait l’application comme vous permettant "
+"de partager votre localisation dans l’App Center"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:33
+#: data/atlas.metainfo.xml.in:67
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr ""
+"Affichage de la touche de raccourci pour l’entrée de recherche à l’aide "
+"d’une infobulle"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:34
+#: data/atlas.metainfo.xml.in:68
 msgid "Add the new style switcher"
-msgstr ""
+msgstr "Ajout du nouveau bouton pour changer le style"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:35
+#: data/atlas.metainfo.xml.in:69
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-msgstr ""
+msgstr "Nouvelle icône vectorisée (un grand merci à @Suzie97)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:36
+#: data/atlas.metainfo.xml.in:70
 msgid "Show your current location if launching the app for the first time"
 msgstr ""
+"Affichage de votre emplacement actuel lors du premier lancement de "
+"l’application"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:38
+#: data/atlas.metainfo.xml.in:72
 msgid "Translation updates:"
-msgstr ""
+msgstr "Mise à jour des traductions :"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:40
+#: data/atlas.metainfo.xml.in:74
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Ajout d’une traduction française (grâce à @NathanBnm)"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:47
+#: data/atlas.metainfo.xml.in:82
 msgid "Initial release"
 msgstr "Version initiale"
 
-#: data/com.github.ryonakano.atlas.appdata.xml.in:53
-msgid "Ryo Nakano"
-msgstr ""
-
-#: data/com.github.ryonakano.atlas.desktop.in:4
+#: data/atlas.desktop.in:4
 msgid "Map"
 msgstr "Carte"
 
-#: data/com.github.ryonakano.atlas.desktop.in:11
+#: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
-msgstr "Voyage;Explorer;"
+msgstr "Voyage;Explorer;trip;"
 
 #~ msgid "Atlas Developers"
 #~ msgstr "Les développeurs d'Atlas"

@@ -1,9 +1,11 @@
 project(
     'com.github.ryonakano.atlas',
     'vala', 'c',
-    version: '1.0.0',
+    version: '1.0.1',
     meson_version: '>=0.57.0'
 )
+
+app_nickname = 'atlas'
 
 gnome = import('gnome')
 i18n = import('i18n')
