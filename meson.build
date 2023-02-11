@@ -25,6 +25,13 @@ config_header = configure_file(
     configuration: conf_data
 )
 
+asresources = gnome.compile_resources(
+    'as-resources',
+    'data/' + app_nickname + '.gresources.xml',
+    source_dir: 'data',
+    c_name: 'as'
+)
+
 sources = files(
     'src' / 'Application.vala',
     # 'src' / 'GeoClue.vala',
@@ -37,6 +44,7 @@ sources = files(
 executable(
     meson.project_name (),
     config_header,
+    asresources,
     sources,
     dependencies: [
         dependency('gio-2.0'),

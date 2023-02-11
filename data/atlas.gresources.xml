@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/ryonakano/atlas/osm-liberty">
+    <file preprocess="json-stripblanks" alias="style.json">../subprojects/osm-liberty/style.json</file>
+    <file preprocess="json-stripblanks" alias="sprites.json">../subprojects/osm-liberty/sprites/osm-liberty.json</file>
+    <file alias="sprites.png">../subprojects/osm-liberty/sprites/osm-liberty.png</file>
+  </gresource>
+</gresources>

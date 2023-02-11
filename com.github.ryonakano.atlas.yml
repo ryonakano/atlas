@@ -11,10 +11,30 @@ finish-args:
   - '--device=dri'
   - '--system-talk-name=org.freedesktop.GeoClue2'
 modules:
+  - name: protobuf
+    buildsystem: autotools
+    config-opts:
+      - 'DIST_LANG=cpp'
+    cleanup:
+      - '/bin/protoc*'
+      - '/lib/libprotoc*'
+      - '/lib/libprotobuf-lite*'
+    sources:
+      - type: archive
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protobuf-all-21.12.tar.gz
+        sha256: 2c6a36c7b5a55accae063667ef3c55f2642e67476d96d355ff0acb13dbb47f09
+  - name: protobuf-c
+    buildsystem: autotools
+    sources:
+      - type: git
+        url: https://github.com/protobuf-c/protobuf-c.git
+        tag: v1.4.1
+        commit: abc67a11c6db271bedbb9f58be85d6f4e2ea8389
   - name: libshumate
     buildsystem: meson
     config-opts:
       - '-Dgtk_doc=false'
+      - '-Dvector_renderer=true'
     sources:
       - type: git
         url: https://github.com/GNOME/libshumate.git

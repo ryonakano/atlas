@@ -14,33 +14,37 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        //  GLib.Bytes style_json = GLib.resources_lookup_data (
-        //      "/com/github/ryonakano/atlas/map-style.json", GLib.ResourceLookupFlags.NONE
-        //  );
+        if (!Shumate.VectorRenderer.is_supported ()) {
+            return;
+        }
 
-        //  if (Shumate.VectorRenderer.is_supported ()) {
-        //      var renderer = new Shumate.VectorRenderer ("vector-tiles", (string) style_json.get_data ()) {
-        //          license = "© OpenStreetMap contributors"
-        //      };
-        //      var registry = new Shumate.MapSourceRegistry.with_defaults ();
-        //      registry.add (renderer);
+        GLib.Bytes style_json;
+        try {
+            style_json = GLib.resources_lookup_data (
+                "/com/github/ryonakano/atlas/osm-liberty/style.json", GLib.ResourceLookupFlags.NONE
+            );
+        } catch (Error e) {
+            warning (e.message);
+        }
 
-        //      var map = new Shumate.SimpleMap () {
-        //          map_source = renderer
-        //      };
-        //      child = map;
-        //  }
-        var renderer = new Shumate.RasterRenderer.from_url ("https://tile.openstreetmap.org/${z}/${x}/${y}.png") {
-            name = "OpenStreetMap Carto",
-            id = "osm-carto",
+        var renderer = new Shumate.VectorRenderer ("vector-tiles", (string) style_json.get_data ()) {
             license = "© OpenStreetMap contributors"
         };
-        var registry = new Shumate.MapSourceRegistry.with_defaults ();
-        registry.add (renderer);
+
+        GLib.Bytes sprites_json = GLib.resources_lookup_data (
+            "/com/github/ryonakano/atlas/osm-liberty/sprites.json", GLib.ResourceLookupFlags.NONE
+        );
+
+        var sprites_pixbuf = new Gdk.Pixbuf.from_resource (
+            "/com/github/ryonakano/atlas/osm-liberty/sprites.png"
+        );
+
+        renderer.set_sprite_sheet_data (sprites_pixbuf, (string) sprites_json.get_data ());
 
         var map = new Shumate.SimpleMap () {
             map_source = renderer
         };
+        child = map;
 
         current_location = new Gtk.Button () {
             tooltip_text = _("Current Location"),
@@ -91,8 +95,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_end (search_entry);
         headerbar.pack_end (spinner);
         set_titlebar (headerbar);
-
-        child = map;
 
         var event_controller_key = new Gtk.EventControllerKey ();
         event_controller_key.key_pressed.connect ((keyval, keycode, state) => {
