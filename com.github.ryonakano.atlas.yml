@@ -13,16 +13,14 @@ finish-args:
 modules:
   - name: protobuf
     buildsystem: autotools
-    config-opts:
-      - 'DIST_LANG=cpp'
     cleanup:
       - '/bin/protoc*'
       - '/lib/libprotoc*'
       - '/lib/libprotobuf-lite*'
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protobuf-all-21.12.tar.gz
-        sha256: 2c6a36c7b5a55accae063667ef3c55f2642e67476d96d355ff0acb13dbb47f09
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protobuf-cpp-3.21.12.tar.gz
+        sha256: 4eab9b524aa5913c6fffb20b2a8abf5ef7f95a80bc0701f3a6dbb4c607f73460
   - name: protobuf-c
     buildsystem: autotools
     sources:
