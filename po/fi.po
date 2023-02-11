@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-18 19:36+0900\n"
+"PO-Revision-Date: 2023-02-03 04:22+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/atlas-app/"
+"fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16-dev\n"
+
+#: src/MainWindow.vala:28
+msgid "Transport Map"
+msgstr "Liikkumiskartta"
+
+#: src/MainWindow.vala:66
+msgid "Current Location"
+msgstr "Nykyinen sijainti"
+
+#: src/MainWindow.vala:82 src/MainWindow.vala:83
+msgid "Search Location"
+msgstr "Etsi sijaintia"
+
+#: src/MainWindow.vala:95
+msgid "Layer:"
+msgstr "Taso:"
+
+#: src/MainWindow.vala:136
+msgid "Preferences"
+msgstr "Asetukset"
+
+#: src/MainWindow.vala:174
+msgid "Searching locations…"
+msgstr "Etsitään sijainteja…"
+
+#: src/MainWindow.vala:252
+msgid "Detecting your current location…"
+msgstr "Paikannetaan nykyistä sijaintia…"
+
+#: src/StyleSwitcher.vala:22
+msgid "Style:"
+msgstr "Tyyli:"
+
+#: src/StyleSwitcher.vala:28
+msgid "Light style"
+msgstr "Vaalea tyyli"
+
+#: src/StyleSwitcher.vala:31
+msgid "Light"
+msgstr "Vaalea"
+
+#: src/StyleSwitcher.vala:35
+msgid "Dark style"
+msgstr "Tumma tyyli"
+
+#: src/StyleSwitcher.vala:38
+msgid "Dark"
+msgstr "Tumma"
+
+#: src/StyleSwitcher.vala:42
+msgid "Use the same style set in the system"
+msgstr "Käytä järjestelmän tyyliä"
+
+#: src/StyleSwitcher.vala:45
+msgid "System"
+msgstr "Järjestelmä"

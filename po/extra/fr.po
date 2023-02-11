@@ -3,22 +3,22 @@
 # This file is distributed under the same license as the extra package.
 # Nathan Bonnemains (@NathanBnm), 2021.
 #
-# rene-coty <irenee.thirion@e.email>, 2022.
+# rene-coty <irenee.thirion@e.email>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-18 19:36+0900\n"
-"PO-Revision-Date: 2022-09-25 10:22+0000\n"
+"PO-Revision-Date: 2023-01-13 18:51+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas-extra/"
-"fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/"
+"atlas-metadata/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: data/atlas.metainfo.xml.in:9 data/atlas.desktop.in:3
 msgid "Atlas"
@@ -51,12 +51,12 @@ msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
+"Ceci est un fork de « Atlas Maps » qui n’existerait pas sans le travail de "
+"Steffen Schuhmann."
 
 #: data/atlas.metainfo.xml.in:27
-#, fuzzy
-#| msgid "View where to go"
 msgid "Search where to go"
-msgstr "Visualisez où vous souhaitez vous rendre"
+msgstr "Cherchez où vous souhaitez vous rendre"
 
 #: data/atlas.metainfo.xml.in:50
 msgid "Ryo Nakano"
