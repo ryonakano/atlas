@@ -1,7 +1,7 @@
 # Lithuanian translation for com.github.ryonakano.atlas
 # Copyright (C) 2021 THE com.github.ryonakano.atlas COPYRIGHT HOLDER
-# This file is distributed under the same license as the com.github.ryonakano.atlas package, which author:
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# PolPolyLingo <paulius.narkevicius@vilniustech.lt>, 2023
 #
 msgid ""
 msgstr ""
@@ -15,7 +15,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.1.1\n"
 
 #: data/atlas.metainfo.xml.in:9 data/atlas.desktop.in:3
 msgid "Atlas"
