@@ -27,22 +27,32 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             warning (e.message);
         }
 
-        var renderer = new Shumate.VectorRenderer ("vector-tiles", (string) style_json.get_data ()) {
-            license = "© OpenStreetMap contributors"
-        };
+        Shumate.VectorRenderer renderer;
+        try {
+            renderer = new Shumate.VectorRenderer ("vector-tiles", (string) style_json.get_data ());
+            renderer.set_license ("© OpenStreetMap contributors");
+        } catch (Error e) {
+            warning ("Failed to create vector map style: %s", e.message);
+        }
 
-        GLib.Bytes sprites_json = GLib.resources_lookup_data (
-            "/com/github/ryonakano/atlas/osm-liberty/sprites.json", GLib.ResourceLookupFlags.NONE
-        );
+        GLib.Bytes sprites_json;
+        try {
+            sprites_json = GLib.resources_lookup_data (
+                "/com/github/ryonakano/atlas/osm-liberty/sprites.json", GLib.ResourceLookupFlags.NONE
+            );
+            var sprites_pixbuf = new Gdk.Pixbuf.from_resource (
+                "/com/github/ryonakano/atlas/osm-liberty/sprites.png"
+            );
+            renderer.set_sprite_sheet_data (sprites_pixbuf, (string) sprites_json.get_data ());
+        } catch (Error e) {
+            warning ("Failed to create spritesheet for vector map style: %s", e.message);
+        }
 
-        var sprites_pixbuf = new Gdk.Pixbuf.from_resource (
-            "/com/github/ryonakano/atlas/osm-liberty/sprites.png"
-        );
-
-        renderer.set_sprite_sheet_data (sprites_pixbuf, (string) sprites_json.get_data ());
+        var registry = new Shumate.MapSourceRegistry.with_defaults ();
+        registry.add (renderer);
 
         var map = new Shumate.SimpleMap () {
-            map_source = renderer
+            map_source = registry.get_by_id (renderer.get_id ())
         };
         child = map;
 
