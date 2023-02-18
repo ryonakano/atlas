@@ -1,3 +1,3 @@
-[submodule "subprojects/osm-liberty"]
-	path = subprojects/osm-liberty
-	url = https://github.com/maputnik/osm-liberty.git
+[submodule "subprojects/osm-liberty-atlas"]
+	path = subprojects/osm-liberty-atlas
+	url = https://github.com/ryonakano/osm-liberty-atlas.git
