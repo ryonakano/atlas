@@ -1,6 +1,7 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: Copyright 2014-2015 Atlas Developers, 2018-2022 Ryo Nakano
+ * SPDX-FileCopyrightText: 2014-2015 Atlas Developers
+ *                         2018-2023 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 public class Atlas.Application : Gtk.Application {
