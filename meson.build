@@ -28,7 +28,7 @@ config_header = configure_file(
 sources = files(
     'src' / 'Application.vala',
     'src' / 'GeoClue.vala',
-    # 'src' / 'LocationMarker.vala',
+    'src' / 'MarkerLayer.vala',
     'src' / 'MainWindow.vala',
     'src' / 'Spinner.vala',
     'src' / 'StyleSwitcher.vala'

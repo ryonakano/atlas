@@ -5,6 +5,7 @@
 
 public class Atlas.MainWindow : Gtk.ApplicationWindow {
     private Atlas.GeoClue geo_clue;
+
     private Shumate.Map base_map;
 
     // The Royal Observatory
@@ -29,8 +30,11 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         var map_widget = new Shumate.SimpleMap () {
             map_source = registry.get_by_id (Shumate.MAP_SOURCE_OSM_MAPNIK)
         };
-        base_map = map_widget.map;
         child = map_widget;
+        base_map = map_widget.map;
+
+        var marker_layer = new Shumate.MarkerLayer (map_widget.viewport);
+        base_map.add_layer (marker_layer);
 
         current_location = new Gtk.Button () {
             tooltip_text = _("Current Location"),
@@ -95,6 +99,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         }
 
         base_map.go_to_full (latitude, longitude, zoom_level);
+//        MarkerLayer.new_marker_at_pos (marker_layer, latitude, longitude);
 
         var event_controller_key = new Gtk.EventControllerKey ();
         event_controller_key.key_pressed.connect ((keyval, keycode, state) => {
@@ -114,7 +119,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
             return false;
         });
-        ((Gtk.Widget)this).add_controller (event_controller_key);
+        ((Gtk.Widget) this).add_controller (event_controller_key);
 
         current_location.clicked.connect (() => {
             double la = DEFAULT_LATITUDE;
@@ -147,8 +152,8 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
         geo.get_current_location.begin ((obj, res) => {
             location = geo.get_current_location.end (res);
-            Spinner.deactivate (spinner);
             current_location.sensitive = true;
+            Spinner.deactivate (spinner);
         });
 
         if (location != null) {
