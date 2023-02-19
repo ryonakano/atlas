@@ -25,16 +25,9 @@ config_header = configure_file(
     configuration: conf_data
 )
 
-asresources = gnome.compile_resources(
-    'as-resources',
-    'data/' + app_nickname + '.gresources.xml',
-    source_dir: 'data',
-    c_name: 'as'
-)
-
 sources = files(
     'src' / 'Application.vala',
-    # 'src' / 'GeoClue.vala',
+    'src' / 'GeoClue.vala',
     # 'src' / 'LocationMarker.vala',
     'src' / 'MainWindow.vala',
     'src' / 'Spinner.vala',
@@ -44,11 +37,11 @@ sources = files(
 executable(
     meson.project_name (),
     config_header,
-    asresources,
     sources,
     dependencies: [
         dependency('gio-2.0'),
         dependency('granite-7'),
+        dependency('libgeoclue-2.0'),
         dependency('shumate-1.0'),
         dependency('gtk4')
     ],

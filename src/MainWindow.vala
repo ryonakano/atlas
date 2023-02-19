@@ -4,6 +4,9 @@
  */
 
 public class Atlas.MainWindow : Gtk.ApplicationWindow {
+    private Atlas.GeoClue geo_clue;
+    private Shumate.Map base_map;
+
     private Gtk.Button current_location;
     private Gtk.Spinner spinner;
 
@@ -14,47 +17,15 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        if (!Shumate.VectorRenderer.is_supported ()) {
-            return;
-        }
-
-        GLib.Bytes style_json;
-        try {
-            style_json = GLib.resources_lookup_data (
-                "/com/github/ryonakano/atlas/osm-liberty/style.json", GLib.ResourceLookupFlags.NONE
-            );
-        } catch (Error e) {
-            warning (e.message);
-        }
-
-        Shumate.VectorRenderer renderer;
-        try {
-            renderer = new Shumate.VectorRenderer ("vector-tiles", (string) style_json.get_data ());
-            renderer.set_license ("© OpenStreetMap contributors");
-        } catch (Error e) {
-            warning ("Failed to create vector map style: %s", e.message);
-        }
-
-        GLib.Bytes sprites_json;
-        try {
-            sprites_json = GLib.resources_lookup_data (
-                "/com/github/ryonakano/atlas/osm-liberty/sprites.json", GLib.ResourceLookupFlags.NONE
-            );
-            var sprites_pixbuf = new Gdk.Pixbuf.from_resource (
-                "/com/github/ryonakano/atlas/osm-liberty/sprites.png"
-            );
-            renderer.set_sprite_sheet_data (sprites_pixbuf, (string) sprites_json.get_data ());
-        } catch (Error e) {
-            warning ("Failed to create spritesheet for vector map style: %s", e.message);
-        }
+        geo_clue = new Atlas.GeoClue ();
 
         var registry = new Shumate.MapSourceRegistry.with_defaults ();
-        registry.add (renderer);
 
-        var map = new Shumate.SimpleMap () {
-            map_source = registry.get_by_id (renderer.get_id ())
+        var map_widget = new Shumate.SimpleMap () {
+            map_source = registry.get_by_id (Shumate.MAP_SOURCE_OSM_MAPNIK)
         };
-        child = map;
+        base_map = map_widget.map;
+        child = map_widget;
 
         current_location = new Gtk.Button () {
             tooltip_text = _("Current Location"),
@@ -106,6 +77,16 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_end (spinner);
         set_titlebar (headerbar);
 
+        double langitude = Atlas.Application.settings.get_double ("langitude");
+        double longitude = Atlas.Application.settings.get_double ("longitude");
+//        view.go_to (langitude, longitude);
+//        view.zoom_level = Atlas.Application.settings.get_uint ("zoom-level");
+
+        // First time launch
+        if (langitude == 0 && longitude == 0) {
+            show_current_location (base_map, geo_clue);
+        }
+
         var event_controller_key = new Gtk.EventControllerKey ();
         event_controller_key.key_pressed.connect ((keyval, keycode, state) => {
             if (Gdk.ModifierType.CONTROL_MASK in state) {
@@ -126,7 +107,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         ((Gtk.Widget)this).add_controller (event_controller_key);
 
         current_location.clicked.connect (() => {
-            show_current_location ();
+            show_current_location (base_map, geo_clue);
         });
 
         search_entry.search_changed.connect (() => {
@@ -145,16 +126,20 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         });
     }
 
-    private void show_current_location () {
+    private void show_current_location (Shumate.Map map, Atlas.GeoClue geo) {
         current_location.sensitive = false;
         Spinner.activate (spinner, _("Detecting your current location…"));
 
-        // TODO: Should be deactivated when moved to the current location
-        Timeout.add (5000, () => {
+        geo.get_current_location.begin ((obj, res) => {
+            var location = geo.get_current_location.end (res);
+            if (location == null) {
+                warning ("Failed to get the current location");
+            } else {
+                map.go_to_full (location.latitude, location.longitude, 15);
+            }
+
             Spinner.deactivate (spinner);
             current_location.sensitive = true;
-
-            return false;
         });
     }
 }

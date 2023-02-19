@@ -1,3 +1,0 @@
-[submodule "subprojects/osm-liberty-atlas"]
-	path = subprojects/osm-liberty-atlas
-	url = https://github.com/ryonakano/osm-liberty-atlas.git
