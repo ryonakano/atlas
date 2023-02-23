@@ -5,38 +5,18 @@
  */
 
 public class Atlas.MainWindow : Gtk.ApplicationWindow {
-    private Atlas.GeoClue geo_clue;
-
-    private Shumate.Map base_map;
-
-    // The Royal Observatory
-    private const double DEFAULT_LATITUDE = 51.2840;
-    private const double DEFAULT_LONGITUDE = 0.0005;
-    private const double DEFAULT_ZOOM_LEVEL = 10;
-
     private Gtk.Button current_location;
     private Gtk.Spinner spinner;
 
     public MainWindow () {
         Object (
-            title: "Atlas"
+            title: Application.APP_NAME
         );
     }
 
     construct {
-        geo_clue = new Atlas.GeoClue ();
-
-        var registry = new Shumate.MapSourceRegistry.with_defaults ();
-        Shumate.MapSource map_source_mapnik = registry.get_by_id (Shumate.MAP_SOURCE_OSM_MAPNIK);
-
-        var map_widget = new Shumate.SimpleMap () {
-            map_source = map_source_mapnik
-        };
+        var map_widget = new MapWidget ();
         child = map_widget;
-        base_map = map_widget.map;
-
-        var marker_layer = new Shumate.MarkerLayer (map_widget.viewport);
-        base_map.add_layer (marker_layer);
 
         current_location = new Gtk.Button () {
             tooltip_text = _("Current Location"),
@@ -80,7 +60,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         };
 
         var headerbar = new Gtk.HeaderBar () {
-            title_widget = new Gtk.Label ("Atlas")
+            title_widget = new Gtk.Label (Application.APP_NAME)
         };
         headerbar.pack_start (current_location);
         headerbar.pack_end (preferences_button);
@@ -88,7 +68,15 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_end (spinner);
         set_titlebar (headerbar);
 
-        init_go_to (map_widget, geo_clue);
+        map_widget.busy_begin.connect (() => {
+            current_location.sensitive = false;
+            spinner_activate (spinner);
+        });
+
+        map_widget.busy_end.connect (() => {
+            current_location.sensitive = true;
+            spinner_deactivate (spinner);
+        });
 
         var event_controller_key = new Gtk.EventControllerKey ();
         event_controller_key.key_pressed.connect ((keyval, keycode, state) => {
@@ -110,12 +98,13 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         ((Gtk.Widget) this).add_controller (event_controller_key);
 
         close_request.connect (() => {
-            save_map_state (base_map);
+            map_widget.save_map_state ();
             destroy ();
+            return false;
         });
 
         current_location.clicked.connect (() => {
-            go_to_current (base_map, geo_clue);
+            map_widget.go_to_current ();
         });
 
         search_entry.search_changed.connect (() => {
@@ -123,60 +112,23 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
                 return;
             }
 
-            Spinner.activate (spinner, _("Searching locations…"));
-
+            spinner_activate (spinner);
             // TODO: Should be deactivated when search result found
             Timeout.add (5000, () => {
-                Spinner.deactivate (spinner);
+                spinner_deactivate (spinner);
 
                 return false;
             });
         });
     }
 
-    private void init_go_to (Shumate.SimpleMap map_widget, Atlas.GeoClue geo) {
-        Shumate.Map base_map = map_widget.map;
-        Shumate.MapSource map_source = map_widget.map_source;
-
-        double latitude = Atlas.Application.settings.get_double ("latitude");
-        double longitude = Atlas.Application.settings.get_double ("longitude");
-        double zoom_level = Atlas.Application.settings.get_double ("zoom-level");
-        if (zoom_level < map_source.min_zoom_level || map_source.max_zoom_level < zoom_level) {
-            zoom_level = DEFAULT_ZOOM_LEVEL;
-        }
-
-        // First time launch
-        if (latitude == DEFAULT_LATITUDE && longitude == DEFAULT_LONGITUDE) {
-            go_to_current (base_map, geo);
-        } else {
-            base_map.go_to_full (latitude, longitude, zoom_level);
-        }
-
-//        MarkerLayer.new_marker_at_pos (marker_layer, latitude, longitude);
+    private void spinner_activate (Gtk.Spinner spinner) {
+        spinner.show ();
+        spinner.start ();
     }
 
-    private void go_to_current (Shumate.Map base_map, Atlas.GeoClue geo) {
-        GClue.Location? location = null;
-
-        current_location.sensitive = false;
-        Spinner.activate (spinner, _("Detecting your current location…"));
-
-        geo.get_current_location.begin ((obj, res) => {
-            location = geo.get_current_location.end (res);
-            current_location.sensitive = true;
-            Spinner.deactivate (spinner);
-
-            if (location == null) {
-                return;
-            }
-
-            base_map.go_to_full (location.latitude, location.longitude, DEFAULT_ZOOM_LEVEL);
-        });
-    }
-
-    private void save_map_state (Shumate.Map map) {
-        Atlas.Application.settings.set_double ("latitude", map.viewport.latitude);
-        Atlas.Application.settings.set_double ("longitude", map.viewport.longitude);
-        Atlas.Application.settings.set_double ("zoom-level", map.viewport.zoom_level);
+    private void spinner_deactivate (Gtk.Spinner spinner) {
+        spinner.hide ();
+        spinner.stop ();
     }
 }

@@ -30,7 +30,7 @@ sources = files(
     'src' / 'GeoClue.vala',
     'src' / 'MarkerLayer.vala',
     'src' / 'MainWindow.vala',
-    'src' / 'Spinner.vala',
+    'src' / 'MapWidget.vala',
     'src' / 'StyleSwitcher.vala'
 )
 
