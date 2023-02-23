@@ -12,7 +12,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     // The Royal Observatory
     private const double DEFAULT_LATITUDE = 51.2840;
     private const double DEFAULT_LONGITUDE = 0.0005;
-    private const double DEFAULT_ZOOM_LEVEL = 4;
+    private const double DEFAULT_ZOOM_LEVEL = 10;
 
     private Gtk.Button current_location;
     private Gtk.Spinner spinner;
@@ -27,9 +27,10 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         geo_clue = new Atlas.GeoClue ();
 
         var registry = new Shumate.MapSourceRegistry.with_defaults ();
+        Shumate.MapSource map_source_mapnik = registry.get_by_id (Shumate.MAP_SOURCE_OSM_MAPNIK);
 
         var map_widget = new Shumate.SimpleMap () {
-            map_source = registry.get_by_id (Shumate.MAP_SOURCE_OSM_MAPNIK)
+            map_source = map_source_mapnik
         };
         child = map_widget;
         base_map = map_widget.map;
@@ -87,28 +88,14 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_end (spinner);
         set_titlebar (headerbar);
 
-        double latitude = Atlas.Application.settings.get_double ("latitude");
-        double longitude = Atlas.Application.settings.get_double ("longitude");
-        double zoom_level = Atlas.Application.settings.get_double ("zoom-level");
-        if (zoom_level < map_widget.map_source.min_zoom_level || map_widget.map_source.max_zoom_level < zoom_level) {
-            zoom_level = DEFAULT_ZOOM_LEVEL;
-        }
-
-        // First time launch
-        if (latitude == DEFAULT_LATITUDE && longitude == DEFAULT_LONGITUDE) {
-            get_current_location (geo_clue, ref latitude, ref longitude);
-        }
-
-        base_map.go_to_full (latitude, longitude, zoom_level);
-//        MarkerLayer.new_marker_at_pos (marker_layer, latitude, longitude);
+        init_go_to (map_widget, geo_clue);
 
         var event_controller_key = new Gtk.EventControllerKey ();
         event_controller_key.key_pressed.connect ((keyval, keycode, state) => {
             if (Gdk.ModifierType.CONTROL_MASK in state) {
                 switch (keyval) {
                     case Gdk.Key.q:
-                        save_map_state (base_map);
-                        destroy ();
+                        close_request ();
                         return true;
                     case Gdk.Key.f:
                         search_entry.grab_focus ();
@@ -122,11 +109,13 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         });
         ((Gtk.Widget) this).add_controller (event_controller_key);
 
+        close_request.connect (() => {
+            save_map_state (base_map);
+            destroy ();
+        });
+
         current_location.clicked.connect (() => {
-            double la = DEFAULT_LATITUDE;
-            double lon = DEFAULT_LONGITUDE;
-            get_current_location (geo_clue, ref la, ref lon);
-            base_map.go_to (la, lon);
+            go_to_current (base_map, geo_clue);
         });
 
         search_entry.search_changed.connect (() => {
@@ -145,7 +134,28 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         });
     }
 
-    private void get_current_location (Atlas.GeoClue geo, ref double latitude, ref double longitude) {
+    private void init_go_to (Shumate.SimpleMap map_widget, Atlas.GeoClue geo) {
+        Shumate.Map base_map = map_widget.map;
+        Shumate.MapSource map_source = map_widget.map_source;
+
+        double latitude = Atlas.Application.settings.get_double ("latitude");
+        double longitude = Atlas.Application.settings.get_double ("longitude");
+        double zoom_level = Atlas.Application.settings.get_double ("zoom-level");
+        if (zoom_level < map_source.min_zoom_level || map_source.max_zoom_level < zoom_level) {
+            zoom_level = DEFAULT_ZOOM_LEVEL;
+        }
+
+        // First time launch
+        if (latitude == DEFAULT_LATITUDE && longitude == DEFAULT_LONGITUDE) {
+            go_to_current (base_map, geo);
+        } else {
+            base_map.go_to_full (latitude, longitude, zoom_level);
+        }
+
+//        MarkerLayer.new_marker_at_pos (marker_layer, latitude, longitude);
+    }
+
+    private void go_to_current (Shumate.Map base_map, Atlas.GeoClue geo) {
         GClue.Location? location = null;
 
         current_location.sensitive = false;
@@ -155,12 +165,13 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             location = geo.get_current_location.end (res);
             current_location.sensitive = true;
             Spinner.deactivate (spinner);
-        });
 
-        if (location != null) {
-            latitude = location.latitude;
-            longitude = location.longitude;
-        }
+            if (location == null) {
+                return;
+            }
+
+            base_map.go_to_full (location.latitude, location.longitude, DEFAULT_ZOOM_LEVEL);
+        });
     }
 
     private void save_map_state (Shumate.Map map) {
