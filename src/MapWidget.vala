@@ -1,28 +1,23 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2023 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2014-2015 Atlas Developers
+ *                         2018-2023 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 public class Atlas.MapWidget : Gtk.Box {
     public signal void busy_begin ();
     public signal void busy_end ();
 
-    private Atlas.GeoClue geo;
-
     private Shumate.Map? base_map = null;
+    private GClue.Simple? simple = null;
 
     // The Royal Observatory
     private const double DEFAULT_LATITUDE = 51.2840;
     private const double DEFAULT_LONGITUDE = 0.0005;
     private const double DEFAULT_ZOOM_LEVEL = 10;
 
-    public MapWidget () {
-    }
-
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;
-
-        geo = new Atlas.GeoClue ();
 
         var registry = new Shumate.MapSourceRegistry.with_defaults ();
         Shumate.MapSource map_source_mapnik = registry.get_by_id (Shumate.MAP_SOURCE_OSM_MAPNIK);
@@ -38,10 +33,11 @@ public class Atlas.MapWidget : Gtk.Box {
         var marker_layer = new Shumate.MarkerLayer (map_widget.viewport);
         base_map.add_layer (marker_layer);
 
-        init_go_to (map_widget, geo);
+        set_init_place (map_widget);
     }
 
-    public void init_go_to (Shumate.SimpleMap map_widget, Atlas.GeoClue geo) {
+    // Set the initial location of the map widget.
+    private void set_init_place (Shumate.SimpleMap map_widget) {
         Shumate.Map base_map = map_widget.map;
         Shumate.MapSource map_source = map_widget.map_source;
 
@@ -66,8 +62,8 @@ public class Atlas.MapWidget : Gtk.Box {
         GClue.Location? location = null;
 
         busy_begin ();
-        geo.get_current_location.begin ((obj, res) => {
-            location = geo.get_current_location.end (res);
+        get_current_location.begin ((obj, res) => {
+            location = get_current_location.end (res);
             busy_end ();
 
             if (location == null) {
@@ -78,6 +74,25 @@ public class Atlas.MapWidget : Gtk.Box {
         });
     }
 
+    // Get the current location.
+    // @return The current location represented by GClue.Location, or null if failed
+    // Inspired from https://gitlab.gnome.org/GNOME/gnome-clocks/blob/master/src/geocoding.vala
+    public async GClue.Location? get_current_location () {
+        if (simple != null) {
+            return simple.get_location ();
+        }
+
+        try {
+            simple = yield new GClue.Simple (Build.PROJECT_NAME, GClue.AccuracyLevel.EXACT, null);
+        } catch (Error e) {
+            warning ("Failed to connect to GeoClue2 service: %s", e.message);
+            return null;
+        }
+
+        return simple.get_location ();
+    }
+
+    // Saves the latest state of the map.
     public void save_map_state () {
         if (base_map == null) {
             return;
