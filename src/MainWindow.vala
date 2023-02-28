@@ -8,11 +8,23 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     construct {
         title = Application.APP_NAME;
 
+        var header_box = new HeaderBox ();
+        set_titlebar (header_box);
+
         var map_widget = new MapWidget ();
         child = map_widget;
 
-        var header_box = new HeaderBox ();
-        set_titlebar (header_box);
+        header_box.go_to_current.connect (() => {
+            map_widget.go_to_current ();
+        });
+
+        header_box.src_mapnik_selected.connect (() => {
+            map_widget.select_mapnik ();
+        });
+
+        header_box.src_transport_selected.connect (() => {
+            map_widget.select_transport ();
+        });
 
         map_widget.busy_begin.connect (() => {
             header_box.busy_begin ();
@@ -45,10 +57,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             map_widget.save_map_state ();
             destroy ();
             return false;
-        });
-
-        header_box.go_to_current.connect (() => {
-            map_widget.go_to_current ();
         });
     }
 }

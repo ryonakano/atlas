@@ -8,6 +8,9 @@ public class Atlas.MapWidget : Gtk.Box {
     public signal void busy_begin ();
     public signal void busy_end ();
 
+    private Shumate.MapSource src_mapnik;
+    private Shumate.MapSource src_transport;
+    private Shumate.SimpleMap map_widget;
     private Shumate.Map? base_map = null;
     private GClue.Simple? simple = null;
 
@@ -20,13 +23,17 @@ public class Atlas.MapWidget : Gtk.Box {
         orientation = Gtk.Orientation.HORIZONTAL;
 
         var registry = new Shumate.MapSourceRegistry.with_defaults ();
-        Shumate.MapSource map_source_mapnik = registry.get_by_id (Shumate.MAP_SOURCE_OSM_MAPNIK);
+        src_mapnik = registry.get_by_id (Shumate.MAP_SOURCE_OSM_MAPNIK);
+        src_transport = registry.get_by_id (Shumate.MAP_SOURCE_OSM_TRANSPORT_MAP);
 
-        var map_widget = new Shumate.SimpleMap () {
-            map_source = map_source_mapnik,
+        map_widget = new Shumate.SimpleMap () {
             vexpand = true,
             hexpand = true
         };
+
+        // TODO: Save and restore the last selected map source
+        select_mapnik ();
+
         append (map_widget);
         base_map = map_widget.map;
 
@@ -72,6 +79,14 @@ public class Atlas.MapWidget : Gtk.Box {
 
             base_map.go_to_full (location.latitude, location.longitude, DEFAULT_ZOOM_LEVEL);
         });
+    }
+
+    public void select_mapnik () {
+        map_widget.map_source = src_mapnik;
+    }
+
+    public void select_transport () {
+        map_widget.map_source = src_transport;
     }
 
     // Get the current location.

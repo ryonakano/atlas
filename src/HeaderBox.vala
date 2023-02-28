@@ -6,6 +6,8 @@
 
 public class Atlas.HeaderBox : Gtk.Box {
     public signal void go_to_current ();
+    public signal void src_mapnik_selected ();
+    public signal void src_transport_selected ();
 
     private Gtk.Button current_location;
     private Gtk.Spinner spinner;
@@ -37,6 +39,33 @@ public class Atlas.HeaderBox : Gtk.Box {
 
         var style_switcher = new StyleSwitcher ();
 
+        var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
+            margin_top = 6,
+            margin_bottom = 6
+        };
+
+        var src_label = new Gtk.Label (_("Map Source:")) {
+            halign = Gtk.Align.START
+        };
+
+        var mapnik_chkbtn = new Gtk.CheckButton.with_label ("Mapnik") {
+            active = false
+        };
+        mapnik_chkbtn.toggled.connect (() => {
+            src_mapnik_selected ();
+        });
+
+        var transport_chkbtn = new Gtk.CheckButton.with_label (_("Transport Map")) {
+            active = false,
+            group = mapnik_chkbtn
+        };
+        transport_chkbtn.toggled.connect (() => {
+            src_transport_selected ();
+        });
+
+        // TODO: Save and restore the last selected map source
+        mapnik_chkbtn.active = true;
+
         var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
             margin_top = 12,
             margin_bottom = 12,
@@ -44,6 +73,10 @@ public class Atlas.HeaderBox : Gtk.Box {
             margin_end = 12
         };
         preferences_box.append (style_switcher);
+        preferences_box.append (separator);
+        preferences_box.append (src_label);
+        preferences_box.append (mapnik_chkbtn);
+        preferences_box.append (transport_chkbtn);
 
         var preferences_popover = new Gtk.Popover () {
             child = preferences_box
