@@ -11,7 +11,8 @@ public class Atlas.MapWidget : Gtk.Box {
     private Shumate.MapSource src_mapnik;
     private Shumate.MapSource src_transport;
     private Shumate.SimpleMap map_widget;
-    private Shumate.Map? base_map = null;
+    private Shumate.Map base_map;
+    private Shumate.MarkerLayer marker_layer;
     private GClue.Simple? simple = null;
 
     // The Royal Observatory
@@ -37,7 +38,7 @@ public class Atlas.MapWidget : Gtk.Box {
         append (map_widget);
         base_map = map_widget.map;
 
-        var marker_layer = new Shumate.MarkerLayer (map_widget.viewport);
+        marker_layer = new Shumate.MarkerLayer (map_widget.viewport);
         base_map.add_layer (marker_layer);
 
         set_init_place (map_widget);
@@ -61,8 +62,6 @@ public class Atlas.MapWidget : Gtk.Box {
         } else {
             base_map.go_to_full (latitude, longitude, zoom_level);
         }
-
-//        MarkerLayer.new_marker_at_pos (marker_layer, latitude, longitude);
     }
 
     public void go_to_current () {
@@ -107,12 +106,17 @@ public class Atlas.MapWidget : Gtk.Box {
         return simple.get_location ();
     }
 
+    public void go_to_place (Geocode.Place place) {
+        Geocode.Location loc;
+        loc = place.location;
+
+        marker_layer.remove_all ();
+        MarkerLayer.new_marker_at_pos (marker_layer, loc.latitude, loc.longitude);
+        base_map.go_to (loc.latitude, loc.longitude);
+    }
+
     // Saves the latest state of the map.
     public void save_map_state () {
-        if (base_map == null) {
-            return;
-        }
-
         Atlas.Application.settings.set_double ("latitude", base_map.viewport.latitude);
         Atlas.Application.settings.set_double ("longitude", base_map.viewport.longitude);
         Atlas.Application.settings.set_double ("zoom-level", base_map.viewport.zoom_level);

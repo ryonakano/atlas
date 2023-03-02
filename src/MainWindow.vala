@@ -5,12 +5,27 @@
  */
 
 public class Atlas.MainWindow : Gtk.ApplicationWindow {
+    /*
+     * FIXME: Gtk.ListStore, Gtk.EntryCompletion is deprecated in 4.10.
+     * However, there is no alternative class at the moment so we're still using it
+     */
+    private Gtk.ListStore location_store;
+    private Cancellable? search_cancellable = null;
+
     private Gtk.Button current_location;
     private Gtk.Spinner spinner;
     private Gtk.SearchEntry search_entry;
 
     construct {
         title = Application.APP_NAME;
+
+        location_store = new Gtk.ListStore (2, typeof (Geocode.Place), typeof (string));
+
+        var location_completion = new Gtk.EntryCompletion () {
+            minimum_key_length = 3,
+            model = location_store,
+            text_column = 1
+        };
 
         current_location = new Gtk.Button () {
             tooltip_text = _("Current Location"),
@@ -29,6 +44,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             placeholder_text = _("Search Location"),
             tooltip_markup = Granite.markup_accel_tooltip ({"<Control>F"}, _("Search Location")),
             valign = Gtk.Align.CENTER,
+//            completion = location_completion,
             margin_start = 6,
             margin_end = 6
         };
@@ -92,6 +108,11 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         var map_widget = new MapWidget ();
         child = map_widget;
 
+        location_completion.set_match_func ((completion, key, iter) => {
+            return true;
+        });
+        location_completion.match_selected.connect ((model, iter) => suggestion_selected (map_widget, model, iter));
+
         current_location.clicked.connect (() => {
             map_widget.go_to_current ();
         });
@@ -102,11 +123,10 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             }
 
             busy_begin ();
-            // TODO: Should be deactivated when search result found
-            Timeout.add (5000, () => {
-                busy_end ();
 
-                return false;
+            compute_location.begin (search_entry.text, (obj, res) => {
+                compute_location.end (res);
+                busy_end ();
             });
         });
 
@@ -166,5 +186,41 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         current_location.sensitive = true;
         spinner.hide ();
         spinner.stop ();
+    }
+
+    private bool suggestion_selected (MapWidget map_widget, Gtk.TreeModel model, Gtk.TreeIter iter) {
+        Value place;
+
+        model.get_value (iter, 0, out place);
+        map_widget.go_to_place ((Geocode.Place) place);
+
+        return false;
+    }
+
+    private async void compute_location (string loc) {
+        if (search_cancellable != null) {
+            search_cancellable.cancel ();
+        }
+
+        search_cancellable = new Cancellable ();
+
+        var forward = new Geocode.Forward.for_string (loc) {
+            answer_count = 10
+        };
+
+        try {
+            var places = yield forward.search_async (search_cancellable);
+            if (places != null) {
+                location_store.clear ();
+            }
+
+            Gtk.TreeIter location;
+            foreach (unowned var place in places) {
+                location_store.append (out location);
+                location_store.set (location, 0, place, 1, place.name);
+            }
+        } catch (Error error) {
+            warning (error.message);
+        }
     }
 }

@@ -11,6 +11,16 @@ finish-args:
   - '--device=dri'
   - '--system-talk-name=org.freedesktop.GeoClue2'
 modules:
+  - name: geocode-glib-2.0
+    buildsystem: meson
+    config-opts:
+      - '-Denable-gtk-doc=false'
+      - '-Dsoup2=false'
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/GNOME/geocode-glib.git
+        tag: '3.26.4'
+        commit: 210abe69d68e38947106f4680631c369b0c23189
   - name: libshumate
     buildsystem: meson
     config-opts:
