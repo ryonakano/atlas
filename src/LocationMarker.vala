@@ -4,10 +4,11 @@
  */
 
 public class Atlas.LocationMarker : Champlain.Marker {
+    private const string MARKER_RESOURCE_PATH = "/com/github/ryonakano/atlas/location-marker.svg";
 
     public LocationMarker () {
         try {
-            var pixbuf = new Gdk.Pixbuf.from_file ("%s/LocationMarker.svg".printf (Build.PKGDATADIR));
+            var pixbuf = new Gdk.Pixbuf.from_resource (MARKER_RESOURCE_PATH);
             var image = new Clutter.Image ();
             image.set_data (pixbuf.get_pixels (),
                           pixbuf.has_alpha ? Cogl.PixelFormat.RGBA_8888 : Cogl.PixelFormat.RGB_888,
