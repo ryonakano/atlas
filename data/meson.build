@@ -8,11 +8,6 @@ foreach i : icon_sizes
     )
 endforeach
 
-install_data(
-    'icons' / 'atlas' / 'LocationMarker.svg',
-    install_dir: get_option('prefix') / get_option('datadir')
-)
-
 i18n.merge_file(
     input: app_nickname + '.desktop.in',
     output: meson.project_name() + '.desktop',

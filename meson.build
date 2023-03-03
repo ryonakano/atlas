@@ -17,12 +17,18 @@ add_global_arguments(
 
 conf_data = configuration_data()
 conf_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
-conf_data.set_quoted('PKGDATADIR', get_option('prefix') / get_option('datadir'))
 conf_data.set_quoted('PROJECT_NAME', meson.project_name())
 config_header = configure_file(
     input: 'src' / 'config.vala.in',
     output: 'config.vala',
     configuration: conf_data
+)
+
+asresources = gnome.compile_resources(
+    'as-resources',
+    'data' / app_nickname + '.gresource.xml',
+    source_dir: 'data',
+    c_name: 'as'
 )
 
 sources = files(
@@ -35,6 +41,7 @@ sources = files(
 
 executable(
     meson.project_name (),
+    asresources,
     config_header,
     sources,
     dependencies: [
