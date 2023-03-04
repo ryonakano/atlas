@@ -15,8 +15,9 @@ On elementary OS? Click the button to get Atlas on AppCenter:
 You'll need the following dependencies:
 
 * libgeoclue-2-dev
+* libgeocode-glib-dev
 * libshumate-dev
-* libgranite-7-dev
+* libgranite-7-dev (>= 7.1.0)
 * libgtk4-dev
 * meson (>= 0.57.0)
 * valac
