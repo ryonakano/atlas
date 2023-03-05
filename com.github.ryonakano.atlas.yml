@@ -11,6 +11,19 @@ finish-args:
   - '--device=dri'
   - '--system-talk-name=org.freedesktop.GeoClue2'
 modules:
+  - name: geoclue
+    buildsystem: meson
+    config-opts:
+      - '-Dgtk-doc=false'
+      - '-D3g-source=false'
+      - '-Dcdma-source=false'
+      - '-Dmodem-gps-source=false'
+      - '-Dnmea-source=false'
+    sources:
+      - type: git
+        url: https://gitlab.freedesktop.org/geoclue/geoclue.git
+        tag: '2.5.7'
+        commit: 3bb60dd600a8b247fd6049e7e5b1c73c2c5fc0e8
   - name: geocode-glib-2.0
     buildsystem: meson
     config-opts:
