@@ -52,6 +52,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         };
 
         var search_res_msg_view = new Granite.Placeholder (_("No Search Results")) {
+            description = _("Try changing the search term."),
             margin_start = 12,
             margin_end = 12
         };
@@ -157,11 +158,10 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             busy_begin ();
 
             compute_location.begin (search_entry.text, location_store, (obj, res) => {
-                try {
-                    compute_location.end (res);
+                bool res_found = compute_location.end (res);
+                if (res_found) {
                     search_res_stack.visible_child = search_res_list_scrolled;
-                } catch (Error error) {
-                    search_res_msg_view.description = error.message;
+                } else {
                     search_res_stack.visible_child = search_res_msg_view;
                 }
 
@@ -245,7 +245,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         spinner.stop ();
     }
 
-    private async void compute_location (string loc, ListStore loc_store) throws Error {
+    private async bool compute_location (string loc, ListStore loc_store) {
         if (search_cancellable != null) {
             search_cancellable.cancel ();
         }
@@ -256,20 +256,24 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             answer_count = 10
         };
 
+        loc_store.remove_all ();
+
+        var places = new List<Geocode.Place> ();
         try {
-            loc_store.remove_all ();
-
-            var places = yield forward.search_async (search_cancellable);
-            if (places.is_empty ()) {
-                return;
-            }
-
-            foreach (unowned var place in places) {
-                loc_store.append (place);
-            }
+            places = yield forward.search_async (search_cancellable);
         } catch (Error error) {
-            throw error;
+            warning (error.message);
         }
+
+        if (places.is_empty ()) {
+            return false;
+        }
+
+        foreach (unowned var place in places) {
+            loc_store.append (place);
+        }
+
+        return true;
     }
 
     private Gtk.Widget construct_search_res (Object item) {
