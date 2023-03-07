@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-18 19:36+0900\n"
+"POT-Creation-Date: 2023-03-07 23:04+0900\n"
 "PO-Revision-Date: 2023-01-13 18:51+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/"
-"atlas-metadata/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas-"
+"metadata/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,33 +20,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.15.1-dev\n"
 
-#: data/atlas.metainfo.xml.in:9 data/atlas.desktop.in:3
+#: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:3
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:5
+#: data/atlas.metainfo.xml.in:11 data/atlas.desktop.in:5
 msgid "View where to go"
 msgstr "Visualisez où vous souhaitez vous rendre"
 
-#: data/atlas.metainfo.xml.in:12
+#: data/atlas.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
 msgstr ""
 "Une application de cartes pour vous aider à visualiser les lieux ou vous "
 "souhaitez vous rendre."
 
-#: data/atlas.metainfo.xml.in:15
+#: data/atlas.metainfo.xml.in:16
 msgid "Features include:"
 msgstr "Fonctionnalités incluses :"
 
-#: data/atlas.metainfo.xml.in:17
+#: data/atlas.metainfo.xml.in:18
 msgid "Search any place"
 msgstr "Recherchez n'importe quel lieu"
 
-#: data/atlas.metainfo.xml.in:18
+#: data/atlas.metainfo.xml.in:19
 msgid "Jump to your current location instantly"
 msgstr "Affichez votre position actuelle en un instant"
 
-#: data/atlas.metainfo.xml.in:20
+#: data/atlas.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
@@ -54,28 +54,34 @@ msgstr ""
 "Ceci est un fork de « Atlas Maps » qui n’existerait pas sans le travail de "
 "Steffen Schuhmann."
 
-#: data/atlas.metainfo.xml.in:27
+#: data/atlas.metainfo.xml.in:28
 msgid "Search where to go"
 msgstr "Cherchez où vous souhaitez vous rendre"
 
-#: data/atlas.metainfo.xml.in:50
+#: data/atlas.metainfo.xml.in:51
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/atlas.metainfo.xml.in:56
-msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr ""
-"Mise à jour de la dépendance geocode-glib de la version 3.26.2 à 3.26.4"
-
 #: data/atlas.metainfo.xml.in:57
-msgid "Update copyright information"
-msgstr "Mise à jour des informations Copyright"
+msgid ""
+"Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead "
+"of libchamplain"
+msgstr ""
 
-#: data/atlas.metainfo.xml.in:58
+#: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:68
 msgid "Update translations"
 msgstr "Mise à jour des traductions"
 
 #: data/atlas.metainfo.xml.in:66
+msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+msgstr ""
+"Mise à jour de la dépendance geocode-glib de la version 3.26.2 à 3.26.4"
+
+#: data/atlas.metainfo.xml.in:67
+msgid "Update copyright information"
+msgstr "Mise à jour des informations Copyright"
+
+#: data/atlas.metainfo.xml.in:76
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
@@ -83,35 +89,35 @@ msgstr ""
 "Correction de l’anomalie qui présentait l’application comme vous permettant "
 "de partager votre localisation dans l’App Center"
 
-#: data/atlas.metainfo.xml.in:67
+#: data/atlas.metainfo.xml.in:77
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr ""
 "Affichage de la touche de raccourci pour l’entrée de recherche à l’aide "
 "d’une infobulle"
 
-#: data/atlas.metainfo.xml.in:68
+#: data/atlas.metainfo.xml.in:78
 msgid "Add the new style switcher"
 msgstr "Ajout du nouveau bouton pour changer le style"
 
-#: data/atlas.metainfo.xml.in:69
+#: data/atlas.metainfo.xml.in:79
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr "Nouvelle icône vectorisée (un grand merci à @Suzie97)"
 
-#: data/atlas.metainfo.xml.in:70
+#: data/atlas.metainfo.xml.in:80
 msgid "Show your current location if launching the app for the first time"
 msgstr ""
 "Affichage de votre emplacement actuel lors du premier lancement de "
 "l’application"
 
-#: data/atlas.metainfo.xml.in:72
+#: data/atlas.metainfo.xml.in:82
 msgid "Translation updates:"
 msgstr "Mise à jour des traductions :"
 
-#: data/atlas.metainfo.xml.in:74
+#: data/atlas.metainfo.xml.in:84
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Ajout d’une traduction française (grâce à @NathanBnm)"
 
-#: data/atlas.metainfo.xml.in:82
+#: data/atlas.metainfo.xml.in:92
 msgid "Initial release"
 msgstr "Version initiale"
 

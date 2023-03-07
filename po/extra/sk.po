@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-18 19:36+0900\n"
+"POT-Creation-Date: 2023-03-07 23:04+0900\n"
 "PO-Revision-Date: 2022-04-23 17:08+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-extra/"
@@ -19,61 +19,67 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.12.1-dev\n"
 
-#: data/atlas.metainfo.xml.in:9 data/atlas.desktop.in:3
+#: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:3
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:5
+#: data/atlas.metainfo.xml.in:11 data/atlas.desktop.in:5
 msgid "View where to go"
 msgstr "Zobrazte si, kam chcete ísť"
 
-#: data/atlas.metainfo.xml.in:12
+#: data/atlas.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
 msgstr ""
 "Mapová aplikácia, ktorá vám pomôže zobraziť si miesto, na ktoré sa chystáte "
 "ísť."
 
-#: data/atlas.metainfo.xml.in:15
+#: data/atlas.metainfo.xml.in:16
 msgid "Features include:"
 msgstr "Funkcie zahŕňajú:"
 
-#: data/atlas.metainfo.xml.in:17
+#: data/atlas.metainfo.xml.in:18
 msgid "Search any place"
 msgstr "Vyhľadajte akékoľvek miesto"
 
-#: data/atlas.metainfo.xml.in:18
+#: data/atlas.metainfo.xml.in:19
 msgid "Jump to your current location instantly"
 msgstr "Presuňte sa na vašu aktuálnu polohu okamžite jedným klikom"
 
-#: data/atlas.metainfo.xml.in:20
+#: data/atlas.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:27
+#: data/atlas.metainfo.xml.in:28
 #, fuzzy
 #| msgid "View where to go"
 msgid "Search where to go"
 msgstr "Zobrazte si, kam chcete ísť"
 
-#: data/atlas.metainfo.xml.in:50
+#: data/atlas.metainfo.xml.in:51
 msgid "Ryo Nakano"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:56
-msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr ""
-
 #: data/atlas.metainfo.xml.in:57
-msgid "Update copyright information"
+msgid ""
+"Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead "
+"of libchamplain"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:58
+#: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:68
 msgid "Update translations"
 msgstr ""
 
 #: data/atlas.metainfo.xml.in:66
+msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:67
+msgid "Update copyright information"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:76
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
@@ -81,31 +87,31 @@ msgstr ""
 "Oprava chyby, keď sa v AppCentre zobrazovalo upozornenie, že aplikácia s "
 "niekým zdieľa vašu polohu"
 
-#: data/atlas.metainfo.xml.in:67
+#: data/atlas.metainfo.xml.in:77
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr "Zobrazovať klávesovú skratku pre políčko vyhľadávania v popise"
 
-#: data/atlas.metainfo.xml.in:68
+#: data/atlas.metainfo.xml.in:78
 msgid "Add the new style switcher"
 msgstr "Pridaný nový prepínač štýlov"
 
-#: data/atlas.metainfo.xml.in:69
+#: data/atlas.metainfo.xml.in:79
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr "Prerobená a vektorizovaná ikonka aplikácie (veľká vďaka @Suzie97)"
 
-#: data/atlas.metainfo.xml.in:70
+#: data/atlas.metainfo.xml.in:80
 msgid "Show your current location if launching the app for the first time"
 msgstr "Zobraziť vašu aktuálnu polohu, ak spustíte aplikáciu po prvý raz"
 
-#: data/atlas.metainfo.xml.in:72
+#: data/atlas.metainfo.xml.in:82
 msgid "Translation updates:"
 msgstr "Aktualizácie prekladov:"
 
-#: data/atlas.metainfo.xml.in:74
+#: data/atlas.metainfo.xml.in:84
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
-#: data/atlas.metainfo.xml.in:82
+#: data/atlas.metainfo.xml.in:92
 msgid "Initial release"
 msgstr "Prvé vydanie"
 
