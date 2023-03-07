@@ -3,6 +3,7 @@
 <component type="desktop-application">
   <id>com.github.ryonakano.atlas</id>
   <launchable type="desktop-id">com.github.ryonakano.atlas.desktop</launchable>
+  <translation type="gettext">com.github.ryonakano.atlas</translation>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
 
