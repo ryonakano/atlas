@@ -2,7 +2,7 @@
 <schemalist>
   <enum id="map-sources">
     <value value="0" nick="mapnik"/>
-    <value value="1" nick="transport_map"/>
+    <value value="1" nick="transport"/>
   </enum>
 
   <schema path="/com/github/ryonakano/atlas/" id="com.github.ryonakano.atlas">
