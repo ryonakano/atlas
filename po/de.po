@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-18 19:36+0900\n"
+"POT-Creation-Date: 2023-03-07 23:04+0900\n"
 "PO-Revision-Date: 2022-04-19 00:09+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/rosp/atlas-main/"
@@ -18,59 +18,71 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
-#: src/MainWindow.vala:28
-msgid "Transport Map"
-msgstr "Verkehrskarte"
+#: src/MainWindow.vala:25
+msgid "Unknown"
+msgstr ""
 
-#: src/MainWindow.vala:66
-msgid "Current Location"
-msgstr "Aktueller Standort"
+#: src/MainWindow.vala:49
+#, fuzzy
+#| msgid "Detecting your current location…"
+msgid "Move to the current location"
+msgstr "Ihr aktueller Standort wird erkennt …"
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:83
+#: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
 msgstr "Standort suchen"
 
-#: src/MainWindow.vala:95
-#, fuzzy
-msgid "Layer:"
-msgstr "Schicht:"
+#: src/MainWindow.vala:69
+msgid "No Search Results"
+msgstr ""
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:70
+msgid "Try changing the search term."
+msgstr ""
+
+#: src/MainWindow.vala:111
+msgid "Map Source:"
+msgstr ""
+
+#: src/MainWindow.vala:119
+msgid "Transport Map"
+msgstr "Verkehrskarte"
+
+#: src/MainWindow.vala:141
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: src/MainWindow.vala:174
-msgid "Searching locations…"
-msgstr "Suche nach Standorten …"
-
-#: src/MainWindow.vala:252
-msgid "Detecting your current location…"
-msgstr "Ihr aktueller Standort wird erkennt …"
-
-#: src/StyleSwitcher.vala:22
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr "Stil:"
 
-#: src/StyleSwitcher.vala:28
-msgid "Light style"
-msgstr "Heller Stil"
-
-#: src/StyleSwitcher.vala:31
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr "Hell"
 
 #: src/StyleSwitcher.vala:35
-msgid "Dark style"
-msgstr "Dunkler Stil"
-
-#: src/StyleSwitcher.vala:38
 msgid "Dark"
 msgstr "Dunkel"
 
-#: src/StyleSwitcher.vala:42
-msgid "Use the same style set in the system"
-msgstr "Verwenden Sie denselben Stil, der im System eingestellt ist"
-
-#: src/StyleSwitcher.vala:45
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr "System"
+
+#~ msgid "Current Location"
+#~ msgstr "Aktueller Standort"
+
+#, fuzzy
+#~ msgid "Layer:"
+#~ msgstr "Schicht:"
+
+#~ msgid "Searching locations…"
+#~ msgstr "Suche nach Standorten …"
+
+#~ msgid "Light style"
+#~ msgstr "Heller Stil"
+
+#~ msgid "Dark style"
+#~ msgstr "Dunkler Stil"
+
+#~ msgid "Use the same style set in the system"
+#~ msgstr "Verwenden Sie denselben Stil, der im System eingestellt ist"

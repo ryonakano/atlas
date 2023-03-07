@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-18 19:36+0900\n"
+"POT-Creation-Date: 2023-03-07 23:04+0900\n"
 "PO-Revision-Date: 2022-05-23 22:18+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/atlas-"
@@ -19,58 +19,70 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13-dev\n"
 
-#: src/MainWindow.vala:28
-msgid "Transport Map"
-msgstr "Транспортна мапа"
+#: src/MainWindow.vala:25
+msgid "Unknown"
+msgstr ""
 
-#: src/MainWindow.vala:66
-msgid "Current Location"
-msgstr "Поточне місцеперебування"
+#: src/MainWindow.vala:49
+#, fuzzy
+#| msgid "Detecting your current location…"
+msgid "Move to the current location"
+msgstr "Визначення поточного місцеперебування…"
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:83
+#: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
 msgstr "Пошук розташування"
 
-#: src/MainWindow.vala:95
-msgid "Layer:"
-msgstr "Шар:"
+#: src/MainWindow.vala:69
+msgid "No Search Results"
+msgstr ""
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:70
+msgid "Try changing the search term."
+msgstr ""
+
+#: src/MainWindow.vala:111
+msgid "Map Source:"
+msgstr ""
+
+#: src/MainWindow.vala:119
+msgid "Transport Map"
+msgstr "Транспортна мапа"
+
+#: src/MainWindow.vala:141
 msgid "Preferences"
 msgstr "Налаштування"
 
-#: src/MainWindow.vala:174
-msgid "Searching locations…"
-msgstr "Пошук розташувань…"
-
-#: src/MainWindow.vala:252
-msgid "Detecting your current location…"
-msgstr "Визначення поточного місцеперебування…"
-
-#: src/StyleSwitcher.vala:22
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr "Стиль:"
 
-#: src/StyleSwitcher.vala:28
-msgid "Light style"
-msgstr "Світлий стиль"
-
-#: src/StyleSwitcher.vala:31
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr "Світлий"
 
 #: src/StyleSwitcher.vala:35
-msgid "Dark style"
-msgstr "Темний стиль"
-
-#: src/StyleSwitcher.vala:38
 msgid "Dark"
 msgstr "Темний"
 
-#: src/StyleSwitcher.vala:42
-msgid "Use the same style set in the system"
-msgstr "Використовувати набір стилів системи"
-
-#: src/StyleSwitcher.vala:45
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr "Системи"
+
+#~ msgid "Current Location"
+#~ msgstr "Поточне місцеперебування"
+
+#~ msgid "Layer:"
+#~ msgstr "Шар:"
+
+#~ msgid "Searching locations…"
+#~ msgstr "Пошук розташувань…"
+
+#~ msgid "Light style"
+#~ msgstr "Світлий стиль"
+
+#~ msgid "Dark style"
+#~ msgstr "Темний стиль"
+
+#~ msgid "Use the same style set in the system"
+#~ msgstr "Використовувати набір стилів системи"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-18 19:36+0900\n"
+"POT-Creation-Date: 2023-03-07 23:04+0900\n"
 "PO-Revision-Date: 2023-02-03 04:22+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/atlas-app/"
@@ -18,58 +18,70 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.16-dev\n"
 
-#: src/MainWindow.vala:28
-msgid "Transport Map"
-msgstr "Liikkumiskartta"
+#: src/MainWindow.vala:25
+msgid "Unknown"
+msgstr ""
 
-#: src/MainWindow.vala:66
-msgid "Current Location"
-msgstr "Nykyinen sijainti"
+#: src/MainWindow.vala:49
+#, fuzzy
+#| msgid "Detecting your current location…"
+msgid "Move to the current location"
+msgstr "Paikannetaan nykyistä sijaintia…"
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:83
+#: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
 msgstr "Etsi sijaintia"
 
-#: src/MainWindow.vala:95
-msgid "Layer:"
-msgstr "Taso:"
+#: src/MainWindow.vala:69
+msgid "No Search Results"
+msgstr ""
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:70
+msgid "Try changing the search term."
+msgstr ""
+
+#: src/MainWindow.vala:111
+msgid "Map Source:"
+msgstr ""
+
+#: src/MainWindow.vala:119
+msgid "Transport Map"
+msgstr "Liikkumiskartta"
+
+#: src/MainWindow.vala:141
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: src/MainWindow.vala:174
-msgid "Searching locations…"
-msgstr "Etsitään sijainteja…"
-
-#: src/MainWindow.vala:252
-msgid "Detecting your current location…"
-msgstr "Paikannetaan nykyistä sijaintia…"
-
-#: src/StyleSwitcher.vala:22
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr "Tyyli:"
 
-#: src/StyleSwitcher.vala:28
-msgid "Light style"
-msgstr "Vaalea tyyli"
-
-#: src/StyleSwitcher.vala:31
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr "Vaalea"
 
 #: src/StyleSwitcher.vala:35
-msgid "Dark style"
-msgstr "Tumma tyyli"
-
-#: src/StyleSwitcher.vala:38
 msgid "Dark"
 msgstr "Tumma"
 
-#: src/StyleSwitcher.vala:42
-msgid "Use the same style set in the system"
-msgstr "Käytä järjestelmän tyyliä"
-
-#: src/StyleSwitcher.vala:45
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr "Järjestelmä"
+
+#~ msgid "Current Location"
+#~ msgstr "Nykyinen sijainti"
+
+#~ msgid "Layer:"
+#~ msgstr "Taso:"
+
+#~ msgid "Searching locations…"
+#~ msgstr "Etsitään sijainteja…"
+
+#~ msgid "Light style"
+#~ msgstr "Vaalea tyyli"
+
+#~ msgid "Dark style"
+#~ msgstr "Tumma tyyli"
+
+#~ msgid "Use the same style set in the system"
+#~ msgstr "Käytä järjestelmän tyyliä"

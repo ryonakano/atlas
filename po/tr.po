@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-18 19:36+0900\n"
+"POT-Creation-Date: 2023-03-07 23:04+0900\n"
 "PO-Revision-Date: 2022-10-10 18:02+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas-main/"
@@ -18,58 +18,70 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.14.1\n"
 
-#: src/MainWindow.vala:28
-msgid "Transport Map"
-msgstr "Ulaşım Haritası"
+#: src/MainWindow.vala:25
+msgid "Unknown"
+msgstr ""
 
-#: src/MainWindow.vala:66
-msgid "Current Location"
-msgstr "Geçerli Konum"
+#: src/MainWindow.vala:49
+#, fuzzy
+#| msgid "Detecting your current location…"
+msgid "Move to the current location"
+msgstr "Geçerli konumunuz algılanıyor…"
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:83
+#: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
 msgstr "Konum Ara"
 
-#: src/MainWindow.vala:95
-msgid "Layer:"
-msgstr "Katman:"
+#: src/MainWindow.vala:69
+msgid "No Search Results"
+msgstr ""
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:70
+msgid "Try changing the search term."
+msgstr ""
+
+#: src/MainWindow.vala:111
+msgid "Map Source:"
+msgstr ""
+
+#: src/MainWindow.vala:119
+msgid "Transport Map"
+msgstr "Ulaşım Haritası"
+
+#: src/MainWindow.vala:141
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: src/MainWindow.vala:174
-msgid "Searching locations…"
-msgstr "Konumlar aranıyor…"
-
-#: src/MainWindow.vala:252
-msgid "Detecting your current location…"
-msgstr "Geçerli konumunuz algılanıyor…"
-
-#: src/StyleSwitcher.vala:22
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr "Biçim:"
 
-#: src/StyleSwitcher.vala:28
-msgid "Light style"
-msgstr "Açık biçim"
-
-#: src/StyleSwitcher.vala:31
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr "Açık"
 
 #: src/StyleSwitcher.vala:35
-msgid "Dark style"
-msgstr "Koyu biçim"
-
-#: src/StyleSwitcher.vala:38
 msgid "Dark"
 msgstr "Koyu"
 
-#: src/StyleSwitcher.vala:42
-msgid "Use the same style set in the system"
-msgstr "Sistemle aynı biçim setini kullan"
-
-#: src/StyleSwitcher.vala:45
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr "Sistem"
+
+#~ msgid "Current Location"
+#~ msgstr "Geçerli Konum"
+
+#~ msgid "Layer:"
+#~ msgstr "Katman:"
+
+#~ msgid "Searching locations…"
+#~ msgstr "Konumlar aranıyor…"
+
+#~ msgid "Light style"
+#~ msgstr "Açık biçim"
+
+#~ msgid "Dark style"
+#~ msgstr "Koyu biçim"
+
+#~ msgid "Use the same style set in the system"
+#~ msgstr "Sistemle aynı biçim setini kullan"
