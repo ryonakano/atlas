@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-18 19:36+0900\n"
+"POT-Creation-Date: 2023-03-07 23:04+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,58 +17,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:28
-msgid "Transport Map"
+#: src/MainWindow.vala:25
+msgid "Unknown"
 msgstr ""
 
-#: src/MainWindow.vala:66
-msgid "Current Location"
+#: src/MainWindow.vala:49
+msgid "Move to the current location"
 msgstr ""
 
-#: src/MainWindow.vala:82 src/MainWindow.vala:83
+#: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
 msgstr ""
 
-#: src/MainWindow.vala:95
-msgid "Layer:"
+#: src/MainWindow.vala:69
+msgid "No Search Results"
 msgstr ""
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:70
+msgid "Try changing the search term."
+msgstr ""
+
+#: src/MainWindow.vala:111
+msgid "Map Source:"
+msgstr ""
+
+#: src/MainWindow.vala:119
+msgid "Transport Map"
+msgstr ""
+
+#: src/MainWindow.vala:141
 msgid "Preferences"
 msgstr ""
 
-#: src/MainWindow.vala:174
-msgid "Searching locations…"
-msgstr ""
-
-#: src/MainWindow.vala:252
-msgid "Detecting your current location…"
-msgstr ""
-
-#: src/StyleSwitcher.vala:22
+#: src/StyleSwitcher.vala:26
 msgid "Style:"
 msgstr ""
 
-#: src/StyleSwitcher.vala:28
-msgid "Light style"
-msgstr ""
-
-#: src/StyleSwitcher.vala:31
+#: src/StyleSwitcher.vala:32
 msgid "Light"
 msgstr ""
 
 #: src/StyleSwitcher.vala:35
-msgid "Dark style"
-msgstr ""
-
-#: src/StyleSwitcher.vala:38
 msgid "Dark"
 msgstr ""
 
-#: src/StyleSwitcher.vala:42
-msgid "Use the same style set in the system"
-msgstr ""
-
-#: src/StyleSwitcher.vala:45
+#: src/StyleSwitcher.vala:41
 msgid "System"
 msgstr ""
