@@ -17,7 +17,7 @@
       <description>Longitude of the last place viewed</description>
     </key>    
     <key type="d" name="zoom-level">
-      <default>10</default>
+      <default>15</default>
       <summary>Zoom level</summary>
       <description>Zoom level of the map last used</description>
     </key>

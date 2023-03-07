@@ -18,7 +18,7 @@ public class Atlas.MapWidget : Gtk.Box {
     // The Royal Observatory
     private const double DEFAULT_LATITUDE = 51.2840;
     private const double DEFAULT_LONGITUDE = 0.0005;
-    private const double DEFAULT_ZOOM_LEVEL = 10;
+    private const double DEFAULT_ZOOM_LEVEL = 15;
 
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;
@@ -32,20 +32,15 @@ public class Atlas.MapWidget : Gtk.Box {
             hexpand = true
         };
 
-        // TODO: Save and restore the last selected map source
-        select_mapnik ();
-
         append (map_widget);
         base_map = map_widget.map;
 
         marker_layer = new Shumate.MarkerLayer (map_widget.viewport);
         base_map.add_layer (marker_layer);
-
-        set_init_place (map_widget);
     }
 
     // Set the initial location of the map widget.
-    private void set_init_place (Shumate.SimpleMap map_widget) {
+    public void set_init_place () {
         Shumate.Map base_map = map_widget.map;
         Shumate.MapSource map_source = map_widget.map_source;
 

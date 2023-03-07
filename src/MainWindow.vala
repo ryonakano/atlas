@@ -5,16 +5,9 @@
  */
 
 public class Atlas.MainWindow : Gtk.ApplicationWindow {
-    private string unknown_text = _("Unknown");
-
-    private ListStore location_store;
-    private Cancellable? search_cancellable = null;
-
-    private Gtk.Button current_location;
-    private Gtk.Spinner spinner;
-    private Gtk.SearchEntry search_entry;
-    private Gtk.ListBox search_res_list;
-    private Gtk.Popover search_res_popover;
+    [CCode (has_target = false)]
+    private delegate bool KeyPressHandler (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state);
+    private static Gee.HashMap<uint, KeyPressHandler> key_press_handler;
 
     private class PlaceListBoxRow : Gtk.ListBoxRow {
         public Geocode.Place place { get; construct; }
@@ -24,6 +17,28 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         }
     }
 
+    private enum MapSource {
+        MAPNIK,
+        TRANSPORT;
+    }
+
+    private string unknown_text = _("Unknown");
+
+    private ListStore location_store;
+    private Cancellable? search_cancellable = null;
+
+    private Gtk.Button current_location;
+    private Gtk.Spinner spinner;
+    public Gtk.SearchEntry search_entry { get; construct; }
+    private Gtk.ListBox search_res_list;
+    private Gtk.Popover search_res_popover;
+
+    static construct {
+        key_press_handler = new Gee.HashMap<uint, KeyPressHandler> ();
+        key_press_handler[Gdk.Key.f] = key_press_handler_f;
+        key_press_handler[Gdk.Key.q] = key_press_handler_q;
+    }
+
     construct {
         title = Application.APP_NAME;
 
@@ -31,7 +46,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         location_store = new ListStore (typeof (Geocode.Place));
 
         current_location = new Gtk.Button () {
-            tooltip_text = _("Current Location"),
+            tooltip_text = _("Move to the current location"),
             icon_name = "mark-location-symbolic",
             margin_start = 6,
             margin_end = 6
@@ -82,6 +97,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         search_res_popover = new Gtk.Popover () {
             has_arrow = false,
             child = search_res_stack,
+            default_widget = search_res_list,
             pointing_to = search_entry_alloc
         };
 
@@ -104,9 +120,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             active = false,
             group = mapnik_chkbtn
         };
-
-        // TODO: Save and restore the last selected map source
-        mapnik_chkbtn.active = true;
 
         var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
             margin_top = 12,
@@ -145,6 +158,16 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         var map_widget = new MapWidget ();
         child = map_widget;
 
+        if ((MapSource) Application.settings.get_enum ("map-source") == MapSource.TRANSPORT) {
+            transport_chkbtn.active = true;
+            map_widget.select_transport ();
+        } else {
+            mapnik_chkbtn.active = true;
+            map_widget.select_mapnik ();
+        }
+
+        map_widget.set_init_place ();
+
         current_location.clicked.connect (() => {
             map_widget.go_to_current ();
         });
@@ -182,10 +205,12 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         });
 
         mapnik_chkbtn.toggled.connect (() => {
+            Application.settings.set_enum ("map-source", MapSource.MAPNIK);
             map_widget.select_mapnik ();
         });
 
         transport_chkbtn.toggled.connect (() => {
+            Application.settings.set_enum ("map-source", MapSource.TRANSPORT);
             map_widget.select_transport ();
         });
 
@@ -205,20 +230,13 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
         var event_controller_key = new Gtk.EventControllerKey ();
         event_controller_key.key_pressed.connect ((keyval, keycode, state) => {
-            if (Gdk.ModifierType.CONTROL_MASK in state) {
-                switch (keyval) {
-                    case Gdk.Key.q:
-                        close_request ();
-                        return true;
-                    case Gdk.Key.f:
-                        on_f_key_pressed ();
-                        return true;
-                    default:
-                        break;
-                }
+            var handler = key_press_handler[keyval];
+            // Unhandled key event
+            if (handler == null) {
+                return false;
             }
 
-            return false;
+            return handler (this, keyval, keycode, state);
         });
         ((Gtk.Widget) this).add_controller (event_controller_key);
 
@@ -229,8 +247,22 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         });
     }
 
-    private void on_f_key_pressed () {
-        search_entry.grab_focus ();
+    private static bool key_press_handler_f (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+        if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
+            return false;
+        }
+
+        window.search_entry.grab_focus ();
+        return true;
+    }
+
+    private static bool key_press_handler_q (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+        if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
+            return false;
+        }
+
+        window.close_request ();
+        return true;
     }
 
     private void busy_begin () {
