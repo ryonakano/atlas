@@ -1,6 +1,6 @@
 app-id: com.github.ryonakano.atlas
 runtime: io.elementary.Platform
-runtime-version: '6.1'
+runtime-version: '7.1'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.atlas
 finish-args:
@@ -11,20 +11,41 @@ finish-args:
   - '--device=dri'
   - '--system-talk-name=org.freedesktop.GeoClue2'
 modules:
-  - name: champlain
+  - name: geoclue
     buildsystem: meson
+    config-opts:
+      - '-Dgtk-doc=false'
+      - '-D3g-source=false'
+      - '-Dcdma-source=false'
+      - '-Dmodem-gps-source=false'
+      - '-Dnmea-source=false'
     sources:
       - type: git
-        url: https://gitlab.gnome.org/GNOME/libchamplain
-        tag: 'LIBCHAMPLAIN_0_12_20'
-        commit: 145e417f32e507b63c21ad4e915b808a6174099e
-  - name: geocode-glib
+        url: https://gitlab.freedesktop.org/geoclue/geoclue.git
+        # >= 2.6.0 doesn't work well on Pantheon
+        # possibly due to https://github.com/elementary/pantheon-agent-geoclue2/issues/32
+        tag: '2.5.7'
+        commit: 3bb60dd600a8b247fd6049e7e5b1c73c2c5fc0e8
+  - name: geocode-glib-2.0
     buildsystem: meson
+    config-opts:
+      - '-Denable-gtk-doc=false'
+      - '-Dsoup2=false'
     sources:
       - type: git
         url: https://gitlab.gnome.org/GNOME/geocode-glib.git
         tag: '3.26.4'
         commit: 210abe69d68e38947106f4680631c369b0c23189
+  - name: libshumate
+    buildsystem: meson
+    config-opts:
+      - '-Dgtk_doc=false'
+      - '-Dlibsoup3=true'
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/GNOME/libshumate.git
+        tag: '1.0.3'
+        commit: 55d89e24de5086404b996a73e94cd56ee2e9541a
   - name: atlas
     buildsystem: meson
     sources:

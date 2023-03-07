@@ -1,10 +1,19 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: Copyright 2014-2015 Atlas Developers, 2018-2022 Ryo Nakano
+ * SPDX-FileCopyrightText: 2014-2015 Atlas Developers
+ *                         2018-2023 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 public class Atlas.Application : Gtk.Application {
-    private MainWindow window;
+    public const string APP_NAME = "Atlas";
+
+    public static bool IS_ON_PANTHEON {
+        get {
+            return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
+        }
+    }
+
+    private MainWindow main_window;
     public static Settings settings;
 
     public Application () {
@@ -27,33 +36,30 @@ public class Atlas.Application : Gtk.Application {
 
     protected override void activate () {
         if (get_windows () != null) {
-            window.present ();
+            main_window.present ();
             return;
         }
 
-        int x, y, w, h;
-        x = Atlas.Application.settings.get_int ("position-x");
-        y = Atlas.Application.settings.get_int ("position-y");
-        w = Atlas.Application.settings.get_int ("window-width");
-        h = Atlas.Application.settings.get_int ("window-height");
+        main_window = new MainWindow ();
+        main_window.set_application (this);
+        // The main_window seems to need showing before restoring its size in Gtk4
+        main_window.present ();
 
-        window = new MainWindow (this);
+        settings.bind ("window-height", main_window, "default-height", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-width", main_window, "default-width", SettingsBindFlags.DEFAULT);
 
-        if (Atlas.Application.settings.get_boolean ("maximized")) {
-            window.maximize ();
-        } else if (x != -1 || y != -1) { // This is not the first time to launch
-            window.move (x, y);
-        } else { // This is the first time to launch
-            window.window_position = Gtk.WindowPosition.CENTER;
+        /*
+         * Binding of main_window maximization with "SettingsBindFlags.DEFAULT" results the main_window getting bigger and bigger on open.
+         * So we use the prepared binding only for setting
+         */
+        if (settings.get_boolean ("maximized")) {
+            main_window.maximize ();
         }
 
-        window.set_default_size (w, h);
-        window.show_all ();
+        settings.bind ("maximized", main_window, "maximized", SettingsBindFlags.SET);
     }
 
     public static int main (string[] args) {
-        Clutter.init (ref args);
-        var app = new Application ();
-        return app.run (args);
+        return new Application ().run (args);
     }
 }

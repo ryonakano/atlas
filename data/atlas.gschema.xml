@@ -2,22 +2,22 @@
 <schemalist>
   <enum id="map-sources">
     <value value="0" nick="mapnik"/>
-    <value value="1" nick="transport_map"/>
+    <value value="1" nick="transport"/>
   </enum>
 
   <schema path="/com/github/ryonakano/atlas/" id="com.github.ryonakano.atlas">
-    <key type="d" name="langitude">
-      <default>0</default>
-      <summary>Langitude</summary>
-      <description>Langitude of the last place viewed</description>
+    <key type="d" name="latitude">
+      <default>51.2840</default>
+      <summary>Latitude</summary>
+      <description>Latitude of the last place viewed</description>
     </key>
     <key type="d" name="longitude">
-      <default>0</default>
+      <default>0.0005</default>
       <summary>Longitude</summary>
       <description>Longitude of the last place viewed</description>
     </key>    
-    <key type="u" name="zoom-level">
-      <default>8</default>
+    <key type="d" name="zoom-level">
+      <default>15</default>
       <summary>Zoom level</summary>
       <description>Zoom level of the map last used</description>
     </key>
@@ -35,16 +35,6 @@
       <default>800</default>
       <summary>Window height</summary>
       <description>Height of the window last closed</description>
-    </key>
-    <key type="i" name="position-x">
-      <default>-1</default>
-      <summary>Window X position</summary>
-      <description>X coordinate of the window last closed</description>
-    </key>
-    <key type="i" name="position-y">
-      <default>-1</default>
-      <summary>Window Y position</summary>
-      <description>Y coordinate of the window last closed</description>
     </key>
     <key type="b" name="maximized">
       <default>false</default>

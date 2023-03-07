@@ -1,88 +1,104 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: Copyright 2014-2015 Atlas Developers, 2018-2022 Ryo Nakano
+ * SPDX-FileCopyrightText: 2014-2015 Atlas Developers
+ *                         2018-2023 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Atlas.MainWindow : Hdy.Window {
-    private Atlas.GeoClue geo_clue;
-    private Gtk.ListStore location_store;
-    private GtkChamplain.Embed champlain;
-    private Champlain.View view;
-    private Champlain.MarkerLayer poi_layer;
-    private Atlas.LocationMarker point;
-    private GLib.Cancellable search_cancellable;
-    private uint configure_id;
+public class Atlas.MainWindow : Gtk.ApplicationWindow {
+    [CCode (has_target = false)]
+    private delegate bool KeyPressHandler (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state);
+    private static Gee.HashMap<uint, KeyPressHandler> key_press_handler;
 
-    private Gtk.Button current_location;
-    private Spinner spinner;
+    private class PlaceListBoxRow : Gtk.ListBoxRow {
+        public Geocode.Place place { get; construct; }
+
+        public PlaceListBoxRow (Geocode.Place place) {
+            Object (place: place);
+        }
+    }
 
     private enum MapSource {
         MAPNIK,
-        TRANSPORT_MAP;
-
-        public static string get_display_string (MapSource map_source) {
-            switch (map_source) {
-                case MapSource.MAPNIK:
-                    return "Mapnik";
-                case MapSource.TRANSPORT_MAP:
-                    return _("Transport Map");
-                default:
-                    assert_not_reached ();
-            }
-        }
+        TRANSPORT;
     }
 
-    public MainWindow (Application app) {
-        Object (
-            application: app,
-            title: "Atlas"
-        );
+    private string unknown_text = _("Unknown");
+
+    private ListStore location_store;
+    private Cancellable? search_cancellable = null;
+
+    private Gtk.Button current_location;
+    private Gtk.Spinner spinner;
+    public Gtk.SearchEntry search_entry { get; construct; }
+    private Gtk.ListBox search_res_list;
+    private Gtk.Popover search_res_popover;
+
+    static construct {
+        key_press_handler = new Gee.HashMap<uint, KeyPressHandler> ();
+        key_press_handler[Gdk.Key.f] = key_press_handler_f;
+        key_press_handler[Gdk.Key.q] = key_press_handler_q;
     }
 
     construct {
-        Hdy.init ();
+        title = Application.APP_NAME;
 
-        geo_clue = new Atlas.GeoClue ();
-        location_store = new Gtk.ListStore (2, typeof (Geocode.Place), typeof (string));
-
-        var location_completion = new Gtk.EntryCompletion () {
-            minimum_key_length = 3,
-            model = location_store,
-            text_column = 1
-        };
-
-        champlain = new GtkChamplain.Embed () {
-            margin = 3
-        };
-        view = champlain.champlain_view;
-        view.horizontal_wrap = true;
-
-        var factory = Champlain.MapSourceFactory.dup_default ();
-
-        poi_layer = new Champlain.MarkerLayer.full (Champlain.SelectionMode.SINGLE);
-        view.add_layer (poi_layer);
+        bool is_searching = false;
+        location_store = new ListStore (typeof (Geocode.Place));
 
         current_location = new Gtk.Button () {
-            tooltip_text = _("Current Location"),
-            image = new Gtk.Image.from_icon_name ("mark-location-symbolic", Gtk.IconSize.LARGE_TOOLBAR)
+            tooltip_text = _("Move to the current location"),
+            icon_name = "mark-location-symbolic",
+            margin_start = 6,
+            margin_end = 6
         };
 
-        spinner = new Spinner ();
+        spinner = new Gtk.Spinner () {
+            visible = false,
+            margin_start = 6,
+            margin_end = 6
+        };
 
-        double langitude = Atlas.Application.settings.get_double ("langitude");
-        double longitude = Atlas.Application.settings.get_double ("longitude");
-        view.go_to (langitude, longitude);
-        view.zoom_level = Atlas.Application.settings.get_uint ("zoom-level");
-
-        if (langitude == 0 && longitude == 0) { // First time launch
-            show_current_location ();
-        }
-
-        var search_entry = new Gtk.SearchEntry () {
+        search_entry = new Gtk.SearchEntry () {
             placeholder_text = _("Search Location"),
             tooltip_markup = Granite.markup_accel_tooltip ({"<Control>F"}, _("Search Location")),
             valign = Gtk.Align.CENTER,
-            completion = location_completion
+            margin_start = 6,
+            margin_end = 6
+        };
+
+        var search_res_msg_view = new Granite.Placeholder (_("No Search Results")) {
+            description = _("Try changing the search term."),
+            margin_start = 12,
+            margin_end = 12
+        };
+
+        search_res_list = new Gtk.ListBox () {
+            selection_mode = Gtk.SelectionMode.BROWSE
+        };
+        search_res_list.bind_model (location_store, construct_search_res);
+
+        var search_res_list_scrolled = new Gtk.ScrolledWindow () {
+            child = search_res_list,
+            hscrollbar_policy = Gtk.PolicyType.NEVER,
+            vexpand = true
+        };
+
+        var search_res_stack = new Gtk.Stack () {
+            height_request = 500
+        };
+        search_res_stack.add_child (search_res_msg_view);
+        search_res_stack.add_child (search_res_list_scrolled);
+
+        Gdk.Rectangle search_entry_alloc;
+        search_entry.get_allocation (out search_entry_alloc);
+        search_entry_alloc.x += 60;
+        search_entry_alloc.y += 30;
+
+        search_res_popover = new Gtk.Popover () {
+            has_arrow = false,
+            child = search_res_stack,
+            default_widget = search_res_list,
+            pointing_to = search_entry_alloc
         };
 
         var style_switcher = new StyleSwitcher ();
@@ -92,199 +108,233 @@ public class Atlas.MainWindow : Hdy.Window {
             margin_bottom = 6
         };
 
-        var layer_label = new Gtk.Label (_("Layer:")) {
+        var src_label = new Gtk.Label (_("Map Source:")) {
             halign = Gtk.Align.START
         };
 
-        var mapnik_radio = new Gtk.RadioButton.with_label_from_widget (null, MapSource.get_display_string (MapSource.MAPNIK)) {
+        var mapnik_chkbtn = new Gtk.CheckButton.with_label ("Mapnik") {
             active = false
         };
-        mapnik_radio.toggled.connect (() => {
-            view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_MAPNIK);
-            Application.settings.set_enum ("map-source", MapSource.MAPNIK);
-            view.max_zoom_level = 18; // reset to the original max zoom level
-        });
 
-        var transport_map_radio = new Gtk.RadioButton.with_label_from_widget (mapnik_radio, MapSource.get_display_string (MapSource.TRANSPORT_MAP)) {
-            active = false
+        var transport_chkbtn = new Gtk.CheckButton.with_label (_("Transport Map")) {
+            active = false,
+            group = mapnik_chkbtn
         };
-        transport_map_radio.toggled.connect (() => {
-            view.map_source = factory.create_cached_source (Champlain.MAP_SOURCE_OSM_TRANSPORT_MAP);
-            Application.settings.set_enum ("map-source", MapSource.TRANSPORT_MAP);
-            // It looks like the transport map doesn't work well when the zoom level is bigger than 15
-            view.max_zoom_level = 15;
-        });
-
-        if ((MapSource) Application.settings.get_enum ("map-source") == MapSource.MAPNIK) {
-            mapnik_radio.active = true;
-        } else {
-            transport_map_radio.active = true;
-        }
 
         var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
-            margin = 12
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
         };
-        preferences_box.add (style_switcher);
-        preferences_box.add (separator);
-        preferences_box.add (layer_label);
-        preferences_box.add (mapnik_radio);
-        preferences_box.add (transport_map_radio);
+        preferences_box.append (style_switcher);
+        preferences_box.append (separator);
+        preferences_box.append (src_label);
+        preferences_box.append (mapnik_chkbtn);
+        preferences_box.append (transport_chkbtn);
 
-        var preferences_button = new Gtk.ToolButton (
-            new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR), null
-        ) {
-            tooltip_text = _("Preferences")
+        var preferences_popover = new Gtk.Popover () {
+            child = preferences_box
         };
 
-        var preferences_popover = new Gtk.Popover (preferences_button);
-        preferences_popover.add (preferences_box);
+        var preferences_button = new Gtk.MenuButton () {
+            tooltip_text = _("Preferences"),
+            icon_name = "open-menu",
+            popover = preferences_popover
+        };
 
-        preferences_button.clicked.connect (() => {
-            preferences_popover.show_all ();
-        });
-
-        var headerbar = new Hdy.HeaderBar () {
-            title = "Atlas",
-            show_close_button = true
+        var headerbar = new Gtk.HeaderBar () {
+            title_widget = new Gtk.Label (Application.APP_NAME),
+            hexpand = true,
+            vexpand = true
         };
         headerbar.pack_start (current_location);
         headerbar.pack_end (preferences_button);
         headerbar.pack_end (search_entry);
+        headerbar.pack_end (search_res_popover);
         headerbar.pack_end (spinner);
+        set_titlebar (headerbar);
 
-        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        main_box.add (headerbar);
-        main_box.add (champlain);
-        add (main_box);
+        var map_widget = new MapWidget ();
+        child = map_widget;
 
-        location_completion.set_match_func ((completion, key, iter) => {
-            return true;
-        });
-        location_completion.match_selected.connect ((model, iter) => suggestion_selected (model, iter));
+        if ((MapSource) Application.settings.get_enum ("map-source") == MapSource.TRANSPORT) {
+            transport_chkbtn.active = true;
+            map_widget.select_transport ();
+        } else {
+            mapnik_chkbtn.active = true;
+            map_widget.select_mapnik ();
+        }
+
+        map_widget.set_init_place ();
 
         current_location.clicked.connect (() => {
-            show_current_location ();
+            map_widget.go_to_current ();
         });
 
         search_entry.search_changed.connect (() => {
-            if (search_entry.text == "") {
+            if (search_entry.text == "" || is_searching) {
                 return;
             }
 
-            spinner.activate (_("Searching locations…"));
+            is_searching = true;
+            busy_begin ();
 
-            compute_location.begin (search_entry.text, (obj, res) => {
-                spinner.deactivate ();
+            compute_location.begin (search_entry.text, location_store, (obj, res) => {
+                bool res_found = compute_location.end (res);
+                if (res_found) {
+                    search_res_stack.visible_child = search_res_list_scrolled;
+                } else {
+                    search_res_stack.visible_child = search_res_msg_view;
+                }
+
+                search_res_popover.popup ();
+                search_entry.grab_focus ();
+                busy_end ();
+                is_searching = false;
             });
         });
 
-        destroy.connect (() => {
-            Atlas.Application.settings.set_double ("langitude", view.latitude);
-            Atlas.Application.settings.set_double ("longitude", view.longitude);
-            Atlas.Application.settings.set_uint ("zoom-level", view.zoom_level);
-        });
-
-        configure_event.connect ((event) => {
-            if (configure_id != 0) {
-                GLib.Source.remove (configure_id);
+        search_res_list.row_activated.connect ((row) => {
+            unowned var place_row = row as PlaceListBoxRow;
+            if (place_row == null) {
+                return;
             }
 
-            configure_id = Timeout.add (100, () => {
-                configure_id = 0;
+            map_widget.go_to_place (place_row.place);
+        });
 
-                Atlas.Application.settings.set_boolean ("maximized", is_maximized);
+        mapnik_chkbtn.toggled.connect (() => {
+            Application.settings.set_enum ("map-source", MapSource.MAPNIK);
+            map_widget.select_mapnik ();
+        });
 
-                if (!is_maximized) {
-                    int x, y, w, h;
-                    get_position (out x, out y);
-                    get_size (out w, out h);
-                    Atlas.Application.settings.set_int ("position-x", x);
-                    Atlas.Application.settings.set_int ("position-y", y);
-                    Atlas.Application.settings.set_int ("window-width", w);
-                    Atlas.Application.settings.set_int ("window-height", h);
-                }
+        transport_chkbtn.toggled.connect (() => {
+            Application.settings.set_enum ("map-source", MapSource.TRANSPORT);
+            map_widget.select_transport ();
+        });
 
+        map_widget.busy_begin.connect (() => {
+            busy_begin ();
+        });
+
+        map_widget.busy_end.connect (() => {
+            busy_end ();
+        });
+
+        var search_entry_gesture = new Gtk.EventControllerKey ();
+        search_entry_gesture.key_pressed.connect (() => {
+            search_res_popover.popdown ();
+        });
+        ((Gtk.Widget) search_res_popover).add_controller (search_entry_gesture);
+
+        var event_controller_key = new Gtk.EventControllerKey ();
+        event_controller_key.key_pressed.connect ((keyval, keycode, state) => {
+            var handler = key_press_handler[keyval];
+            // Unhandled key event
+            if (handler == null) {
                 return false;
-            });
-
-            return Gdk.EVENT_PROPAGATE;
-        });
-
-        key_press_event.connect ((key) => {
-            if (Gdk.ModifierType.CONTROL_MASK in key.state) {
-                switch (key.keyval) {
-                    case Gdk.Key.q:
-                        destroy ();
-                        break;
-                    case Gdk.Key.f:
-                        search_entry.grab_focus ();
-                        break;
-                }
             }
+
+            return handler (this, keyval, keycode, state);
+        });
+        ((Gtk.Widget) this).add_controller (event_controller_key);
+
+        close_request.connect (() => {
+            map_widget.save_map_state ();
+            destroy ();
+            return false;
         });
     }
 
-    private bool suggestion_selected (Gtk.TreeModel model, Gtk.TreeIter iter) {
-        Value place;
-
-        model.get_value (iter, 0, out place);
-        center_map ((Geocode.Place)place);
-
-        return false;
-    }
-
-    private void center_map (Geocode.Place loc) {
-        if (point == null) {
-            point = new Atlas.LocationMarker ();
+    private static bool key_press_handler_f (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+        if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
+            return false;
         }
 
-        point.latitude = loc.location.latitude;
-        point.longitude = loc.location.longitude;
-
-        view.go_to (point.latitude, point.longitude);
-
-        poi_layer.remove_all ();
-        poi_layer.add_marker (point);
+        window.search_entry.grab_focus ();
+        return true;
     }
 
-    private void show_current_location () {
+    private static bool key_press_handler_q (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+        if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
+            return false;
+        }
+
+        window.close_request ();
+        return true;
+    }
+
+    private void busy_begin () {
         current_location.sensitive = false;
-        spinner.activate (_("Detecting your current location…"));
-
-        geo_clue.get_current_location.begin ((obj, res) => {
-            var location = geo_clue.get_current_location.end (res);
-            view.center_on (location.latitude, location.longitude);
-            view.zoom_level = 15;
-            spinner.deactivate ();
-            current_location.sensitive = true;
-        });
+        spinner.show ();
+        spinner.start ();
     }
 
-    // TODO Move to GeoCode
-    private async void compute_location (string loc) {
-    // TODO Use search options
+    private void busy_end () {
+        current_location.sensitive = true;
+        spinner.hide ();
+        spinner.stop ();
+    }
+
+    private async bool compute_location (string loc, ListStore loc_store) {
         if (search_cancellable != null) {
             search_cancellable.cancel ();
         }
 
-        search_cancellable = new GLib.Cancellable ();
+        search_cancellable = new Cancellable ();
 
         var forward = new Geocode.Forward.for_string (loc) {
             answer_count = 10
         };
-        try {
-            var places = yield forward.search_async (search_cancellable);
-            if (places != null) {
-                location_store.clear ();
-            }
 
-            Gtk.TreeIter location;
-            foreach (unowned var place in places) {
-                location_store.append (out location);
-                location_store.set (location, 0, place, 1, place.name);
-            }
+        loc_store.remove_all ();
+
+        var places = new List<Geocode.Place> ();
+        try {
+            places = yield forward.search_async (search_cancellable);
         } catch (Error error) {
             warning (error.message);
         }
+
+        if (places.is_empty ()) {
+            return false;
+        }
+
+        foreach (unowned var place in places) {
+            loc_store.append (place);
+        }
+
+        return true;
+    }
+
+    private Gtk.Widget construct_search_res (Object item) {
+        unowned var place = item as Geocode.Place;
+
+        var icon = new Gtk.Image.from_gicon (place.icon);
+
+        string street = place.street ?? unknown_text;
+        string postal_code = place.postal_code ?? unknown_text;
+        string town = place.town ?? unknown_text;
+
+        string info_text = "%s, %s, %s".printf (street, postal_code, town);
+        var label = new Granite.HeaderLabel (place.name) {
+            secondary_text = info_text
+        };
+
+        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+            margin_top = 6,
+            margin_bottom = 6,
+            margin_start = 6,
+            margin_end = 6
+        };
+        box.append (icon);
+        box.append (label);
+
+        var row = new PlaceListBoxRow (place) {
+            child = box
+        };
+
+        return row;
     }
 }
