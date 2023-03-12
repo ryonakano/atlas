@@ -3,31 +3,30 @@
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
+# albanobattistella <albano_battistella@hotmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-07 23:04+0900\n"
-"PO-Revision-Date: 2022-04-17 02:57+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/atlas-main/"
+"PO-Revision-Date: 2023-03-13 15:40+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/atlas-app/"
 "it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: src/MainWindow.vala:25
 msgid "Unknown"
-msgstr ""
+msgstr "Sconosciuto"
 
 #: src/MainWindow.vala:49
-#, fuzzy
-#| msgid "Detecting your current location…"
 msgid "Move to the current location"
-msgstr "Rilevamento della tua posizione attuale…"
+msgstr "Passa alla posizione corrente"
 
 #: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
@@ -35,15 +34,15 @@ msgstr "Cerca posizione"
 
 #: src/MainWindow.vala:69
 msgid "No Search Results"
-msgstr ""
+msgstr "Nessun risultato trovato"
 
 #: src/MainWindow.vala:70
 msgid "Try changing the search term."
-msgstr ""
+msgstr "Prova a cambiare il termine di ricerca."
 
 #: src/MainWindow.vala:111
 msgid "Map Source:"
-msgstr ""
+msgstr "Fonte mappa:"
 
 #: src/MainWindow.vala:119
 msgid "Transport Map"
