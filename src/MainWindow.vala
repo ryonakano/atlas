@@ -6,8 +6,8 @@
 
 public class Atlas.MainWindow : Gtk.ApplicationWindow {
     [CCode (has_target = false)]
-    private delegate bool KeyPressHandler (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state);
-    private static Gee.HashMap<uint, KeyPressHandler> key_press_handler;
+    private delegate bool KeyPressHandler (Object obj, uint keyval, uint keycode, Gdk.ModifierType state);
+    private static Gee.HashMap<uint, KeyPressHandler> win_kp_handler;
 
     private class PlaceListBoxRow : Gtk.ListBoxRow {
         public Geocode.Place place { get; construct; }
@@ -34,9 +34,9 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     private Gtk.Popover search_res_popover;
 
     static construct {
-        key_press_handler = new Gee.HashMap<uint, KeyPressHandler> ();
-        key_press_handler[Gdk.Key.f] = key_press_handler_f;
-        key_press_handler[Gdk.Key.q] = key_press_handler_q;
+        win_kp_handler = new Gee.HashMap<uint, KeyPressHandler> ();
+        win_kp_handler[Gdk.Key.f] = win_kp_handler_f;
+        win_kp_handler[Gdk.Key.q] = win_kp_handler_q;
     }
 
     construct {
@@ -230,7 +230,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
         var event_controller_key = new Gtk.EventControllerKey ();
         event_controller_key.key_pressed.connect ((keyval, keycode, state) => {
-            var handler = key_press_handler[keyval];
+            var handler = win_kp_handler[keyval];
             // Unhandled key event
             if (handler == null) {
                 return false;
@@ -247,7 +247,12 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         });
     }
 
-    private static bool key_press_handler_f (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+    // F key press handler for MainWindow
+    // obj must be "(typeof) MainWindow"
+    private static bool win_kp_handler_f (Object obj, uint keyval, uint keycode, Gdk.ModifierType state) {
+        MainWindow window = obj as MainWindow;
+        assert (window is MainWindow);
+
         if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
             return false;
         }
@@ -256,7 +261,12 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         return true;
     }
 
-    private static bool key_press_handler_q (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+    // F key press handler for MainWindow
+    // obj must be "(typeof) MainWindow"
+    private static bool win_kp_handler_q (Object obj, uint keyval, uint keycode, Gdk.ModifierType state) {
+        MainWindow window = obj as MainWindow;
+        assert (window is MainWindow);
+
         if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
             return false;
         }
