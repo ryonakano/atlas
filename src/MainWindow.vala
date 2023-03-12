@@ -261,7 +261,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         return true;
     }
 
-    // F key press handler for MainWindow
+    // Q key press handler for MainWindow
     // obj must be "(typeof) MainWindow"
     private static bool win_kp_handler_q (Object obj, uint keyval, uint keycode, Gdk.ModifierType state) {
         MainWindow window = obj as MainWindow;
