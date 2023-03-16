@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   Flatpak:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     strategy:
       matrix:
@@ -39,7 +39,7 @@ jobs:
 
   Lint:
     name: Lint
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     container:
       image: valalang/lint
     steps:
