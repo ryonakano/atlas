@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Heimen Stoffels <vistausss@fastmail.com>, 2022, 2023.
+# Philip Goto <philip.goto@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-07 23:04+0900\n"
-"PO-Revision-Date: 2023-03-08 21:38+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"PO-Revision-Date: 2023-03-19 14:36+0000\n"
+"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/"
 "atlas-metadata/nl/>\n"
 "Language: nl\n"
@@ -68,7 +69,7 @@ msgstr ""
 
 #: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:68
 msgid "Update translations"
-msgstr "Bijgewerkt: vertalingen"
+msgstr "Vertalingen bijgewerkt"
 
 #: data/atlas.metainfo.xml.in:66
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
