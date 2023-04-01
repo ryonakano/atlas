@@ -12,7 +12,7 @@ public class Atlas.MapWidget : Gtk.Box {
     private Shumate.MapSource src_transport;
     private Shumate.SimpleMap map_widget;
     private Shumate.Map base_map;
-    private Shumate.MarkerLayer marker_layer;
+    private Shumate.MarkerLayer? marker_layer = null;
     private GClue.Simple? simple = null;
 
     // The Royal Observatory
@@ -34,6 +34,10 @@ public class Atlas.MapWidget : Gtk.Box {
 
         append (map_widget);
         base_map = map_widget.map;
+    }
+
+    public void add_marker_layer () {
+        Shumate.Map base_map = map_widget.map;
 
         marker_layer = new Shumate.MarkerLayer (map_widget.viewport);
         base_map.add_layer (marker_layer);
