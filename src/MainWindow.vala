@@ -89,16 +89,10 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         search_res_stack.add_child (search_res_msg_view);
         search_res_stack.add_child (search_res_list_scrolled);
 
-        Gdk.Rectangle search_entry_alloc;
-        search_entry.get_allocation (out search_entry_alloc);
-        search_entry_alloc.x += 60;
-        search_entry_alloc.y += 30;
-
         search_res_popover = new Gtk.Popover () {
             has_arrow = false,
             child = search_res_stack,
-            default_widget = search_res_list,
-            pointing_to = search_entry_alloc
+            default_widget = search_res_list
         };
 
         var style_switcher = new StyleSwitcher ();
