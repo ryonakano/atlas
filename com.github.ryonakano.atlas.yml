@@ -1,6 +1,6 @@
 app-id: com.github.ryonakano.atlas
 runtime: io.elementary.Platform
-runtime-version: '7.1'
+runtime-version: '7.2'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.atlas
 finish-args:
@@ -11,6 +11,13 @@ finish-args:
   - '--device=dri'
   - '--system-talk-name=org.freedesktop.GeoClue2'
 modules:
+  # Required for geoclue 2.6.0
+  - name: libsoup-2.4
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/libsoup/2.74/libsoup-2.74.3.tar.xz
+        sha256: e4b77c41cfc4c8c5a035fcdc320c7bc6cfb75ef7c5a034153df1413fa1d92f13
   - name: geoclue
     buildsystem: meson
     config-opts:
