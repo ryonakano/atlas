@@ -48,7 +48,7 @@ executable(
         dependency('geocode-glib-2.0'),
         dependency('gio-2.0'),
         dependency('granite-7', version: '>= 7.1.0'),
-        dependency('libgeoclue-2.0'),
+        dependency('libportal'),
         dependency('shumate-1.0'),
         dependency('gtk4')
     ],

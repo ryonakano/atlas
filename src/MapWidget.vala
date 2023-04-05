@@ -13,7 +13,9 @@ public class Atlas.MapWidget : Gtk.Box {
     private Shumate.SimpleMap map_widget;
     private Shumate.Map base_map;
     private Shumate.MarkerLayer? marker_layer = null;
-    private GClue.Simple? simple = null;
+
+    private Xdp.Portal? portal = null;
+    private Cancellable? loc_monitor_cancelable = null;
 
     // The Royal Observatory
     private const double DEFAULT_LATITUDE = 51.2840;
@@ -64,18 +66,30 @@ public class Atlas.MapWidget : Gtk.Box {
     }
 
     public void go_to_current () {
-        GClue.Location? location = null;
-
         busy_begin ();
-        get_current_location.begin ((obj, res) => {
-            location = get_current_location.end (res);
-            busy_end ();
 
-            if (location == null) {
-                return;
+        if (portal == null) {
+            portal = new Xdp.Portal ();
+            portal.location_updated.connect ((lat, lng, alt, acc, sp, hd, desc, sec, msec) => {
+                base_map.go_to_full (lat, lng, DEFAULT_ZOOM_LEVEL);
+                portal.location_monitor_stop ();
+                busy_end ();
+            });
+        }
+
+        if (loc_monitor_cancelable != null) {
+            loc_monitor_cancelable.cancel ();
+        }
+
+        loc_monitor_cancelable = new Cancellable ();
+
+        portal.location_monitor_start.begin (null, 0, 0, Xdp.LocationAccuracy.EXACT, Xdp.LocationMonitorFlags.NONE,
+                                             loc_monitor_cancelable, (obj, res) => {
+            try {
+                portal.location_monitor_start.end (res);
+            } catch (Error e) {
+                warning (e.message);
             }
-
-            base_map.go_to_full (location.latitude, location.longitude, DEFAULT_ZOOM_LEVEL);
         });
     }
 
@@ -85,24 +99,6 @@ public class Atlas.MapWidget : Gtk.Box {
 
     public void select_transport () {
         map_widget.map_source = src_transport;
-    }
-
-    // Get the current location.
-    // @return The current location represented by GClue.Location, or null if failed
-    // Inspired from https://gitlab.gnome.org/GNOME/gnome-clocks/blob/master/src/geocoding.vala
-    public async GClue.Location? get_current_location () {
-        if (simple != null) {
-            return simple.get_location ();
-        }
-
-        try {
-            simple = yield new GClue.Simple (Build.PROJECT_NAME, GClue.AccuracyLevel.EXACT, null);
-        } catch (Error e) {
-            warning ("Failed to connect to GeoClue2 service: %s", e.message);
-            return null;
-        }
-
-        return simple.get_location ();
     }
 
     public void go_to_place (Geocode.Place place) {

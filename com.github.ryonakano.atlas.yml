@@ -9,29 +9,7 @@ finish-args:
   - '--socket=wayland'
   - '--socket=fallback-x11'
   - '--device=dri'
-  - '--system-talk-name=org.freedesktop.GeoClue2'
 modules:
-  # Required for geoclue 2.6.0
-  - name: libsoup-2.4
-    buildsystem: meson
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/libsoup/2.74/libsoup-2.74.3.tar.xz
-        sha256: e4b77c41cfc4c8c5a035fcdc320c7bc6cfb75ef7c5a034153df1413fa1d92f13
-  - name: geoclue
-    buildsystem: meson
-    config-opts:
-      - '-Dgtk-doc=false'
-      - '-D3g-source=false'
-      - '-Dcdma-source=false'
-      - '-Dmodem-gps-source=false'
-      - '-Dnmea-source=false'
-    sources:
-      - type: archive
-        # >= 2.6.0 doesn't work well on Pantheon
-        # possibly due to https://github.com/elementary/pantheon-agent-geoclue2/issues/32
-        url: https://gitlab.freedesktop.org/geoclue/geoclue/-/archive/2.5.7/geoclue-2.5.7.tar.bz2
-        sha256: 6cc7dbe4177b4e7f3532f7fe42262049789a3cd6c55afe60a3564d7394119c27
   - name: geocode-glib-2.0
     buildsystem: meson
     config-opts:
@@ -41,6 +19,16 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.4.tar.xz
         sha256: 2d9a6826d158470449a173871221596da0f83ebdcff98b90c7049089056a37aa
+  - name: libportal
+    buildsystem: meson
+    config-opts:
+      - '-Dbackends=gtk4'
+      - '-Ddocs=false'
+      - '-Dtests=false'
+    sources:
+      - type: archive
+        url: https://github.com/flatpak/libportal/archive/refs/tags/0.6.tar.gz
+        sha256: 8ad326c4f53b7433645dc86d994fef0292bee8adda0fe67db9288ace19250a9c
   - name: libshumate
     buildsystem: meson
     config-opts:
