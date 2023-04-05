@@ -89,6 +89,7 @@ public class Atlas.MapWidget : Gtk.Box {
                 portal.location_monitor_start.end (res);
             } catch (Error e) {
                 warning (e.message);
+                busy_end ();
             }
         });
     }
