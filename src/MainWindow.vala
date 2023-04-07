@@ -161,7 +161,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         }
 
         // Add the marker layer on top after selecting map source
-        map_widget.add_marker_layer ();
+        map_widget.init_marker_layers ();
         map_widget.set_init_place ();
 
         current_location.clicked.connect (() => {

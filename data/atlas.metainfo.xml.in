@@ -55,6 +55,7 @@
       <description>
         <ul>
           <li>Rewrite the app</li>
+          <li>Add current location indicator</li>
           <li>Update library versions</li>
           <li>Update translations</li>
         </ul>
