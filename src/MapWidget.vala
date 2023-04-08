@@ -43,7 +43,7 @@ public class Atlas.MapWidget : Gtk.Box {
     }
 
     // Set the initial location of the map widget.
-    public void set_init_place () {
+    private void set_init_place () {
         Shumate.MapSource map_source = map_widget.map_source;
 
         double latitude = Atlas.Application.settings.get_double ("latitude");
@@ -81,7 +81,9 @@ public class Atlas.MapWidget : Gtk.Box {
         get_gclue_simple.begin ((obj, res) => {
             simple = get_gclue_simple.end (res);
 
+            // Location services might be disabled
             if (simple == null) {
+                set_init_place ();
                 busy_end ();
                 return;
             }
@@ -90,9 +92,10 @@ public class Atlas.MapWidget : Gtk.Box {
             location = simple.location;
             draw_location (location);
             is_watching_location = true;
+            set_init_place ();
             busy_end ();
 
-            // redraw on location changed
+            // redraw on location change
             simple.notify["location"].connect (() => {
                 location = simple.location;
                 draw_location (location);
