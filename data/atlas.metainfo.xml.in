@@ -54,7 +54,9 @@
     <release version="2.0.0" date="2023-03-07">
       <description>
         <ul>
-          <li>Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead of libchamplain</li>
+          <li>Rewrite the app</li>
+          <li>Add current location indicator</li>
+          <li>Update library versions</li>
           <li>Update translations</li>
         </ul>
       </description>

@@ -33,7 +33,7 @@ asresources = gnome.compile_resources(
 
 sources = files(
     'src' / 'Application.vala',
-    'src' / 'MarkerLayer.vala',
+    'src' / 'MarkerLayerManager.vala',
     'src' / 'MainWindow.vala',
     'src' / 'MapWidget.vala',
     'src' / 'StyleSwitcher.vala'
