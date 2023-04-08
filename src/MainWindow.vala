@@ -160,8 +160,17 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             map_widget.select_mapnik ();
         }
 
+        map_widget.busy_begin.connect (() => {
+            busy_begin ();
+        });
+
+        map_widget.busy_end.connect (() => {
+            busy_end ();
+        });
+
         // Add the marker layer on top after selecting map source
         map_widget.init_marker_layers ();
+        map_widget.watch_location_change ();
         map_widget.set_init_place ();
 
         current_location.clicked.connect (() => {
@@ -208,14 +217,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         transport_chkbtn.toggled.connect (() => {
             Application.settings.set_enum ("map-source", MapSource.TRANSPORT);
             map_widget.select_transport ();
-        });
-
-        map_widget.busy_begin.connect (() => {
-            busy_begin ();
-        });
-
-        map_widget.busy_end.connect (() => {
-            busy_end ();
         });
 
         var search_entry_gesture = new Gtk.EventControllerKey ();
