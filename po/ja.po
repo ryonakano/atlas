@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:04+0900\n"
+"POT-Creation-Date: 2023-04-08 12:44+0000\n"
 "PO-Revision-Date: 2023-03-15 13:40+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas-app/"
@@ -38,15 +38,15 @@ msgstr "検索結果がありません"
 msgid "Try changing the search term."
 msgstr "検索用語を変えてみてください。"
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:105
 msgid "Map Source:"
 msgstr "マップ提供元:"
 
-#: src/MainWindow.vala:119
+#: src/MainWindow.vala:113
 msgid "Transport Map"
 msgstr "交通マップ"
 
-#: src/MainWindow.vala:141
+#: src/MainWindow.vala:135
 msgid "Preferences"
 msgstr "設定"
 

@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:04+0900\n"
+"POT-Creation-Date: 2023-04-08 12:44+0000\n"
 "PO-Revision-Date: 2023-03-19 14:36+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/atlas-app/nl/>"
-"\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/atlas-app/nl/"
+">\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,15 +39,15 @@ msgstr "Er zijn geen zoekresultaten"
 msgid "Try changing the search term."
 msgstr "Probeer een andere zoekopdracht."
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:105
 msgid "Map Source:"
 msgstr "Kaartbron:"
 
-#: src/MainWindow.vala:119
+#: src/MainWindow.vala:113
 msgid "Transport Map"
 msgstr "OV-kaart"
 
-#: src/MainWindow.vala:141
+#: src/MainWindow.vala:135
 msgid "Preferences"
 msgstr "Voorkeuren"
 

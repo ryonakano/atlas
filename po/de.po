@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:04+0900\n"
+"POT-Creation-Date: 2023-04-08 12:44+0000\n"
 "PO-Revision-Date: 2022-04-19 00:09+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/rosp/atlas-main/"
@@ -40,15 +40,15 @@ msgstr ""
 msgid "Try changing the search term."
 msgstr ""
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:105
 msgid "Map Source:"
 msgstr ""
 
-#: src/MainWindow.vala:119
+#: src/MainWindow.vala:113
 msgid "Transport Map"
 msgstr "Verkehrskarte"
 
-#: src/MainWindow.vala:141
+#: src/MainWindow.vala:135
 msgid "Preferences"
 msgstr "Einstellungen"
 
