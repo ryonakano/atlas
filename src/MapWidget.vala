@@ -80,9 +80,9 @@ public class Atlas.MapWidget : Gtk.Box {
         busy_begin ();
         get_gclue_simple.begin ((obj, res) => {
             simple = get_gclue_simple.end (res);
-            busy_end ();
 
             if (simple == null) {
+                busy_end ();
                 return;
             }
 
@@ -90,6 +90,7 @@ public class Atlas.MapWidget : Gtk.Box {
             location = simple.location;
             draw_location (location);
             is_watching_location = true;
+            busy_end ();
 
             // redraw on location changed
             simple.notify["location"].connect (() => {
