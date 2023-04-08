@@ -28,7 +28,7 @@ namespace Atlas {
 
         construct {
             var pointer_layer = new Shumate.MarkerLayer (map_widget.viewport);
-            map_widget.map.add_layer (pointer_layer);
+            map_widget.add_overlay_layer (pointer_layer);
             LayerData pointer_data = {
                 pointer_layer,
                 POINTER_IMAGE
@@ -36,7 +36,7 @@ namespace Atlas {
             layer_data += pointer_data;
 
             var location_layer = new Shumate.MarkerLayer (map_widget.viewport);
-            map_widget.map.add_layer (location_layer);
+            map_widget.add_overlay_layer (location_layer);
             LayerData location_data = {
                 location_layer,
                 LOCATION_IMAGE
