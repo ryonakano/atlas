@@ -18,7 +18,7 @@ You'll need the following dependencies:
 * libgeocode-glib-dev
 * libshumate-dev
 * libgranite-7-dev (>= 7.1.0)
-* libgtk4-dev
+* libgtk-4-dev
 * meson (>= 0.57.0)
 * valac
 
