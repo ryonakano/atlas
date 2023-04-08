@@ -73,6 +73,7 @@ public class Atlas.MapWidget : Gtk.Box {
         GClue.Simple? simple = null;
 
         if (is_watching_location) {
+            debug ("Location is already being watched");
             return;
         }
 
@@ -120,6 +121,7 @@ public class Atlas.MapWidget : Gtk.Box {
 
     public void go_to_current () {
         if (location == null) {
+            warning ("Unable to go to current location: No location information provided");
             return;
         }
 
