@@ -1,7 +1,7 @@
 # Atlas
 Atlas is a map viewer designed for elementary OS.
 
-![Screenshot](data/screenshots/screenshot-light.png)
+![Screenshot](data/screenshots/pantheon/screenshot-light.png)
 
 This is a fork of [Atlas Maps](https://launchpad.net/atlas-maps) and wouldn't exist without work of [Steffen Schuhmann](https://launchpad.net/~sschuhmann).
 
