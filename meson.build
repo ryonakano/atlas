@@ -45,7 +45,7 @@ executable(
     config_header,
     sources,
     dependencies: [
-        dependency('geocode-glib-2.0'),
+        dependency('geocode-glib-2.0', version: '>= 3.26.3'),
         dependency('gio-2.0'),
         dependency('granite-7', version: '>= 7.1.0'),
         dependency('libgeoclue-2.0'),
