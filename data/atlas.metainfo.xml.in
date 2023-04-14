@@ -51,7 +51,7 @@
   <developer_name>Ryo Nakano</developer_name>
 
   <releases>
-    <release version="2.0.0" date="2023-04-16" urgency="medium">
+    <release version="2.0.0" date="2023-04-15" urgency="medium">
       <description>
         <ul>
           <li>Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead of libchamplain</li>
