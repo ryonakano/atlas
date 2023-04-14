@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:04+0900\n"
+"POT-Creation-Date: 2023-04-08 12:44+0000\n"
 "PO-Revision-Date: 2022-04-23 17:08+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-extra/"
@@ -67,19 +67,27 @@ msgid ""
 "of libchamplain"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:68
+#: data/atlas.metainfo.xml.in:58
+msgid "Add an blue circle indicator that represents your current location"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:59
+msgid "Update Flatpak runtime version to 7.2"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:60 data/atlas.metainfo.xml.in:70
 msgid "Update translations"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:66
+#: data/atlas.metainfo.xml.in:68
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:67
+#: data/atlas.metainfo.xml.in:69
 msgid "Update copyright information"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:76
+#: data/atlas.metainfo.xml.in:78
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
@@ -87,31 +95,31 @@ msgstr ""
 "Oprava chyby, keď sa v AppCentre zobrazovalo upozornenie, že aplikácia s "
 "niekým zdieľa vašu polohu"
 
-#: data/atlas.metainfo.xml.in:77
+#: data/atlas.metainfo.xml.in:79
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr "Zobrazovať klávesovú skratku pre políčko vyhľadávania v popise"
 
-#: data/atlas.metainfo.xml.in:78
+#: data/atlas.metainfo.xml.in:80
 msgid "Add the new style switcher"
 msgstr "Pridaný nový prepínač štýlov"
 
-#: data/atlas.metainfo.xml.in:79
+#: data/atlas.metainfo.xml.in:81
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr "Prerobená a vektorizovaná ikonka aplikácie (veľká vďaka @Suzie97)"
 
-#: data/atlas.metainfo.xml.in:80
+#: data/atlas.metainfo.xml.in:82
 msgid "Show your current location if launching the app for the first time"
 msgstr "Zobraziť vašu aktuálnu polohu, ak spustíte aplikáciu po prvý raz"
 
-#: data/atlas.metainfo.xml.in:82
+#: data/atlas.metainfo.xml.in:84
 msgid "Translation updates:"
 msgstr "Aktualizácie prekladov:"
 
-#: data/atlas.metainfo.xml.in:84
+#: data/atlas.metainfo.xml.in:86
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
-#: data/atlas.metainfo.xml.in:92
+#: data/atlas.metainfo.xml.in:94
 msgid "Initial release"
 msgstr "Prvé vydanie"
 

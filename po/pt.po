@@ -2,31 +2,30 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2022.
+# Felipe Nogueira <contato.fnog@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:04+0900\n"
-"PO-Revision-Date: 2022-06-21 12:18+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/atlas-"
-"main/pt/>\n"
+"POT-Creation-Date: 2023-04-08 12:44+0000\n"
+"PO-Revision-Date: 2023-04-12 02:50+0000\n"
+"Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
+"atlas-app/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: src/MainWindow.vala:25
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecido"
 
 #: src/MainWindow.vala:49
-#, fuzzy
-#| msgid "Detecting your current location…"
 msgid "Move to the current location"
-msgstr "A detetar a sua localização atual…"
+msgstr "Mover para a localização atual"
 
 #: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
@@ -34,21 +33,21 @@ msgstr "Procurar localização"
 
 #: src/MainWindow.vala:69
 msgid "No Search Results"
-msgstr ""
+msgstr "Sem resultados de busca"
 
 #: src/MainWindow.vala:70
 msgid "Try changing the search term."
-msgstr ""
+msgstr "Tente alterar o termo de pesquisa."
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:105
 msgid "Map Source:"
-msgstr ""
+msgstr "Fonte do mapa:"
 
-#: src/MainWindow.vala:119
+#: src/MainWindow.vala:113
 msgid "Transport Map"
 msgstr "Mapa de transporte"
 
-#: src/MainWindow.vala:141
+#: src/MainWindow.vala:135
 msgid "Preferences"
 msgstr "Preferências"
 

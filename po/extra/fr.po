@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:04+0900\n"
+"POT-Creation-Date: 2023-04-08 12:44+0000\n"
 "PO-Revision-Date: 2023-01-13 18:51+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas-"
@@ -68,20 +68,28 @@ msgid ""
 "of libchamplain"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:68
+#: data/atlas.metainfo.xml.in:58
+msgid "Add an blue circle indicator that represents your current location"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:59
+msgid "Update Flatpak runtime version to 7.2"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:60 data/atlas.metainfo.xml.in:70
 msgid "Update translations"
 msgstr "Mise à jour des traductions"
 
-#: data/atlas.metainfo.xml.in:66
+#: data/atlas.metainfo.xml.in:68
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
 msgstr ""
 "Mise à jour de la dépendance geocode-glib de la version 3.26.2 à 3.26.4"
 
-#: data/atlas.metainfo.xml.in:67
+#: data/atlas.metainfo.xml.in:69
 msgid "Update copyright information"
 msgstr "Mise à jour des informations Copyright"
 
-#: data/atlas.metainfo.xml.in:76
+#: data/atlas.metainfo.xml.in:78
 msgid ""
 "Fix the app being introduced as if sharing your location to someone in "
 "AppCenter"
@@ -89,35 +97,35 @@ msgstr ""
 "Correction de l’anomalie qui présentait l’application comme vous permettant "
 "de partager votre localisation dans l’App Center"
 
-#: data/atlas.metainfo.xml.in:77
+#: data/atlas.metainfo.xml.in:79
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr ""
 "Affichage de la touche de raccourci pour l’entrée de recherche à l’aide "
 "d’une infobulle"
 
-#: data/atlas.metainfo.xml.in:78
+#: data/atlas.metainfo.xml.in:80
 msgid "Add the new style switcher"
 msgstr "Ajout du nouveau bouton pour changer le style"
 
-#: data/atlas.metainfo.xml.in:79
+#: data/atlas.metainfo.xml.in:81
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr "Nouvelle icône vectorisée (un grand merci à @Suzie97)"
 
-#: data/atlas.metainfo.xml.in:80
+#: data/atlas.metainfo.xml.in:82
 msgid "Show your current location if launching the app for the first time"
 msgstr ""
 "Affichage de votre emplacement actuel lors du premier lancement de "
 "l’application"
 
-#: data/atlas.metainfo.xml.in:82
+#: data/atlas.metainfo.xml.in:84
 msgid "Translation updates:"
 msgstr "Mise à jour des traductions :"
 
-#: data/atlas.metainfo.xml.in:84
+#: data/atlas.metainfo.xml.in:86
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Ajout d’une traduction française (grâce à @NathanBnm)"
 
-#: data/atlas.metainfo.xml.in:92
+#: data/atlas.metainfo.xml.in:94
 msgid "Initial release"
 msgstr "Version initiale"
 

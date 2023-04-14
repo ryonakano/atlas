@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 23:04+0900\n"
+"POT-Creation-Date: 2023-04-08 12:44+0000\n"
 "PO-Revision-Date: 2023-03-08 21:38+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas-app/"
@@ -38,15 +38,15 @@ msgstr "Arama Sonucu Yok"
 msgid "Try changing the search term."
 msgstr "Arama terimini değiştirmeyi deneyin."
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:105
 msgid "Map Source:"
 msgstr "Harita Kaynağı:"
 
-#: src/MainWindow.vala:119
+#: src/MainWindow.vala:113
 msgid "Transport Map"
 msgstr "Ulaşım Haritası"
 
-#: src/MainWindow.vala:141
+#: src/MainWindow.vala:135
 msgid "Preferences"
 msgstr "Tercihler"
 

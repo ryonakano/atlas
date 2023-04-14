@@ -1,7 +1,7 @@
 # Atlas
 Atlas is a map viewer designed for elementary OS.
 
-![Screenshot](data/Screenshot.png)
+![Screenshot](data/screenshots/pantheon/screenshot-light.png)
 
 This is a fork of [Atlas Maps](https://launchpad.net/atlas-maps) and wouldn't exist without work of [Steffen Schuhmann](https://launchpad.net/~sschuhmann).
 
@@ -15,10 +15,10 @@ On elementary OS? Click the button to get Atlas on AppCenter:
 You'll need the following dependencies:
 
 * libgeoclue-2-dev
-* libgeocode-glib-dev
+* libgeocode-glib-dev (>= 3.26.3)
 * libshumate-dev
 * libgranite-7-dev (>= 7.1.0)
-* libgtk4-dev
+* libgtk-4-dev
 * meson (>= 0.57.0)
 * valac
 
