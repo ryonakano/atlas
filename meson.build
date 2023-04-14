@@ -1,7 +1,7 @@
 project(
     'com.github.ryonakano.atlas',
     'vala', 'c',
-    version: '1.0.1',
+    version: '2.0.0',
     meson_version: '>=0.57.0'
 )
 
