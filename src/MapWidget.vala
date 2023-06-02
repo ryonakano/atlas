@@ -133,8 +133,7 @@ public class Atlas.MapWidget : Gtk.Box {
     }
 
     public void go_to_place (Geocode.Place place) {
-        Geocode.Location loc;
-        loc = place.location;
+        Geocode.Location loc = place.location;
 
         manager.clear_markers (MarkerType.POINTER);
         manager.new_marker_at_pos (MarkerType.POINTER, loc.latitude, loc.longitude);

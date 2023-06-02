@@ -2,32 +2,30 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
-# JohnDumpling <john_dumpling@protonmail.com>, 2022.
+# JohnDumpling <john_dumpling@protonmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-08 12:44+0000\n"
-"PO-Revision-Date: 2022-04-23 17:08+0000\n"
+"PO-Revision-Date: 2023-05-26 11:53+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-main/"
-"sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-app/sk/"
+">\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.12.1-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: src/MainWindow.vala:25
 msgid "Unknown"
-msgstr ""
+msgstr "Neznáme"
 
 #: src/MainWindow.vala:49
-#, fuzzy
-#| msgid "Detecting your current location…"
 msgid "Move to the current location"
-msgstr "Zisťuje sa vaša aktuálna poloha…"
+msgstr "Presunúť sa na aktuálnu polohu"
 
 #: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
@@ -35,15 +33,15 @@ msgstr "Vyhľadať miesto"
 
 #: src/MainWindow.vala:69
 msgid "No Search Results"
-msgstr ""
+msgstr "Žiadne výsledky vyhľadávania"
 
 #: src/MainWindow.vala:70
 msgid "Try changing the search term."
-msgstr ""
+msgstr "Skúste zmeniť hľadaný výraz."
 
 #: src/MainWindow.vala:105
 msgid "Map Source:"
-msgstr ""
+msgstr "Zdroj mapy:"
 
 #: src/MainWindow.vala:113
 msgid "Transport Map"

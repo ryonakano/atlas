@@ -2,22 +2,22 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
-# JohnDumpling <john_dumpling@protonmail.com>, 2022.
+# JohnDumpling <john_dumpling@protonmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-08 12:44+0000\n"
-"PO-Revision-Date: 2022-04-23 17:08+0000\n"
+"PO-Revision-Date: 2023-05-26 11:53+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-extra/"
-"sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
+"atlas-metadata/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.12.1-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:3
 msgid "Atlas"
@@ -50,42 +50,46 @@ msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
+"Toto je vetva (fork) aplikácie „Atlas Maps“ a neexistovala by bez práce "
+"Steffena Schuhmanna."
 
 #: data/atlas.metainfo.xml.in:28
-#, fuzzy
-#| msgid "View where to go"
 msgid "Search where to go"
-msgstr "Zobrazte si, kam chcete ísť"
+msgstr "Vyhľadajte miesto, kam chcete ísť"
 
 #: data/atlas.metainfo.xml.in:51
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/atlas.metainfo.xml.in:57
 msgid ""
 "Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead "
 "of libchamplain"
 msgstr ""
+"Prerobený kód aplikácie; teraz používa GTK 4 namiesto GTK 3 a libshumate "
+"namiesto libchamplain"
 
 #: data/atlas.metainfo.xml.in:58
 msgid "Add an blue circle indicator that represents your current location"
 msgstr ""
+"Pridaný modrý indikátor v tvare kruhu, ktorý reprezentuje vašu aktuálnu "
+"polohu"
 
 #: data/atlas.metainfo.xml.in:59
 msgid "Update Flatpak runtime version to 7.2"
-msgstr ""
+msgstr "Aktualizácia verzie behového prostredia Flatpak na 7.2"
 
 #: data/atlas.metainfo.xml.in:60 data/atlas.metainfo.xml.in:70
 msgid "Update translations"
-msgstr ""
+msgstr "Aktualizované preklady"
 
 #: data/atlas.metainfo.xml.in:68
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr ""
+msgstr "Aktualizovaná závislosť geocode-glib z 3.26.2 na 3.26.4"
 
 #: data/atlas.metainfo.xml.in:69
 msgid "Update copyright information"
-msgstr ""
+msgstr "Aktualizácia informácií o autorských právach"
 
 #: data/atlas.metainfo.xml.in:78
 msgid ""
