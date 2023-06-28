@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-08 12:44+0000\n"
+"POT-Creation-Date: 2023-06-28 21:00+0900\n"
 "PO-Revision-Date: 2023-02-04 16:24+0200\n"
 "Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
 "Language-Team: none\n"
@@ -57,32 +57,37 @@ msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
 #: data/atlas.metainfo.xml.in:57
+msgid "Use newer version of GeoClue which prefers Location Portal if available"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:69
+#: data/atlas.metainfo.xml.in:79
+msgid "Update translations"
+msgstr "Atnaujinti vertimai"
+
+#: data/atlas.metainfo.xml.in:66
 msgid ""
 "Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead "
 "of libchamplain"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:58
+#: data/atlas.metainfo.xml.in:67
 msgid "Add an blue circle indicator that represents your current location"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:59
-msgid "Update Flatpak runtime version to 7.2"
+#: data/atlas.metainfo.xml.in:68
+msgid "Update Flatpak runtime version"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:60 data/atlas.metainfo.xml.in:70
-msgid "Update translations"
-msgstr "Atnaujinti vertimai"
-
-#: data/atlas.metainfo.xml.in:68
+#: data/atlas.metainfo.xml.in:77
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
 msgstr "Atnaujintas privalomas geocode-glib iš 3.26.2 į 3.26.4"
 
-#: data/atlas.metainfo.xml.in:69
+#: data/atlas.metainfo.xml.in:78
 msgid "Update copyright information"
 msgstr "Atnaujinta autorių teisių informacija"
 
-#: data/atlas.metainfo.xml.in:78
+#: data/atlas.metainfo.xml.in:87
 #, fuzzy
 #| msgid ""
 #| "Fix the app being introduced as if sharing your location to someone in "
@@ -94,33 +99,33 @@ msgstr ""
 "Pažindinimo programos taisa, kuomet nėra keičiamasi buvimo vieta per "
 "\"AppCenter\" nepažįstamiems asmenims"
 
-#: data/atlas.metainfo.xml.in:79
+#: data/atlas.metainfo.xml.in:88
 msgid "Show the shortcut key for search entry using tooltip"
 msgstr ""
 "Naudojant tooltip pateikti greitųjų klavišų kombinaciją paieškos įvesčiai"
 
-#: data/atlas.metainfo.xml.in:80
+#: data/atlas.metainfo.xml.in:89
 msgid "Add the new style switcher"
 msgstr "Pridėti naują stilių mainytoją"
 
-#: data/atlas.metainfo.xml.in:81
+#: data/atlas.metainfo.xml.in:90
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
 msgstr ""
 "Permaketuota ir vektorizuota programėlės ikonėlė (big thanks to @Suzie97)"
 
-#: data/atlas.metainfo.xml.in:82
+#: data/atlas.metainfo.xml.in:91
 msgid "Show your current location if launching the app for the first time"
 msgstr "Pateikti dabartinę buvimo vietą paleidžiant programėlę pirmą kartą"
 
-#: data/atlas.metainfo.xml.in:84
+#: data/atlas.metainfo.xml.in:93
 msgid "Translation updates:"
 msgstr "Vertimo naujiniai:"
 
-#: data/atlas.metainfo.xml.in:86
+#: data/atlas.metainfo.xml.in:95
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Pridėtas prancūzų vertimas (thanks to @NathanBnm)"
 
-#: data/atlas.metainfo.xml.in:94
+#: data/atlas.metainfo.xml.in:103
 msgid "Initial release"
 msgstr "Einamoji laida"
 
