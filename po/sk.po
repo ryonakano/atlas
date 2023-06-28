@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-08 12:44+0000\n"
+"POT-Creation-Date: 2023-06-28 21:00+0900\n"
 "PO-Revision-Date: 2023-05-26 11:53+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-app/sk/"
@@ -51,19 +51,19 @@ msgstr "Dopravná mapa"
 msgid "Preferences"
 msgstr "Predvoľby"
 
-#: src/StyleSwitcher.vala:26
+#: src/StyleSwitcher.vala:27
 msgid "Style:"
 msgstr "Štýl:"
 
-#: src/StyleSwitcher.vala:32
+#: src/StyleSwitcher.vala:31
 msgid "Light"
 msgstr "Svetlý"
 
-#: src/StyleSwitcher.vala:35
+#: src/StyleSwitcher.vala:32
 msgid "Dark"
 msgstr "Tmavý"
 
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Systém"
 

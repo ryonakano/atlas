@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-08 12:44+0000\n"
+"POT-Creation-Date: 2023-06-28 21:00+0900\n"
 "PO-Revision-Date: 2022-04-17 02:57+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas-main/"
@@ -54,19 +54,19 @@ msgstr "Carte des transports"
 msgid "Preferences"
 msgstr "Préférences"
 
-#: src/StyleSwitcher.vala:26
+#: src/StyleSwitcher.vala:27
 msgid "Style:"
 msgstr "Style :"
 
-#: src/StyleSwitcher.vala:32
+#: src/StyleSwitcher.vala:31
 msgid "Light"
 msgstr "Clair"
 
-#: src/StyleSwitcher.vala:35
+#: src/StyleSwitcher.vala:32
 msgid "Dark"
 msgstr "Sombre"
 
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Système"
 

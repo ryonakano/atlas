@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-08 12:44+0000\n"
+"POT-Creation-Date: 2023-06-28 21:00+0900\n"
 "PO-Revision-Date: 2023-04-12 02:50+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
-"atlas-app/pt/>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/atlas-"
+"app/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,19 +51,19 @@ msgstr "Mapa de transporte"
 msgid "Preferences"
 msgstr "Preferências"
 
-#: src/StyleSwitcher.vala:26
+#: src/StyleSwitcher.vala:27
 msgid "Style:"
 msgstr "Estilo:"
 
-#: src/StyleSwitcher.vala:32
+#: src/StyleSwitcher.vala:31
 msgid "Light"
 msgstr "Claro"
 
-#: src/StyleSwitcher.vala:35
+#: src/StyleSwitcher.vala:32
 msgid "Dark"
 msgstr "Escuro"
 
-#: src/StyleSwitcher.vala:41
+#: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Sistema"
 
