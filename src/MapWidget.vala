@@ -102,7 +102,7 @@ public class Atlas.MapWidget : Gtk.Box {
     }
 
     // Inspired from https://gitlab.gnome.org/GNOME/gnome-clocks/blob/master/src/geocoding.vala
-    public async GClue.Simple? get_gclue_simple () {
+    private async GClue.Simple? get_gclue_simple () {
         GClue.Simple? simple = null;
 
         try {
