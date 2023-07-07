@@ -160,17 +160,19 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             map_widget.select_mapnik ();
         }
 
-        map_widget.busy_begin.connect (() => {
-            busy_begin ();
-        });
-
-        map_widget.busy_end.connect (() => {
-            busy_end ();
-        });
-
         // Add the marker layer on top after selecting map source
         map_widget.init_marker_layers ();
-        map_widget.watch_location_change ();
+
+        // Try to seek the current location
+        busy_begin ();
+        map_widget.watch_location_change.begin ((obj, res) => {
+            bool watch_enabled = map_widget.watch_location_change.end (res);
+            busy_end ();
+            if (!watch_enabled) {
+                current_location.tooltip_text = _("Failed to connect to location service");
+                current_location.sensitive = false;
+            }
+        });
 
         current_location.clicked.connect (() => {
             map_widget.go_to_current ();
