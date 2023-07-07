@@ -5,9 +5,6 @@
  */
 
 public class Atlas.MapWidget : Gtk.Box {
-    public signal void busy_begin ();
-    public signal void busy_end ();
-
     private Shumate.MapSource src_mapnik;
     private Shumate.MapSource src_transport;
     private Shumate.SimpleMap map_widget;
@@ -69,38 +66,32 @@ public class Atlas.MapWidget : Gtk.Box {
         map_widget.map_source = src_transport;
     }
 
-    public void watch_location_change () {
-        GClue.Simple? simple = null;
-
+    public async bool watch_location_change () {
         if (is_watching_location) {
             debug ("Location is already being watched");
-            return;
+            return true;
         }
 
-        busy_begin ();
-        get_gclue_simple.begin ((obj, res) => {
-            simple = get_gclue_simple.end (res);
-
+        GClue.Simple? simple = yield get_gclue_simple ();
+        if (simple == null) {
             // Location services might be disabled
-            if (simple == null) {
-                set_init_place ();
-                busy_end ();
-                return;
-            }
+            set_init_place ();
+            return false;
+        }
 
-            // draw initial current location
+        // draw initial current location
+        location = simple.location;
+        draw_location (location);
+        is_watching_location = true;
+        set_init_place ();
+
+        // redraw on location change
+        simple.notify["location"].connect (() => {
             location = simple.location;
             draw_location (location);
-            is_watching_location = true;
-            set_init_place ();
-            busy_end ();
-
-            // redraw on location change
-            simple.notify["location"].connect (() => {
-                location = simple.location;
-                draw_location (location);
-            });
         });
+
+        return true;
     }
 
     private void draw_location (GClue.Location location) {
