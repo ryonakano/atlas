@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-28 21:00+0900\n"
-"PO-Revision-Date: 2023-02-03 04:22+0000\n"
+"PO-Revision-Date: 2023-07-25 15:05+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/atlas-app/"
 "fi/>\n"
@@ -16,17 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: src/MainWindow.vala:25
 msgid "Unknown"
-msgstr ""
+msgstr "Tuntematon"
 
 #: src/MainWindow.vala:49
-#, fuzzy
-#| msgid "Detecting your current location…"
 msgid "Move to the current location"
-msgstr "Paikannetaan nykyistä sijaintia…"
+msgstr "Siirrä nykyiseen sijaintiin"
 
 #: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
@@ -34,15 +32,15 @@ msgstr "Etsi sijaintia"
 
 #: src/MainWindow.vala:69
 msgid "No Search Results"
-msgstr ""
+msgstr "Ei hakutuloksia"
 
 #: src/MainWindow.vala:70
 msgid "Try changing the search term."
-msgstr ""
+msgstr "Yritä eri hakuehdoilla."
 
 #: src/MainWindow.vala:105
 msgid "Map Source:"
-msgstr ""
+msgstr "Karttalähde:"
 
 #: src/MainWindow.vala:113
 msgid "Transport Map"
