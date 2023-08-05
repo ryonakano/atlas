@@ -22,16 +22,19 @@ You'll need the following dependencies:
 * meson (>= 0.57.0)
 * valac
 
-Run `meson build` to configure the build environment. Change to the build directory and run `ninja` to build
+Run `meson setup` to configure the build environment and run `ninja` to build
 
-    meson build --prefix=/usr
-    cd build
-    ninja
+```bash
+meson setup builddir --prefix=/usr
+ninja -C builddir
+```
 
 To install, use `ninja install`, then execute with `com.github.ryonakano.atlas`
 
-    ninja install
-    com.github.ryonakano.atlas
+```bash
+ninja install -C builddir
+com.github.ryonakano.atlas
+```
 
 ## Contributing
 There are many ways you can contribute, even if you don't know how to code.
