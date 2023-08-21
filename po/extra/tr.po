@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-28 21:00+0900\n"
-"PO-Revision-Date: 2023-08-19 00:51+0000\n"
+"PO-Revision-Date: 2023-08-21 01:53+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/"
 "atlas-metadata/tr/>\n"
@@ -62,7 +62,7 @@ msgstr "Ryo Nakano"
 
 #: data/atlas.metainfo.xml.in:57
 msgid "Use newer version of GeoClue which prefers Location Portal if available"
-msgstr ""
+msgstr "Varsa Konum Portalını tercih eden GeoClue'nun daha yeni sürümünü kullan"
 
 #: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:69
 #: data/atlas.metainfo.xml.in:79
