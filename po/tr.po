@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # Oğuz Ersen <oguz@ersen.moe>, 2022, 2023.
+# Sabri Ünal <libreajans@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-28 21:00+0900\n"
-"PO-Revision-Date: 2023-03-08 21:38+0000\n"
-"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
+"PO-Revision-Date: 2023-08-21 01:53+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas-app/"
 "tr/>\n"
 "Language: tr\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: src/MainWindow.vala:25
 msgid "Unknown"
@@ -52,7 +53,7 @@ msgstr "Tercihler"
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
-msgstr "Biçim:"
+msgstr "Biçem:"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light"
