@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# gallegonovato <fran-carro@hotmail.es>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-28 21:00+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.vala:25
+msgid "Unknown"
+msgstr ""
+
+#: src/MainWindow.vala:49
+msgid "Move to the current location"
+msgstr ""
+
+#: src/MainWindow.vala:62 src/MainWindow.vala:63
+msgid "Search Location"
+msgstr ""
+
+#: src/MainWindow.vala:69
+msgid "No Search Results"
+msgstr ""
+
+#: src/MainWindow.vala:70
+msgid "Try changing the search term."
+msgstr ""
+
+#: src/MainWindow.vala:105
+msgid "Map Source:"
+msgstr ""
+
+#: src/MainWindow.vala:113
+msgid "Transport Map"
+msgstr ""
+
+#: src/MainWindow.vala:135
+msgid "Preferences"
+msgstr ""
+
+#: src/StyleSwitcher.vala:27
+msgid "Style:"
+msgstr ""
+
+#: src/StyleSwitcher.vala:31
+msgid "Light"
+msgstr ""
+
+#: src/StyleSwitcher.vala:32
+msgid "Dark"
+msgstr ""
+
+#: src/StyleSwitcher.vala:33
+msgid "System"
+msgstr ""
