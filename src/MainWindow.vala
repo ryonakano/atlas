@@ -246,10 +246,9 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     }
 
     // F key press handler for MainWindow
-    // obj must be "(typeof) MainWindow"
-    private static bool win_kp_handler_f (Object obj, uint keyval, uint keycode, Gdk.ModifierType state) {
+    private static bool win_kp_handler_f (Object obj, uint keyval, uint keycode, Gdk.ModifierType state)
+                                          requires (obj is MainWindow) {
         MainWindow window = obj as MainWindow;
-        assert (window is MainWindow);
 
         if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
             return false;
@@ -260,10 +259,9 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     }
 
     // Q key press handler for MainWindow
-    // obj must be "(typeof) MainWindow"
-    private static bool win_kp_handler_q (Object obj, uint keyval, uint keycode, Gdk.ModifierType state) {
+    private static bool win_kp_handler_q (Object obj, uint keyval, uint keycode, Gdk.ModifierType state)
+                                          requires (obj is MainWindow) {
         MainWindow window = obj as MainWindow;
-        assert (window is MainWindow);
 
         if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
             return false;
