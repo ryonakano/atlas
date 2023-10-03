@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-28 21:00+0900\n"
-"PO-Revision-Date: 2023-01-13 18:51+0000\n"
+"PO-Revision-Date: 2023-10-05 12:10+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas-"
-"metadata/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/"
+"atlas-metainfo/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:3
 msgid "Atlas"
@@ -83,7 +83,7 @@ msgstr ""
 
 #: data/atlas.metainfo.xml.in:68
 msgid "Update Flatpak runtime version"
-msgstr ""
+msgstr "Mise à jour de l’environnement d’exécution Flatpak"
 
 #: data/atlas.metainfo.xml.in:77
 msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
