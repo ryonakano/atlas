@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-28 21:00+0900\n"
-"PO-Revision-Date: 2023-08-11 10:47+0000\n"
+"PO-Revision-Date: 2023-10-05 12:10+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
-"atlas-metadata/sk/>\n"
+"atlas-metainfo/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:3
 msgid "Atlas"
@@ -113,7 +113,7 @@ msgstr "Zobrazovať klávesovú skratku pre políčko vyhľadávania v popise"
 
 #: data/atlas.metainfo.xml.in:89
 msgid "Add the new style switcher"
-msgstr "Pridaný nový prepínač štýlov"
+msgstr "Pridaný nový volič štýlov"
 
 #: data/atlas.metainfo.xml.in:90
 msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
