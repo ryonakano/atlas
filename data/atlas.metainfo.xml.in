@@ -52,7 +52,7 @@
 
   <releases>
     <release version="3.0.0" date="2023-07-07" urgency="high">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Use newer version of GeoClue which prefers Location Portal if available</li>
           <li>Update translations</li>
@@ -61,7 +61,7 @@
     </release>
 
     <release version="2.0.0" date="2023-04-15" urgency="medium">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead of libchamplain</li>
           <li>Add an blue circle indicator that represents your current location</li>
@@ -72,7 +72,7 @@
     </release>
 
     <release version="1.0.1" date="2022-08-16">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Update the dependency geocode-glib from 3.26.2 to 3.26.4</li>
           <li>Update copyright information</li>
@@ -82,7 +82,7 @@
     </release>
 
     <release version="1.0.0" date="2021-12-28">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fix the app being introduced as if sharing your location to someone in AppCenter</li>
           <li>Show the shortcut key for search entry using tooltip</li>
@@ -98,7 +98,7 @@
     </release>
 
     <release version="0.1.0" date="2021-11-30">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Initial release</li>
         </ul>
