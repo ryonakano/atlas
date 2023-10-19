@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 21:00+0900\n"
+"POT-Creation-Date: 2023-10-19 13:51+0000\n"
 "PO-Revision-Date: 2023-10-05 12:10+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
-"atlas-metainfo/sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-"
+"metainfo/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,79 +62,6 @@ msgstr "Vyhľadajte miesto, kam chcete ísť"
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/atlas.metainfo.xml.in:57
-msgid "Use newer version of GeoClue which prefers Location Portal if available"
-msgstr ""
-"Použite novšiu verziu GeoClue, ktorá preferuje portál umiestnenia, ak je k "
-"dispozícii"
-
-#: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:69
-#: data/atlas.metainfo.xml.in:79
-msgid "Update translations"
-msgstr "Aktualizované preklady"
-
-#: data/atlas.metainfo.xml.in:66
-msgid ""
-"Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead "
-"of libchamplain"
-msgstr ""
-"Prerobený kód aplikácie; teraz používa GTK 4 namiesto GTK 3 a libshumate "
-"namiesto libchamplain"
-
-#: data/atlas.metainfo.xml.in:67
-msgid "Add an blue circle indicator that represents your current location"
-msgstr ""
-"Pridaný modrý indikátor v tvare kruhu, ktorý reprezentuje vašu aktuálnu "
-"polohu"
-
-#: data/atlas.metainfo.xml.in:68
-msgid "Update Flatpak runtime version"
-msgstr "Aktualizovať verziu Flatpak runtime"
-
-#: data/atlas.metainfo.xml.in:77
-msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr "Aktualizovaná závislosť geocode-glib z 3.26.2 na 3.26.4"
-
-#: data/atlas.metainfo.xml.in:78
-msgid "Update copyright information"
-msgstr "Aktualizácia informácií o autorských právach"
-
-#: data/atlas.metainfo.xml.in:87
-msgid ""
-"Fix the app being introduced as if sharing your location to someone in "
-"AppCenter"
-msgstr ""
-"Oprava chyby, keď sa v AppCentre zobrazovalo upozornenie, že aplikácia s "
-"niekým zdieľa vašu polohu"
-
-#: data/atlas.metainfo.xml.in:88
-msgid "Show the shortcut key for search entry using tooltip"
-msgstr "Zobrazovať klávesovú skratku pre políčko vyhľadávania v popise"
-
-#: data/atlas.metainfo.xml.in:89
-msgid "Add the new style switcher"
-msgstr "Pridaný nový volič štýlov"
-
-#: data/atlas.metainfo.xml.in:90
-msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-msgstr "Prerobená a vektorizovaná ikonka aplikácie (veľká vďaka @Suzie97)"
-
-#: data/atlas.metainfo.xml.in:91
-msgid "Show your current location if launching the app for the first time"
-msgstr "Zobraziť vašu aktuálnu polohu, ak spustíte aplikáciu po prvý raz"
-
-#: data/atlas.metainfo.xml.in:93
-msgid "Translation updates:"
-msgstr "Aktualizácie prekladov:"
-
-#: data/atlas.metainfo.xml.in:95
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
-
-#: data/atlas.metainfo.xml.in:103
-msgid "Initial release"
-msgstr "Prvé vydanie"
-
 #: data/atlas.desktop.in:4
 msgid "Map"
 msgstr "Mapa"
@@ -142,6 +69,64 @@ msgstr "Mapa"
 #: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "Výlet;Objaviť;Preskúmať;"
+
+#~ msgid ""
+#~ "Use newer version of GeoClue which prefers Location Portal if available"
+#~ msgstr ""
+#~ "Použite novšiu verziu GeoClue, ktorá preferuje portál umiestnenia, ak je "
+#~ "k dispozícii"
+
+#~ msgid "Update translations"
+#~ msgstr "Aktualizované preklady"
+
+#~ msgid ""
+#~ "Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate "
+#~ "instead of libchamplain"
+#~ msgstr ""
+#~ "Prerobený kód aplikácie; teraz používa GTK 4 namiesto GTK 3 a libshumate "
+#~ "namiesto libchamplain"
+
+#~ msgid "Add an blue circle indicator that represents your current location"
+#~ msgstr ""
+#~ "Pridaný modrý indikátor v tvare kruhu, ktorý reprezentuje vašu aktuálnu "
+#~ "polohu"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Aktualizovať verziu Flatpak runtime"
+
+#~ msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+#~ msgstr "Aktualizovaná závislosť geocode-glib z 3.26.2 na 3.26.4"
+
+#~ msgid "Update copyright information"
+#~ msgstr "Aktualizácia informácií o autorských právach"
+
+#~ msgid ""
+#~ "Fix the app being introduced as if sharing your location to someone in "
+#~ "AppCenter"
+#~ msgstr ""
+#~ "Oprava chyby, keď sa v AppCentre zobrazovalo upozornenie, že aplikácia s "
+#~ "niekým zdieľa vašu polohu"
+
+#~ msgid "Show the shortcut key for search entry using tooltip"
+#~ msgstr "Zobrazovať klávesovú skratku pre políčko vyhľadávania v popise"
+
+#~ msgid "Add the new style switcher"
+#~ msgstr "Pridaný nový volič štýlov"
+
+#~ msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
+#~ msgstr "Prerobená a vektorizovaná ikonka aplikácie (veľká vďaka @Suzie97)"
+
+#~ msgid "Show your current location if launching the app for the first time"
+#~ msgstr "Zobraziť vašu aktuálnu polohu, ak spustíte aplikáciu po prvý raz"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Aktualizácie prekladov:"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
+
+#~ msgid "Initial release"
+#~ msgstr "Prvé vydanie"
 
 #~ msgid "Atlas Developers"
 #~ msgstr "Vývojári Atlas"

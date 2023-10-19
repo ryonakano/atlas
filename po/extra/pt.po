@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 21:00+0900\n"
+"POT-Creation-Date: 2023-10-19 13:51+0000\n"
 "PO-Revision-Date: 2022-12-26 21:51+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/atlas-"
@@ -58,74 +58,6 @@ msgstr "Procurar para onde ir"
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/atlas.metainfo.xml.in:57
-msgid "Use newer version of GeoClue which prefers Location Portal if available"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:69
-#: data/atlas.metainfo.xml.in:79
-msgid "Update translations"
-msgstr "Atualização de tradução"
-
-#: data/atlas.metainfo.xml.in:66
-msgid ""
-"Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead "
-"of libchamplain"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:67
-msgid "Add an blue circle indicator that represents your current location"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:68
-msgid "Update Flatpak runtime version"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:77
-msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr "Atualização do geocode-glib de dependência de 3.26.2 para 3.26.4"
-
-#: data/atlas.metainfo.xml.in:78
-msgid "Update copyright information"
-msgstr "Atualização da informação de direitos de autor"
-
-#: data/atlas.metainfo.xml.in:87
-msgid ""
-"Fix the app being introduced as if sharing your location to someone in "
-"AppCenter"
-msgstr ""
-"Corrige a aplicação de ser apresentada como se estivesse a partilhar a sua "
-"localização com alguém no Centro de Aplicações"
-
-#: data/atlas.metainfo.xml.in:88
-msgid "Show the shortcut key for search entry using tooltip"
-msgstr "Mostra a tecla de atalho para entrada de pesquisa usando a dica"
-
-#: data/atlas.metainfo.xml.in:89
-msgid "Add the new style switcher"
-msgstr "Adiciona o novo alternador de estilo"
-
-#: data/atlas.metainfo.xml.in:90
-msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-msgstr "Ícone de aplicação redesenhado e vetorizado (obrigado a @Suzie97)"
-
-#: data/atlas.metainfo.xml.in:91
-msgid "Show your current location if launching the app for the first time"
-msgstr ""
-"Mostra a sua localização atual se iniciar a aplicação pela primeira vez"
-
-#: data/atlas.metainfo.xml.in:93
-msgid "Translation updates:"
-msgstr "Atualizações de tradução:"
-
-#: data/atlas.metainfo.xml.in:95
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
-
-#: data/atlas.metainfo.xml.in:103
-msgid "Initial release"
-msgstr "Versão inicial"
-
 #: data/atlas.desktop.in:4
 msgid "Map"
 msgstr "Mapa"
@@ -133,6 +65,44 @@ msgstr "Mapa"
 #: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "Trip;Explore;Viagem;Explorar;"
+
+#~ msgid "Update translations"
+#~ msgstr "Atualização de tradução"
+
+#~ msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+#~ msgstr "Atualização do geocode-glib de dependência de 3.26.2 para 3.26.4"
+
+#~ msgid "Update copyright information"
+#~ msgstr "Atualização da informação de direitos de autor"
+
+#~ msgid ""
+#~ "Fix the app being introduced as if sharing your location to someone in "
+#~ "AppCenter"
+#~ msgstr ""
+#~ "Corrige a aplicação de ser apresentada como se estivesse a partilhar a "
+#~ "sua localização com alguém no Centro de Aplicações"
+
+#~ msgid "Show the shortcut key for search entry using tooltip"
+#~ msgstr "Mostra a tecla de atalho para entrada de pesquisa usando a dica"
+
+#~ msgid "Add the new style switcher"
+#~ msgstr "Adiciona o novo alternador de estilo"
+
+#~ msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
+#~ msgstr "Ícone de aplicação redesenhado e vetorizado (obrigado a @Suzie97)"
+
+#~ msgid "Show your current location if launching the app for the first time"
+#~ msgstr ""
+#~ "Mostra a sua localização atual se iniciar a aplicação pela primeira vez"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Atualizações de tradução:"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
+
+#~ msgid "Initial release"
+#~ msgstr "Versão inicial"
 
 #~ msgid "Atlas Developers"
 #~ msgstr "Programadores do Atlas"

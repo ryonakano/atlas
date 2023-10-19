@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 21:00+0900\n"
+"POT-Creation-Date: 2023-10-19 13:51+0000\n"
 "PO-Revision-Date: 2023-03-19 14:36+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/atlas-"
@@ -59,76 +59,6 @@ msgstr "Zoek je bestemming"
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/atlas.metainfo.xml.in:57
-msgid "Use newer version of GeoClue which prefers Location Portal if available"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:69
-#: data/atlas.metainfo.xml.in:79
-msgid "Update translations"
-msgstr "Vertalingen bijgewerkt"
-
-#: data/atlas.metainfo.xml.in:66
-msgid ""
-"Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead "
-"of libchamplain"
-msgstr ""
-"Nieuw: de app maakt voortaan gebruik van GTK 4 in plaats van GTK 3 en "
-"libshumate in plaats van libchamplain"
-
-#: data/atlas.metainfo.xml.in:67
-msgid "Add an blue circle indicator that represents your current location"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:68
-msgid "Update Flatpak runtime version"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:77
-msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr "Bijgewerkt: geocode-glib van 3.26.2 naar 3.26.4"
-
-#: data/atlas.metainfo.xml.in:78
-msgid "Update copyright information"
-msgstr "Bijgewerkt: copyrightinformatie"
-
-#: data/atlas.metainfo.xml.in:87
-msgid ""
-"Fix the app being introduced as if sharing your location to someone in "
-"AppCenter"
-msgstr ""
-"Opgelost: de toepassing kon worden gebruikt om een locatie te delen in "
-"AppCenter"
-
-#: data/atlas.metainfo.xml.in:88
-msgid "Show the shortcut key for search entry using tooltip"
-msgstr "Nieuw: de sneltoets van het zoekvak wordt getoond in de hulpballon"
-
-#: data/atlas.metainfo.xml.in:89
-msgid "Add the new style switcher"
-msgstr "Verbeterd: nieuwe schakelaar"
-
-#: data/atlas.metainfo.xml.in:90
-msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-msgstr ""
-"Opnieuw ontworpen vector-toepassingspictogram (veel dank aan @Suzie97!)"
-
-#: data/atlas.metainfo.xml.in:91
-msgid "Show your current location if launching the app for the first time"
-msgstr "Nieuw: je huidige locatie wordt getoond na de eerste opstart"
-
-#: data/atlas.metainfo.xml.in:93
-msgid "Translation updates:"
-msgstr "Vertaalupdates:"
-
-#: data/atlas.metainfo.xml.in:95
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
-
-#: data/atlas.metainfo.xml.in:103
-msgid "Initial release"
-msgstr "Eerste versie"
-
 #: data/atlas.desktop.in:4
 msgid "Map"
 msgstr "Kaart"
@@ -136,6 +66,51 @@ msgstr "Kaart"
 #: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "Reis;Verkennen;Kaart;"
+
+#~ msgid "Update translations"
+#~ msgstr "Vertalingen bijgewerkt"
+
+#~ msgid ""
+#~ "Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate "
+#~ "instead of libchamplain"
+#~ msgstr ""
+#~ "Nieuw: de app maakt voortaan gebruik van GTK 4 in plaats van GTK 3 en "
+#~ "libshumate in plaats van libchamplain"
+
+#~ msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+#~ msgstr "Bijgewerkt: geocode-glib van 3.26.2 naar 3.26.4"
+
+#~ msgid "Update copyright information"
+#~ msgstr "Bijgewerkt: copyrightinformatie"
+
+#~ msgid ""
+#~ "Fix the app being introduced as if sharing your location to someone in "
+#~ "AppCenter"
+#~ msgstr ""
+#~ "Opgelost: de toepassing kon worden gebruikt om een locatie te delen in "
+#~ "AppCenter"
+
+#~ msgid "Show the shortcut key for search entry using tooltip"
+#~ msgstr "Nieuw: de sneltoets van het zoekvak wordt getoond in de hulpballon"
+
+#~ msgid "Add the new style switcher"
+#~ msgstr "Verbeterd: nieuwe schakelaar"
+
+#~ msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
+#~ msgstr ""
+#~ "Opnieuw ontworpen vector-toepassingspictogram (veel dank aan @Suzie97!)"
+
+#~ msgid "Show your current location if launching the app for the first time"
+#~ msgstr "Nieuw: je huidige locatie wordt getoond na de eerste opstart"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Vertaalupdates:"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
+
+#~ msgid "Initial release"
+#~ msgstr "Eerste versie"
 
 #~ msgid "Atlas Developers"
 #~ msgstr "Atlas-ontwikkelaars"

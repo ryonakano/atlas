@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 21:00+0900\n"
+"POT-Creation-Date: 2023-10-19 13:51+0000\n"
 "PO-Revision-Date: 2023-10-05 12:10+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/"
-"atlas-metainfo/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/atlas-"
+"metainfo/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,81 +58,6 @@ msgstr "Buscar un destino"
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/atlas.metainfo.xml.in:57
-msgid "Use newer version of GeoClue which prefers Location Portal if available"
-msgstr ""
-"Utilizar la nueva versión de GeoClue que prefiere el Portal de Localización "
-"si está disponible"
-
-#: data/atlas.metainfo.xml.in:58 data/atlas.metainfo.xml.in:69
-#: data/atlas.metainfo.xml.in:79
-msgid "Update translations"
-msgstr "Actualizar las traducciones"
-
-#: data/atlas.metainfo.xml.in:66
-msgid ""
-"Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead "
-"of libchamplain"
-msgstr ""
-"Reescrita la aplicación; ahora usa GTK 4 en lugar de GTK 3 y libshumate en "
-"lugar de libchamplain"
-
-#: data/atlas.metainfo.xml.in:67
-msgid "Add an blue circle indicator that represents your current location"
-msgstr "Añade un indicador circular azul que represente tu ubicación actual"
-
-#: data/atlas.metainfo.xml.in:68
-msgid "Update Flatpak runtime version"
-msgstr "Actualizar la versión de Flatpak"
-
-#: data/atlas.metainfo.xml.in:77
-msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-msgstr "Actualizar la dependencia geocode-glib de 3.26.2 a 3.26.4"
-
-#: data/atlas.metainfo.xml.in:78
-msgid "Update copyright information"
-msgstr "Actualizar la información de los derechos de autor"
-
-#: data/atlas.metainfo.xml.in:87
-msgid ""
-"Fix the app being introduced as if sharing your location to someone in "
-"AppCenter"
-msgstr ""
-"Se corrigió un error por el cual AppCentre mostraba una advertencia de que "
-"la aplicación estaba compartiendo tu ubicación con alguien"
-
-#: data/atlas.metainfo.xml.in:88
-msgid "Show the shortcut key for search entry using tooltip"
-msgstr ""
-"Mostrar el método abreviado del teclado para la entrada de la búsqueda "
-"usando la información sobre las herramientas"
-
-#: data/atlas.metainfo.xml.in:89
-msgid "Add the new style switcher"
-msgstr "Añadir el nuevo conmutador de estilos"
-
-#: data/atlas.metainfo.xml.in:90
-msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-msgstr ""
-"Icono de la aplicación rediseñado y vectorizado (muchas gracias a @Suzie97)"
-
-#: data/atlas.metainfo.xml.in:91
-msgid "Show your current location if launching the app for the first time"
-msgstr ""
-"Muestra tu ubicación actual si es la primera vez que inicias la aplicación"
-
-#: data/atlas.metainfo.xml.in:93
-msgid "Translation updates:"
-msgstr "Actualizaciones de las traducciones:"
-
-#: data/atlas.metainfo.xml.in:95
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Añadir traducción al francés (gracias a @NathanBnm)"
-
-#: data/atlas.metainfo.xml.in:103
-msgid "Initial release"
-msgstr "Versión inicial"
-
 #: data/atlas.desktop.in:4
 msgid "Map"
 msgstr "Mapa"
@@ -140,3 +65,64 @@ msgstr "Mapa"
 #: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "Viaje;Explora;"
+
+#~ msgid ""
+#~ "Use newer version of GeoClue which prefers Location Portal if available"
+#~ msgstr ""
+#~ "Utilizar la nueva versión de GeoClue que prefiere el Portal de "
+#~ "Localización si está disponible"
+
+#~ msgid "Update translations"
+#~ msgstr "Actualizar las traducciones"
+
+#~ msgid ""
+#~ "Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate "
+#~ "instead of libchamplain"
+#~ msgstr ""
+#~ "Reescrita la aplicación; ahora usa GTK 4 en lugar de GTK 3 y libshumate "
+#~ "en lugar de libchamplain"
+
+#~ msgid "Add an blue circle indicator that represents your current location"
+#~ msgstr "Añade un indicador circular azul que represente tu ubicación actual"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Actualizar la versión de Flatpak"
+
+#~ msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+#~ msgstr "Actualizar la dependencia geocode-glib de 3.26.2 a 3.26.4"
+
+#~ msgid "Update copyright information"
+#~ msgstr "Actualizar la información de los derechos de autor"
+
+#~ msgid ""
+#~ "Fix the app being introduced as if sharing your location to someone in "
+#~ "AppCenter"
+#~ msgstr ""
+#~ "Se corrigió un error por el cual AppCentre mostraba una advertencia de "
+#~ "que la aplicación estaba compartiendo tu ubicación con alguien"
+
+#~ msgid "Show the shortcut key for search entry using tooltip"
+#~ msgstr ""
+#~ "Mostrar el método abreviado del teclado para la entrada de la búsqueda "
+#~ "usando la información sobre las herramientas"
+
+#~ msgid "Add the new style switcher"
+#~ msgstr "Añadir el nuevo conmutador de estilos"
+
+#~ msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
+#~ msgstr ""
+#~ "Icono de la aplicación rediseñado y vectorizado (muchas gracias a "
+#~ "@Suzie97)"
+
+#~ msgid "Show your current location if launching the app for the first time"
+#~ msgstr ""
+#~ "Muestra tu ubicación actual si es la primera vez que inicias la aplicación"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Actualizaciones de las traducciones:"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Añadir traducción al francés (gracias a @NathanBnm)"
+
+#~ msgid "Initial release"
+#~ msgstr "Versión inicial"
