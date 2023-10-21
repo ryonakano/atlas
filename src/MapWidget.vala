@@ -80,15 +80,13 @@ public class Atlas.MapWidget : Gtk.Box {
         }
 
         // draw initial current location
-        location = simple.location;
-        draw_location (location);
+        draw_location (simple.location);
         is_watching_location = true;
         set_init_place ();
 
         // redraw on location change
         simple.notify["location"].connect (() => {
-            location = simple.location;
-            draw_location (location);
+            draw_location (simple.location);
         });
 
         return true;
@@ -97,6 +95,16 @@ public class Atlas.MapWidget : Gtk.Box {
     private void draw_location (GClue.Location location) {
         double lat = location.latitude;
         double lng = location.longitude;
+        this.location = location;
+
+        // Use fixed latitude and longitude as current location (for debug)
+        if (Atlas.Application.settings.get_boolean ("fixed-location")) {
+            lat = Atlas.Application.settings.get_double ("latitude-fixed");
+            lng = Atlas.Application.settings.get_double ("longitude-fixed");
+            this.location.latitude = lat;
+            this.location.longitude = lng;
+        }
+
         manager.clear_markers (MarkerType.LOCATION);
         manager.new_marker_at_pos (MarkerType.LOCATION, lat, lng);
     }

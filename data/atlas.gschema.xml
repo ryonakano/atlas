@@ -15,7 +15,22 @@
       <default>0.0005</default>
       <summary>Longitude</summary>
       <description>Longitude of the last place viewed</description>
-    </key>    
+    </key>
+    <key type="b" name="fixed-location">
+      <default>false</default>
+      <summary>Fixed location</summary>
+      <description>Use fixed latitude and longitude as current location (for debug use)</description>
+    </key>
+    <key type="d" name="latitude-fixed">
+      <default>41.8981</default>
+      <summary>Latitude (fixed location)</summary>
+      <description>Fixed latitude used as current location (for debug use)</description>
+    </key>
+    <key type="d" name="longitude-fixed">
+      <default>12.4784</default>
+      <summary>Longitude (fixed location)</summary>
+      <description>Fixed longitude used as current location (for debug use)</description>
+    </key>
     <key type="d" name="zoom-level">
       <default>15</default>
       <summary>Zoom level</summary>
