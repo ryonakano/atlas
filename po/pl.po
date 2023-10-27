@@ -2,29 +2,31 @@
 # Copyright (C) 2021 THE com.github.ryonakano.atlas COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # PolPolyLingo <paulius.narkevicius@vilniustech.lt>, 2023
-#
+# Eryk Michalak <gnu.ewm@protonmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-28 21:00+0900\n"
-"PO-Revision-Date: 2023-02-04 16:59+0200\n"
-"Last-Translator: PolPolyLingo <paulius.narkevicius@vilniustech.lt>\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-10-29 05:19+0000\n"
+"Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/rosp/atlas-app/pl/"
+">\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: src/MainWindow.vala:25
 msgid "Unknown"
-msgstr ""
+msgstr "Nieznane"
 
 #: src/MainWindow.vala:49
-#, fuzzy
-#| msgid "Detecting your current location…"
 msgid "Move to the current location"
-msgstr "Trwa wykrywanie bieżącej lokalizacji…"
+msgstr "Przenieś do bieżącej lokalizacji"
 
 #: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
@@ -32,15 +34,15 @@ msgstr "Lokalizacja wyszukiwania"
 
 #: src/MainWindow.vala:69
 msgid "No Search Results"
-msgstr ""
+msgstr "Brak wyników wyszukiwania"
 
 #: src/MainWindow.vala:70
 msgid "Try changing the search term."
-msgstr ""
+msgstr "Spróbuj zmienić zapytanie wyszukiwania."
 
 #: src/MainWindow.vala:105
 msgid "Map Source:"
-msgstr ""
+msgstr "Źródło mapy:"
 
 #: src/MainWindow.vala:113
 msgid "Transport Map"
@@ -56,7 +58,7 @@ msgstr "Styl:"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light"
-msgstr "Światło"
+msgstr "Jasny"
 
 #: src/StyleSwitcher.vala:32
 msgid "Dark"
