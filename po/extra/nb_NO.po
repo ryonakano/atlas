@@ -7,13 +7,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-19 13:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-01-27 13:01+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
+"atlas-metainfo/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/atlas.metainfo.xml.in:10 data/atlas.desktop.in:3
 msgid "Atlas"
@@ -21,42 +24,44 @@ msgstr ""
 
 #: data/atlas.metainfo.xml.in:11 data/atlas.desktop.in:5
 msgid "View where to go"
-msgstr ""
+msgstr "Vis hvor du skal"
 
 #: data/atlas.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
-msgstr ""
+msgstr "Et kartprogram som hjelper deg å visualisere hvor du skal."
 
 #: data/atlas.metainfo.xml.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Funksjoner:"
 
 #: data/atlas.metainfo.xml.in:18
 msgid "Search any place"
-msgstr ""
+msgstr "Søk etter steder"
 
 #: data/atlas.metainfo.xml.in:19
 msgid "Jump to your current location instantly"
-msgstr ""
+msgstr "Hopp til nåværende sted umiddelbart"
 
 #: data/atlas.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
+"Dette er en forgrening av «Atlas Maps» og ville ikke eksistert uten Steffen "
+"Schuhmann."
 
 #: data/atlas.metainfo.xml.in:28
 msgid "Search where to go"
-msgstr ""
+msgstr "Søk deg dit du skal"
 
 #: data/atlas.metainfo.xml.in:51
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/atlas.desktop.in:4
 msgid "Map"
-msgstr ""
+msgstr "Kart"
 
 #: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
-msgstr ""
+msgstr "Tur;Utforsker;kart;planlegging;"
