@@ -7,58 +7,61 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-28 21:00+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-01-27 13:01+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
+"atlas-app/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: src/MainWindow.vala:25
 msgid "Unknown"
-msgstr ""
+msgstr "Ukjent"
 
 #: src/MainWindow.vala:49
 msgid "Move to the current location"
-msgstr ""
+msgstr "Flytt til nåværende mål"
 
 #: src/MainWindow.vala:62 src/MainWindow.vala:63
 msgid "Search Location"
-msgstr ""
+msgstr "Søk etter sted"
 
 #: src/MainWindow.vala:69
 msgid "No Search Results"
-msgstr ""
+msgstr "Resultatløst"
 
 #: src/MainWindow.vala:70
 msgid "Try changing the search term."
-msgstr ""
+msgstr "Prøv å endre søket."
 
 #: src/MainWindow.vala:105
 msgid "Map Source:"
-msgstr ""
+msgstr "Kartkilde:"
 
 #: src/MainWindow.vala:113
 msgid "Transport Map"
-msgstr ""
+msgstr "Transportkart"
 
 #: src/MainWindow.vala:135
 msgid "Preferences"
-msgstr ""
+msgstr "Innstillinger"
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
-msgstr ""
+msgstr "Drakt"
 
 #: src/StyleSwitcher.vala:31
 msgid "Light"
-msgstr ""
+msgstr "Lys"
 
 #: src/StyleSwitcher.vala:32
 msgid "Dark"
-msgstr ""
+msgstr "Mørk"
 
 #: src/StyleSwitcher.vala:33
 msgid "System"
-msgstr ""
+msgstr "System"
