@@ -5,10 +5,6 @@
  */
 
 public class Atlas.MainWindow : Gtk.ApplicationWindow {
-    [CCode (has_target = false)]
-    private delegate bool KeyPressHandler (Object obj, uint keyval, uint keycode, Gdk.ModifierType state);
-    private static Gee.HashMap<uint, KeyPressHandler> win_kp_handler;
-
     private class PlaceListBoxRow : Gtk.ListBoxRow {
         public Geocode.Place place { get; construct; }
 
@@ -22,8 +18,10 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         TRANSPORT;
     }
 
+    private const ActionEntry[] ACTION_ENTRIES = {
+        { "search", on_search_activate },
+    };
     private string unknown_text = _("Unknown");
-
     private ListStore location_store;
     private Cancellable? search_cancellable = null;
 
@@ -32,15 +30,11 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     public Gtk.SearchEntry search_entry { get; construct; }
     private Gtk.ListBox search_res_list;
     private Gtk.Popover search_res_popover;
-
-    static construct {
-        win_kp_handler = new Gee.HashMap<uint, KeyPressHandler> ();
-        win_kp_handler[Gdk.Key.f] = win_kp_handler_f;
-        win_kp_handler[Gdk.Key.q] = win_kp_handler_q;
-    }
+    private MapWidget map_widget;
 
     construct {
         title = Application.APP_NAME;
+        add_action_entries (ACTION_ENTRIES, this);
 
         bool is_searching = false;
         location_store = new ListStore (typeof (Geocode.Place));
@@ -149,7 +143,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_end (spinner);
         set_titlebar (headerbar);
 
-        var map_widget = new MapWidget ();
+        map_widget = new MapWidget ();
         child = map_widget;
 
         if ((MapSource) Application.settings.get_enum ("map-source") == MapSource.TRANSPORT) {
@@ -226,49 +220,19 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         });
         ((Gtk.Widget) search_res_popover).add_controller (search_entry_gesture);
 
-        var event_controller_key = new Gtk.EventControllerKey ();
-        event_controller_key.key_pressed.connect ((keyval, keycode, state) => {
-            var handler = win_kp_handler[keyval];
-            // Unhandled key event
-            if (handler == null) {
-                return false;
-            }
-
-            return handler (this, keyval, keycode, state);
-        });
-        ((Gtk.Widget) this).add_controller (event_controller_key);
-
         close_request.connect (() => {
-            map_widget.save_map_state ();
-            destroy ();
-            return false;
+            prep_destroy ();
+            return Gdk.EVENT_STOP;
         });
     }
 
-    // F key press handler for MainWindow
-    private static bool win_kp_handler_f (Object obj, uint keyval, uint keycode, Gdk.ModifierType state)
-                                          requires (obj is MainWindow) {
-        MainWindow window = obj as MainWindow;
-
-        if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
-            return false;
-        }
-
-        window.search_entry.grab_focus ();
-        return true;
+    public void prep_destroy () {
+        map_widget.save_map_state ();
+        destroy ();
     }
 
-    // Q key press handler for MainWindow
-    private static bool win_kp_handler_q (Object obj, uint keyval, uint keycode, Gdk.ModifierType state)
-                                          requires (obj is MainWindow) {
-        MainWindow window = obj as MainWindow;
-
-        if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
-            return false;
-        }
-
-        window.close_request ();
-        return true;
+    private void on_search_activate () {
+        search_entry.grab_focus ();
     }
 
     private void busy_begin () {
