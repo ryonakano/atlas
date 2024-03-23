@@ -5,8 +5,6 @@ project(
     meson_version: '>=0.57.0'
 )
 
-app_nickname = 'atlas'
-
 gnome = import('gnome')
 i18n = import('i18n')
 
@@ -26,7 +24,7 @@ config_header = configure_file(
 
 asresources = gnome.compile_resources(
     'as-resources',
-    'data' / app_nickname + '.gresource.xml',
+    'data' / 'atlas.gresource.xml',
     source_dir: 'data',
     c_name: 'as'
 )
