@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 21:00+0900\n"
+"POT-Creation-Date: 2024-03-23 16:21+0900\n"
 "PO-Revision-Date: 2023-05-26 11:53+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas-app/sk/"
@@ -19,37 +19,84 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.18-dev\n"
 
-#: src/MainWindow.vala:25
+#: data/atlas.desktop.in:3
+msgid "Atlas"
+msgstr ""
+
+#: data/atlas.desktop.in:4
+msgid "Map"
+msgstr ""
+
+#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr ""
+
+#: data/atlas.desktop.in:11
+msgid "Trip;Explore;"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:19
+#, fuzzy
+msgid "Jump to your current location instantly"
+msgstr "Presunúť sa na aktuálnu polohu"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:28
+msgid "Search where to go"
+msgstr ""
+
+#: src/MainWindow.vala:24
 msgid "Unknown"
 msgstr "Neznáme"
 
-#: src/MainWindow.vala:49
+#: src/MainWindow.vala:43
 msgid "Move to the current location"
 msgstr "Presunúť sa na aktuálnu polohu"
 
-#: src/MainWindow.vala:62 src/MainWindow.vala:63
+#: src/MainWindow.vala:56 src/MainWindow.vala:57
 msgid "Search Location"
 msgstr "Vyhľadať miesto"
 
-#: src/MainWindow.vala:69
+#: src/MainWindow.vala:63
 msgid "No Search Results"
 msgstr "Žiadne výsledky vyhľadávania"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:64
 msgid "Try changing the search term."
 msgstr "Skúste zmeniť hľadaný výraz."
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:99
 msgid "Map Source:"
 msgstr "Zdroj mapy:"
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:107
 msgid "Transport Map"
 msgstr "Dopravná mapa"
 
-#: src/MainWindow.vala:135
+#: src/MainWindow.vala:129
 msgid "Preferences"
 msgstr "Predvoľby"
+
+#: src/MainWindow.vala:166
+msgid "Failed to connect to location service"
+msgstr ""
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"

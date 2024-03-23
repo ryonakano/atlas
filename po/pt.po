@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 21:00+0900\n"
+"POT-Creation-Date: 2024-03-23 16:21+0900\n"
 "PO-Revision-Date: 2023-04-12 02:50+0000\n"
 "Last-Translator: Felipe Nogueira <contato.fnog@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/atlas-"
@@ -19,37 +19,84 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.17-dev\n"
 
-#: src/MainWindow.vala:25
+#: data/atlas.desktop.in:3
+msgid "Atlas"
+msgstr ""
+
+#: data/atlas.desktop.in:4
+msgid "Map"
+msgstr ""
+
+#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr ""
+
+#: data/atlas.desktop.in:11
+msgid "Trip;Explore;"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:19
+#, fuzzy
+msgid "Jump to your current location instantly"
+msgstr "Mover para a localização atual"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:28
+msgid "Search where to go"
+msgstr ""
+
+#: src/MainWindow.vala:24
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: src/MainWindow.vala:49
+#: src/MainWindow.vala:43
 msgid "Move to the current location"
 msgstr "Mover para a localização atual"
 
-#: src/MainWindow.vala:62 src/MainWindow.vala:63
+#: src/MainWindow.vala:56 src/MainWindow.vala:57
 msgid "Search Location"
 msgstr "Procurar localização"
 
-#: src/MainWindow.vala:69
+#: src/MainWindow.vala:63
 msgid "No Search Results"
 msgstr "Sem resultados de busca"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:64
 msgid "Try changing the search term."
 msgstr "Tente alterar o termo de pesquisa."
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:99
 msgid "Map Source:"
 msgstr "Fonte do mapa:"
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:107
 msgid "Transport Map"
 msgstr "Mapa de transporte"
 
-#: src/MainWindow.vala:135
+#: src/MainWindow.vala:129
 msgid "Preferences"
 msgstr "Preferências"
+
+#: src/MainWindow.vala:166
+msgid "Failed to connect to location service"
+msgstr ""
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
