@@ -1,66 +1,66 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Russian translations for com.github.ryonakano.atlas package.
+# Copyright (C) 2021 THE com.github.ryonakano.atlas'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # lenemter <lenemter@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 16:21+0900\n"
-"PO-Revision-Date: 2023-03-24 01:51+0000\n"
+"POT-Creation-Date: 2024-03-23 16:42+0900\n"
+"PO-Revision-Date: 2023-07-06 22:33+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/atlas-app/"
-"ru/>\n"
+"Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: data/atlas.desktop.in:3
 msgid "Atlas"
-msgstr ""
+msgstr "Atlas"
 
 #: data/atlas.desktop.in:4
 msgid "Map"
-msgstr ""
+msgstr "Карта"
 
 #: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
-msgstr ""
+msgstr "Смотрите куда идти"
 
 #: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
-msgstr ""
+msgstr "Путешествие;Исследовать;"
 
 #: data/atlas.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
-msgstr ""
+msgstr "Карта, которая помогает вам смотреть куда вы хотите пойти."
 
 #: data/atlas.metainfo.xml.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Функции:"
 
 #: data/atlas.metainfo.xml.in:18
 msgid "Search any place"
-msgstr ""
+msgstr "Ищите любое место"
 
 #: data/atlas.metainfo.xml.in:19
-#, fuzzy
 msgid "Jump to your current location instantly"
-msgstr "Переместиться к текущему местоположению"
+msgstr "Мгновенно переместитесь к вашему текущему местоположению"
 
 #: data/atlas.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
+"Это форк приложения «Atlas Maps», и оно не могло бы существовать без работы "
+"Steffen Schuhmann."
 
 #: data/atlas.metainfo.xml.in:28
 msgid "Search where to go"
-msgstr ""
+msgstr "Ищите куда пойти"
 
 #: src/MainWindow.vala:24
 msgid "Unknown"
@@ -131,3 +131,66 @@ msgstr "Система"
 
 #~ msgid "Use the same style set in the system"
 #~ msgstr "Использовать стиль системы"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
+
+#~ msgid ""
+#~ "Use newer version of GeoClue which prefers Location Portal if available"
+#~ msgstr ""
+#~ "Используется новая версия GeoClue, которая использует портал геолокации, "
+#~ "если он доступен"
+
+#~ msgid "Update translations"
+#~ msgstr "Обновлены переводы"
+
+#~ msgid ""
+#~ "Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate "
+#~ "instead of libchamplain"
+#~ msgstr ""
+#~ "Приложение было полностью переписано. Теперь используется GTK 4, вместо "
+#~ "GTK 3 и libshumate, вместо libchamplain"
+
+#~ msgid "Add an blue circle indicator that represents your current location"
+#~ msgstr ""
+#~ "Добавлен синий кружок, который показывает ваше текущее местоположение"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Обновлена версия Flatpak runtime"
+
+#~ msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
+#~ msgstr "Обновлена зависимость geocode-glib с 3.26.2 до 3.26.4"
+
+#~ msgid "Update copyright information"
+#~ msgstr "Обновлена информация об авторских правах"
+
+#~ msgid ""
+#~ "Fix the app being introduced as if sharing your location to someone in "
+#~ "AppCenter"
+#~ msgstr ""
+#~ "Исправлена проблема, когда казалось, что приложение делится вашим "
+#~ "местоположением с кем-то в AppCenter"
+
+#~ msgid "Show the shortcut key for search entry using tooltip"
+#~ msgstr ""
+#~ "Сочетание клавиш для поиска теперь показано во всплывающей подсказке"
+
+#~ msgid "Add the new style switcher"
+#~ msgstr "Добавлен переключатель стиля"
+
+#~ msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
+#~ msgstr ""
+#~ "Переработана и сделана векторной иконка приложения (большое спасибо "
+#~ "@Suzie97)"
+
+#~ msgid "Show your current location if launching the app for the first time"
+#~ msgstr "Показ вашего текущего местоположения при первом запуске"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Обновления переводов:"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Добавлен перевод на французский язык (спасибо @NathanBnm)"
+
+#~ msgid "Initial release"
+#~ msgstr "Начальный выпуск"
