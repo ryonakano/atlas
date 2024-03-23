@@ -21,10 +21,7 @@ Thank you for getting interested in contribution to this project! We really appr
 
 ## Translate the Project
 
-We accept translations through Weblate:
-
-- [atlas-app](https://hosted.weblate.org/projects/rosp/atlas-app/): Texts in the app itself
-- [atlas-metainfo](https://hosted.weblate.org/projects/rosp/atlas-metainfo/): Texts in the desktop entry and the software center
+We accept translations through [Weblate](https://hosted.weblate.org/projects/rosp/atlas/).
 
 Alternatively, you can fork this repository, edit the `*.po` files directly, and submit changes through pull requests.
 
