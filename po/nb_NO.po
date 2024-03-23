@@ -113,6 +113,3 @@ msgstr "Mørk"
 #: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "System"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"

@@ -2,7 +2,6 @@
 # Copyright (C) 2021 THE com.github.ryonakano.atlas COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # PolPolyLingo <paulius.narkevicius@vilniustech.lt>, 2023
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
@@ -114,67 +113,3 @@ msgstr "Tamsus"
 #: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Sistema"
-
-#~ msgid "Current Location"
-#~ msgstr "Dabartinė vieta"
-
-#~ msgid "Layer:"
-#~ msgstr "Erdvė:"
-
-#~ msgid "Searching locations…"
-#~ msgstr "Vykdoma vietos paieška (...)"
-
-#~ msgid "Light style"
-#~ msgstr "Šviesus stilius"
-
-#~ msgid "Dark style"
-#~ msgstr "Tamsus stilius"
-
-#~ msgid "Use the same style set in the system"
-#~ msgstr "Naudoti sistemos stilių"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"
-
-#~ msgid "Update translations"
-#~ msgstr "Atnaujinti vertimai"
-
-#~ msgid "Update the dependency geocode-glib from 3.26.2 to 3.26.4"
-#~ msgstr "Atnaujintas privalomas geocode-glib iš 3.26.2 į 3.26.4"
-
-#~ msgid "Update copyright information"
-#~ msgstr "Atnaujinta autorių teisių informacija"
-
-#, fuzzy
-#~| msgid ""
-#~| "Fix the app being introduced as if sharing your location to someone in "
-#~| "\"AppCenter\""
-#~ msgid ""
-#~ "Fix the app being introduced as if sharing your location to someone in "
-#~ "AppCenter"
-#~ msgstr ""
-#~ "Pažindinimo programos taisa, kuomet nėra keičiamasi buvimo vieta per "
-#~ "\"AppCenter\" nepažįstamiems asmenims"
-
-#~ msgid "Show the shortcut key for search entry using tooltip"
-#~ msgstr ""
-#~ "Naudojant tooltip pateikti greitųjų klavišų kombinaciją paieškos įvesčiai"
-
-#~ msgid "Add the new style switcher"
-#~ msgstr "Pridėti naują stilių mainytoją"
-
-#~ msgid "Redesigned &amp; vectored app icon (big thanks to @Suzie97)"
-#~ msgstr ""
-#~ "Permaketuota ir vektorizuota programėlės ikonėlė (big thanks to @Suzie97)"
-
-#~ msgid "Show your current location if launching the app for the first time"
-#~ msgstr "Pateikti dabartinę buvimo vietą paleidžiant programėlę pirmą kartą"
-
-#~ msgid "Translation updates:"
-#~ msgstr "Vertimo naujiniai:"
-
-#~ msgid "Add French translation (thanks to @NathanBnm)"
-#~ msgstr "Pridėtas prancūzų vertimas (thanks to @NathanBnm)"
-
-#~ msgid "Initial release"
-#~ msgstr "Einamoji laida"
