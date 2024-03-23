@@ -1,54 +1,101 @@
 # Japanese translations for com.github.ryonakano.atlas package.
 # Copyright (C) 2021 THE com.github.ryonakano.atlas'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021, 2023.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 21:00+0900\n"
-"PO-Revision-Date: 2023-03-15 13:40+0000\n"
+"POT-Creation-Date: 2024-03-23 17:00+0900\n"
+"PO-Revision-Date: 2023-06-29 12:52+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas-app/"
-"ja/>\n"
+"Language-Team: \n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 4.18.1\n"
 
-#: src/MainWindow.vala:25
+#: data/atlas.desktop.in:3
+msgid "Atlas"
+msgstr "Atlas"
+
+#: data/atlas.desktop.in:4
+msgid "Map"
+msgstr "地図"
+
+#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr "行きたい場所を見ましょう"
+
+#: data/atlas.desktop.in:11
+msgid "Trip;Explore;"
+msgstr "旅行;冒険;探索;"
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr "行き先を探すのに便利な地図アプリです。"
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "含まれる機能:"
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr "場所を検索できます"
+
+#: data/atlas.metainfo.xml.in:19
+msgid "Jump to your current location instantly"
+msgstr "現在地をすぐに表示できます"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+"このアプリは、\"Atlas Maps\" をフォークして開発されました。Steffen Schuhmann "
+"に感謝申し上げます。"
+
+#: data/atlas.metainfo.xml.in:28
+msgid "Search where to go"
+msgstr "行きたい場所を検索しましょう"
+
+#: src/MainWindow.vala:24
 msgid "Unknown"
 msgstr "不明"
 
-#: src/MainWindow.vala:49
+#: src/MainWindow.vala:43
 msgid "Move to the current location"
 msgstr "現在地に移動"
 
-#: src/MainWindow.vala:62 src/MainWindow.vala:63
+#: src/MainWindow.vala:56 src/MainWindow.vala:57
 msgid "Search Location"
 msgstr "場所を検索"
 
-#: src/MainWindow.vala:69
+#: src/MainWindow.vala:63
 msgid "No Search Results"
 msgstr "検索結果がありません"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:64
 msgid "Try changing the search term."
 msgstr "検索用語を変えてみてください。"
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:99
 msgid "Map Source:"
 msgstr "マップ提供元:"
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:107
 msgid "Transport Map"
 msgstr "交通マップ"
 
-#: src/MainWindow.vala:135
+#: src/MainWindow.vala:129
 msgid "Preferences"
 msgstr "設定"
+
+#: src/MainWindow.vala:166
+msgid "Failed to connect to location service"
+msgstr ""
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
@@ -65,21 +112,3 @@ msgstr "ダーク"
 #: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "システム"
-
-#~ msgid "Current Location"
-#~ msgstr "現在地"
-
-#~ msgid "Layer:"
-#~ msgstr "レイヤー:"
-
-#~ msgid "Searching locations…"
-#~ msgstr "場所を検索しています…"
-
-#~ msgid "Light style"
-#~ msgstr "ライトスタイル"
-
-#~ msgid "Dark style"
-#~ msgstr "ダークスタイル"
-
-#~ msgid "Use the same style set in the system"
-#~ msgstr "システムの設定と同じスタイルを使います"
