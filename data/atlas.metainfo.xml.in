@@ -7,7 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
 
-  <name translatable="no">Atlas</name>
+  <name translate="no">Atlas</name>
   <summary>View where to go</summary>
   <description>
     <p>
@@ -50,14 +50,14 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name translatable="no">Ryo Nakano</developer_name>
+  <developer_name translate="no">Ryo Nakano</developer_name>
   <developer id="com.github.ryonakano">
-    <name translatable="no">Ryo Nakano</name>
+    <name translate="no">Ryo Nakano</name>
   </developer>
 
   <releases>
     <release version="3.0.0" date="2023-07-07" urgency="high">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Use newer version of GeoClue which prefers Location Portal if available</li>
           <li>Update translations</li>
@@ -66,7 +66,7 @@
     </release>
 
     <release version="2.0.0" date="2023-04-15" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead of libchamplain</li>
           <li>Add an blue circle indicator that represents your current location</li>
@@ -77,7 +77,7 @@
     </release>
 
     <release version="1.0.1" date="2022-08-16">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Update the dependency geocode-glib from 3.26.2 to 3.26.4</li>
           <li>Update copyright information</li>
@@ -87,7 +87,7 @@
     </release>
 
     <release version="1.0.0" date="2021-12-28">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Fix the app being introduced as if sharing your location to someone in AppCenter</li>
           <li>Show the shortcut key for search entry using tooltip</li>
@@ -103,7 +103,7 @@
     </release>
 
     <release version="0.1.0" date="2021-11-30">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Initial release</li>
         </ul>
