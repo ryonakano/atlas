@@ -23,21 +23,21 @@ public class Atlas.Application : Gtk.Application {
     public Application () {
         Object (
             flags: ApplicationFlags.FLAGS_NONE,
-            application_id: Build.PROJECT_NAME
+            application_id: Config.PROJECT_NAME
         );
     }
 
     static construct {
-        settings = new Settings (Build.PROJECT_NAME);
+        settings = new Settings (Config.PROJECT_NAME);
     }
 
     protected override void startup () {
         base.startup ();
 
         Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (Build.PROJECT_NAME, Build.LOCALEDIR);
-        Intl.bind_textdomain_codeset (Build.PROJECT_NAME, "UTF-8");
-        Intl.textdomain (Build.PROJECT_NAME);
+        Intl.bindtextdomain (Config.PROJECT_NAME, Config.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Config.PROJECT_NAME, "UTF-8");
+        Intl.textdomain (Config.PROJECT_NAME);
 
         add_action_entries (ACTION_ENTRIES, this);
         set_accels_for_action ("app.quit", { "<Control>q" });

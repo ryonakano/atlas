@@ -1,4 +1,4 @@
-namespace Build {
+namespace Config {
     public const string LOCALEDIR = @LOCALEDIR@;
     public const string PROJECT_NAME = @PROJECT_NAME@;
 }

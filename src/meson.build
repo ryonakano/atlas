@@ -2,8 +2,8 @@ conf_data = configuration_data()
 conf_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 conf_data.set_quoted('PROJECT_NAME', meson.project_name())
 config_header = configure_file(
-    input: 'config.vala.in',
-    output: 'config.vala',
+    input: 'Config.vala.in',
+    output: 'Config.vala',
     configuration: conf_data
 )
 
