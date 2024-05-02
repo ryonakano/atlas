@@ -35,7 +35,6 @@
   </screenshots>
 
   <branding>
-    <color type="primary">#fe9ab8</color>
     <color type="primary" scheme_preference="light">#bc245d</color>
     <color type="primary" scheme_preference="dark">#f4679d</color>
   </branding>
