@@ -25,8 +25,12 @@
 
   <screenshots>
     <screenshot type="default">
-      <caption>Search where to go</caption>
+      <caption>App window in the light mode</caption>
       <image>https://raw.githubusercontent.com/ryonakano/atlas/3.0.0/data/screenshots/pantheon/screenshot-light.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>App window in the dark mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.0.0/data/screenshots/pantheon/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
