@@ -59,13 +59,13 @@
   </developer>
 
   <releases>
-    <release version="3.0.1" date="2023-12-01" urgency="low">
+    <release version="3.0.1" date="2024-05-02" urgency="low">
       <description translatable="no">
         <ul>
           <li>Set current location button insensitive if connecting to location service being failed</li>
           <li>Allow to use fixed location as current location (debug purpose)</li>
           <li>Flatpak: Update platform version</li>
-          <li>Flatpak: Update libshumate to 1.1.2</li>
+          <li>Flatpak: Update libshumate to 1.1.3</li>
           <li>Update translations</li>
         </ul>
       </description>
