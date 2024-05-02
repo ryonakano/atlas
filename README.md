@@ -19,7 +19,7 @@ You'll need the following dependencies:
 * libshumate-dev
 * libgranite-7-dev (>= 7.1.0)
 * libgtk-4-dev
-* meson (>= 0.57.0)
+* meson (>= 0.58.0)
 * valac
 
 Run `meson setup` to configure the build environment and run `ninja` to build
