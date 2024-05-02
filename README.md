@@ -12,7 +12,7 @@ Features include:
 
 ## Installation
 ### From AppCenter (Recommended)
-Click the button to get KonbuCase on AppCenter if you're on elementary OS:
+Click the button to get Atlas on AppCenter if you're on elementary OS:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.atlas)
 
