@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/com/github/ryonakano/atlas">
+  <gresource prefix="/com/github/ryonakano/atlas/icons">
     <file compressed="true" preprocess="xml-stripblanks" alias="pointer.svg">icons/pointer.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="location.svg">icons/location.svg</file>
   </gresource>
