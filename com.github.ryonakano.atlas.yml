@@ -27,8 +27,8 @@ modules:
       - '-Dlibsoup3=true'
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.3.tar.xz
-        sha256: 6b8a159ed744fdd15992411662a05cb4187fb55e185111a366e0038d2f0b3543
+        url: https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.4.tar.xz
+        sha256: 574c242f89cda4e8395afd89382806a9ea017a2b0d9cfd89d1bb97fa389edf1e
 
   - name: atlas
     buildsystem: meson
