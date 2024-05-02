@@ -23,8 +23,7 @@ public class Atlas.Application : Gtk.Application {
     public Application () {
         Object (
             flags: ApplicationFlags.FLAGS_NONE,
-            application_id: Config.APP_ID,
-            resource_base_path: Config.RESOURCE_PREFIX
+            application_id: Config.APP_ID
         );
     }
 

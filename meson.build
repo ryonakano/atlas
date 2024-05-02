@@ -2,7 +2,7 @@ project(
     'com.github.ryonakano.atlas',
     'vala', 'c',
     version: '3.0.0',
-    meson_version: '>=0.58.0'
+    meson_version: '>=0.57.0'
 )
 
 app_name = 'Atlas'
