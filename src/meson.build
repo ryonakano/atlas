@@ -1,10 +1,12 @@
-conf_data = configuration_data()
-conf_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
-conf_data.set_quoted('PROJECT_NAME', meson.project_name())
-config_header = configure_file(
+config_data = configuration_data()
+config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
+config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
+config_data.set_quoted('APP_ID', app_id)
+config_data.set_quoted('RESOURCE_PREFIX', '/' + meson.project_name().replace('.', '/'))
+config_file = configure_file(
     input: 'Config.vala.in',
-    output: 'Config.vala',
-    configuration: conf_data
+    output: '@BASENAME@',
+    configuration: config_data
 )
 
 sources = files(
@@ -16,9 +18,9 @@ sources = files(
 )
 
 executable(
-    meson.project_name (),
+    app_id,
     asresources,
-    config_header,
+    config_file,
     sources,
     dependencies: [
         dependency('geocode-glib-2.0', version: '>= 3.26.3'),

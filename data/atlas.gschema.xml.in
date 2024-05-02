@@ -5,7 +5,7 @@
     <value value="1" nick="transport"/>
   </enum>
 
-  <schema path="/com/github/ryonakano/atlas/" id="com.github.ryonakano.atlas">
+  <schema path="/com/github/ryonakano/atlas/" id="@APP_ID@">
     <key type="d" name="latitude">
       <default>51.2840</default>
       <summary>Latitude</summary>
