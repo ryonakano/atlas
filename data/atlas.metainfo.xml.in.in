@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014-2015 Atlas Developers, 2018-2024 Ryo Nakano -->
 <component type="desktop-application">
-  <id>com.github.ryonakano.atlas</id>
-  <launchable type="desktop-id">com.github.ryonakano.atlas.desktop</launchable>
-  <translation type="gettext">com.github.ryonakano.atlas</translation>
+  <id>@APP_ID@</id>
+  <launchable type="desktop-id">@APP_ID@.desktop</launchable>
+  <translation type="gettext">@GETTEXT_PACKAGE@</translation>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
 
-  <name>Atlas</name>
+  <name translate="no">Atlas</name>
   <summary>View where to go</summary>
   <description>
     <p>
@@ -25,15 +25,18 @@
 
   <screenshots>
     <screenshot type="default">
-      <caption>Search where to go</caption>
+      <caption>App window in the light mode</caption>
       <image>https://raw.githubusercontent.com/ryonakano/atlas/3.0.1/data/screenshots/pantheon/screenshot-light.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>App window in the dark mode</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.0.1/data/screenshots/pantheon/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
   <branding>
-    <color type="primary">#fe9ab8</color>
-    <color type="primary" schema_preference="light">#bc245d</color>
-    <color type="primary" schema_preference="dark">#f4679d</color>
+    <color type="primary" scheme_preference="light">#bc245d</color>
+    <color type="primary" scheme_preference="dark">#f4679d</color>
   </branding>
 
   <content_rating type="oars-1.1" />
@@ -46,9 +49,14 @@
   <url type="homepage">https://github.com/ryonakano/atlas</url>
   <url type="bugtracker">https://github.com/ryonakano/atlas/issues</url>
   <url type="help">https://github.com/ryonakano/atlas/issues</url>
+  <url type="vcs-browser">https://github.com/ryonakano/atlas</url>
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
-  <developer_name>Ryo Nakano</developer_name>
+  <!-- developer_name has deprecated since AppStream 1.0 -->
+  <developer_name translate="no">Ryo Nakano</developer_name>
+  <developer id="com.github.ryonakano">
+    <name translate="no">Ryo Nakano</name>
+  </developer>
 
   <releases>
     <release version="3.0.1" date="2023-12-01" urgency="low">
@@ -64,7 +72,7 @@
     </release>
 
     <release version="3.0.0" date="2023-07-07" urgency="high">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Use newer version of GeoClue which prefers Location Portal if available</li>
           <li>Update translations</li>
@@ -73,7 +81,7 @@
     </release>
 
     <release version="2.0.0" date="2023-04-15" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead of libchamplain</li>
           <li>Add an blue circle indicator that represents your current location</li>
@@ -84,7 +92,7 @@
     </release>
 
     <release version="1.0.1" date="2022-08-16">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Update the dependency geocode-glib from 3.26.2 to 3.26.4</li>
           <li>Update copyright information</li>
@@ -94,7 +102,7 @@
     </release>
 
     <release version="1.0.0" date="2021-12-28">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Fix the app being introduced as if sharing your location to someone in AppCenter</li>
           <li>Show the shortcut key for search entry using tooltip</li>
@@ -110,7 +118,7 @@
     </release>
 
     <release version="0.1.0" date="2021-11-30">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Initial release</li>
         </ul>

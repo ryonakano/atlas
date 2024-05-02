@@ -1,55 +1,105 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Turkish translations for com.github.ryonakano.atlas.
+# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2018-2024 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # Oğuz Ersen <oguz@ersen.moe>, 2022, 2023.
 # Sabri Ünal <libreajans@gmail.com>, 2023.
+# Sabri Ünal <yakushabb@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-28 21:00+0900\n"
-"PO-Revision-Date: 2023-08-21 01:53+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas-app/"
-"tr/>\n"
+"POT-Creation-Date: 2024-03-23 17:00+0900\n"
+"PO-Revision-Date: 2024-04-06 20:01+0000\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
-#: src/MainWindow.vala:25
+#: data/atlas.desktop.in:3
+msgid "Atlas"
+msgstr "Atlas"
+
+#: data/atlas.desktop.in:4
+msgid "Map"
+msgstr "Harita"
+
+#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr "Nereye gideceğinizi görün"
+
+#: data/atlas.desktop.in:11
+msgid "Trip;Explore;"
+msgstr "Trip;Explore;Gezi;Seyahat;Yolculuk;Keşfet;"
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr ""
+"Nereye gitmek istediğinizi görmenize yardımcı olan bir harita uygulaması."
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "Özellikler:"
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr "Herhangi bir yeri arayın"
+
+#: data/atlas.metainfo.xml.in:19
+msgid "Jump to your current location instantly"
+msgstr "Geçerli konumunuza anında atlayın"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+"Bu, \"Atlas Maps\" uygulamasının bir çatalıdır ve Steffen Schuhmann'ın "
+"çalışmaları olmadan var olamazdı."
+
+#: data/atlas.metainfo.xml.in:28
+msgid "Search where to go"
+msgstr "Nereye gideceğinizi arayın"
+
+#: src/MainWindow.vala:24
 msgid "Unknown"
 msgstr "Bilinmiyor"
 
-#: src/MainWindow.vala:49
+#: src/MainWindow.vala:43
 msgid "Move to the current location"
 msgstr "Geçerli konuma git"
 
-#: src/MainWindow.vala:62 src/MainWindow.vala:63
+#: src/MainWindow.vala:56 src/MainWindow.vala:57
 msgid "Search Location"
 msgstr "Konum Ara"
 
-#: src/MainWindow.vala:69
+#: src/MainWindow.vala:63
 msgid "No Search Results"
 msgstr "Arama Sonucu Yok"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:64
 msgid "Try changing the search term."
 msgstr "Arama terimini değiştirmeyi deneyin."
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:99
 msgid "Map Source:"
 msgstr "Harita Kaynağı:"
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:107
 msgid "Transport Map"
 msgstr "Ulaşım Haritası"
 
-#: src/MainWindow.vala:135
+#: src/MainWindow.vala:129
 msgid "Preferences"
 msgstr "Tercihler"
+
+#: src/MainWindow.vala:166
+msgid "Failed to connect to location service"
+msgstr "Konum hizmetine bağlanamadı"
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
@@ -66,21 +116,3 @@ msgstr "Koyu"
 #: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Sistem"
-
-#~ msgid "Current Location"
-#~ msgstr "Geçerli Konum"
-
-#~ msgid "Layer:"
-#~ msgstr "Katman:"
-
-#~ msgid "Searching locations…"
-#~ msgstr "Konumlar aranıyor…"
-
-#~ msgid "Light style"
-#~ msgstr "Açık biçim"
-
-#~ msgid "Dark style"
-#~ msgstr "Koyu biçim"
-
-#~ msgid "Use the same style set in the system"
-#~ msgstr "Sistemle aynı biçim setini kullan"

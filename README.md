@@ -1,17 +1,38 @@
 # Atlas
+![App window in the light mode](data/screenshots/pantheon/screenshot-light.png#gh-light-mode-only)
+
+![App window in the dark mode](data/screenshots/pantheon/screenshot-dark.png#gh-dark-mode-only)
+
 Atlas is a map viewer designed for elementary OS.
 
-![Screenshot](data/screenshots/pantheon/screenshot-light.png)
+Features include:
 
-This is a fork of [Atlas Maps](https://launchpad.net/atlas-maps) and wouldn't exist without work of [Steffen Schuhmann](https://launchpad.net/~sschuhmann).
+- Search any place
+- Jump to your current location instantly
 
 ## Installation
-### For Users
-On elementary OS? Click the button to get Atlas on AppCenter:
+### From AppCenter (Recommended)
+Click the button to get Atlas on AppCenter if you're on elementary OS:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.atlas)
 
-### For Developers
+### From Source Code (Flatpak)
+You'll need `flatpak` and `flatpak-builder` commands installed on your system.
+
+Run `flatpak remote-add` to add AppCenter remote for dependencies:
+
+```
+flatpak remote-add --user --if-not-exists appcenter https://flatpak.elementary.io/repo.flatpakrepo
+```
+
+To build and install, use `flatpak-builder`, then execute with `flatpak run`:
+
+```
+flatpak-builder builddir --user --install --force-clean --install-deps-from=appcenter build-aux/appcenter/com.github.ryonakano.atlas.Devel.yml
+flatpak run com.github.ryonakano.atlas.Devel
+```
+
+### From Source Code (Native)
 You'll need the following dependencies:
 
 * libgeoclue-2-dev
@@ -19,38 +40,32 @@ You'll need the following dependencies:
 * libshumate-dev
 * libgranite-7-dev (>= 7.1.0)
 * libgtk-4-dev
-* meson (>= 0.57.0)
+* meson (>= 0.58.0)
 * valac
 
-Run `meson setup` to configure the build environment and run `ninja` to build
+Run `meson setup` to configure the build environment and run `meson compile` to build:
 
 ```bash
 meson setup builddir --prefix=/usr
-ninja -C builddir
+meson compile -C builddir
 ```
 
-To install, use `ninja install`, then execute with `com.github.ryonakano.atlas`
+To install, use `meson install`, then execute with `com.github.ryonakano.atlas`:
 
 ```bash
-ninja install -C builddir
+meson install -C builddir
 com.github.ryonakano.atlas
 ```
 
 ## Contributing
-There are many ways you can contribute, even if you don't know how to code.
+Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like to:
 
-### Reporting Bugs or Suggesting Improvements
-Simply [create a new issue](https://github.com/ryonakano/atlas/issues/new) describing your problem and how to reproduce or your suggestion. If you are not used to do, [this section](https://docs.elementary.io/contributor-guide/feedback/reporting-issues) is for you.
+- submit bug reports / feature requests
+- propose coding changes
+- translate the project
 
-### Writing Some Code
-We follow [the coding style of elementary OS](https://docs.elementary.io/develop/writing-apps/code-style) and [its Human Interface Guidelines](https://docs.elementary.io/hig/). Try to respect them.
+## Get Support
+Need help in use of the app? Refer to [the discussions page](https://github.com/ryonakano/atlas/discussions) to search for existing discussions or [start a new discussion](https://github.com/ryonakano/atlas/discussions/new/choose) if none is relevant.
 
-### Translation
-We accept translations of this project through [Weblate](https://weblate.org/). We would appreciate it if you would join our translation work!
-
-Click the following graphs to get started:
-
-| App: Texts in the app itself | Metainfo: Texts in the desktop entry and the software center |
-| --- | --- |
-| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/atlas-app/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/atlas-app) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/atlas-metainfo/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/atlas-metainfo) |
-
+## History
+This is a fork of [Atlas Maps](https://launchpad.net/atlas-maps) and wouldn't exist without work of [Steffen Schuhmann](https://launchpad.net/~sschuhmann).

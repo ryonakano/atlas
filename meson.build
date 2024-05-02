@@ -2,10 +2,15 @@ project(
     'com.github.ryonakano.atlas',
     'vala', 'c',
     version: '3.0.1',
-    meson_version: '>=0.57.0'
+    meson_version: '>=0.58.0'
 )
 
-app_nickname = 'atlas'
+app_name = 'Atlas'
+app_id = meson.project_name()
+if get_option('development')
+    app_name += ' (Development)'
+    app_id += '.Devel'
+endif
 
 gnome = import('gnome')
 i18n = import('i18n')
@@ -15,48 +20,9 @@ add_global_arguments(
     language:'c'
 )
 
-conf_data = configuration_data()
-conf_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
-conf_data.set_quoted('PROJECT_NAME', meson.project_name())
-config_header = configure_file(
-    input: 'src' / 'config.vala.in',
-    output: 'config.vala',
-    configuration: conf_data
-)
-
-asresources = gnome.compile_resources(
-    'as-resources',
-    'data' / app_nickname + '.gresource.xml',
-    source_dir: 'data',
-    c_name: 'as'
-)
-
-sources = files(
-    'src' / 'Application.vala',
-    'src' / 'MarkerLayerManager.vala',
-    'src' / 'MainWindow.vala',
-    'src' / 'MapWidget.vala',
-    'src' / 'StyleSwitcher.vala'
-)
-
-executable(
-    meson.project_name (),
-    asresources,
-    config_header,
-    sources,
-    dependencies: [
-        dependency('geocode-glib-2.0', version: '>= 3.26.3'),
-        dependency('gio-2.0'),
-        dependency('granite-7', version: '>= 7.1.0'),
-        dependency('libgeoclue-2.0'),
-        dependency('shumate-1.0'),
-        dependency('gtk4')
-    ],
-    install: true
-)
-
 subdir('data')
 subdir('po')
+subdir('src')
 
 gnome.post_install(
     glib_compile_schemas: true,

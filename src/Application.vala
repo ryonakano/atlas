@@ -9,29 +9,40 @@ public class Atlas.Application : Gtk.Application {
 
     public static bool IS_ON_PANTHEON {
         get {
-            return GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
+            return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
         }
     }
 
+    public static Settings settings { get; private set; }
+
+    private const ActionEntry[] ACTION_ENTRIES = {
+        { "quit", on_quit_activate },
+    };
     private MainWindow main_window;
-    public static Settings settings;
 
     public Application () {
         Object (
             flags: ApplicationFlags.FLAGS_NONE,
-            application_id: Build.PROJECT_NAME
+            application_id: Config.APP_ID,
+            resource_base_path: Config.RESOURCE_PREFIX
         );
     }
 
-    construct {
-        Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (Build.PROJECT_NAME, Build.LOCALEDIR);
-        Intl.bind_textdomain_codeset (Build.PROJECT_NAME, "UTF-8");
-        Intl.textdomain (Build.PROJECT_NAME);
+    static construct {
+        settings = new Settings (Config.APP_ID);
     }
 
-    static construct {
-        settings = new Settings (Build.PROJECT_NAME);
+    protected override void startup () {
+        base.startup ();
+
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (Config.GETTEXT_PACKAGE);
+
+        add_action_entries (ACTION_ENTRIES, this);
+        set_accels_for_action ("app.quit", { "<Control>q" });
+        set_accels_for_action ("win.search", { "<Control>f" });
     }
 
     protected override void activate () {
@@ -57,6 +68,16 @@ public class Atlas.Application : Gtk.Application {
         }
 
         settings.bind ("maximized", main_window, "maximized", SettingsBindFlags.SET);
+    }
+
+    private void on_quit_activate () {
+        if (main_window != null) {
+            main_window.prep_destroy ();
+            // Prevent quit() for now for pre-destruction process
+            return;
+        }
+
+        quit ();
     }
 
     public static int main (string[] args) {
