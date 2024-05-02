@@ -65,7 +65,7 @@
           <li>Set current location button insensitive if connecting to location service being failed</li>
           <li>Allow to use fixed location as current location (debug purpose)</li>
           <li>Flatpak: Update platform version</li>
-          <li>Flatpak: Update libshumate to 1.1.3</li>
+          <li>Flatpak: Update libshumate to 1.1.4</li>
           <li>Update translations</li>
         </ul>
       </description>
