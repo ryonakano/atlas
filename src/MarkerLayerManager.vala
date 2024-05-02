@@ -16,8 +16,8 @@ namespace Atlas {
             string image;
         }
 
-        private const string POINTER_IMAGE = "/com/github/ryonakano/atlas/pointer.svg";
-        private const string LOCATION_IMAGE = "/com/github/ryonakano/atlas/location.svg";
+        private const string POINTER_IMAGE = "pointer";
+        private const string LOCATION_IMAGE = "location";
 
         public Shumate.SimpleMap map_widget { private get; construct; }
         private LayerData[] layer_data;
@@ -47,7 +47,7 @@ namespace Atlas {
         public void new_marker_at_pos (MarkerType type, double latitude, double longitude) {
             LayerData data = layer_data[type];
 
-            var image = new Gtk.Image.from_resource (data.image) {
+            var image = new Gtk.Image.from_icon_name (data.image) {
                 icon_size = Gtk.IconSize.LARGE
             };
             var marker = new Shumate.Marker () {
