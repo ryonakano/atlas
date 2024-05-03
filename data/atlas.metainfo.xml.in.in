@@ -60,7 +60,7 @@
 
   <releases>
     <release version="3.0.1" date="2024-05-02" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Set current location button insensitive if connecting to location service being failed</li>
           <li>Allow to use fixed location as current location (debug purpose)</li>
