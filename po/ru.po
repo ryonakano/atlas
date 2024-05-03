@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 17:00+0900\n"
+"POT-Creation-Date: 2024-05-03 15:09+0900\n"
 "PO-Revision-Date: 2023-07-06 22:33+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: \n"
@@ -19,39 +19,39 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.0-dev\n"
 
-#: data/atlas.desktop.in:3
-msgid "Atlas"
-msgstr "Atlas"
+#: data/atlas.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in.in:4
 msgid "Map"
 msgstr "Карта"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in.in:5 data/atlas.metainfo.xml.in.in:11
 msgid "View where to go"
 msgstr "Смотрите куда идти"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in.in:11
 msgid "Trip;Explore;"
 msgstr "Путешествие;Исследовать;"
 
-#: data/atlas.metainfo.xml.in:13
+#: data/atlas.metainfo.xml.in.in:13
 msgid "A map app that helps you to see where you want to go."
 msgstr "Карта, которая помогает вам смотреть куда вы хотите пойти."
 
-#: data/atlas.metainfo.xml.in:16
+#: data/atlas.metainfo.xml.in.in:16
 msgid "Features include:"
 msgstr "Функции:"
 
-#: data/atlas.metainfo.xml.in:18
+#: data/atlas.metainfo.xml.in.in:18
 msgid "Search any place"
 msgstr "Ищите любое место"
 
-#: data/atlas.metainfo.xml.in:19
+#: data/atlas.metainfo.xml.in.in:19
 msgid "Jump to your current location instantly"
 msgstr "Мгновенно переместитесь к вашему текущему местоположению"
 
-#: data/atlas.metainfo.xml.in:21
+#: data/atlas.metainfo.xml.in.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
@@ -59,9 +59,13 @@ msgstr ""
 "Это форк приложения «Atlas Maps», и оно не могло бы существовать без работы "
 "Steffen Schuhmann."
 
-#: data/atlas.metainfo.xml.in:28
-msgid "Search where to go"
-msgstr "Ищите куда пойти"
+#: data/atlas.metainfo.xml.in.in:28
+msgid "App window in the light mode"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in.in:32
+msgid "App window in the dark mode"
+msgstr ""
 
 #: src/MainWindow.vala:24
 msgid "Unknown"
@@ -114,3 +118,9 @@ msgstr "Тёмный"
 #: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Система"
+
+#~ msgid "Atlas"
+#~ msgstr "Atlas"
+
+#~ msgid "Search where to go"
+#~ msgstr "Ищите куда пойти"

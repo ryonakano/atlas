@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 17:00+0900\n"
+"POT-Creation-Date: 2024-05-03 15:09+0900\n"
 "PO-Revision-Date: 2024-04-06 20:01+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas/tr/>\n"
@@ -20,40 +20,40 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/atlas.desktop.in:3
-msgid "Atlas"
-msgstr "Atlas"
+#: data/atlas.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in.in:4
 msgid "Map"
 msgstr "Harita"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in.in:5 data/atlas.metainfo.xml.in.in:11
 msgid "View where to go"
 msgstr "Nereye gideceğinizi görün"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in.in:11
 msgid "Trip;Explore;"
 msgstr "Trip;Explore;Gezi;Seyahat;Yolculuk;Keşfet;"
 
-#: data/atlas.metainfo.xml.in:13
+#: data/atlas.metainfo.xml.in.in:13
 msgid "A map app that helps you to see where you want to go."
 msgstr ""
 "Nereye gitmek istediğinizi görmenize yardımcı olan bir harita uygulaması."
 
-#: data/atlas.metainfo.xml.in:16
+#: data/atlas.metainfo.xml.in.in:16
 msgid "Features include:"
 msgstr "Özellikler:"
 
-#: data/atlas.metainfo.xml.in:18
+#: data/atlas.metainfo.xml.in.in:18
 msgid "Search any place"
 msgstr "Herhangi bir yeri arayın"
 
-#: data/atlas.metainfo.xml.in:19
+#: data/atlas.metainfo.xml.in.in:19
 msgid "Jump to your current location instantly"
 msgstr "Geçerli konumunuza anında atlayın"
 
-#: data/atlas.metainfo.xml.in:21
+#: data/atlas.metainfo.xml.in.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
@@ -61,9 +61,13 @@ msgstr ""
 "Bu, \"Atlas Maps\" uygulamasının bir çatalıdır ve Steffen Schuhmann'ın "
 "çalışmaları olmadan var olamazdı."
 
-#: data/atlas.metainfo.xml.in:28
-msgid "Search where to go"
-msgstr "Nereye gideceğinizi arayın"
+#: data/atlas.metainfo.xml.in.in:28
+msgid "App window in the light mode"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in.in:32
+msgid "App window in the dark mode"
+msgstr ""
 
 #: src/MainWindow.vala:24
 msgid "Unknown"
@@ -116,3 +120,9 @@ msgstr "Koyu"
 #: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Sistem"
+
+#~ msgid "Atlas"
+#~ msgstr "Atlas"
+
+#~ msgid "Search where to go"
+#~ msgstr "Nereye gideceğinizi arayın"

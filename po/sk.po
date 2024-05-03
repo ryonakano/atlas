@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 17:00+0900\n"
+"POT-Creation-Date: 2024-05-03 15:09+0900\n"
 "PO-Revision-Date: 2023-10-05 12:10+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: \n"
@@ -20,41 +20,41 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 5.1-dev\n"
 
-#: data/atlas.desktop.in:3
-msgid "Atlas"
-msgstr "Atlas"
+#: data/atlas.desktop.in.in:3
+msgid "@APP_NAME@"
+msgstr ""
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in.in:4
 msgid "Map"
 msgstr "Mapa"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in.in:5 data/atlas.metainfo.xml.in.in:11
 msgid "View where to go"
 msgstr "Zobrazte si, kam chcete ísť"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in.in:11
 msgid "Trip;Explore;"
 msgstr "Výlet;Objaviť;Preskúmať;"
 
-#: data/atlas.metainfo.xml.in:13
+#: data/atlas.metainfo.xml.in.in:13
 msgid "A map app that helps you to see where you want to go."
 msgstr ""
 "Mapová aplikácia, ktorá vám pomôže zobraziť si miesto, na ktoré sa chystáte "
 "ísť."
 
-#: data/atlas.metainfo.xml.in:16
+#: data/atlas.metainfo.xml.in.in:16
 msgid "Features include:"
 msgstr "Funkcie zahŕňajú:"
 
-#: data/atlas.metainfo.xml.in:18
+#: data/atlas.metainfo.xml.in.in:18
 msgid "Search any place"
 msgstr "Vyhľadajte akékoľvek miesto"
 
-#: data/atlas.metainfo.xml.in:19
+#: data/atlas.metainfo.xml.in.in:19
 msgid "Jump to your current location instantly"
 msgstr "Presuňte sa na vašu aktuálnu polohu okamžite jedným klikom"
 
-#: data/atlas.metainfo.xml.in:21
+#: data/atlas.metainfo.xml.in.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
@@ -62,9 +62,13 @@ msgstr ""
 "Toto je vetva (fork) aplikácie „Atlas Maps“ a neexistovala by bez práce "
 "Steffena Schuhmanna."
 
-#: data/atlas.metainfo.xml.in:28
-msgid "Search where to go"
-msgstr "Vyhľadajte miesto, kam chcete ísť"
+#: data/atlas.metainfo.xml.in.in:28
+msgid "App window in the light mode"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in.in:32
+msgid "App window in the dark mode"
+msgstr ""
 
 #: src/MainWindow.vala:24
 msgid "Unknown"
@@ -117,3 +121,9 @@ msgstr "Tmavý"
 #: src/StyleSwitcher.vala:33
 msgid "System"
 msgstr "Systém"
+
+#~ msgid "Atlas"
+#~ msgstr "Atlas"
+
+#~ msgid "Search where to go"
+#~ msgstr "Vyhľadajte miesto, kam chcete ísť"
