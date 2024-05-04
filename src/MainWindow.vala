@@ -180,14 +180,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
             is_busy = true;
             compute_location.begin (search_entry.text, location_store, (obj, res) => {
-                bool res_found = compute_location.end (res);
-                /*
-                if (res_found) {
-                    search_res_stack.visible_child = search_res_list_scrolled;
-                } else {
-                    search_res_stack.visible_child = search_placeholder;
-                }
-                */
+                compute_location.end (res);
 
                 search_res_popover.popup ();
                 search_entry.grab_focus ();
@@ -236,7 +229,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         search_entry.grab_focus ();
     }
 
-    private async bool compute_location (string loc, ListStore loc_store) {
+    private async void compute_location (string loc, ListStore loc_store) {
         if (search_cancellable != null) {
             search_cancellable.cancel ();
         }
@@ -256,15 +249,9 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             warning (error.message);
         }
 
-        if (places.is_empty ()) {
-            return false;
-        }
-
         foreach (unowned var place in places) {
             loc_store.append (place);
         }
-
-        return true;
     }
 
     private Gtk.Widget construct_search_res (Object item) {
