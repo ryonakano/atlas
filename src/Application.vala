@@ -5,8 +5,6 @@
  */
 
 public class Atlas.Application : Gtk.Application {
-    public const string APP_NAME = "Atlas";
-
     public static bool IS_ON_PANTHEON {
         get {
             return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";

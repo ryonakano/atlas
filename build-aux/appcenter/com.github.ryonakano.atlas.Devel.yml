@@ -30,6 +30,15 @@ modules:
         url: https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.4.tar.xz
         sha256: 574c242f89cda4e8395afd89382806a9ea017a2b0d9cfd89d1bb97fa389edf1e
 
+  - name: blueprint-compiler
+    buildsystem: meson
+    cleanup:
+      - "*"
+    sources:
+      - type: archive
+        url: https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.12.0/blueprint-compiler-v0.12.0.tar.gz
+        sha256: 6dbb4ea851cec164030abded5949ea77ff92032e23527e1c0597d7efe0c36a81
+
   - name: atlas
     buildsystem: meson
     config-opts:

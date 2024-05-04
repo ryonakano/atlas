@@ -1,0 +1,113 @@
+using Gtk 4.0;
+using Granite 7.0;
+using Shumate 1.0;
+
+// Main menu model
+menu main_menu {
+  submenu {
+    label: _("_Style");
+
+    item {
+      label: _("S_ystem");
+      action: "app.color-scheme";
+      target: "default";
+    }
+
+    item {
+      label: _("_Light");
+      action: "app.color-scheme";
+      target: "force-light";
+    }
+
+    item {
+      label: _("_Dark");
+      action: "app.color-scheme";
+      target: "force-dark";
+    }
+  }
+
+  submenu {
+    label: _("_Map Source");
+
+    item {
+      label: _("M_apnik");
+      action: "win.map-source";
+      target: "mapnik";
+    }
+
+    item {
+      label: _("_Transport Map");
+      action: "win.map-source";
+      target: "transport";
+    }
+  }
+}
+
+/**
+ * MainWindow: The app window
+ */
+template $AtlasMainWindow : Gtk.ApplicationWindow {
+  title: "Atlas";
+
+  [titlebar]
+  Gtk.HeaderBar {
+    [start]
+    Gtk.Button current_location {
+      tooltip-text: _("Move to the current location");
+      icon-name: "mark-location-symbolic";
+      margin-start: 6;
+      margin-end: 6;
+      sensitive: bind template.is-busy inverted;
+    }
+
+    [end]
+    Gtk.MenuButton {
+      tooltip-text: _("Main Menu");
+      icon-name: "open-menu";
+      menu-model: main_menu;
+      primary: true;
+    }
+
+    [end]
+    Gtk.SearchEntry search_entry {
+      placeholder-text: _("Search Location");
+      valign: center;
+      margin-start: 6;
+      margin-end: 6;
+
+      Gtk.Popover search_res_popover {
+        has-arrow: false;
+        width-request: 300;
+        height-request: 500;
+
+        Gtk.ScrolledWindow {
+          hscrollbar-policy: never;
+          vexpand: true;
+
+          Gtk.ListBox search_res_list {
+            selection-mode: browse;
+
+            [placeholder]
+            Granite.Placeholder {
+              title: _("No Search Results");
+              description: _("Try changing the search term.");
+              margin-start: 12;
+              margin-end: 12;
+            }
+          }
+        }
+      }
+    }
+
+    [end]
+    Gtk.Spinner spinner {
+      visible: bind template.is-busy;
+      spinning: bind template.is-busy;
+      margin-start: 6;
+      margin-end: 6;
+    }
+  }
+
+  Shumate.SimpleMap map_widget {
+  }
+}
