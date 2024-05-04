@@ -60,7 +60,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             margin_end = 6
         };
 
-        var search_res_msg_view = new Granite.Placeholder (_("No Search Results")) {
+        var search_placeholder = new Granite.Placeholder (_("No Search Results")) {
             description = _("Try changing the search term."),
             margin_start = 12,
             margin_end = 12
@@ -70,6 +70,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             selection_mode = Gtk.SelectionMode.BROWSE
         };
         search_res_list.bind_model (location_store, construct_search_res);
+        search_res_list.set_placeholder (search_placeholder);
 
         var search_res_list_scrolled = new Gtk.ScrolledWindow () {
             child = search_res_list,
@@ -77,15 +78,11 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             vexpand = true
         };
 
-        var search_res_stack = new Gtk.Stack () {
-            height_request = 500
-        };
-        search_res_stack.add_child (search_res_msg_view);
-        search_res_stack.add_child (search_res_list_scrolled);
-
         search_res_popover = new Gtk.Popover () {
+            width_request = 400,
+            height_request = 500,
             has_arrow = false,
-            child = search_res_stack,
+            child = search_res_list_scrolled,
             default_widget = search_res_list
         };
 
@@ -181,11 +178,13 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
             compute_location.begin (search_entry.text, location_store, (obj, res) => {
                 bool res_found = compute_location.end (res);
+                /*
                 if (res_found) {
                     search_res_stack.visible_child = search_res_list_scrolled;
                 } else {
-                    search_res_stack.visible_child = search_res_msg_view;
+                    search_res_stack.visible_child = search_placeholder;
                 }
+                */
 
                 search_res_popover.popup ();
                 search_entry.grab_focus ();
