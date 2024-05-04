@@ -186,20 +186,20 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         search_entry.grab_focus ();
     }
 
-        private void setup_map_source_action () {
-            var map_source_action = new SimpleAction.stateful (
-                "map-source", VariantType.STRING, new Variant.string (Define.MapSource.MAPNIK)
-            );
-            map_source_action.bind_property ("state", map_widget, "map-source",
-                                        BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
-                                        Util.map_source_action_transform_to_cb,
-                                        Util.map_source_action_transform_from_cb);
-            Application.settings.bind_with_mapping ("map-source", map_widget, "map-source", SettingsBindFlags.DEFAULT,
-                                        Util.map_source_get_mapping_cb,
-                                        Util.map_source_set_mapping_cb,
-                                        null, null);
-            add_action (map_source_action);
-        }
+    private void setup_map_source_action () {
+        var map_source_action = new SimpleAction.stateful (
+            "map-source", VariantType.STRING, new Variant.string (Define.MapSource.MAPNIK)
+        );
+        map_source_action.bind_property ("state", map_widget, "map-source",
+                                         BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
+                                         Util.map_source_action_transform_to_cb,
+                                         Util.map_source_action_transform_from_cb);
+        Application.settings.bind_with_mapping ("map-source", map_widget, "map-source", SettingsBindFlags.DEFAULT,
+                                                Util.map_source_get_mapping_cb,
+                                                Util.map_source_set_mapping_cb,
+                                                null, null);
+        add_action (map_source_action);
+    }
 
     private async void compute_location (string loc, ListStore loc_store) {
         if (search_cancellable != null) {
