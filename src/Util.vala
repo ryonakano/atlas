@@ -128,5 +128,4 @@ namespace Util {
 
         return new Variant.string (map_source);
     }
-
 }
