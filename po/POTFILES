@@ -1,4 +1,3 @@
 data/atlas.desktop.in.in
 data/atlas.metainfo.xml.in.in
 src/MainWindow.vala
-src/StyleSwitcher.vala

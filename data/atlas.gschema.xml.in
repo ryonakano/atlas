@@ -56,15 +56,16 @@
       <summary>Maximized window</summary>
       <description>Whether the window last closed was maximized or not</description>
     </key>
-    <key name="is-prefer-dark" type="b">
-      <default>false</default>
-      <summary>Prefer dark</summary>
+    <key name="color-scheme" type="s">
+      <choices>
+        <choice value="default"/>
+        <choice value="force-light"/>
+        <choice value="force-dark"/>
+      </choices>
+
+      <default>'default'</default>
+      <summary>Color scheme</summary>
       <description>Whether to show the window in a dark style or not</description>
-    </key>
-    <key name="is-follow-system-style" type="b">
-      <default>true</default>
-      <summary>Follow system style</summary>
-      <description>Whether to follow system's dark style settings or not</description>
     </key>
    </schema>
 </schemalist>

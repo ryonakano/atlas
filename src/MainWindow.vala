@@ -15,11 +15,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         }
     }
 
-    private enum MapSource {
-        MAPNIK,
-        TRANSPORT;
-    }
-
     private const ActionEntry[] ACTION_ENTRIES = {
         { "search", on_search_activate },
     };
@@ -86,46 +81,24 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         };
         search_res_popover.set_parent (search_entry);
 
-        var style_switcher = new StyleSwitcher ();
+        var style_submenu = new Menu ();
+        style_submenu.append (_("S_ystem"), "app.color-scheme(\"%s\")".printf (StyleManager.COLOR_SCHEME_DEFAULT));
+        style_submenu.append (_("_Light"), "app.color-scheme(\"%s\")".printf (StyleManager.COLOR_SCHEME_FORCE_LIGHT));
+        style_submenu.append (_("_Dark"), "app.color-scheme(\"%s\")".printf (StyleManager.COLOR_SCHEME_FORCE_DARK));
 
-        var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
-            margin_top = 6,
-            margin_bottom = 6
-        };
+        var map_source_submenu = new Menu ();
+        map_source_submenu.append (_("M_apnik"), "win.map-source(\"%s\")".printf (Define.MapSource.MAPNIK));
+        map_source_submenu.append (_("_Transport"), "win.map-source(\"%s\")".printf (Define.MapSource.TRANSPORT));
 
-        var src_label = new Gtk.Label (_("Map Source:")) {
-            halign = Gtk.Align.START
-        };
+        var menu = new Menu ();
+        menu.append_submenu (_("_Style"), style_submenu);
+        menu.append_submenu (_("_Map Source"), map_source_submenu);
 
-        var mapnik_chkbtn = new Gtk.CheckButton.with_label ("Mapnik") {
-            active = false
-        };
-
-        var transport_chkbtn = new Gtk.CheckButton.with_label (_("Transport Map")) {
-            active = false,
-            group = mapnik_chkbtn
-        };
-
-        var preferences_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6) {
-            margin_top = 12,
-            margin_bottom = 12,
-            margin_start = 12,
-            margin_end = 12
-        };
-        preferences_box.append (style_switcher);
-        preferences_box.append (separator);
-        preferences_box.append (src_label);
-        preferences_box.append (mapnik_chkbtn);
-        preferences_box.append (transport_chkbtn);
-
-        var preferences_popover = new Gtk.Popover () {
-            child = preferences_box
-        };
-
-        var preferences_button = new Gtk.MenuButton () {
-            tooltip_text = _("Preferences"),
+        var menu_button = new Gtk.MenuButton () {
+            tooltip_text = _("Main Menu"),
             icon_name = "open-menu",
-            popover = preferences_popover
+            menu_model = menu,
+            primary = true
         };
 
         var headerbar = new Gtk.HeaderBar () {
@@ -133,7 +106,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             vexpand = true
         };
         headerbar.pack_start (current_location);
-        headerbar.pack_end (preferences_button);
+        headerbar.pack_end (menu_button);
         headerbar.pack_end (search_entry);
         headerbar.pack_end (spinner);
         set_titlebar (headerbar);
@@ -141,13 +114,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         map_widget = new MapWidget ();
         child = map_widget;
 
-        if ((MapSource) Application.settings.get_enum ("map-source") == MapSource.TRANSPORT) {
-            transport_chkbtn.active = true;
-            map_widget.select_transport ();
-        } else {
-            mapnik_chkbtn.active = true;
-            map_widget.select_mapnik ();
-        }
+        setup_map_source_action ();
 
         // Add the marker layer on top after selecting map source
         map_widget.init_marker_layers ();
@@ -196,16 +163,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             map_widget.go_to_place (place_row.place);
         });
 
-        mapnik_chkbtn.toggled.connect (() => {
-            Application.settings.set_enum ("map-source", MapSource.MAPNIK);
-            map_widget.select_mapnik ();
-        });
-
-        transport_chkbtn.toggled.connect (() => {
-            Application.settings.set_enum ("map-source", MapSource.TRANSPORT);
-            map_widget.select_transport ();
-        });
-
         var search_entry_gesture = new Gtk.EventControllerKey ();
         search_entry_gesture.key_pressed.connect (() => {
             search_res_popover.popdown ();
@@ -226,6 +183,21 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
     private void on_search_activate () {
         search_entry.grab_focus ();
+    }
+
+    private void setup_map_source_action () {
+        var map_source_action = new SimpleAction.stateful (
+            "map-source", VariantType.STRING, new Variant.string (Define.MapSource.MAPNIK)
+        );
+        map_source_action.bind_property ("state", map_widget, "map-source",
+                                         BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
+                                         Util.map_source_action_transform_to_cb,
+                                         Util.map_source_action_transform_from_cb);
+        Application.settings.bind_with_mapping ("map-source", map_widget, "map-source", SettingsBindFlags.DEFAULT,
+                                                Util.map_source_get_mapping_cb,
+                                                Util.map_source_set_mapping_cb,
+                                                null, null);
+        add_action (map_source_action);
     }
 
     private async void compute_location (string loc, ListStore loc_store) {

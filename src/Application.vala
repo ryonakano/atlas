@@ -17,6 +17,7 @@ public class Atlas.Application : Gtk.Application {
         { "quit", on_quit_activate },
     };
     private MainWindow main_window;
+    private StyleManager style_manager;
 
     public Application () {
         Object (
@@ -30,6 +31,20 @@ public class Atlas.Application : Gtk.Application {
         settings = new Settings (Config.APP_ID);
     }
 
+    private void setup_style () {
+        style_manager = StyleManager.get_default ();
+
+        var style_action = new SimpleAction.stateful (
+            "color-scheme", VariantType.STRING, new Variant.string (StyleManager.COLOR_SCHEME_DEFAULT)
+        );
+        style_action.bind_property ("state", style_manager, "color-scheme",
+                                    BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
+                                    Util.style_action_transform_to_cb,
+                                    Util.style_action_transform_from_cb);
+        settings.bind ("color-scheme", style_manager, "color-scheme", SettingsBindFlags.DEFAULT);
+        add_action (style_action);
+    }
+
     protected override void startup () {
         base.startup ();
 
@@ -37,6 +52,8 @@ public class Atlas.Application : Gtk.Application {
         Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
         Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (Config.GETTEXT_PACKAGE);
+
+        setup_style ();
 
         add_action_entries (ACTION_ENTRIES, this);
         set_accels_for_action ("app.quit", { "<Control>q" });
