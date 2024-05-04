@@ -85,6 +85,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             child = search_res_list_scrolled,
             default_widget = search_res_list
         };
+        search_res_popover.set_parent (search_entry);
 
         var style_switcher = new StyleSwitcher ();
 
@@ -135,7 +136,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_start (current_location);
         headerbar.pack_end (preferences_button);
         headerbar.pack_end (search_entry);
-        headerbar.pack_end (search_res_popover);
         headerbar.pack_end (spinner);
         set_titlebar (headerbar);
 
@@ -225,6 +225,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     }
 
     public void prep_destroy () {
+        search_res_popover.unparent ();
         map_widget.save_map_state ();
         destroy ();
     }
