@@ -24,7 +24,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
     private Gtk.Button current_location;
     private Gtk.Spinner spinner;
-    public Gtk.SearchEntry search_entry { get; construct; }
+    private Gtk.SearchEntry search_entry;
     private Gtk.ListBox search_res_list;
     private Gtk.Popover search_res_popover;
     private MapWidget map_widget;
