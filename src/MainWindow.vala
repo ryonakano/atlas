@@ -49,7 +49,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
         search_entry = new Gtk.SearchEntry () {
             placeholder_text = _("Search Location"),
-            tooltip_markup = Granite.markup_accel_tooltip ({"<Control>F"}, _("Search Location")),
             valign = Gtk.Align.CENTER,
             margin_start = 6,
             margin_end = 6
