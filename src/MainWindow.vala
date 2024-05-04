@@ -33,7 +33,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
     private MapWidget map_widget;
 
     construct {
-        title = Application.APP_NAME;
+        title = "Atlas";
         add_action_entries (ACTION_ENTRIES, this);
 
         bool is_searching = false;
@@ -132,7 +132,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         };
 
         var headerbar = new Gtk.HeaderBar () {
-            title_widget = new Gtk.Label (Application.APP_NAME),
             hexpand = true,
             vexpand = true
         };
