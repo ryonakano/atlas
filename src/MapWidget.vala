@@ -5,8 +5,16 @@
  */
 
 public class Atlas.MapWidget : Gtk.Box {
-    private Shumate.MapSource src_mapnik;
-    private Shumate.MapSource src_transport;
+    public Shumate.MapSource map_source {
+        get {
+            return map_widget.map_source;
+        }
+
+        set {
+            map_widget.map_source = value;
+        }
+    }
+
     private Shumate.SimpleMap map_widget;
     private Shumate.Map base_map;
     private GClue.Location? location = null;
@@ -21,10 +29,6 @@ public class Atlas.MapWidget : Gtk.Box {
 
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;
-
-        var registry = new Shumate.MapSourceRegistry.with_defaults ();
-        src_mapnik = registry.get_by_id (Shumate.MAP_SOURCE_OSM_MAPNIK);
-        src_transport = registry.get_by_id (Shumate.MAP_SOURCE_OSM_TRANSPORT_MAP);
 
         map_widget = new Shumate.SimpleMap () {
             vexpand = true,
@@ -56,14 +60,6 @@ public class Atlas.MapWidget : Gtk.Box {
         } else {
             base_map.go_to_full (latitude, longitude, zoom_level);
         }
-    }
-
-    public void select_mapnik () {
-        map_widget.map_source = src_mapnik;
-    }
-
-    public void select_transport () {
-        map_widget.map_source = src_transport;
     }
 
     public async bool watch_location_change () {

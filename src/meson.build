@@ -11,10 +11,12 @@ config_file = configure_file(
 
 sources = files(
     'Application.vala',
+    'Define.vala',
     'MainWindow.vala',
     'MapWidget.vala',
     'MarkerLayerManager.vala',
-    'StyleSwitcher.vala',
+    'StyleManager.vala',
+    'Util.vala',
 )
 
 executable(
