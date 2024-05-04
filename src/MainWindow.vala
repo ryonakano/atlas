@@ -5,6 +5,8 @@
  */
 
 public class Atlas.MainWindow : Gtk.ApplicationWindow {
+    public bool is_busy { get; private set; }
+
     private class PlaceListBoxRow : Gtk.ListBoxRow {
         public Geocode.Place place { get; construct; }
 
@@ -36,7 +38,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         title = "Atlas";
         add_action_entries (ACTION_ENTRIES, this);
 
-        bool is_searching = false;
         location_store = new ListStore (typeof (Geocode.Place));
 
         current_location = new Gtk.Button () {
@@ -47,7 +48,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         };
 
         spinner = new Gtk.Spinner () {
-            visible = false,
             margin_start = 6,
             margin_end = 6
         };
@@ -154,28 +154,31 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         map_widget.init_marker_layers ();
 
         // Try to seek the current location
-        busy_begin ();
+        is_busy = true;
         map_widget.watch_location_change.begin ((obj, res) => {
             bool watch_enabled = map_widget.watch_location_change.end (res);
-            busy_end ();
+            is_busy = false;
             if (!watch_enabled) {
                 current_location.tooltip_text = _("Failed to connect to location service");
                 current_location.sensitive = false;
             }
         });
 
+        bind_property ("is-busy", spinner, "visible", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
+        bind_property ("is-busy", spinner, "spinning", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
+
+        bind_property ("is-busy", current_location, "sensitive", BindingFlags.INVERT_BOOLEAN | BindingFlags.SYNC_CREATE);
+
         current_location.clicked.connect (() => {
             map_widget.go_to_current ();
         });
 
         search_entry.search_changed.connect (() => {
-            if (search_entry.text == "" || is_searching) {
+            if (search_entry.text == "" || is_busy) {
                 return;
             }
 
-            is_searching = true;
-            busy_begin ();
-
+            is_busy = true;
             compute_location.begin (search_entry.text, location_store, (obj, res) => {
                 bool res_found = compute_location.end (res);
                 /*
@@ -188,8 +191,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
                 search_res_popover.popup ();
                 search_entry.grab_focus ();
-                busy_end ();
-                is_searching = false;
+                is_busy = false;
             });
         });
 
@@ -232,18 +234,6 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
     private void on_search_activate () {
         search_entry.grab_focus ();
-    }
-
-    private void busy_begin () {
-        current_location.sensitive = false;
-        spinner.show ();
-        spinner.start ();
-    }
-
-    private void busy_end () {
-        current_location.sensitive = true;
-        spinner.hide ();
-        spinner.stop ();
     }
 
     private async bool compute_location (string loc, ListStore loc_store) {
