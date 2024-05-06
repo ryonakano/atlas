@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-03 15:09+0900\n"
-"PO-Revision-Date: 2024-05-04 13:07+0000\n"
+"PO-Revision-Date: 2024-05-07 17:07+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas/tr/>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: data/atlas.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -64,11 +64,11 @@ msgstr ""
 
 #: data/atlas.metainfo.xml.in.in:28
 msgid "App window in the light mode"
-msgstr "Uygulama penceresi, açık tema görünümünde"
+msgstr "Uygulama penceresi açık kipte"
 
 #: data/atlas.metainfo.xml.in.in:32
 msgid "App window in the dark mode"
-msgstr "Uygulama penceresi, koyu tema görünümünde"
+msgstr "Uygulama penceresi koyu kipte"
 
 #: src/MainWindow.vala:24
 msgid "Unknown"
