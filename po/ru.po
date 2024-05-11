@@ -2,15 +2,15 @@
 # Copyright (C) 2014-2015 Atlas Developers
 # Copyright (C) 2018-2024 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
-# lenemter <lenemter@gmail.com>, 2022, 2023.
+# lenemter <lenemter@gmail.com>, 2022, 2023, 2024.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-03 15:09+0900\n"
-"PO-Revision-Date: 2024-05-03 10:45+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-05-08 14:05+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/atlas/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: data/atlas.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -62,11 +62,11 @@ msgstr ""
 
 #: data/atlas.metainfo.xml.in.in:28
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Окно приложения в светлом режиме"
 
 #: data/atlas.metainfo.xml.in.in:32
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Окно приложения в тёмном режиме"
 
 #: src/MainWindow.vala:24
 msgid "Unknown"
@@ -102,7 +102,7 @@ msgstr "Параметры"
 
 #: src/MainWindow.vala:166
 msgid "Failed to connect to location service"
-msgstr ""
+msgstr "Не удалось подключиться к службе местоположения"
 
 #: src/StyleSwitcher.vala:27
 msgid "Style:"
