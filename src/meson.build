@@ -27,10 +27,11 @@ executable(
     dependencies: [
         dependency('geocode-glib-2.0', version: '>= 3.26.3'),
         dependency('gio-2.0'),
+        dependency('glib-2.0', version: '>= 2.74'),
         dependency('granite-7', version: '>= 7.1.0'),
+        dependency('gtk4'),
         dependency('libgeoclue-2.0'),
         dependency('shumate-1.0'),
-        dependency('gtk4')
     ],
     install: true
 )

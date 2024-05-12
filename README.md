@@ -37,9 +37,10 @@ You'll need the following dependencies:
 
 * libgeoclue-2-dev
 * libgeocode-glib-dev (>= 3.26.3)
-* libshumate-dev
+* libglib2.0-dev (>= 2.74)
 * libgranite-7-dev (>= 7.1.0)
 * libgtk-4-dev
+* libshumate-dev
 * meson (>= 0.58.0)
 * valac
 
