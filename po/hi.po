@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-15 21:03+0900\n"
-"PO-Revision-Date: 2024-05-14 01:56+0000\n"
+"PO-Revision-Date: 2024-05-16 13:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/atlas/hi/>\n"
 "Language: hi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/atlas.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -100,29 +100,23 @@ msgstr "गहरी"
 
 #: src/MainWindow.vala:90
 msgid "Mapnik"
-msgstr ""
+msgstr "मैपनिक"
 
 #: src/MainWindow.vala:91
-#, fuzzy
-#| msgid "Transport Map"
 msgid "Transport"
-msgstr "परिवहन मानचित्र"
+msgstr "परिवहन"
 
 #: src/MainWindow.vala:94
-#, fuzzy
-#| msgid "Style:"
 msgid "Style"
-msgstr "शैली:"
+msgstr "शैली"
 
 #: src/MainWindow.vala:95
-#, fuzzy
-#| msgid "Map Source:"
 msgid "Map Source"
-msgstr "मानचित्र स्रोत:"
+msgstr "मानचित्र स्रोत"
 
 #: src/MainWindow.vala:98
 msgid "Main Menu"
-msgstr ""
+msgstr "मुख्य मेनू"
 
 #: src/MainWindow.vala:128
 msgid "Failed to connect to location service"
