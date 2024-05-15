@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 15:09+0900\n"
+"POT-Creation-Date: 2024-05-15 21:03+0900\n"
 "PO-Revision-Date: 2024-05-08 14:05+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/atlas/es/>\n"
@@ -67,57 +67,70 @@ msgstr "Ventana de la aplicación en modo claro."
 msgid "App window in the dark mode"
 msgstr "Ventana de la aplicación en modo oscuro."
 
-#: src/MainWindow.vala:24
+#: src/MainWindow.vala:21
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: src/MainWindow.vala:43
+#: src/MainWindow.vala:39
 msgid "Move to the current location"
 msgstr "Desplazarse a la ubicación actual"
 
-#: src/MainWindow.vala:56 src/MainWindow.vala:57
+#: src/MainWindow.vala:51
 msgid "Search Location"
 msgstr "Buscar la ubicación"
 
-#: src/MainWindow.vala:63
+#: src/MainWindow.vala:57
 msgid "No Search Results"
 msgstr "No hay resultados"
 
-#: src/MainWindow.vala:64
+#: src/MainWindow.vala:58
 msgid "Try changing the search term."
 msgstr "Prueba a cambiar el término de la búsqueda."
 
-#: src/MainWindow.vala:99
-msgid "Map Source:"
-msgstr "Fuente del mapa:"
+#: src/MainWindow.vala:85
+msgid "System"
+msgstr "Sistema"
 
-#: src/MainWindow.vala:107
-msgid "Transport Map"
-msgstr "Mapa de transportes"
-
-#: src/MainWindow.vala:129
-msgid "Preferences"
-msgstr "Preferencias"
-
-#: src/MainWindow.vala:166
-msgid "Failed to connect to location service"
-msgstr "Falló la conexión al servicio de localización"
-
-#: src/StyleSwitcher.vala:27
-msgid "Style:"
-msgstr "Estilo:"
-
-#: src/StyleSwitcher.vala:31
+#: src/MainWindow.vala:86
 msgid "Light"
 msgstr "Claro"
 
-#: src/StyleSwitcher.vala:32
+#: src/MainWindow.vala:87
 msgid "Dark"
 msgstr "Oscuro"
 
-#: src/StyleSwitcher.vala:33
-msgid "System"
-msgstr "Sistema"
+#: src/MainWindow.vala:90
+msgid "Mapnik"
+msgstr ""
+
+#: src/MainWindow.vala:91
+#, fuzzy
+#| msgid "Transport Map"
+msgid "Transport"
+msgstr "Mapa de transportes"
+
+#: src/MainWindow.vala:94
+#, fuzzy
+#| msgid "Style:"
+msgid "Style"
+msgstr "Estilo:"
+
+#: src/MainWindow.vala:95
+#, fuzzy
+#| msgid "Map Source:"
+msgid "Map Source"
+msgstr "Fuente del mapa:"
+
+#: src/MainWindow.vala:98
+msgid "Main Menu"
+msgstr ""
+
+#: src/MainWindow.vala:128
+msgid "Failed to connect to location service"
+msgstr "Falló la conexión al servicio de localización"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferencias"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

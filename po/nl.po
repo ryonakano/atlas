@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 15:09+0900\n"
+"POT-Creation-Date: 2024-05-15 21:03+0900\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/atlas/nl/>\n"
@@ -68,57 +68,70 @@ msgstr ""
 msgid "App window in the dark mode"
 msgstr ""
 
-#: src/MainWindow.vala:24
+#: src/MainWindow.vala:21
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: src/MainWindow.vala:43
+#: src/MainWindow.vala:39
 msgid "Move to the current location"
 msgstr "Verplaatsen naar huidige locatie"
 
-#: src/MainWindow.vala:56 src/MainWindow.vala:57
+#: src/MainWindow.vala:51
 msgid "Search Location"
 msgstr "Locatie zoeken"
 
-#: src/MainWindow.vala:63
+#: src/MainWindow.vala:57
 msgid "No Search Results"
 msgstr "Er zijn geen zoekresultaten"
 
-#: src/MainWindow.vala:64
+#: src/MainWindow.vala:58
 msgid "Try changing the search term."
 msgstr "Probeer een andere zoekopdracht."
 
-#: src/MainWindow.vala:99
-msgid "Map Source:"
-msgstr "Kaartbron:"
+#: src/MainWindow.vala:85
+msgid "System"
+msgstr "Systeem"
 
-#: src/MainWindow.vala:107
-msgid "Transport Map"
-msgstr "OV-kaart"
-
-#: src/MainWindow.vala:129
-msgid "Preferences"
-msgstr "Voorkeuren"
-
-#: src/MainWindow.vala:166
-msgid "Failed to connect to location service"
-msgstr ""
-
-#: src/StyleSwitcher.vala:27
-msgid "Style:"
-msgstr "Thema:"
-
-#: src/StyleSwitcher.vala:31
+#: src/MainWindow.vala:86
 msgid "Light"
 msgstr "Licht"
 
-#: src/StyleSwitcher.vala:32
+#: src/MainWindow.vala:87
 msgid "Dark"
 msgstr "Donker"
 
-#: src/StyleSwitcher.vala:33
-msgid "System"
-msgstr "Systeem"
+#: src/MainWindow.vala:90
+msgid "Mapnik"
+msgstr ""
+
+#: src/MainWindow.vala:91
+#, fuzzy
+#| msgid "Transport Map"
+msgid "Transport"
+msgstr "OV-kaart"
+
+#: src/MainWindow.vala:94
+#, fuzzy
+#| msgid "Style:"
+msgid "Style"
+msgstr "Thema:"
+
+#: src/MainWindow.vala:95
+#, fuzzy
+#| msgid "Map Source:"
+msgid "Map Source"
+msgstr "Kaartbron:"
+
+#: src/MainWindow.vala:98
+msgid "Main Menu"
+msgstr ""
+
+#: src/MainWindow.vala:128
+msgid "Failed to connect to location service"
+msgstr ""
+
+#~ msgid "Preferences"
+#~ msgstr "Voorkeuren"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

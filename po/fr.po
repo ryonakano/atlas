@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 15:09+0900\n"
+"POT-Creation-Date: 2024-05-15 21:03+0900\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas/fr/>\n"
@@ -71,58 +71,69 @@ msgstr ""
 msgid "App window in the dark mode"
 msgstr ""
 
-#: src/MainWindow.vala:24
+#: src/MainWindow.vala:21
 msgid "Unknown"
 msgstr ""
 
-#: src/MainWindow.vala:43
+#: src/MainWindow.vala:39
 #, fuzzy
 msgid "Move to the current location"
 msgstr "Détection de votre position…"
 
-#: src/MainWindow.vala:56 src/MainWindow.vala:57
+#: src/MainWindow.vala:51
 msgid "Search Location"
 msgstr "Rechercher un lieu"
 
-#: src/MainWindow.vala:63
+#: src/MainWindow.vala:57
 msgid "No Search Results"
 msgstr ""
 
-#: src/MainWindow.vala:64
+#: src/MainWindow.vala:58
 msgid "Try changing the search term."
 msgstr ""
 
-#: src/MainWindow.vala:99
-msgid "Map Source:"
-msgstr ""
+#: src/MainWindow.vala:85
+msgid "System"
+msgstr "Système"
 
-#: src/MainWindow.vala:107
-msgid "Transport Map"
-msgstr "Carte des transports"
-
-#: src/MainWindow.vala:129
-msgid "Preferences"
-msgstr "Préférences"
-
-#: src/MainWindow.vala:166
-msgid "Failed to connect to location service"
-msgstr ""
-
-#: src/StyleSwitcher.vala:27
-msgid "Style:"
-msgstr "Style :"
-
-#: src/StyleSwitcher.vala:31
+#: src/MainWindow.vala:86
 msgid "Light"
 msgstr "Clair"
 
-#: src/StyleSwitcher.vala:32
+#: src/MainWindow.vala:87
 msgid "Dark"
 msgstr "Sombre"
 
-#: src/StyleSwitcher.vala:33
-msgid "System"
-msgstr "Système"
+#: src/MainWindow.vala:90
+msgid "Mapnik"
+msgstr ""
+
+#: src/MainWindow.vala:91
+#, fuzzy
+#| msgid "Transport Map"
+msgid "Transport"
+msgstr "Carte des transports"
+
+#: src/MainWindow.vala:94
+#, fuzzy
+#| msgid "Style:"
+msgid "Style"
+msgstr "Style :"
+
+#: src/MainWindow.vala:95
+msgid "Map Source"
+msgstr ""
+
+#: src/MainWindow.vala:98
+msgid "Main Menu"
+msgstr ""
+
+#: src/MainWindow.vala:128
+msgid "Failed to connect to location service"
+msgstr ""
+
+#~ msgid "Preferences"
+#~ msgstr "Préférences"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

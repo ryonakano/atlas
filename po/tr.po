@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 15:09+0900\n"
+"POT-Creation-Date: 2024-05-15 21:03+0900\n"
 "PO-Revision-Date: 2024-05-07 17:07+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas/tr/>\n"
@@ -70,57 +70,70 @@ msgstr "Uygulama penceresi açık kipte"
 msgid "App window in the dark mode"
 msgstr "Uygulama penceresi koyu kipte"
 
-#: src/MainWindow.vala:24
+#: src/MainWindow.vala:21
 msgid "Unknown"
 msgstr "Bilinmiyor"
 
-#: src/MainWindow.vala:43
+#: src/MainWindow.vala:39
 msgid "Move to the current location"
 msgstr "Geçerli konuma git"
 
-#: src/MainWindow.vala:56 src/MainWindow.vala:57
+#: src/MainWindow.vala:51
 msgid "Search Location"
 msgstr "Konum Ara"
 
-#: src/MainWindow.vala:63
+#: src/MainWindow.vala:57
 msgid "No Search Results"
 msgstr "Arama Sonucu Yok"
 
-#: src/MainWindow.vala:64
+#: src/MainWindow.vala:58
 msgid "Try changing the search term."
 msgstr "Arama terimini değiştirmeyi deneyin."
 
-#: src/MainWindow.vala:99
-msgid "Map Source:"
-msgstr "Harita Kaynağı:"
+#: src/MainWindow.vala:85
+msgid "System"
+msgstr "Sistem"
 
-#: src/MainWindow.vala:107
-msgid "Transport Map"
-msgstr "Ulaşım Haritası"
-
-#: src/MainWindow.vala:129
-msgid "Preferences"
-msgstr "Tercihler"
-
-#: src/MainWindow.vala:166
-msgid "Failed to connect to location service"
-msgstr "Konum hizmetine bağlanamadı"
-
-#: src/StyleSwitcher.vala:27
-msgid "Style:"
-msgstr "Biçem:"
-
-#: src/StyleSwitcher.vala:31
+#: src/MainWindow.vala:86
 msgid "Light"
 msgstr "Açık"
 
-#: src/StyleSwitcher.vala:32
+#: src/MainWindow.vala:87
 msgid "Dark"
 msgstr "Koyu"
 
-#: src/StyleSwitcher.vala:33
-msgid "System"
-msgstr "Sistem"
+#: src/MainWindow.vala:90
+msgid "Mapnik"
+msgstr ""
+
+#: src/MainWindow.vala:91
+#, fuzzy
+#| msgid "Transport Map"
+msgid "Transport"
+msgstr "Ulaşım Haritası"
+
+#: src/MainWindow.vala:94
+#, fuzzy
+#| msgid "Style:"
+msgid "Style"
+msgstr "Biçem:"
+
+#: src/MainWindow.vala:95
+#, fuzzy
+#| msgid "Map Source:"
+msgid "Map Source"
+msgstr "Harita Kaynağı:"
+
+#: src/MainWindow.vala:98
+msgid "Main Menu"
+msgstr ""
+
+#: src/MainWindow.vala:128
+msgid "Failed to connect to location service"
+msgstr "Konum hizmetine bağlanamadı"
+
+#~ msgid "Preferences"
+#~ msgstr "Tercihler"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

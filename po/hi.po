@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 15:09+0900\n"
+"POT-Creation-Date: 2024-05-15 21:03+0900\n"
 "PO-Revision-Date: 2024-05-14 01:56+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/atlas/hi/>\n"
@@ -36,8 +36,7 @@ msgstr "यात्रा;अन्वेषण;"
 
 #: data/atlas.metainfo.xml.in.in:13
 msgid "A map app that helps you to see where you want to go."
-msgstr ""
-"एक मानचित्र ऐप जो आपको यह देखने में मदद करता है कि आप कहां जाना चाहते हैं।"
+msgstr "एक मानचित्र ऐप जो आपको यह देखने में मदद करता है कि आप कहां जाना चाहते हैं।"
 
 #: data/atlas.metainfo.xml.in.in:16
 msgid "Features include:"
@@ -56,8 +55,8 @@ msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
-"यह \"Atlas Maps\" का एक फोर्क है और जो स्टीफ़न शूहमैन के काम के बिना अस्तित्"
-"व में नहीं होता।"
+"यह \"Atlas Maps\" का एक फोर्क है और जो स्टीफ़न शूहमैन के काम के बिना अस्तित्व में नहीं "
+"होता।"
 
 #: data/atlas.metainfo.xml.in.in:28
 msgid "App window in the light mode"
@@ -67,54 +66,67 @@ msgstr "ऐप खिड़की हल्के मोड में"
 msgid "App window in the dark mode"
 msgstr "ऐप खिड़की गहरे मोड में"
 
-#: src/MainWindow.vala:24
+#: src/MainWindow.vala:21
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: src/MainWindow.vala:43
+#: src/MainWindow.vala:39
 msgid "Move to the current location"
 msgstr "वर्तमान स्थान पर जाएं"
 
-#: src/MainWindow.vala:56 src/MainWindow.vala:57
+#: src/MainWindow.vala:51
 msgid "Search Location"
 msgstr "स्थान खोजें"
 
-#: src/MainWindow.vala:63
+#: src/MainWindow.vala:57
 msgid "No Search Results"
 msgstr "कोई खोज परिणाम नहीं"
 
-#: src/MainWindow.vala:64
+#: src/MainWindow.vala:58
 msgid "Try changing the search term."
 msgstr "खोज शब्द बदलने का प्रयास करें।"
 
-#: src/MainWindow.vala:99
-msgid "Map Source:"
-msgstr "मानचित्र स्रोत:"
+#: src/MainWindow.vala:85
+msgid "System"
+msgstr "सिस्टम"
 
-#: src/MainWindow.vala:107
-msgid "Transport Map"
-msgstr "परिवहन मानचित्र"
-
-#: src/MainWindow.vala:129
-msgid "Preferences"
-msgstr "प्राथमिकताएं"
-
-#: src/MainWindow.vala:166
-msgid "Failed to connect to location service"
-msgstr "स्थान सेवा से जुड़ने में विफल"
-
-#: src/StyleSwitcher.vala:27
-msgid "Style:"
-msgstr "शैली:"
-
-#: src/StyleSwitcher.vala:31
+#: src/MainWindow.vala:86
 msgid "Light"
 msgstr "हल्की"
 
-#: src/StyleSwitcher.vala:32
+#: src/MainWindow.vala:87
 msgid "Dark"
 msgstr "गहरी"
 
-#: src/StyleSwitcher.vala:33
-msgid "System"
-msgstr "सिस्टम"
+#: src/MainWindow.vala:90
+msgid "Mapnik"
+msgstr ""
+
+#: src/MainWindow.vala:91
+#, fuzzy
+#| msgid "Transport Map"
+msgid "Transport"
+msgstr "परिवहन मानचित्र"
+
+#: src/MainWindow.vala:94
+#, fuzzy
+#| msgid "Style:"
+msgid "Style"
+msgstr "शैली:"
+
+#: src/MainWindow.vala:95
+#, fuzzy
+#| msgid "Map Source:"
+msgid "Map Source"
+msgstr "मानचित्र स्रोत:"
+
+#: src/MainWindow.vala:98
+msgid "Main Menu"
+msgstr ""
+
+#: src/MainWindow.vala:128
+msgid "Failed to connect to location service"
+msgstr "स्थान सेवा से जुड़ने में विफल"
+
+#~ msgid "Preferences"
+#~ msgstr "प्राथमिकताएं"
