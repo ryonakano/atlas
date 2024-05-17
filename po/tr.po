@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-15 21:03+0900\n"
-"PO-Revision-Date: 2024-05-07 17:07+0000\n"
+"PO-Revision-Date: 2024-05-18 22:01+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas/tr/>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/atlas.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -107,26 +107,20 @@ msgid "Mapnik"
 msgstr ""
 
 #: src/MainWindow.vala:91
-#, fuzzy
-#| msgid "Transport Map"
 msgid "Transport"
-msgstr "Ulaşım Haritası"
+msgstr "Ulaşım"
 
 #: src/MainWindow.vala:94
-#, fuzzy
-#| msgid "Style:"
 msgid "Style"
-msgstr "Biçem:"
+msgstr "Biçem"
 
 #: src/MainWindow.vala:95
-#, fuzzy
-#| msgid "Map Source:"
 msgid "Map Source"
-msgstr "Harita Kaynağı:"
+msgstr "Harita Kaynağı"
 
 #: src/MainWindow.vala:98
 msgid "Main Menu"
-msgstr ""
+msgstr "Ana Menü"
 
 #: src/MainWindow.vala:128
 msgid "Failed to connect to location service"
