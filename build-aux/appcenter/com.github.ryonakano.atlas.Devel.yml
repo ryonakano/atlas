@@ -24,11 +24,10 @@ modules:
     buildsystem: meson
     config-opts:
       - '-Dgtk_doc=false'
-      - '-Dlibsoup3=true'
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.4.tar.xz
-        sha256: 574c242f89cda4e8395afd89382806a9ea017a2b0d9cfd89d1bb97fa389edf1e
+        url: https://download.gnome.org/sources/libshumate/1.2/libshumate-1.2.2.tar.xz
+        sha256: 6f587579f7f2d60b38d3f4727eb1a8d2feac9cbdc018e53ff5f772a8608fa44b
 
   - name: atlas
     buildsystem: meson
