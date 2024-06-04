@@ -28,6 +28,26 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/libshumate/1.2/libshumate-1.2.2.tar.xz
         sha256: 6f587579f7f2d60b38d3f4727eb1a8d2feac9cbdc018e53ff5f772a8608fa44b
+    modules:
+      - name: protobuf
+        buildsystem: autotools
+        config-opts:
+          - 'DIST_LANG=cpp'
+        cleanup:
+          - '/bin/protoc*'
+          - '/lib/libprotoc*'
+          - '/lib/libprotobuf-lite*'
+        sources:
+          - type: archive
+            url: https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protobuf-all-3.17.3.tar.gz
+            sha256: 77ad26d3f65222fd96ccc18b055632b0bfedf295cb748b712a98ba1ac0b704b2
+
+      - name: protobuf-c
+        buildsystem: autotools
+        sources:
+          - type: archive
+            url: https://github.com/protobuf-c/protobuf-c/releases/download/v1.5.0/protobuf-c-1.5.0.tar.gz
+            sha256: 7b404c63361ed35b3667aec75cc37b54298d56dd2bcf369de3373212cc06fd98
 
   - name: atlas
     buildsystem: meson
