@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-15 21:03+0900\n"
-"PO-Revision-Date: 2024-05-18 22:01+0000\n"
+"PO-Revision-Date: 2024-06-17 12:09+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas/tr/>\n"
 "Language: tr\n"
@@ -104,7 +104,7 @@ msgstr "Koyu"
 
 #: src/MainWindow.vala:90
 msgid "Mapnik"
-msgstr ""
+msgstr "Mapnik"
 
 #: src/MainWindow.vala:91
 msgid "Transport"
