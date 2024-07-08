@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-15 21:03+0900\n"
-"PO-Revision-Date: 2024-05-09 12:48+0000\n"
+"PO-Revision-Date: 2024-07-09 19:09+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/atlas/it/>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/atlas.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -105,26 +105,20 @@ msgid "Mapnik"
 msgstr ""
 
 #: src/MainWindow.vala:91
-#, fuzzy
-#| msgid "Transport Map"
 msgid "Transport"
-msgstr "Mappa dei trasporti"
+msgstr "Trasporto"
 
 #: src/MainWindow.vala:94
-#, fuzzy
-#| msgid "Style:"
 msgid "Style"
-msgstr "Stile:"
+msgstr "Stile"
 
 #: src/MainWindow.vala:95
-#, fuzzy
-#| msgid "Map Source:"
 msgid "Map Source"
-msgstr "Fonte mappa:"
+msgstr "Fonte mappa"
 
 #: src/MainWindow.vala:98
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu principale"
 
 #: src/MainWindow.vala:128
 msgid "Failed to connect to location service"
