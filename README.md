@@ -1,7 +1,7 @@
 # Atlas
-![App window in the light mode](data/screenshots/pantheon/screenshot-light.png#gh-light-mode-only)
+![App window in the light mode](data/screenshots/screenshot-light.png#gh-light-mode-only)
 
-![App window in the dark mode](data/screenshots/pantheon/screenshot-dark.png#gh-dark-mode-only)
+![App window in the dark mode](data/screenshots/screenshot-dark.png#gh-dark-mode-only)
 
 Atlas is a map viewer designed for elementary OS.
 
