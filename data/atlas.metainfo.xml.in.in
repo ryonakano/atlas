@@ -59,6 +59,18 @@
   </developer>
 
   <releases>
+    <release version="3.0.2" date="2024-08-12" urgency="low">
+      <description translate="no">
+        <ul>
+          <li>Fix search popover attachment</li>
+          <li>Fix fat titlebar with Adwaita stylesheet</li>
+          <li>Flatpak: Update platform version to 8</li>
+          <li>Flatpak: Update libshumate to 1.2.3</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="3.0.1" date="2024-05-02" urgency="low">
       <description translate="no">
         <ul>
