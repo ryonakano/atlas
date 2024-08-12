@@ -4,17 +4,17 @@ runtime-version: '8'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.atlas.Devel
 finish-args:
-  - '--share=ipc'
-  - '--share=network'
-  - '--socket=wayland'
-  - '--socket=fallback-x11'
-  - '--device=dri'
+  - --share=ipc
+  - --share=network
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
 modules:
   - name: geocode-glib-2.0
     buildsystem: meson
     config-opts:
-      - '-Denable-gtk-doc=false'
-      - '-Dsoup2=false'
+      - -Denable-gtk-doc=false
+      - -Dsoup2=false
     sources:
       - type: archive
         url: https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.4.tar.xz
@@ -26,7 +26,7 @@ modules:
   - name: libshumate
     buildsystem: meson
     config-opts:
-      - '-Dgtk_doc=false'
+      - -Dgtk_doc=false
     sources:
       - type: archive
         url: https://download.gnome.org/sources/libshumate/1.2/libshumate-1.2.2.tar.xz
@@ -38,11 +38,11 @@ modules:
       - name: protobuf
         buildsystem: autotools
         config-opts:
-          - 'DIST_LANG=cpp'
+          - DIST_LANG=cpp
         cleanup:
-          - '/bin/protoc*'
-          - '/lib/libprotoc*'
-          - '/lib/libprotobuf-lite*'
+          - /bin/protoc*
+          - /lib/libprotoc*
+          - /lib/libprotobuf-lite*
         sources:
           - type: archive
             url: https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protobuf-all-3.17.3.tar.gz
@@ -52,7 +52,7 @@ modules:
               project-id: 236278
               versions:
                 '>=': 3.17.0
-                '<': 3.18.0
+                <: 3.18.0
               url-template: https://github.com/protocolbuffers/protobuf/releases/download/v$version/protobuf-all-$version.tar.gz
 
       - name: protobuf-c
@@ -69,7 +69,7 @@ modules:
   - name: atlas
     buildsystem: meson
     config-opts:
-      - '-Ddevelopment=true'
+      - -Ddevelopment=true
     sources:
       - type: dir
         path: ../../
