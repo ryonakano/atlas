@@ -23,8 +23,8 @@ jobs:
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # use --commit-only instead of --update to create single PR that updates all manifests
-          args: --commit-only --never-fork build-aux/appcenter/com.github.ryonakano.atlas.Devel.yml
+          # use --edit-only instead of --update to create single PR that updates all manifests
+          args: --edit-only --never-fork build-aux/appcenter/com.github.ryonakano.atlas.Devel.yml
 
       - name: Update stable manifest
         uses: docker://ghcr.io/flathub/flatpak-external-data-checker:latest
