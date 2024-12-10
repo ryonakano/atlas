@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-15 21:03+0900\n"
-"PO-Revision-Date: 2024-12-10 12:14+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-12-11 12:15+0000\n"
+"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/atlas/et/>"
 "\n"
 "Language: et\n"
@@ -25,98 +25,102 @@ msgstr "@APP_NAME@"
 
 #: data/atlas.desktop.in.in:4
 msgid "Map"
-msgstr ""
+msgstr "Kaart"
 
 #: data/atlas.desktop.in.in:5 data/atlas.metainfo.xml.in.in:11
 msgid "View where to go"
-msgstr ""
+msgstr "Vaata, kuhu saad jõuda"
 
 #: data/atlas.desktop.in.in:11
 msgid "Trip;Explore;"
 msgstr ""
+"map;atlas;reisima;reisimine;kaart;kaardid;teekond;teekonnad;sõitmine;kõndimin"
+"e;matkamine;"
 
 #: data/atlas.metainfo.xml.in.in:13
 msgid "A map app that helps you to see where you want to go."
-msgstr ""
+msgstr "Kaart, mis aitab sul selgust saada oma teekonnast."
 
 #: data/atlas.metainfo.xml.in.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Funktsionaalsused:"
 
 #: data/atlas.metainfo.xml.in.in:18
 msgid "Search any place"
-msgstr ""
+msgstr "Otsi kõiki asukohti"
 
 #: data/atlas.metainfo.xml.in.in:19
 msgid "Jump to your current location instantly"
-msgstr ""
+msgstr "Näita lennult praegust asukohta"
 
 #: data/atlas.metainfo.xml.in.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
+"See rakendus on edasiarendus rakendusest „Atlas Maps“ ning teda poleks "
+"olemas ilma Steffen Schuhmanni panuseta."
 
 #: data/atlas.metainfo.xml.in.in:28
 msgid "App window in the light mode"
-msgstr ""
+msgstr "Heledas kujunduses rakenduse aken"
 
 #: data/atlas.metainfo.xml.in.in:32
 msgid "App window in the dark mode"
-msgstr ""
+msgstr "Tumedas kujunduses rakenduse aken"
 
 #: src/MainWindow.vala:21
 msgid "Unknown"
-msgstr ""
+msgstr "Teadmata"
 
 #: src/MainWindow.vala:39
 msgid "Move to the current location"
-msgstr ""
+msgstr "Näita praekust asukohta"
 
 #: src/MainWindow.vala:51
 msgid "Search Location"
-msgstr ""
+msgstr "Otsi asukohta"
 
 #: src/MainWindow.vala:57
 msgid "No Search Results"
-msgstr ""
+msgstr "Otsingul pole tulemusi"
 
 #: src/MainWindow.vala:58
 msgid "Try changing the search term."
-msgstr ""
+msgstr "Proovi muuta otsingusõna."
 
 #: src/MainWindow.vala:85
 msgid "System"
-msgstr ""
+msgstr "Süsteemi kujundus"
 
 #: src/MainWindow.vala:86
 msgid "Light"
-msgstr ""
+msgstr "Hele kujundus"
 
 #: src/MainWindow.vala:87
 msgid "Dark"
-msgstr ""
+msgstr "Tume kujundus"
 
 #: src/MainWindow.vala:90
 msgid "Mapnik"
-msgstr ""
+msgstr "Mapnik"
 
 #: src/MainWindow.vala:91
 msgid "Transport"
-msgstr ""
+msgstr "Transport"
 
 #: src/MainWindow.vala:94
 msgid "Style"
-msgstr ""
+msgstr "Välimus"
 
 #: src/MainWindow.vala:95
 msgid "Map Source"
-msgstr ""
+msgstr "Kaardiallikas"
 
 #: src/MainWindow.vala:98
 msgid "Main Menu"
-msgstr ""
+msgstr "Põhimenüü"
 
 #: src/MainWindow.vala:128
 msgid "Failed to connect to location service"
-msgstr ""
+msgstr "Ei õnnestunud luua ühendust asukoha tuvastamise teenusega"
