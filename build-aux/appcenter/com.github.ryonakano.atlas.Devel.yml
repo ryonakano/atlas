@@ -1,4 +1,4 @@
-app-id: com.github.ryonakano.atlas.Devel
+id: com.github.ryonakano.atlas.Devel
 runtime: io.elementary.Platform
 runtime-version: '8'
 sdk: io.elementary.Sdk
