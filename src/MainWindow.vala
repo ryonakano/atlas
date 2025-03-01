@@ -54,7 +54,8 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
             margin_end = 6
         };
 
-        var search_placeholder = new Granite.Placeholder (_("No Search Results")) {
+        var search_placeholder = new Adw.StatusPage () {
+            title = _("No Search Results"),
             description = _("Try changing the search term."),
             margin_start = 12,
             margin_end = 12
@@ -241,9 +242,10 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         string town = place.town ?? unknown_text;
 
         string info_text = "%s, %s, %s".printf (street, postal_code, town);
-        var label = new Granite.HeaderLabel (place.name) {
+        var label = new Gtk.Label (place.name) {
             secondary_text = info_text
         };
+        label.add_css_name ("title-4");
 
         var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
             margin_top = 6,
