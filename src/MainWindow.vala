@@ -55,8 +55,9 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         };
 
         var search_placeholder = new Adw.StatusPage () {
-            title = _("No Search Results"),
-            description = _("Try changing the search term."),
+            title = _("No Results Found"),
+            description = _("Try a different search"),
+            icon_name = "edit-find-symbolic",
             margin_start = 12,
             margin_end = 12
         };
