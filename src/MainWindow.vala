@@ -257,7 +257,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         label_box.append (place_name_label);
         label_box.append (info_label);
 
-        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             margin_top = 6,
             margin_bottom = 6,
             margin_start = 6,
