@@ -4,42 +4,32 @@
  */
 
 namespace Util {
-    public static bool style_action_transform_to_cb (Binding binding, Value from_value, ref Value to_value) {
-        Variant? variant = from_value.dup_variant ();
-        if (variant == null) {
-            warning ("Failed to Variant.dup_variant");
-            return false;
-        }
-
-        var val = variant.get_string ();
-        switch (val) {
-            case StyleManager.COLOR_SCHEME_DEFAULT:
-            case StyleManager.COLOR_SCHEME_FORCE_LIGHT:
-            case StyleManager.COLOR_SCHEME_FORCE_DARK:
-                to_value.set_string (val);
-                break;
+    public static Adw.ColorScheme to_adw_scheme (string str_scheme) {
+        switch (str_scheme) {
+            case Define.ColorScheme.DEFAULT:
+                return Adw.ColorScheme.DEFAULT;
+            case Define.ColorScheme.FORCE_LIGHT:
+                return Adw.ColorScheme.FORCE_LIGHT;
+            case Define.ColorScheme.FORCE_DARK:
+                return Adw.ColorScheme.FORCE_DARK;
             default:
-                warning ("style_action_transform_to_cb: Invalid color scheme: %s", val);
-                return false;
+                warning ("Invalid color scheme string: %s", str_scheme);
+                return Adw.ColorScheme.DEFAULT;
         }
-
-        return true;
     }
 
-    public static bool style_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
-        var val = (string) from_value;
-        switch (val) {
-            case StyleManager.COLOR_SCHEME_DEFAULT:
-            case StyleManager.COLOR_SCHEME_FORCE_LIGHT:
-            case StyleManager.COLOR_SCHEME_FORCE_DARK:
-                to_value.set_variant (new Variant.string (val));
-                break;
+    public static string to_str_scheme (Adw.ColorScheme adw_scheme) {
+        switch (adw_scheme) {
+            case Adw.ColorScheme.DEFAULT:
+                return Define.ColorScheme.DEFAULT;
+            case Adw.ColorScheme.FORCE_LIGHT:
+                return Define.ColorScheme.FORCE_LIGHT;
+            case Adw.ColorScheme.FORCE_DARK:
+                return Define.ColorScheme.FORCE_DARK;
             default:
-                warning ("style_action_transform_from_cb: Invalid color scheme: %s", val);
-                return false;
+                warning ("Invalid color scheme: %d", adw_scheme);
+                return Define.ColorScheme.DEFAULT;
         }
-
-        return true;
     }
 
     public static bool map_source_action_transform_to_cb (Binding binding, Value from_value, ref Value to_value) {

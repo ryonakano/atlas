@@ -4,7 +4,7 @@
  *                         2018-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Atlas.MainWindow : Gtk.ApplicationWindow {
+public class Atlas.MainWindow : Adw.ApplicationWindow {
     public bool is_busy { get; private set; }
 
     private class PlaceListBoxRow : Gtk.ListBoxRow {
@@ -54,7 +54,8 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             margin_end = 6
         };
 
-        var search_placeholder = new Granite.Placeholder (_("No Search Results")) {
+        var search_placeholder = new Adw.StatusPage () {
+            title = _("No Search Results"),
             description = _("Try changing the search term."),
             margin_start = 12,
             margin_end = 12
@@ -82,9 +83,9 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         search_res_popover.set_parent (search_entry);
 
         var style_submenu = new Menu ();
-        style_submenu.append (_("System"), "app.color-scheme('%s')".printf (StyleManager.COLOR_SCHEME_DEFAULT));
-        style_submenu.append (_("Light"), "app.color-scheme('%s')".printf (StyleManager.COLOR_SCHEME_FORCE_LIGHT));
-        style_submenu.append (_("Dark"), "app.color-scheme('%s')".printf (StyleManager.COLOR_SCHEME_FORCE_DARK));
+        style_submenu.append (_("System"), "app.color-scheme('%s')".printf (Define.ColorScheme.DEFAULT));
+        style_submenu.append (_("Light"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_LIGHT));
+        style_submenu.append (_("Dark"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_DARK));
 
         var map_source_submenu = new Menu ();
         map_source_submenu.append (_("Mapnik"), "win.map-source('%s')".printf (Define.MapSource.MAPNIK));
@@ -101,7 +102,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             primary = true
         };
 
-        var headerbar = new Gtk.HeaderBar () {
+        var headerbar = new Adw.HeaderBar () {
             hexpand = true,
             vexpand = true
         };
@@ -109,10 +110,16 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_end (menu_button);
         headerbar.pack_end (search_entry);
         headerbar.pack_end (spinner);
-        set_titlebar (headerbar);
 
         map_widget = new MapWidget ();
-        child = map_widget;
+
+        var toolbar_view = new Adw.ToolbarView ();
+        toolbar_view.add_top_bar (headerbar);
+        toolbar_view.set_content (map_widget);
+
+        content = toolbar_view;
+        width_request = 700;
+        height_request = 500;
 
         setup_map_source_action ();
 
@@ -230,23 +237,34 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
 
         var icon = new Gtk.Image.from_gicon (place.icon);
 
+        var place_name_label = new Gtk.Label (place.name) {
+            halign = Gtk.Align.START
+        };
+        place_name_label.add_css_class ("title-4");
+
         string street = place.street ?? unknown_text;
         string postal_code = place.postal_code ?? unknown_text;
         string town = place.town ?? unknown_text;
 
         string info_text = "%s, %s, %s".printf (street, postal_code, town);
-        var label = new Granite.HeaderLabel (place.name) {
-            secondary_text = info_text
-        };
 
-        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+        var info_label = new Gtk.Label (info_text) {
+            halign = Gtk.Align.START
+        };
+        info_label.add_css_class ("dim-label");
+
+        var label_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+        label_box.append (place_name_label);
+        label_box.append (info_label);
+
+        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             margin_top = 6,
             margin_bottom = 6,
             margin_start = 6,
             margin_end = 6
         };
         box.append (icon);
-        box.append (label);
+        box.append (label_box);
 
         var row = new PlaceListBoxRow (place) {
             child = box
