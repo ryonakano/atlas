@@ -82,9 +82,9 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         search_res_popover.set_parent (search_entry);
 
         var style_submenu = new Menu ();
-        style_submenu.append (_("System"), "app.color-scheme(\"%s\")".printf (StyleManager.COLOR_SCHEME_DEFAULT));
-        style_submenu.append (_("Light"), "app.color-scheme(\"%s\")".printf (StyleManager.COLOR_SCHEME_FORCE_LIGHT));
-        style_submenu.append (_("Dark"), "app.color-scheme(\"%s\")".printf (StyleManager.COLOR_SCHEME_FORCE_DARK));
+        style_submenu.append (_("System"), "app.color-scheme('%s')".printf (Define.ColorScheme.DEFAULT));
+        style_submenu.append (_("Light"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_LIGHT));
+        style_submenu.append (_("Dark"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_DARK));
 
         var map_source_submenu = new Menu ();
         map_source_submenu.append (_("Mapnik"), "win.map-source(\"%s\")".printf (Define.MapSource.MAPNIK));
