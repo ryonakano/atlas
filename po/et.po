@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-15 21:03+0900\n"
+"POT-Creation-Date: 2025-03-01 14:36+0000\n"
 "PO-Revision-Date: 2024-12-11 12:15+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/atlas/et/>"
-"\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/atlas/et/"
+">\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,8 +34,8 @@ msgstr "Vaata, kuhu saad jõuda"
 #: data/atlas.desktop.in.in:11
 msgid "Trip;Explore;"
 msgstr ""
-"map;atlas;reisima;reisimine;kaart;kaardid;teekond;teekonnad;sõitmine;kõndimin"
-"e;matkamine;"
+"map;atlas;reisima;reisimine;kaart;kaardid;teekond;teekonnad;sõitmine;"
+"kõndimine;matkamine;"
 
 #: data/atlas.metainfo.xml.in.in:13
 msgid "A map app that helps you to see where you want to go."
@@ -81,46 +81,51 @@ msgstr "Näita praekust asukohta"
 msgid "Search Location"
 msgstr "Otsi asukohta"
 
-#: src/MainWindow.vala:57
-msgid "No Search Results"
+#: src/MainWindow.vala:58
+#, fuzzy
+#| msgid "No Search Results"
+msgid "No Results Found"
 msgstr "Otsingul pole tulemusi"
 
-#: src/MainWindow.vala:58
-msgid "Try changing the search term."
-msgstr "Proovi muuta otsingusõna."
+#: src/MainWindow.vala:59
+msgid "Try a different search"
+msgstr ""
 
-#: src/MainWindow.vala:85
+#: src/MainWindow.vala:87
 msgid "System"
 msgstr "Süsteemi kujundus"
 
-#: src/MainWindow.vala:86
+#: src/MainWindow.vala:88
 msgid "Light"
 msgstr "Hele kujundus"
 
-#: src/MainWindow.vala:87
+#: src/MainWindow.vala:89
 msgid "Dark"
 msgstr "Tume kujundus"
 
-#: src/MainWindow.vala:90
+#: src/MainWindow.vala:92
 msgid "Mapnik"
 msgstr "Mapnik"
 
-#: src/MainWindow.vala:91
+#: src/MainWindow.vala:93
 msgid "Transport"
 msgstr "Transport"
 
-#: src/MainWindow.vala:94
+#: src/MainWindow.vala:96
 msgid "Style"
 msgstr "Välimus"
 
-#: src/MainWindow.vala:95
+#: src/MainWindow.vala:97
 msgid "Map Source"
 msgstr "Kaardiallikas"
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:100
 msgid "Main Menu"
 msgstr "Põhimenüü"
 
-#: src/MainWindow.vala:128
+#: src/MainWindow.vala:136
 msgid "Failed to connect to location service"
 msgstr "Ei õnnestunud luua ühendust asukoha tuvastamise teenusega"
+
+#~ msgid "Try changing the search term."
+#~ msgstr "Proovi muuta otsingusõna."

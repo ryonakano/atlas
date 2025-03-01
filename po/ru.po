@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-15 21:03+0900\n"
+"POT-Creation-Date: 2025-03-01 14:36+0000\n"
 "PO-Revision-Date: 2024-05-08 14:05+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/atlas/ru/>\n"
@@ -80,55 +80,60 @@ msgstr "Переместиться к текущему местоположен�
 msgid "Search Location"
 msgstr "Искать место"
 
-#: src/MainWindow.vala:57
-msgid "No Search Results"
+#: src/MainWindow.vala:58
+#, fuzzy
+#| msgid "No Search Results"
+msgid "No Results Found"
 msgstr "Ничего не найдено"
 
-#: src/MainWindow.vala:58
-msgid "Try changing the search term."
-msgstr "Попробуйте изменить поисковой запрос."
+#: src/MainWindow.vala:59
+msgid "Try a different search"
+msgstr ""
 
-#: src/MainWindow.vala:85
+#: src/MainWindow.vala:87
 msgid "System"
 msgstr "Система"
 
-#: src/MainWindow.vala:86
+#: src/MainWindow.vala:88
 msgid "Light"
 msgstr "Светлый"
 
-#: src/MainWindow.vala:87
+#: src/MainWindow.vala:89
 msgid "Dark"
 msgstr "Тёмный"
 
-#: src/MainWindow.vala:90
+#: src/MainWindow.vala:92
 msgid "Mapnik"
 msgstr ""
 
-#: src/MainWindow.vala:91
+#: src/MainWindow.vala:93
 #, fuzzy
 #| msgid "Transport Map"
 msgid "Transport"
 msgstr "Карта транспорта"
 
-#: src/MainWindow.vala:94
+#: src/MainWindow.vala:96
 #, fuzzy
 #| msgid "Style:"
 msgid "Style"
 msgstr "Стиль:"
 
-#: src/MainWindow.vala:95
+#: src/MainWindow.vala:97
 #, fuzzy
 #| msgid "Map Source:"
 msgid "Map Source"
 msgstr "Источник карты:"
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:100
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:128
+#: src/MainWindow.vala:136
 msgid "Failed to connect to location service"
 msgstr "Не удалось подключиться к службе местоположения"
+
+#~ msgid "Try changing the search term."
+#~ msgstr "Попробуйте изменить поисковой запрос."
 
 #~ msgid "Preferences"
 #~ msgstr "Параметры"

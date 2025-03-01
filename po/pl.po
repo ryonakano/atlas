@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-15 21:03+0900\n"
+"POT-Creation-Date: 2025-03-01 14:36+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/atlas/pl/>\n"
@@ -80,55 +80,60 @@ msgstr "Przenieś do bieżącej lokalizacji"
 msgid "Search Location"
 msgstr "Lokalizacja wyszukiwania"
 
-#: src/MainWindow.vala:57
-msgid "No Search Results"
+#: src/MainWindow.vala:58
+#, fuzzy
+#| msgid "No Search Results"
+msgid "No Results Found"
 msgstr "Brak wyników wyszukiwania"
 
-#: src/MainWindow.vala:58
-msgid "Try changing the search term."
-msgstr "Spróbuj zmienić zapytanie wyszukiwania."
+#: src/MainWindow.vala:59
+msgid "Try a different search"
+msgstr ""
 
-#: src/MainWindow.vala:85
+#: src/MainWindow.vala:87
 msgid "System"
 msgstr "System"
 
-#: src/MainWindow.vala:86
+#: src/MainWindow.vala:88
 msgid "Light"
 msgstr "Jasny"
 
-#: src/MainWindow.vala:87
+#: src/MainWindow.vala:89
 msgid "Dark"
 msgstr "Ciemny"
 
-#: src/MainWindow.vala:90
+#: src/MainWindow.vala:92
 msgid "Mapnik"
 msgstr ""
 
-#: src/MainWindow.vala:91
+#: src/MainWindow.vala:93
 #, fuzzy
 #| msgid "Transport Map"
 msgid "Transport"
 msgstr "Mapa transportu"
 
-#: src/MainWindow.vala:94
+#: src/MainWindow.vala:96
 #, fuzzy
 #| msgid "Style:"
 msgid "Style"
 msgstr "Styl:"
 
-#: src/MainWindow.vala:95
+#: src/MainWindow.vala:97
 #, fuzzy
 #| msgid "Map Source:"
 msgid "Map Source"
 msgstr "Źródło mapy:"
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:100
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:128
+#: src/MainWindow.vala:136
 msgid "Failed to connect to location service"
 msgstr ""
+
+#~ msgid "Try changing the search term."
+#~ msgstr "Spróbuj zmienić zapytanie wyszukiwania."
 
 #~ msgid "Preferences"
 #~ msgstr "Preferencje"
