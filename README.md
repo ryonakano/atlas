@@ -35,6 +35,7 @@ flatpak run com.github.ryonakano.atlas.Devel
 ### From Source Code (Native)
 You'll need the following dependencies:
 
+* libadwaita-1-dev
 * libgeoclue-2-dev
 * libgeocode-glib-dev (>= 3.26.3)
 * libglib2.0-dev (>= 2.74)

@@ -30,6 +30,7 @@ executable(
         dependency('glib-2.0', version: '>= 2.74'),
         dependency('granite-7', version: '>= 7.1.0'),
         dependency('gtk4'),
+        dependency('libadwaita-1'),
         dependency('libgeoclue-2.0'),
         dependency('shumate-1.0'),
     ],
