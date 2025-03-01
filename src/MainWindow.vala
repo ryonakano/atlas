@@ -82,13 +82,13 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         search_res_popover.set_parent (search_entry);
 
         var style_submenu = new Menu ();
-        style_submenu.append (_("System"), "app.color-scheme(\"%s\")".printf (StyleManager.COLOR_SCHEME_DEFAULT));
-        style_submenu.append (_("Light"), "app.color-scheme(\"%s\")".printf (StyleManager.COLOR_SCHEME_FORCE_LIGHT));
-        style_submenu.append (_("Dark"), "app.color-scheme(\"%s\")".printf (StyleManager.COLOR_SCHEME_FORCE_DARK));
+        style_submenu.append (_("System"), "app.color-scheme('%s')".printf (StyleManager.COLOR_SCHEME_DEFAULT));
+        style_submenu.append (_("Light"), "app.color-scheme('%s')".printf (StyleManager.COLOR_SCHEME_FORCE_LIGHT));
+        style_submenu.append (_("Dark"), "app.color-scheme('%s')".printf (StyleManager.COLOR_SCHEME_FORCE_DARK));
 
         var map_source_submenu = new Menu ();
-        map_source_submenu.append (_("Mapnik"), "win.map-source(\"%s\")".printf (Define.MapSource.MAPNIK));
-        map_source_submenu.append (_("Transport"), "win.map-source(\"%s\")".printf (Define.MapSource.TRANSPORT));
+        map_source_submenu.append (_("Mapnik"), "win.map-source('%s')".printf (Define.MapSource.MAPNIK));
+        map_source_submenu.append (_("Transport"), "win.map-source('%s')".printf (Define.MapSource.TRANSPORT));
 
         var menu = new Menu ();
         menu.append_submenu (_("Style"), style_submenu);
