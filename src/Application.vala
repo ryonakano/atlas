@@ -5,12 +5,6 @@
  */
 
 public class Atlas.Application : Adw.Application {
-    public static bool IS_ON_PANTHEON {
-        get {
-            return Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon";
-        }
-    }
-
     public static Settings settings { get; private set; }
 
     private const ActionEntry[] ACTION_ENTRIES = {
@@ -77,7 +71,7 @@ public class Atlas.Application : Adw.Application {
         //
         //  * make Granite optional dependency
         //  * make sure to respect currently running DE
-        if (IS_ON_PANTHEON) {
+        if (Util.is_on_pantheon ()) {
             // Apply elementary stylesheet instead of default Adwaita stylesheet
             Granite.init ();
         }
