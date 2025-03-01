@@ -72,8 +72,16 @@ public class Atlas.Application : Adw.Application {
     }
 
     protected override void startup () {
-        // Apply elementary stylesheet instead of default Adwaita stylesheet
-        Granite.init ();
+#if USE_GRANITE
+        // Use both compile-time and runtime conditions to:
+        //
+        //  * make Granite optional dependency
+        //  * make sure to respect currently running DE
+        if (IS_ON_PANTHEON) {
+            // Apply elementary stylesheet instead of default Adwaita stylesheet
+            Granite.init ();
+        }
+#endif
 
         base.startup ();
 

@@ -51,6 +51,7 @@ modules:
   - name: atlas
     buildsystem: meson
     config-opts:
+      - -Dgranite=enabled
       - -Ddevelopment=true
     sources:
       - type: dir
