@@ -117,6 +117,8 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         toolbar_view.set_content (map_widget);
 
         content = toolbar_view;
+        width_request = 700;
+        height_request = 500;
 
         setup_map_source_action ();
 
