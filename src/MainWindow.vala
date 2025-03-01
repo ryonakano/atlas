@@ -88,8 +88,8 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         style_submenu.append (_("Dark"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_DARK));
 
         var map_source_submenu = new Menu ();
-        map_source_submenu.append (_("Mapnik"), "win.map-source(\"%s\")".printf (Define.MapSource.MAPNIK));
-        map_source_submenu.append (_("Transport"), "win.map-source(\"%s\")".printf (Define.MapSource.TRANSPORT));
+        map_source_submenu.append (_("Mapnik"), "win.map-source('%s')".printf (Define.MapSource.MAPNIK));
+        map_source_submenu.append (_("Transport"), "win.map-source('%s')".printf (Define.MapSource.TRANSPORT));
 
         var menu = new Menu ();
         menu.append_submenu (_("Style"), style_submenu);
