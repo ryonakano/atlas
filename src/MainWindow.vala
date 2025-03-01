@@ -4,7 +4,7 @@
  *                         2018-2024 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Atlas.MainWindow : Gtk.ApplicationWindow {
+public class Atlas.MainWindow : Adw.ApplicationWindow {
     public bool is_busy { get; private set; }
 
     private class PlaceListBoxRow : Gtk.ListBoxRow {
@@ -101,7 +101,7 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
             primary = true
         };
 
-        var headerbar = new Gtk.HeaderBar () {
+        var headerbar = new Adw.HeaderBar () {
             hexpand = true,
             vexpand = true
         };
@@ -109,10 +109,14 @@ public class Atlas.MainWindow : Gtk.ApplicationWindow {
         headerbar.pack_end (menu_button);
         headerbar.pack_end (search_entry);
         headerbar.pack_end (spinner);
-        set_titlebar (headerbar);
 
         map_widget = new MapWidget ();
-        child = map_widget;
+
+        var toolbar_view = new Adw.ToolbarView ();
+        toolbar_view.add_top_bar (headerbar);
+        toolbar_view.set_content (map_widget);
+
+        content = toolbar_view;
 
         setup_map_source_action ();
 
