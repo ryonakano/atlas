@@ -1,6 +1,6 @@
 # Polish translation for com.github.ryonakano.atlas.
 # Copyright (C) 2014-2015 Atlas Developers
-# Copyright (C) 2018-2024 Ryo Nakano
+# Copyright (C) 2018-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # PolPolyLingo <paulius.narkevicius@vilniustech.lt>, 2023
 # Eryk Michalak <gnu.ewm@protonmail.com>, 2023.
