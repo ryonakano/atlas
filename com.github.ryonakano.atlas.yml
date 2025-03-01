@@ -35,28 +35,10 @@ modules:
           type: gnome
           name: libshumate
     modules:
-      - name: protobuf
-        buildsystem: autotools
-        config-opts:
-          - DIST_LANG=cpp
-        cleanup:
-          - /bin/protoc*
-          - /lib/libprotoc*
-          - /lib/libprotobuf-lite*
-        sources:
-          - type: archive
-            url: https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protobuf-all-3.17.3.tar.gz
-            sha256: 77ad26d3f65222fd96ccc18b055632b0bfedf295cb748b712a98ba1ac0b704b2
-            x-checker-data:
-              type: anitya
-              project-id: 236278
-              versions:
-                '>=': 3.17.0
-                <: 3.18.0
-              url-template: https://github.com/protocolbuffers/protobuf/releases/download/v$version/protobuf-all-$version.tar.gz
-
       - name: protobuf-c
         buildsystem: autotools
+        config-opts:
+          - --disable-protoc
         sources:
           - type: archive
             url: https://github.com/protobuf-c/protobuf-c/releases/download/v1.5.0/protobuf-c-1.5.0.tar.gz
