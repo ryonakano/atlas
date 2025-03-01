@@ -237,15 +237,20 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
 
         var icon = new Gtk.Image.from_gicon (place.icon);
 
+        var place_name_label = new Gtk.Label (place.name) {
+            halign = Gtk.Align.START
+        };
+        place_name_label.add_css_class ("title-4");
+
         string street = place.street ?? unknown_text;
         string postal_code = place.postal_code ?? unknown_text;
         string town = place.town ?? unknown_text;
 
         string info_text = "%s, %s, %s".printf (street, postal_code, town);
-        var place_name_label = new Gtk.Label (place.name);
-        place_name_label.add_css_class ("title-4");
 
-        var info_label = new Gtk.Label (info_text);
+        var info_label = new Gtk.Label (info_text) {
+            halign = Gtk.Align.START
+        };
         info_label.add_css_class ("dim-label");
 
         var label_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
