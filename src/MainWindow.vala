@@ -242,10 +242,15 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         string town = place.town ?? unknown_text;
 
         string info_text = "%s, %s, %s".printf (street, postal_code, town);
-        var label = new Gtk.Label (place.name) {
-            secondary_text = info_text
-        };
-        label.add_css_name ("title-4");
+        var place_name_label = new Gtk.Label (place.name);
+        place_name_label.add_css_class ("title-4");
+
+        var info_label = new Gtk.Label (info_text) {
+        info_label.add_css_class ("dim-label");
+
+        var label_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+        label_box.append (place_name_label);
+        label_box.append (info_label);
 
         var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
             margin_top = 6,
@@ -254,7 +259,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
             margin_end = 6
         };
         box.append (icon);
-        box.append (label);
+        box.append (label_box);
 
         var row = new PlaceListBoxRow (place) {
             child = box
