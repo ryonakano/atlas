@@ -5,8 +5,6 @@
  */
 
 public class Atlas.MainWindow : Adw.ApplicationWindow {
-    public bool is_busy { get; private set; }
-
     private class PlaceListBoxRow : Gtk.ListBoxRow {
         public Geocode.Place place { get; construct; }
 
@@ -15,9 +13,22 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         }
     }
 
+    [Flags]
+    private enum BusyReason {
+        /** Busy with locating */
+        LOCATING,
+
+        /** Busy with searching */
+        SEARCHING,
+
+        /** Busy for any reason */
+        ANY = LOCATING | SEARCHING
+    }
+
     private const ActionEntry[] ACTION_ENTRIES = {
         { "search", on_search_activate },
     };
+    private int busy_reason = 0;
     private string unknown_text = _("Unknown");
     private ListStore location_store;
     private Cancellable? search_cancellable = null;
@@ -128,37 +139,36 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         map_widget.init_marker_layers ();
 
         // Try to seek the current location
-        is_busy = true;
+        busy_start (BusyReason.LOCATING);
         map_widget.watch_location_change.begin ((obj, res) => {
             bool watch_enabled = map_widget.watch_location_change.end (res);
-            is_busy = false;
+            busy_end (BusyReason.LOCATING);
             if (!watch_enabled) {
                 current_location.tooltip_text = _("Failed to connect to location service");
                 current_location.sensitive = false;
             }
         });
 
-        bind_property ("is-busy", spinner, "visible", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
-        bind_property ("is-busy", spinner, "spinning", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
-
-        bind_property ("is-busy", current_location, "sensitive", BindingFlags.INVERT_BOOLEAN | BindingFlags.SYNC_CREATE);
-
         current_location.clicked.connect (() => {
             map_widget.go_to_current ();
         });
 
         search_entry.search_changed.connect (() => {
-            if (search_entry.text == "" || is_busy) {
+            if (search_entry.text == "") {
                 return;
             }
 
-            is_busy = true;
+            if ((bool)(busy_reason & BusyReason.SEARCHING)) {
+                return;
+            }
+
+            busy_start (BusyReason.SEARCHING);
             compute_location.begin (search_entry.text, location_store, (obj, res) => {
                 compute_location.end (res);
 
                 search_res_popover.popup ();
                 search_entry.grab_focus ();
-                is_busy = false;
+                busy_end (BusyReason.SEARCHING);
             });
         });
 
@@ -191,6 +201,36 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
 
     private void on_search_activate () {
         search_entry.grab_focus ();
+    }
+
+    private void busy_start (BusyReason reason) {
+        // Not busy → Busy
+        if (!(bool)(busy_reason & BusyReason.ANY)) {
+            spinner.visible = true;
+            spinner.spinning = true;
+        }
+
+        // Not locating → Locating
+        if ((bool)(reason & BusyReason.LOCATING)) {
+            current_location.sensitive = false;
+        }
+
+        busy_reason |= reason;
+    }
+
+    private void busy_end (BusyReason reason) {
+        busy_reason &= ~reason;
+
+        // Locating → Not locating
+        if ((bool)(reason & BusyReason.LOCATING)) {
+            current_location.sensitive = true;
+        }
+
+        // Busy → Not busy
+        if (!(bool)(busy_reason & BusyReason.ANY)) {
+            spinner.visible = false;
+            spinner.spinning = false;
+        }
     }
 
     private void setup_map_source_action () {
