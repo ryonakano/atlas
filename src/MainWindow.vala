@@ -25,7 +25,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         SEARCHING,
 
         /** Busy for some reason */
-        BUSY = LOCATING | SEARCHING,
+        BUSY = LOCATING | SEARCHING
     }
 
     private const ActionEntry[] ACTION_ENTRIES = {
@@ -208,7 +208,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
 
     private void busy_start (BusyState state) {
         // Not busy → Busy
-        if (!(bool)(busy_state & BusyState.BUSY)) {
+        if (busy_state == BusyState.NONE) {
             spinner.visible = true;
             spinner.spinning = true;
         }
@@ -230,7 +230,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         }
 
         // Busy → Not busy
-        if (!(bool)(busy_state & BusyState.BUSY)) {
+        if (busy_state == BusyState.NONE) {
             spinner.visible = false;
             spinner.spinning = false;
         }
