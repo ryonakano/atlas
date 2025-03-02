@@ -142,10 +142,10 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         map_widget.init_marker_layers ();
 
         // Try to seek the current location
-        start_busy (BusyState.LOCATING);
+        busy_start (BusyState.LOCATING);
         map_widget.watch_location_change.begin ((obj, res) => {
             bool watch_enabled = map_widget.watch_location_change.end (res);
-            end_busy (BusyState.LOCATING);
+            busy_end (BusyState.LOCATING);
             if (!watch_enabled) {
                 current_location.tooltip_text = _("Failed to connect to location service");
                 current_location.sensitive = false;
@@ -165,13 +165,13 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
                 return;
             }
 
-            start_busy (BusyState.SEARCHING);
+            busy_start (BusyState.SEARCHING);
             compute_location.begin (search_entry.text, location_store, (obj, res) => {
                 compute_location.end (res);
 
                 search_res_popover.popup ();
                 search_entry.grab_focus ();
-                end_busy (BusyState.SEARCHING);
+                busy_end (BusyState.SEARCHING);
             });
         });
 
@@ -206,7 +206,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         search_entry.grab_focus ();
     }
 
-    private void start_busy (BusyState state) {
+    private void busy_start (BusyState state) {
         // Not busy → Busy
         if (!(bool)(busy_state & BusyState.BUSY)) {
             spinner.visible = true;
@@ -221,7 +221,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         busy_state |= state;
     }
 
-    private void end_busy (BusyState state) {
+    private void busy_end (BusyState state) {
         busy_state &= ~state;
 
         // Locating → Not locating
