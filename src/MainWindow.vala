@@ -14,21 +14,21 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
     }
 
     [Flags]
-    private enum BusyState {
+    private enum BusyReason {
         /** Busy with locating */
         LOCATING,
 
         /** Busy with searching */
         SEARCHING,
 
-        /** Busy for some reason */
-        BUSY = LOCATING | SEARCHING
+        /** Busy for any reason */
+        ANY = LOCATING | SEARCHING
     }
 
     private const ActionEntry[] ACTION_ENTRIES = {
         { "search", on_search_activate },
     };
-    private int busy_state = 0;
+    private int busy_reason = 0;
     private string unknown_text = _("Unknown");
     private ListStore location_store;
     private Cancellable? search_cancellable = null;
@@ -139,10 +139,10 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         map_widget.init_marker_layers ();
 
         // Try to seek the current location
-        busy_start (BusyState.LOCATING);
+        busy_start (BusyReason.LOCATING);
         map_widget.watch_location_change.begin ((obj, res) => {
             bool watch_enabled = map_widget.watch_location_change.end (res);
-            busy_end (BusyState.LOCATING);
+            busy_end (BusyReason.LOCATING);
             if (!watch_enabled) {
                 current_location.tooltip_text = _("Failed to connect to location service");
                 current_location.sensitive = false;
@@ -158,17 +158,17 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
                 return;
             }
 
-            if ((bool)(busy_state & BusyState.SEARCHING)) {
+            if ((bool)(busy_reason & BusyReason.SEARCHING)) {
                 return;
             }
 
-            busy_start (BusyState.SEARCHING);
+            busy_start (BusyReason.SEARCHING);
             compute_location.begin (search_entry.text, location_store, (obj, res) => {
                 compute_location.end (res);
 
                 search_res_popover.popup ();
                 search_entry.grab_focus ();
-                busy_end (BusyState.SEARCHING);
+                busy_end (BusyReason.SEARCHING);
             });
         });
 
@@ -203,31 +203,31 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         search_entry.grab_focus ();
     }
 
-    private void busy_start (int state) {
+    private void busy_start (int reason) {
         // Not busy → Busy
-        if (!(bool)(busy_state & BusyState.BUSY)) {
+        if (!(bool)(busy_reason & BusyReason.ANY)) {
             spinner.visible = true;
             spinner.spinning = true;
         }
 
         // Not locating → Locating
-        if ((bool)(state & BusyState.LOCATING)) {
+        if ((bool)(reason & BusyReason.LOCATING)) {
             current_location.sensitive = false;
         }
 
-        busy_state |= state;
+        busy_reason |= reason;
     }
 
-    private void busy_end (int state) {
-        busy_state &= ~state;
+    private void busy_end (int reason) {
+        busy_reason &= ~reason;
 
         // Locating → Not locating
-        if ((bool)(state & BusyState.LOCATING)) {
+        if ((bool)(reason & BusyReason.LOCATING)) {
             current_location.sensitive = true;
         }
 
         // Busy → Not busy
-        if (!(bool)(busy_state & BusyState.BUSY)) {
+        if (!(bool)(busy_reason & BusyReason.ANY)) {
             spinner.visible = false;
             spinner.spinning = false;
         }
