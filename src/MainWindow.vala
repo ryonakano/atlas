@@ -203,7 +203,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         search_entry.grab_focus ();
     }
 
-    private void busy_start (int reason) {
+    private void busy_start (BusyReason reason) {
         // Not busy → Busy
         if (!(bool)(busy_reason & BusyReason.ANY)) {
             spinner.visible = true;
@@ -218,7 +218,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         busy_reason |= reason;
     }
 
-    private void busy_end (int reason) {
+    private void busy_end (BusyReason reason) {
         busy_reason &= ~reason;
 
         // Locating → Not locating
