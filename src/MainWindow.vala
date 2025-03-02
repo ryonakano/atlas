@@ -15,9 +15,6 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
 
     [Flags]
     private enum BusyState {
-        /** Not busy */
-        NONE,
-
         /** Busy with locating */
         LOCATING,
 
@@ -31,7 +28,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
     private const ActionEntry[] ACTION_ENTRIES = {
         { "search", on_search_activate },
     };
-    private BusyState busy_state = BusyState.NONE;
+    private int busy_state = 0;
     private string unknown_text = _("Unknown");
     private ListStore location_store;
     private Cancellable? search_cancellable = null;
@@ -206,9 +203,9 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         search_entry.grab_focus ();
     }
 
-    private void busy_start (BusyState state) {
+    private void busy_start (int state) {
         // Not busy → Busy
-        if (busy_state == BusyState.NONE) {
+        if (!(bool)(busy_state & BusyState.BUSY)) {
             spinner.visible = true;
             spinner.spinning = true;
         }
@@ -221,7 +218,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         busy_state |= state;
     }
 
-    private void busy_end (BusyState state) {
+    private void busy_end (int state) {
         busy_state &= ~state;
 
         // Locating → Not locating
@@ -230,7 +227,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         }
 
         // Busy → Not busy
-        if (busy_state == BusyState.NONE) {
+        if (!(bool)(busy_state & BusyState.BUSY)) {
             spinner.visible = false;
             spinner.spinning = false;
         }
