@@ -13,11 +13,11 @@ namespace Atlas {
     public class MarkerLayerManager : Object {
         private struct LayerData {
             Shumate.MarkerLayer layer;
-            string image;
+            string icon_name;
         }
 
-        private const string POINTER_IMAGE = "pointer";
-        private const string LOCATION_IMAGE = "location";
+        private const string POINTER_ICON_NAME = "pointer";
+        private const string LOCATION_ICON_NAME = "location";
 
         public Shumate.SimpleMap map_widget { private get; construct; }
         private LayerData[] layer_data;
@@ -31,7 +31,7 @@ namespace Atlas {
             map_widget.add_overlay_layer (pointer_layer);
             LayerData pointer_data = {
                 pointer_layer,
-                POINTER_IMAGE
+                POINTER_ICON_NAME
             };
             layer_data += pointer_data;
 
@@ -39,7 +39,7 @@ namespace Atlas {
             map_widget.add_overlay_layer (location_layer);
             LayerData location_data = {
                 location_layer,
-                LOCATION_IMAGE
+                LOCATION_ICON_NAME
             };
             layer_data += location_data;
         }
@@ -47,7 +47,7 @@ namespace Atlas {
         public void new_marker_at_pos (MarkerType type, double latitude, double longitude) {
             LayerData data = layer_data[type];
 
-            var image = new Gtk.Image.from_icon_name (data.image) {
+            var image = new Gtk.Image.from_icon_name (data.icon_name) {
                 icon_size = Gtk.IconSize.LARGE
             };
             var marker = new Shumate.Marker () {
