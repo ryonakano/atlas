@@ -29,6 +29,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         { "search", on_search_activate },
     };
     private int busy_reason = 0;
+    private uint search_begin_timeout = 0;
     private string unknown_text = _("Unknown");
     private ListStore location_store;
     private Cancellable? search_cancellable = null;
@@ -163,17 +164,14 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
                 return;
             }
 
-            if ((bool)(busy_reason & BusyReason.SEARCHING)) {
-                return;
+            if (search_begin_timeout != 0) {
+                Source.remove (search_begin_timeout);
+                search_begin_timeout = 0;
             }
 
-            busy_start (BusyReason.SEARCHING);
-            compute_location.begin (search_entry.text, location_store, (obj, res) => {
-                compute_location.end (res);
-
-                search_res_popover.popup ();
-                search_entry.grab_focus ();
-                busy_end (BusyReason.SEARCHING);
+            search_begin_timeout = Timeout.add_once (1000, () => {
+                search_location.begin (search_entry.text, location_store);
+                search_begin_timeout = 0;
             });
         });
 
@@ -253,6 +251,17 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         add_action (map_source_action);
     }
 
+    private async void search_location (string term, ListStore res) {
+        busy_start (BusyReason.SEARCHING);
+
+        yield compute_location (term, res);
+
+        search_res_popover.popup ();
+        search_entry.grab_focus ();
+
+        busy_end (BusyReason.SEARCHING);
+    }
+
     private async void compute_location (string loc, ListStore loc_store) {
         if (search_cancellable != null) {
             search_cancellable.cancel ();
@@ -264,15 +273,15 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
             answer_count = 10
         };
 
-        loc_store.remove_all ();
-
         var places = new List<Geocode.Place> ();
         try {
             places = yield forward.search_async (search_cancellable);
         } catch (Error error) {
             warning (error.message);
+            return;
         }
 
+        loc_store.remove_all ();
         foreach (unowned var place in places) {
             loc_store.append (place);
         }
