@@ -1,6 +1,6 @@
 id: com.github.ryonakano.atlas
 runtime: io.elementary.Platform
-runtime-version: '8'
+runtime-version: '8.1'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.atlas
 finish-args:
@@ -9,6 +9,8 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
+build-options:
+  libdir: /app/lib
 modules:
   - name: geocode-glib-2.0
     buildsystem: meson
