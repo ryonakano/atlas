@@ -31,8 +31,8 @@ modules:
       - -Dgtk_doc=false
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libshumate/1.2/libshumate-1.2.3.tar.xz
-        sha256: 4cc6cd73f6d87155f62766ab63e5aacc473bd9a0ce35906932acfc839e964c0c
+        url: https://download.gnome.org/sources/libshumate/1.4/libshumate-1.4.0.tar.xz
+        sha256: 3984368e0259862b3810d1ddc86d2dadd6d372a2b32376ccf4aff7c2e48c6d30
         x-checker-data:
           type: gnome
           name: libshumate
