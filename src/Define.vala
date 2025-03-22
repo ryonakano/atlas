@@ -5,6 +5,13 @@
 
 namespace Define {
     /**
+     * The name of the application.
+     *
+     * Use this constant to prevent the app name from being translated.
+     */
+    public const string APP_NAME = "Atlas";
+
+    /**
      * String representation of Adw.ColorScheme.
      *
      * Note: Only defines necessary strings for the app.
