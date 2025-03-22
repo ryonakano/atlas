@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
+  <gresource prefix="/com/github/ryonakano/atlas">
+    <file preprocess="xml-stripblanks" alias="@APP_ID@.metainfo.xml">@APP_ID@.metainfo.xml</file>
+  </gresource>
+
   <gresource prefix="/com/github/ryonakano/atlas/icons">
     <file compressed="true" preprocess="xml-stripblanks" alias="pointer.svg">icons/pointer.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="location.svg">icons/location.svg</file>
