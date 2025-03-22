@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-01 14:36+0000\n"
+"POT-Creation-Date: 2025-03-22 23:42+0900\n"
 "PO-Revision-Date: 2025-03-01 21:00+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/>"
-"\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/"
+">\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,61 +68,92 @@ msgstr "ライトモードのアプリウィンドウ"
 msgid "App window in the dark mode"
 msgstr "ダークモードのアプリウィンドウ"
 
-#: src/MainWindow.vala:21
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:157
+msgid "translator-credits"
+msgstr ""
+
+#: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "不明"
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:56
 msgid "Move to the current location"
 msgstr "現在地に移動"
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:68
 msgid "Search Location"
 msgstr "場所を検索"
 
-#: src/MainWindow.vala:58
+#: src/MainWindow.vala:75
 msgid "No Results Found"
 msgstr "見つかりませんでした"
 
-#: src/MainWindow.vala:59
+#: src/MainWindow.vala:76
 msgid "Try a different search"
 msgstr "他のキーワードを試してください"
 
-#: src/MainWindow.vala:87
-msgid "System"
+#: src/MainWindow.vala:104
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
 msgstr "システム"
 
-#: src/MainWindow.vala:88
-msgid "Light"
+#: src/MainWindow.vala:105
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
 msgstr "ライト"
 
-#: src/MainWindow.vala:89
-msgid "Dark"
+#: src/MainWindow.vala:106
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
 msgstr "ダーク"
 
-#: src/MainWindow.vala:92
-msgid "Mapnik"
-msgstr "Mapnik"
+#: src/MainWindow.vala:109
+msgid "Map_nik"
+msgstr ""
 
-#: src/MainWindow.vala:93
-msgid "Transport"
+#: src/MainWindow.vala:110
+#, fuzzy
+#| msgid "Transport"
+msgid "_Transport"
 msgstr "交通"
 
-#: src/MainWindow.vala:96
-msgid "Style"
+#: src/MainWindow.vala:113
+#, fuzzy
+#| msgid "Style"
+msgid "_Style"
 msgstr "スタイル"
 
-#: src/MainWindow.vala:97
-msgid "Map Source"
+#: src/MainWindow.vala:114
+#, fuzzy
+#| msgid "Map Source"
+msgid "_Map Source"
 msgstr "マップ提供元"
 
-#: src/MainWindow.vala:100
+#. TRANSLATORS: %s will be replaced by the app name
+#: src/MainWindow.vala:118
+#, c-format
+msgid "_About %s"
+msgstr ""
+
+#: src/MainWindow.vala:122
 msgid "Main Menu"
 msgstr "メインメニュー"
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:158
 msgid "Failed to connect to location service"
 msgstr "位置情報サービスに接続できませんでした"
+
+#~ msgid "Mapnik"
+#~ msgstr "Mapnik"
 
 #~ msgid "Try changing the search term."
 #~ msgstr "検索用語を変えてみてください。"

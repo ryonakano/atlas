@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-01 14:36+0000\n"
+"POT-Creation-Date: 2025-03-22 23:42+0900\n"
 "PO-Revision-Date: 2025-03-02 06:40+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/atlas/ta/>\n"
@@ -36,8 +36,7 @@ msgstr "பயணம்; ஆராயுங்கள்;"
 
 #: data/atlas.metainfo.xml.in.in:13
 msgid "A map app that helps you to see where you want to go."
-msgstr ""
-"நீங்கள் எங்கு செல்ல விரும்புகிறீர்கள் என்பதைப் பார்க்க உதவும் வரைபட பயன்பாடு."
+msgstr "நீங்கள் எங்கு செல்ல விரும்புகிறீர்கள் என்பதைப் பார்க்க உதவும் வரைபட பயன்பாடு."
 
 #: data/atlas.metainfo.xml.in.in:16
 msgid "Features include:"
@@ -66,58 +65,89 @@ msgstr "ஒளி பயன்முறையில் பயன்பாட்�
 msgid "App window in the dark mode"
 msgstr "இருண்ட பயன்முறையில் பயன்பாட்டு சாளரம்"
 
-#: src/MainWindow.vala:21
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:157
+msgid "translator-credits"
+msgstr ""
+
+#: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "தெரியவில்லை"
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:56
 msgid "Move to the current location"
 msgstr "தற்போதைய இடத்திற்கு செல்லுங்கள்"
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:68
 msgid "Search Location"
 msgstr "இடம் தேடல்"
 
-#: src/MainWindow.vala:58
+#: src/MainWindow.vala:75
 msgid "No Results Found"
 msgstr "முடிவுகள் எதுவும் கிடைக்கவில்லை"
 
-#: src/MainWindow.vala:59
+#: src/MainWindow.vala:76
 msgid "Try a different search"
 msgstr "வேறு தேடலை முயற்சிக்கவும்"
 
-#: src/MainWindow.vala:87
-msgid "System"
+#: src/MainWindow.vala:104
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
 msgstr "மண்டலம்"
 
-#: src/MainWindow.vala:88
-msgid "Light"
+#: src/MainWindow.vala:105
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
 msgstr "ஒளி"
 
-#: src/MainWindow.vala:89
-msgid "Dark"
+#: src/MainWindow.vala:106
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
 msgstr "இருண்ட"
 
-#: src/MainWindow.vala:92
-msgid "Mapnik"
-msgstr "மேப்னிக்"
+#: src/MainWindow.vala:109
+msgid "Map_nik"
+msgstr ""
 
-#: src/MainWindow.vala:93
-msgid "Transport"
+#: src/MainWindow.vala:110
+#, fuzzy
+#| msgid "Transport"
+msgid "_Transport"
 msgstr "போக்குவரத்து"
 
-#: src/MainWindow.vala:96
-msgid "Style"
+#: src/MainWindow.vala:113
+#, fuzzy
+#| msgid "Style"
+msgid "_Style"
 msgstr "சூல் தண்டு"
 
-#: src/MainWindow.vala:97
-msgid "Map Source"
+#: src/MainWindow.vala:114
+#, fuzzy
+#| msgid "Map Source"
+msgid "_Map Source"
 msgstr "வரைபட மூல"
 
-#: src/MainWindow.vala:100
+#. TRANSLATORS: %s will be replaced by the app name
+#: src/MainWindow.vala:118
+#, c-format
+msgid "_About %s"
+msgstr ""
+
+#: src/MainWindow.vala:122
 msgid "Main Menu"
 msgstr "பட்டியல் விளையாடுங்கள்"
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:158
 msgid "Failed to connect to location service"
 msgstr "இருப்பிட சேவையுடன் இணைக்கத் தவறிவிட்டது"
+
+#~ msgid "Mapnik"
+#~ msgstr "மேப்னிக்"

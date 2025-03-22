@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-01 14:36+0000\n"
+"POT-Creation-Date: 2025-03-22 23:42+0900\n"
 "PO-Revision-Date: 2024-07-09 19:09+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/atlas/it/>\n"
@@ -68,61 +68,89 @@ msgstr "Finestra dell'app in modalità chiara"
 msgid "App window in the dark mode"
 msgstr "Finestra dell'app in modalità scura"
 
-#: src/MainWindow.vala:21
+#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
+#. You can optionally add your name if you want, plus you may add your email address or website.
+#. e.g.:
+#. John Doe
+#. John Doe <john-doe@example.com>
+#. John Doe https://example.com
+#: src/Application.vala:157
+msgid "translator-credits"
+msgstr ""
+
+#: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "Sconosciuto"
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:56
 msgid "Move to the current location"
 msgstr "Passa alla posizione corrente"
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:68
 msgid "Search Location"
 msgstr "Cerca posizione"
 
-#: src/MainWindow.vala:58
+#: src/MainWindow.vala:75
 #, fuzzy
 #| msgid "No Search Results"
 msgid "No Results Found"
 msgstr "Nessun risultato trovato"
 
-#: src/MainWindow.vala:59
+#: src/MainWindow.vala:76
 msgid "Try a different search"
 msgstr ""
 
-#: src/MainWindow.vala:87
-msgid "System"
+#: src/MainWindow.vala:104
+#, fuzzy
+#| msgid "System"
+msgid "S_ystem"
 msgstr "Sistema"
 
-#: src/MainWindow.vala:88
-msgid "Light"
+#: src/MainWindow.vala:105
+#, fuzzy
+#| msgid "Light"
+msgid "_Light"
 msgstr "Chiaro"
 
-#: src/MainWindow.vala:89
-msgid "Dark"
+#: src/MainWindow.vala:106
+#, fuzzy
+#| msgid "Dark"
+msgid "_Dark"
 msgstr "Scuro"
 
-#: src/MainWindow.vala:92
-msgid "Mapnik"
+#: src/MainWindow.vala:109
+msgid "Map_nik"
 msgstr ""
 
-#: src/MainWindow.vala:93
-msgid "Transport"
+#: src/MainWindow.vala:110
+#, fuzzy
+#| msgid "Transport"
+msgid "_Transport"
 msgstr "Trasporto"
 
-#: src/MainWindow.vala:96
-msgid "Style"
+#: src/MainWindow.vala:113
+#, fuzzy
+#| msgid "Style"
+msgid "_Style"
 msgstr "Stile"
 
-#: src/MainWindow.vala:97
-msgid "Map Source"
+#: src/MainWindow.vala:114
+#, fuzzy
+#| msgid "Map Source"
+msgid "_Map Source"
 msgstr "Fonte mappa"
 
-#: src/MainWindow.vala:100
+#. TRANSLATORS: %s will be replaced by the app name
+#: src/MainWindow.vala:118
+#, c-format
+msgid "_About %s"
+msgstr ""
+
+#: src/MainWindow.vala:122
 msgid "Main Menu"
 msgstr "Menu principale"
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:158
 msgid "Failed to connect to location service"
 msgstr "Impossibile connettersi al servizio di localizzazione"
 
