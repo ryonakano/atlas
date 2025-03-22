@@ -47,7 +47,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
             add_css_class ("devel");
         }
 
-        title = "Atlas";
+        title = Define.APP_NAME;
         add_action_entries (ACTION_ENTRIES, this);
 
         location_store = new ListStore (typeof (Geocode.Place));
