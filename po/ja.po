@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-22 23:42+0900\n"
-"PO-Revision-Date: 2025-03-01 21:00+0000\n"
+"PO-Revision-Date: 2025-03-22 15:27+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/"
-">\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/>"
+"\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: data/atlas.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -76,7 +76,7 @@ msgstr "ダークモードのアプリウィンドウ"
 #. John Doe https://example.com
 #: src/Application.vala:157
 msgid "translator-credits"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: src/MainWindow.vala:33
 msgid "Unknown"
@@ -99,50 +99,38 @@ msgid "Try a different search"
 msgstr "他のキーワードを試してください"
 
 #: src/MainWindow.vala:104
-#, fuzzy
-#| msgid "System"
 msgid "S_ystem"
-msgstr "システム"
+msgstr "システム(_Y)"
 
 #: src/MainWindow.vala:105
-#, fuzzy
-#| msgid "Light"
 msgid "_Light"
-msgstr "ライト"
+msgstr "ライト(_L)"
 
 #: src/MainWindow.vala:106
-#, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
-msgstr "ダーク"
+msgstr "ダーク(_D)"
 
 #: src/MainWindow.vala:109
 msgid "Map_nik"
-msgstr ""
+msgstr "Mapnik(_N)"
 
 #: src/MainWindow.vala:110
-#, fuzzy
-#| msgid "Transport"
 msgid "_Transport"
-msgstr "交通"
+msgstr "交通(_T)"
 
 #: src/MainWindow.vala:113
-#, fuzzy
-#| msgid "Style"
 msgid "_Style"
-msgstr "スタイル"
+msgstr "スタイル(_S)"
 
 #: src/MainWindow.vala:114
-#, fuzzy
-#| msgid "Map Source"
 msgid "_Map Source"
-msgstr "マップ提供元"
+msgstr "マップ提供元(_M)"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/MainWindow.vala:118
 #, c-format
 msgid "_About %s"
-msgstr ""
+msgstr "%s について(_A)"
 
 #: src/MainWindow.vala:122
 msgid "Main Menu"
