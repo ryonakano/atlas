@@ -145,7 +145,7 @@ public class Atlas.Application : Adw.Application {
             null
         ) {
             version = Config.APP_VERSION,
-            copyright = "© 2014-2015 Atlas Developers\n" + "© 2018-2025 Ryo Nakano",
+            copyright = "© 2014-2015 Atlas Developers\n© 2018-2025 Ryo Nakano",
             developers = DEVELOPERS,
             artists = ARTISTS,
             ///TRANSLATORS: A newline-separated list of translators. Don't translate literally.
