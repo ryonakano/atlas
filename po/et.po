@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-22 23:42+0900\n"
-"PO-Revision-Date: 2025-03-23 06:44+0000\n"
+"PO-Revision-Date: 2025-03-23 08:05+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/atlas/et/>"
 "\n"
@@ -100,40 +100,32 @@ msgid "Try a different search"
 msgstr "Proovi teistsugust otsingut"
 
 #: src/MainWindow.vala:104
-#, fuzzy
-#| msgid "System"
 msgid "S_ystem"
-msgstr "Süsteemi kujundus"
+msgstr "S_üsteemi kujundus"
 
 #: src/MainWindow.vala:105
 msgid "_Light"
 msgstr "_Hele kujundus"
 
 #: src/MainWindow.vala:106
-#, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
-msgstr "Tume kujundus"
+msgstr "_Tume kujundus"
 
 #: src/MainWindow.vala:109
 msgid "Map_nik"
-msgstr ""
+msgstr "Map_nik"
 
 #: src/MainWindow.vala:110
-#, fuzzy
-#| msgid "Transport"
 msgid "_Transport"
-msgstr "Transport"
+msgstr "_Transport"
 
 #: src/MainWindow.vala:113
 msgid "_Style"
 msgstr "_Kujundus"
 
 #: src/MainWindow.vala:114
-#, fuzzy
-#| msgid "Map Source"
 msgid "_Map Source"
-msgstr "Kaardiallikas"
+msgstr "K_aardiallikas"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/MainWindow.vala:118
