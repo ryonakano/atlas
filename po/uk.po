@@ -10,17 +10,17 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-22 23:42+0900\n"
-"PO-Revision-Date: 2025-03-09 09:33+0000\n"
+"PO-Revision-Date: 2025-03-25 00:04+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/atlas/uk/"
-">\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/atlas/uk/>"
+"\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: data/atlas.desktop.in.in:3
 msgid "@APP_NAME@"
@@ -80,7 +80,7 @@ msgstr "Вікно застосунку у темному режимі"
 #. John Doe https://example.com
 #: src/Application.vala:157
 msgid "translator-credits"
-msgstr ""
+msgstr "Ihor Hordiichuk"
 
 #: src/MainWindow.vala:33
 msgid "Unknown"
@@ -103,50 +103,38 @@ msgid "Try a different search"
 msgstr "Введіть інший запит"
 
 #: src/MainWindow.vala:104
-#, fuzzy
-#| msgid "System"
 msgid "S_ystem"
-msgstr "Системи"
+msgstr "С_истемний"
 
 #: src/MainWindow.vala:105
-#, fuzzy
-#| msgid "Light"
 msgid "_Light"
-msgstr "Світлий"
+msgstr "_Світлий"
 
 #: src/MainWindow.vala:106
-#, fuzzy
-#| msgid "Dark"
 msgid "_Dark"
-msgstr "Темний"
+msgstr "_Темний"
 
 #: src/MainWindow.vala:109
 msgid "Map_nik"
-msgstr ""
+msgstr "Map_nik"
 
 #: src/MainWindow.vala:110
-#, fuzzy
-#| msgid "Transport"
 msgid "_Transport"
-msgstr "Транспорт"
+msgstr "_Транспорт"
 
 #: src/MainWindow.vala:113
-#, fuzzy
-#| msgid "Style"
 msgid "_Style"
-msgstr "Стиль"
+msgstr "_Стиль"
 
 #: src/MainWindow.vala:114
-#, fuzzy
-#| msgid "Map Source"
 msgid "_Map Source"
-msgstr "Джерело мапи"
+msgstr "_Джерело мапи"
 
 #. TRANSLATORS: %s will be replaced by the app name
 #: src/MainWindow.vala:118
 #, c-format
 msgid "_About %s"
-msgstr ""
+msgstr "_Про %s"
 
 #: src/MainWindow.vala:122
 msgid "Main Menu"
