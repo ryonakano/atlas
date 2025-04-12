@@ -59,6 +59,20 @@
   </developer>
 
   <releases>
+    <release version="3.1.0" date="2025-04-12" urgency="medium">
+      <description translate="no">
+        <ul>
+          <li>Improve search</li>
+          <li>Support for GNOME</li>
+          <li>Flatpak: Update protobuf-c to 1.5.1</li>
+          <li>Flatpak: Update elementary Platform to 8.1</li>
+          <li>Flatpak: Update libshumate to 1.4.0</li>
+          <li>Flatpak: Remove unused protobuf</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="3.0.2" date="2024-08-12" urgency="low">
       <description translate="no">
         <ul>
