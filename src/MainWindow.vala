@@ -28,7 +28,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
     private const ActionEntry[] ACTION_ENTRIES = {
         { "search", on_search_activate },
     };
-    private int busy_reason = 0;
+    private int current_busy_reason = 0;
     private uint search_begin_timeout = 0;
     private string unknown_text = _("Unknown");
     private ListStore location_store;
@@ -211,31 +211,31 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         search_entry.grab_focus ();
     }
 
-    private void busy_start (BusyReason reason) {
+    private void busy_start (BusyReason new_reason) {
         // Not busy → Busy
-        if (!(bool)(busy_reason & BusyReason.ANY)) {
+        if (!(bool)(current_busy_reason & BusyReason.ANY)) {
             spinner.visible = true;
             spinner.spinning = true;
         }
 
         // Not locating → Locating
-        if ((bool)(reason & BusyReason.LOCATING)) {
+        if ((bool)(new_reason & BusyReason.LOCATING)) {
             current_location.sensitive = false;
         }
 
-        busy_reason |= reason;
+        current_busy_reason |= new_reason;
     }
 
-    private void busy_end (BusyReason reason) {
-        busy_reason &= ~reason;
+    private void busy_end (BusyReason new_reason) {
+        current_busy_reason &= ~new_reason;
 
         // Locating → Not locating
-        if ((bool)(reason & BusyReason.LOCATING)) {
+        if ((bool)(new_reason & BusyReason.LOCATING)) {
             current_location.sensitive = true;
         }
 
         // Busy → Not busy
-        if (!(bool)(busy_reason & BusyReason.ANY)) {
+        if (!(bool)(current_busy_reason & BusyReason.ANY)) {
             spinner.visible = false;
             spinner.spinning = false;
         }
