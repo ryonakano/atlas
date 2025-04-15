@@ -136,7 +136,9 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
 
         map_widget = new MapWidget ();
 
-        var toolbar_view = new Adw.ToolbarView ();
+        var toolbar_view = new Adw.ToolbarView () {
+            top_bar_style = Adw.ToolbarStyle.RAISED
+        };
         toolbar_view.add_top_bar (headerbar);
         toolbar_view.set_content (map_widget);
 
