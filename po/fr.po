@@ -81,7 +81,7 @@ msgstr "Vue des applications en mode sombre"
 #. John Doe https://example.com
 #: src/Application.vala:157
 msgid "translator-credits"
-msgstr "Teamcons - teamcons.carrd.co"
+msgstr "Teamcons https://teamcons.carrd.co"
 
 #: src/MainWindow.vala:33
 msgid "Unknown"
