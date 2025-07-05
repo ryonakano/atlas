@@ -48,7 +48,7 @@ modules:
             commit: 4719fdd7760624388c2c5b9d6759eb6a47490626
             x-checker-data:
               type: git
-              tag-pattern: '^v([\d.]+)$'
+              tag-pattern: ^v([\d.]+)$
 
   - name: atlas
     buildsystem: meson
