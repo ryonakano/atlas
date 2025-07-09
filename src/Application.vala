@@ -66,6 +66,14 @@ public class Atlas.Application : Adw.Application {
 
     protected override void startup () {
         if (Util.is_on_pantheon ()) {
+            /*
+             * Granite.init() calls Gdk.DisplayManager.get() internally without
+             * initializing Gtk, which is illegal and causes an intentional
+             * crash since Gtk 4.17. So, initialize Gtk explicitly here as a
+             * workaround.
+             * TODO: Remove this when https://github.com/elementary/granite/pull/893 is released
+             */
+            Gtk.init ();
             // Apply elementary stylesheet instead of default Adwaita stylesheet
             Granite.init ();
         }
