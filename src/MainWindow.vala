@@ -66,12 +66,9 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
             margin_end = 6
         };
 
-        var search_placeholder = new Adw.StatusPage () {
-            title = _("No Results Found"),
+        var search_placeholder = new Granite.Placeholder (_("No Results Found")) {
             description = _("Try a different search"),
-            icon_name = "edit-find-symbolic",
-            margin_start = 12,
-            margin_end = 12
+            icon = new ThemedIcon ("edit-find-symbolic")
         };
 
         search_res_list = new Gtk.ListBox () {
@@ -276,9 +273,10 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         } catch (Error error) {
             warning (error.message);
             return;
+        } finally {
+            loc_store.remove_all ();
         }
 
-        loc_store.remove_all ();
         foreach (unowned var place in places) {
             loc_store.append (place);
         }
