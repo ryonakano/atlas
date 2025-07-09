@@ -5,7 +5,7 @@
  *                         2014-2015 Atlas Developers
  */
 
-public class Atlas.SearchResultItem : Gtk.Box {
+public class Atlas.SearchResultItem : Granite.Bin {
     private Geocode.Place? _place = null;
     public Geocode.Place? place {
         get {
@@ -50,9 +50,10 @@ public class Atlas.SearchResultItem : Gtk.Box {
         label_box.append (name_label);
         label_box.append (info_label);
 
-        spacing = 6;
+        var box = new Gtk.Box (HORIZONTAL, 6);
+        box.append (image);
+        box.append (label_box);
 
-        append (image);
-        append (label_box);
+        child = box;
     }
 }
