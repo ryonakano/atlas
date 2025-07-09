@@ -10,7 +10,7 @@ endforeach
 
 i18n.merge_file(
     input: 'atlas.desktop.in',
-    output: '@0@.desktop'.format(meson.project_name()),
+    output: meson.project_name() + '.desktop',
     po_dir: meson.project_source_root() / 'po',
     type: 'desktop',
     install: true,
@@ -19,7 +19,7 @@ i18n.merge_file(
 
 i18n.merge_file(
     input: 'atlas.metainfo.xml.in',
-    output: '@0@.metainfo.xml'.format(meson.project_name()),
+    output: meson.project_name() + '.metainfo.xml',
     po_dir: meson.project_source_root() / 'po',
     install: true,
     install_dir: get_option('datadir') / 'metainfo'
