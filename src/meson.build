@@ -10,10 +10,7 @@ config_file = configure_file(
     configuration: config_data
 )
 
-granite_dep = dependency('granite-7', version: '>= 7.2.0', required: get_option('granite'))
-if granite_dep.found()
-    add_project_arguments('--define=USE_GRANITE', language: 'vala')
-endif
+granite_dep = dependency('granite-7', version: '>= 7.2.0')
 
 dependencies = [
     dependency('geocode-glib-2.0', version: '>= 3.26.3'),
