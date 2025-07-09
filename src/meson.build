@@ -24,6 +24,7 @@ sources = files(
     'MainWindow.vala',
     'MapWidget.vala',
     'MarkerLayerManager.vala',
+    'SearchResultItem.vala',
     'Util.vala',
 )
 
