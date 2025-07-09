@@ -42,7 +42,7 @@ You'll need the following dependencies:
 * libgranite-7-dev (>= 7.2.0, required only when you build with `granite` feature enabled)
 * libgtk-4-dev
 * libshumate-dev
-* meson (>= 0.58.0)
+* meson (>= 0.57.0)
 * valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:

@@ -2,7 +2,7 @@ project(
     'com.github.ryonakano.atlas',
     'vala', 'c',
     version: '3.1.0',
-    meson_version: '>=0.58.0'
+    meson_version: '>=0.57.0'
 )
 
 gnome = import('gnome')
