@@ -1,8 +1,8 @@
-id: com.github.ryonakano.atlas
+id: com.github.ryonakano.atlas.Devel
 runtime: io.elementary.Platform
 runtime-version: '8.1'
 sdk: io.elementary.Sdk
-command: com.github.ryonakano.atlas
+command: com.github.ryonakano.atlas.Devel
 finish-args:
   - --share=ipc
   - --share=network
@@ -52,6 +52,8 @@ modules:
 
   - name: atlas
     buildsystem: meson
+    config-opts:
+      - -Ddevelopment=true
     sources:
       - type: dir
-        path: .
+        path: ../../
