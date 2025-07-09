@@ -88,12 +88,12 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         var search_res_list_scrolled = new Gtk.ScrolledWindow () {
             child = search_res_list,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
-            vexpand = true
+            max_content_height = 500,
+            propagate_natural_height = true
         };
 
         search_res_popover = new Gtk.Popover () {
             width_request = 400,
-            height_request = 500,
             has_arrow = false,
             child = search_res_list_scrolled,
             default_widget = search_res_list
