@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=@APP_NAME@
+Name=Atlas
 GenericName=Map
 Comment=View where to go
 Categories=GTK;Utility;Science;Maps;
-Exec=@APP_ID@
-Icon=@APP_ID@
+Exec=com.github.ryonakano.atlas
+Icon=com.github.ryonakano.atlas
 Type=Application
 Terminal=false
 Keywords=Trip;Explore;
