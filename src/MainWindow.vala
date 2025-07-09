@@ -42,11 +42,6 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
     private MapWidget map_widget;
 
     construct {
-        // Distinct development build visually
-        if (".Devel" in Config.APP_ID) {
-            add_css_class ("devel");
-        }
-
         title = "Atlas";
         add_action_entries (ACTION_ENTRIES, this);
 

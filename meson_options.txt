@@ -1,2 +1,1 @@
 option('granite', type: 'feature', value: 'disabled', description: 'Enable elementary OS integration. Requires Granite')
-option('development', type: 'boolean', value: false, description: 'If this is a development build')
