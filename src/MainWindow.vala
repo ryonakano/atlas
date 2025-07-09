@@ -88,6 +88,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         var search_res_list_scrolled = new Gtk.ScrolledWindow () {
             child = search_res_list,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
+            max_content_height = 500,
             propagate_natural_height = true
         };
 
