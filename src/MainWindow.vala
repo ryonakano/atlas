@@ -47,7 +47,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
             add_css_class ("devel");
         }
 
-        title = Define.APP_NAME;
+        title = "Atlas";
         add_action_entries (ACTION_ENTRIES, this);
 
         location_store = new ListStore (typeof (Geocode.Place));
@@ -88,12 +88,12 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         var search_res_list_scrolled = new Gtk.ScrolledWindow () {
             child = search_res_list,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
-            vexpand = true
+            max_content_height = 500,
+            propagate_natural_height = true
         };
 
         search_res_popover = new Gtk.Popover () {
             width_request = 400,
-            height_request = 500,
             has_arrow = false,
             child = search_res_list_scrolled,
             default_widget = search_res_list
@@ -112,11 +112,6 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         var main_menu = new Menu ();
         main_menu.append_submenu (_("_Style"), style_submenu);
         main_menu.append_submenu (_("_Map Source"), map_source_submenu);
-        // Pantheon prefers AppCenter instead of an about dialog for app details, so prevent it from being shown on Pantheon
-        if (!Util.is_on_pantheon ()) {
-            ///TRANSLATORS: %s will be replaced by the app name
-            main_menu.append (_("_About %s").printf (Define.APP_NAME), "app.about");
-        }
 
         var menu_button = new Gtk.MenuButton () {
             tooltip_text = _("Main Menu"),

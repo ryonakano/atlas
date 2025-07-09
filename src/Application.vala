@@ -9,7 +9,6 @@ public class Atlas.Application : Adw.Application {
 
     private const ActionEntry[] ACTION_ENTRIES = {
         { "quit", on_quit_activate },
-        { "about", on_about_activate },
     };
     private MainWindow main_window;
 
@@ -119,38 +118,6 @@ public class Atlas.Application : Adw.Application {
         }
 
         quit ();
-    }
-
-    private void on_about_activate () {
-        // List of maintainers
-        const string[] DEVELOPERS = {
-            "Steffen Schuhmann https://launchpad.net/~sschuhmann",
-            "Ryo Nakano https://github.com/ryonakano",
-        };
-        // List of icon authors
-        const string[] ARTISTS = {
-            "Steffen Schuhmann https://launchpad.net/~sschuhmann",
-            "Ryo Nakano https://github.com/ryonakano",
-            "Rajdeep Singha https://github.com/Suzie97",
-        };
-
-        var about_dialog = new Adw.AboutDialog.from_appdata (
-            "%s/%s.metainfo.xml".printf (Config.RESOURCE_PREFIX, Config.APP_ID),
-            null
-        ) {
-            version = Config.APP_VERSION,
-            copyright = "© 2014-2015 Atlas Developers\n© 2018-2025 Ryo Nakano",
-            developers = DEVELOPERS,
-            artists = ARTISTS,
-            ///TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-            ///You can optionally add your name if you want, plus you may add your email address or website.
-            ///e.g.:
-            ///John Doe
-            ///John Doe <john-doe@example.com>
-            ///John Doe https://example.com
-            translator_credits = _("translator-credits")
-        };
-        about_dialog.present (get_active_window ());
     }
 
     public static int main (string[] args) {
