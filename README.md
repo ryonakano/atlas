@@ -28,8 +28,8 @@ flatpak remote-add --user --if-not-exists appcenter https://flatpak.elementary.i
 To build and install, use `flatpak-builder`, then execute with `flatpak run`:
 
 ```
-flatpak-builder builddir --user --install --force-clean --install-deps-from=appcenter build-aux/appcenter/com.github.ryonakano.atlas.Devel.yml
-flatpak run com.github.ryonakano.atlas.Devel
+flatpak-builder builddir --user --install --force-clean --install-deps-from=appcenter com.github.ryonakano.atlas.yml
+flatpak run com.github.ryonakano.atlas
 ```
 
 ### From Source Code (Native)
@@ -39,10 +39,10 @@ You'll need the following dependencies:
 * libgeoclue-2-dev
 * libgeocode-glib-dev (>= 3.26.3)
 * libglib2.0-dev (>= 2.74)
-* libgranite-7-dev (>= 7.2.0, required only when you build with `granite` feature enabled)
+* libgranite-7-dev (>= 7.2.0)
 * libgtk-4-dev
 * libshumate-dev
-* meson (>= 0.58.0)
+* meson (>= 0.57.0)
 * valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:
