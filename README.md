@@ -4,7 +4,6 @@
 ![Screenshot in the dark mode](data/screenshots/screenshot-dark.png#gh-dark-mode-only)
 
 ## Building, Testing, and Installation
-
 Run `flatpak-builder` to configure the build environment, download dependencies, build, and install
 
 ```bash
@@ -16,3 +15,6 @@ Then execute with
 ```bash
     flatpak run com.github.ryonakano.atlas
 ```
+
+## History
+This is a fork of [Atlas Maps](https://launchpad.net/atlas-maps) and wouldn't exist without work of [Steffen Schuhmann](https://launchpad.net/~sschuhmann).
