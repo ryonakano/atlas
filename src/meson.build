@@ -9,6 +9,7 @@ config_file = configure_file(
 
 dependencies = [
     # Version limitation for libsoup 3.x support
+    # libsoup 2.x is no longer shipped on GNOME Flatpak runtime by default
     dependency('geocode-glib-2.0', version: '>= 3.26.3'),
     dependency('gio-2.0'),
     # Version limitation for GLib.ApplicationFlags.DEFAULT_FLAGS
