@@ -23,7 +23,6 @@ sources = files(
     'Define.vala',
     'MainWindow.vala',
     'MapWidget.vala',
-    'MarkerLayerManager.vala',
     'Util.vala',
 )
 
