@@ -19,7 +19,7 @@ public class Atlas.MapWidget : Gtk.Box {
     private Shumate.Map base_map;
     // Displays the "pin" icon at a specified place by search
     private Shumate.MarkerLayer pin_layer;
-    // Displays the icon for current location
+    // Displays the position of current location
     private Shumate.MarkerLayer location_layer;
 
     private GClue.Location? location = null;
