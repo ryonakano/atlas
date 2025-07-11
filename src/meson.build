@@ -8,9 +8,12 @@ config_file = configure_file(
 )
 
 dependencies = [
+    # Version limitation for libsoup 3.x support
     dependency('geocode-glib-2.0', version: '>= 3.26.3'),
     dependency('gio-2.0'),
+    # Version limitation for GLib.ApplicationFlags.DEFAULT_FLAGS
     dependency('glib-2.0', version: '>= 2.74'),
+    # Version limitation for Granite.init()
     dependency('granite-7', version: '>= 7.2.0'),
     dependency('gtk4'),
     dependency('libadwaita-1'),
