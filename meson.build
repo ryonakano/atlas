@@ -3,7 +3,7 @@ project(
     'vala', 'c',
     version: '3.1.0',
     # Version limitation for gnome.post_install()
-    meson_version: '>=0.57.0'
+    meson_version: '>= 0.57.0'
 )
 
 gnome = import('gnome')
