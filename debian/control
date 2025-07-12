@@ -1,0 +1,12 @@
+Source: io.elementary.atlas
+Section: x11
+Priority: optional
+Maintainer: elementary, Inc. <builds@elementary.io>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.1.1
+Homepage: https://github.com/elementary/atlas
+
+Package: io.elementary.atlas
+Architecture: any
+Depends: flatpak, ${misc:Depends}, ${shlibs:Depends}
+Description: Map viewer designed for elementary OS
