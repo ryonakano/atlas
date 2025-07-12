@@ -14,13 +14,13 @@ public class Atlas.Application : Adw.Application {
 
     public Application () {
         Object (
-            application_id: "com.github.ryonakano.atlas",
+            application_id: "io.elementary.atlas",
             flags: ApplicationFlags.DEFAULT_FLAGS
         );
     }
 
     static construct {
-        settings = new Settings ("com.github.ryonakano.atlas");
+        settings = new Settings ("io.elementary.atlas");
     }
 
     private void setup_style () {

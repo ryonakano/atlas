@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014-2015 Atlas Developers, 2018-2025 Ryo Nakano -->
 <component type="desktop-application">
-  <id>com.github.ryonakano.atlas</id>
-  <launchable type="desktop-id">com.github.ryonakano.atlas.desktop</launchable>
-  <translation type="gettext">com.github.ryonakano.atlas</translation>
+  <id>io.elementary.atlas</id>
+  <launchable type="desktop-id">io.elementary.atlas.desktop</launchable>
+  <translation type="gettext">io.elementary.atlas</translation>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 

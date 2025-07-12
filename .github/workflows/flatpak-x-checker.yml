@@ -23,4 +23,4 @@ jobs:
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: --update --never-fork com.github.ryonakano.atlas.yml
+          args: --update --never-fork io.elementary.atlas.yml
