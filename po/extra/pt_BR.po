@@ -60,6 +60,3 @@ msgstr ""
 #: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
 msgid "See locations on a map"
 msgstr ""
-
-#~ msgid "@APP_NAME@"
-#~ msgstr "@APP_NAME@"

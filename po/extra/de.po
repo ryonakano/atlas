@@ -61,36 +61,3 @@ msgstr ""
 #: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
 msgid "See locations on a map"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Move to the current location"
-#~ msgstr "Ihr aktueller Standort wird erkennt …"
-
-#~ msgid "Search Location"
-#~ msgstr "Standort suchen"
-
-#, fuzzy
-#~ msgid "System"
-#~ msgstr "System"
-
-#, fuzzy
-#~ msgid "Light"
-#~ msgstr "Hell"
-
-#, fuzzy
-#~ msgid "Dark"
-#~ msgstr "Dunkel"
-
-#, fuzzy
-#~ msgid "Transport"
-#~ msgstr "Verkehrskarte"
-
-#, fuzzy
-#~ msgid "Style"
-#~ msgstr "Stil:"
-
-#~ msgid "@APP_NAME@"
-#~ msgstr "@APP_NAME@"
-
-#~ msgid "Preferences"
-#~ msgstr "Einstellungen"

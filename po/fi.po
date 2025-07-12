@@ -85,16 +85,3 @@ msgstr ""
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Jump to your current location instantly"
-#~ msgstr "Siirrä nykyiseen sijaintiin"
-
-#~ msgid "@APP_NAME@"
-#~ msgstr "@APP_NAME@"
-
-#~ msgid "Try changing the search term."
-#~ msgstr "Yritä eri hakuehdoilla."
-
-#~ msgid "Preferences"
-#~ msgstr "Asetukset"

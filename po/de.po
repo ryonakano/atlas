@@ -84,13 +84,3 @@ msgstr ""
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Jump to your current location instantly"
-#~ msgstr "Ihr aktueller Standort wird erkennt …"
-
-#~ msgid "@APP_NAME@"
-#~ msgstr "@APP_NAME@"
-
-#~ msgid "Preferences"
-#~ msgstr "Einstellungen"
