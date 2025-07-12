@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 23:42+0900\n"
+"POT-Creation-Date: 2025-07-09 21:13+0900\n"
 "PO-Revision-Date: 2025-07-04 15:03+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/atlas/ta/>\n"
@@ -18,124 +18,120 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13-dev\n"
 
-#: data/atlas.desktop.in.in:3
-msgid "@APP_NAME@"
-msgstr "@APP_NAME@"
+#: data/atlas.desktop.in:3
+msgid "Atlas"
+msgstr ""
 
-#: data/atlas.desktop.in.in:4
+#: data/atlas.desktop.in:4
 msgid "Map"
 msgstr "வரைபடம்"
 
-#: data/atlas.desktop.in.in:5 data/atlas.metainfo.xml.in.in:11
+#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "எங்கு செல்ல வேண்டும் என்று பார்க்கவும்"
 
-#: data/atlas.desktop.in.in:11
+#: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "பயணம்; ஆராயுங்கள்;"
 
-#: data/atlas.metainfo.xml.in.in:13
+#: data/atlas.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
 msgstr "நீங்கள் எங்கு செல்ல விரும்புகிறீர்கள் என்பதைப் பார்க்க உதவும் வரைபட பயன்பாடு."
 
-#: data/atlas.metainfo.xml.in.in:16
+#: data/atlas.metainfo.xml.in:16
 msgid "Features include:"
 msgstr "நற்பொருத்தங்கள் பின்வருமாறு:"
 
-#: data/atlas.metainfo.xml.in.in:18
+#: data/atlas.metainfo.xml.in:18
 msgid "Search any place"
 msgstr "எந்த இடத்தையும் தேடுங்கள்"
 
-#: data/atlas.metainfo.xml.in.in:19
+#: data/atlas.metainfo.xml.in:19
 msgid "Jump to your current location instantly"
 msgstr "உங்கள் தற்போதைய இருப்பிடத்திற்கு உடனடியாக செல்லவும்"
 
-#: data/atlas.metainfo.xml.in.in:21
+#: data/atlas.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
 "இது \"அட்லச் மேப்ச்\" இன் முட்கரண்டி மற்றும் ச்டெஃபென் சுஅ்மானின் வேலை இல்லாமல் இருக்காது."
 
-#: data/atlas.metainfo.xml.in.in:28
-msgid "App window in the light mode"
-msgstr "ஒளி பயன்முறையில் பயன்பாட்டு சாளரம்"
-
-#: data/atlas.metainfo.xml.in.in:32
-msgid "App window in the dark mode"
-msgstr "இருண்ட பயன்முறையில் பயன்பாட்டு சாளரம்"
-
-#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-#. You can optionally add your name if you want, plus you may add your email address or website.
-#. e.g.:
-#. John Doe
-#. John Doe <john-doe@example.com>
-#. John Doe https://example.com
-#: src/Application.vala:157
-msgid "translator-credits"
-msgstr "தமிழ்நேரம் (TamilNeram.github.io)"
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
+msgstr ""
 
 #: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "தெரியவில்லை"
 
-#: src/MainWindow.vala:56
+#: src/MainWindow.vala:51
 msgid "Move to the current location"
 msgstr "தற்போதைய இடத்திற்கு செல்லுங்கள்"
 
-#: src/MainWindow.vala:68
+#: src/MainWindow.vala:63
 msgid "Search Location"
 msgstr "இடம் தேடல்"
 
-#: src/MainWindow.vala:75
+#: src/MainWindow.vala:70
 msgid "No Results Found"
 msgstr "முடிவுகள் எதுவும் கிடைக்கவில்லை"
 
-#: src/MainWindow.vala:76
+#: src/MainWindow.vala:71
 msgid "Try a different search"
 msgstr "வேறு தேடலை முயற்சிக்கவும்"
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:99
 msgid "S_ystem"
 msgstr "முறைமை"
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:100
 msgid "_Light"
 msgstr "விளக்கு"
 
-#: src/MainWindow.vala:106
+#: src/MainWindow.vala:101
 msgid "_Dark"
 msgstr "இருண்ட"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:104
 msgid "Map_nik"
 msgstr "வரைபடம்"
 
-#: src/MainWindow.vala:110
+#: src/MainWindow.vala:105
 msgid "_Transport"
 msgstr "போக்குவரத்து"
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:108
 msgid "_Style"
 msgstr "பாணி"
 
-#: src/MainWindow.vala:114
+#: src/MainWindow.vala:109
 msgid "_Map Source"
 msgstr "வரைபட மூலம்"
 
-#. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:118
-#, c-format
-msgid "_About %s"
-msgstr "%s பற்றி"
-
-#: src/MainWindow.vala:122
+#: src/MainWindow.vala:112
 msgid "Main Menu"
 msgstr "பட்டியல் விளையாடுங்கள்"
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "இருப்பிட சேவையுடன் இணைக்கத் தவறிவிட்டது"
+
+#~ msgid "@APP_NAME@"
+#~ msgstr "@APP_NAME@"
+
+#~ msgid "App window in the light mode"
+#~ msgstr "ஒளி பயன்முறையில் பயன்பாட்டு சாளரம்"
+
+#~ msgid "App window in the dark mode"
+#~ msgstr "இருண்ட பயன்முறையில் பயன்பாட்டு சாளரம்"
+
+#~ msgid "translator-credits"
+#~ msgstr "தமிழ்நேரம் (TamilNeram.github.io)"
+
+#, c-format
+#~ msgid "_About %s"
+#~ msgstr "%s பற்றி"
 
 #~ msgid "Mapnik"
 #~ msgstr "மேப்னிக்"

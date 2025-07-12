@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 23:42+0900\n"
-"PO-Revision-Date: 2025-03-22 15:27+0000\n"
+"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"PO-Revision-Date: 2025-07-10 13:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/>"
 "\n"
@@ -18,41 +18,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
-#: data/atlas.desktop.in.in:3
-msgid "@APP_NAME@"
-msgstr "@APP_NAME@"
+#: data/atlas.desktop.in:3
+msgid "Atlas"
+msgstr "Atlas"
 
-#: data/atlas.desktop.in.in:4
+#: data/atlas.desktop.in:4
 msgid "Map"
 msgstr "地図"
 
-#: data/atlas.desktop.in.in:5 data/atlas.metainfo.xml.in.in:11
+#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "行きたい場所を見ましょう"
 
-#: data/atlas.desktop.in.in:11
+#: data/atlas.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "旅行;冒険;探索;"
 
-#: data/atlas.metainfo.xml.in.in:13
+#: data/atlas.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
 msgstr "行き先を探すのに便利な地図アプリです。"
 
-#: data/atlas.metainfo.xml.in.in:16
+#: data/atlas.metainfo.xml.in:16
 msgid "Features include:"
 msgstr "含まれる機能:"
 
-#: data/atlas.metainfo.xml.in.in:18
+#: data/atlas.metainfo.xml.in:18
 msgid "Search any place"
 msgstr "場所を検索できます"
 
-#: data/atlas.metainfo.xml.in.in:19
+#: data/atlas.metainfo.xml.in:19
 msgid "Jump to your current location instantly"
 msgstr "現在地をすぐに表示できます"
 
-#: data/atlas.metainfo.xml.in.in:21
+#: data/atlas.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
@@ -60,85 +60,81 @@ msgstr ""
 "このアプリは、\"Atlas Maps\" をフォークして開発されました。Steffen Schuhmann "
 "に感謝申し上げます。"
 
-#: data/atlas.metainfo.xml.in.in:28
-msgid "App window in the light mode"
-msgstr "ライトモードのアプリウィンドウ"
-
-#: data/atlas.metainfo.xml.in.in:32
-msgid "App window in the dark mode"
-msgstr "ダークモードのアプリウィンドウ"
-
-#. TRANSLATORS: A newline-separated list of translators. Don't translate literally.
-#. You can optionally add your name if you want, plus you may add your email address or website.
-#. e.g.:
-#. John Doe
-#. John Doe <john-doe@example.com>
-#. John Doe https://example.com
-#: src/Application.vala:157
-msgid "translator-credits"
-msgstr "Ryo Nakano"
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
+msgstr "地図上で場所を確認します"
 
 #: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "不明"
 
-#: src/MainWindow.vala:56
+#: src/MainWindow.vala:51
 msgid "Move to the current location"
 msgstr "現在地に移動"
 
-#: src/MainWindow.vala:68
+#: src/MainWindow.vala:63
 msgid "Search Location"
 msgstr "場所を検索"
 
-#: src/MainWindow.vala:75
+#: src/MainWindow.vala:70
 msgid "No Results Found"
 msgstr "見つかりませんでした"
 
-#: src/MainWindow.vala:76
+#: src/MainWindow.vala:71
 msgid "Try a different search"
 msgstr "他のキーワードを試してください"
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:99
 msgid "S_ystem"
 msgstr "システム(_Y)"
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:100
 msgid "_Light"
 msgstr "ライト(_L)"
 
-#: src/MainWindow.vala:106
+#: src/MainWindow.vala:101
 msgid "_Dark"
 msgstr "ダーク(_D)"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:104
 msgid "Map_nik"
 msgstr "Mapnik(_N)"
 
-#: src/MainWindow.vala:110
+#: src/MainWindow.vala:105
 msgid "_Transport"
 msgstr "交通(_T)"
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:108
 msgid "_Style"
 msgstr "スタイル(_S)"
 
-#: src/MainWindow.vala:114
+#: src/MainWindow.vala:109
 msgid "_Map Source"
 msgstr "マップ提供元(_M)"
 
-#. TRANSLATORS: %s will be replaced by the app name
-#: src/MainWindow.vala:118
-#, c-format
-msgid "_About %s"
-msgstr "%s について(_A)"
-
-#: src/MainWindow.vala:122
+#: src/MainWindow.vala:112
 msgid "Main Menu"
 msgstr "メインメニュー"
 
-#: src/MainWindow.vala:158
+#: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "位置情報サービスに接続できませんでした"
+
+#~ msgid "@APP_NAME@"
+#~ msgstr "@APP_NAME@"
+
+#~ msgid "App window in the light mode"
+#~ msgstr "ライトモードのアプリウィンドウ"
+
+#~ msgid "App window in the dark mode"
+#~ msgstr "ダークモードのアプリウィンドウ"
+
+#~ msgid "translator-credits"
+#~ msgstr "Ryo Nakano"
+
+#, c-format
+#~ msgid "_About %s"
+#~ msgstr "%s について(_A)"
 
 #~ msgid "Mapnik"
 #~ msgstr "Mapnik"
@@ -148,9 +144,6 @@ msgstr "位置情報サービスに接続できませんでした"
 
 #~ msgid "Preferences"
 #~ msgstr "設定"
-
-#~ msgid "Atlas"
-#~ msgstr "Atlas"
 
 #~ msgid "Search where to go"
 #~ msgstr "行きたい場所を検索しましょう"

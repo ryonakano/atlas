@@ -8,10 +8,14 @@ config_file = configure_file(
 )
 
 dependencies = [
+    # Version limitation for libsoup 3.x support
+    # libsoup 2.x is no longer shipped on GNOME Flatpak runtime by default
     dependency('geocode-glib-2.0', version: '>= 3.26.3'),
     dependency('gio-2.0'),
+    # Version limitation for GLib.ApplicationFlags.DEFAULT_FLAGS
     dependency('glib-2.0', version: '>= 2.74'),
-    dependency('granite-7', version: '>= 7.2.0'),
+    # Version limitation for automatic load of Application.css in Granite.init()
+    dependency('granite-7', version: '>= 7.3.0'),
     dependency('gtk4'),
     dependency('libadwaita-1'),
     dependency('libgeoclue-2.0'),
@@ -23,7 +27,6 @@ sources = files(
     'Define.vala',
     'MainWindow.vala',
     'MapWidget.vala',
-    'MarkerLayerManager.vala',
     'Util.vala',
 )
 
