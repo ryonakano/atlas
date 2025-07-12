@@ -26,11 +26,11 @@
   <screenshots>
     <screenshot type="default" environment="pantheon">
       <caption>See locations on a map</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.1.1/data/screenshots/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/elementary/atlas/3.1.1/data/screenshots/screenshot-light.png</image>
     </screenshot>
     <screenshot environment="pantheon:dark">
       <caption>See locations on a map</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.1.1/data/screenshots/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/elementary/atlas/3.1.1/data/screenshots/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -46,11 +46,11 @@
     <control>keyboard</control>
   </supports>
 
-  <url type="homepage">https://github.com/ryonakano/atlas</url>
-  <url type="bugtracker">https://github.com/ryonakano/atlas/issues</url>
-  <url type="help">https://github.com/ryonakano/atlas/issues</url>
-  <url type="vcs-browser">https://github.com/ryonakano/atlas</url>
-  <url type="translate">https://hosted.weblate.org/projects/rosp</url>
+  <url type="homepage">https://github.com/elementary/atlas</url>
+  <url type="bugtracker">https://github.com/elementary/atlas/issues</url>
+  <url type="help">https://github.com/elementary/atlas/issues</url>
+  <url type="vcs-browser">https://github.com/elementary/atlas</url>
+  <url type="translate">https://l10n.elementary.io/projects/atlas</url>
 
   <developer id="org.elementaryos">
     <name>elementary, Inc.</name>
