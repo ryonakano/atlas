@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:38+0900\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas/sk/>\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: data/atlas.desktop.in:3
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in:3
 msgid "Map"
 msgstr "Mapa"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "Zobrazte si, kam chcete ísť"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in:10
 msgid "Trip;Explore;"
 msgstr "Výlet;Objaviť;Preskúmať;"
 
@@ -81,7 +81,6 @@ msgstr "Vyhľadať miesto"
 
 #: src/MainWindow.vala:70
 #, fuzzy
-#| msgid "No Search Results"
 msgid "No Results Found"
 msgstr "Žiadne výsledky vyhľadávania"
 
@@ -91,42 +90,36 @@ msgstr ""
 
 #: src/MainWindow.vala:99
 #, fuzzy
-#| msgid "System"
-msgid "S_ystem"
+msgid "System"
 msgstr "Systém"
 
 #: src/MainWindow.vala:100
 #, fuzzy
-#| msgid "Light"
-msgid "_Light"
+msgid "Light"
 msgstr "Svetlý"
 
 #: src/MainWindow.vala:101
 #, fuzzy
-#| msgid "Dark"
-msgid "_Dark"
+msgid "Dark"
 msgstr "Tmavý"
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
+msgid "Mapnik"
 msgstr ""
 
 #: src/MainWindow.vala:105
 #, fuzzy
-#| msgid "Transport Map"
-msgid "_Transport"
+msgid "Transport"
 msgstr "Dopravná mapa"
 
 #: src/MainWindow.vala:108
 #, fuzzy
-#| msgid "Style:"
-msgid "_Style"
+msgid "Style"
 msgstr "Štýl:"
 
 #: src/MainWindow.vala:109
 #, fuzzy
-#| msgid "Map Source:"
-msgid "_Map Source"
+msgid "Map Source"
 msgstr "Zdroj mapy:"
 
 #: src/MainWindow.vala:112

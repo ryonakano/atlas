@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:38+0900\n"
 "PO-Revision-Date: 2025-03-31 04:19+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/atlas/it/>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.11-dev\n"
 
-#: data/atlas.desktop.in:3
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in:3
 msgid "Map"
 msgstr "Mappa"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "Visualizza dove vuoi andare"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in:10
 msgid "Trip;Explore;"
 msgstr "Viaggio;Esplora;"
 
@@ -78,7 +78,6 @@ msgstr "Cerca posizione"
 
 #: src/MainWindow.vala:70
 #, fuzzy
-#| msgid "No Search Results"
 msgid "No Results Found"
 msgstr "Nessun risultato trovato"
 
@@ -88,42 +87,36 @@ msgstr ""
 
 #: src/MainWindow.vala:99
 #, fuzzy
-#| msgid "System"
-msgid "S_ystem"
+msgid "System"
 msgstr "Sistema"
 
 #: src/MainWindow.vala:100
 #, fuzzy
-#| msgid "Light"
-msgid "_Light"
+msgid "Light"
 msgstr "Chiaro"
 
 #: src/MainWindow.vala:101
 #, fuzzy
-#| msgid "Dark"
-msgid "_Dark"
+msgid "Dark"
 msgstr "Scuro"
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
+msgid "Mapnik"
 msgstr ""
 
 #: src/MainWindow.vala:105
 #, fuzzy
-#| msgid "Transport"
-msgid "_Transport"
+msgid "Transport"
 msgstr "Trasporto"
 
 #: src/MainWindow.vala:108
 #, fuzzy
-#| msgid "Style"
-msgid "_Style"
+msgid "Style"
 msgstr "Stile"
 
 #: src/MainWindow.vala:109
 #, fuzzy
-#| msgid "Map Source"
-msgid "_Map Source"
+msgid "Map Source"
 msgstr "Fonte mappa"
 
 #: src/MainWindow.vala:112

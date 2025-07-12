@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:38+0900\n"
 "PO-Revision-Date: 2025-06-11 12:02+0000\n"
 "Last-Translator: Stella and Charlie <teamcons.carrd.co>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas/fr/>\n"
@@ -23,19 +23,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.12-dev\n"
 
-#: data/atlas.desktop.in:3
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in:3
 msgid "Map"
 msgstr "Carte"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "Visualisez où vous souhaitez vous rendre"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in:10
 msgid "Trip;Explore;"
 msgstr "Voyage;Explorer;"
 
@@ -90,35 +90,37 @@ msgid "Try a different search"
 msgstr "Essayez une recherche différente"
 
 #: src/MainWindow.vala:99
-msgid "S_ystem"
+#, fuzzy
+msgid "System"
 msgstr "S_ystème"
 
 #: src/MainWindow.vala:100
 #, fuzzy
-#| msgid "Light"
-msgid "_Light"
+msgid "Light"
 msgstr "Clair"
 
 #: src/MainWindow.vala:101
 #, fuzzy
-#| msgid "Dark"
-msgid "_Dark"
+msgid "Dark"
 msgstr "Sombre"
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
-msgstr "Map_nik"
+msgid "Mapnik"
+msgstr ""
 
 #: src/MainWindow.vala:105
-msgid "_Transport"
+#, fuzzy
+msgid "Transport"
 msgstr "_Transports"
 
 #: src/MainWindow.vala:108
-msgid "_Style"
+#, fuzzy
+msgid "Style"
 msgstr "_Style"
 
 #: src/MainWindow.vala:109
-msgid "_Map Source"
+#, fuzzy
+msgid "Map Source"
 msgstr "Source de la carte"
 
 #: src/MainWindow.vala:112
@@ -128,6 +130,9 @@ msgstr "Menu principal"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "Echec de la connexion au service de localisation"
+
+#~ msgid "Map_nik"
+#~ msgstr "Map_nik"
 
 #~ msgid "@APP_NAME@"
 #~ msgstr "@APP_NAME@"

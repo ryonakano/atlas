@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:38+0900\n"
 "PO-Revision-Date: 2024-06-17 12:09+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas/tr/>\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-#: data/atlas.desktop.in:3
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in:3
 msgid "Map"
 msgstr "Harita"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "Nereye gideceğinizi görün"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in:10
 msgid "Trip;Explore;"
 msgstr "Trip;Explore;Gezi;Seyahat;Yolculuk;Keşfet;"
 
@@ -80,7 +80,6 @@ msgstr "Konum Ara"
 
 #: src/MainWindow.vala:70
 #, fuzzy
-#| msgid "No Search Results"
 msgid "No Results Found"
 msgstr "Arama Sonucu Yok"
 
@@ -90,42 +89,36 @@ msgstr ""
 
 #: src/MainWindow.vala:99
 #, fuzzy
-#| msgid "System"
-msgid "S_ystem"
+msgid "System"
 msgstr "Sistem"
 
 #: src/MainWindow.vala:100
 #, fuzzy
-#| msgid "Light"
-msgid "_Light"
+msgid "Light"
 msgstr "Açık"
 
 #: src/MainWindow.vala:101
 #, fuzzy
-#| msgid "Dark"
-msgid "_Dark"
+msgid "Dark"
 msgstr "Koyu"
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
-msgstr ""
+msgid "Mapnik"
+msgstr "Mapnik"
 
 #: src/MainWindow.vala:105
 #, fuzzy
-#| msgid "Transport"
-msgid "_Transport"
+msgid "Transport"
 msgstr "Ulaşım"
 
 #: src/MainWindow.vala:108
 #, fuzzy
-#| msgid "Style"
-msgid "_Style"
+msgid "Style"
 msgstr "Biçem"
 
 #: src/MainWindow.vala:109
 #, fuzzy
-#| msgid "Map Source"
-msgid "_Map Source"
+msgid "Map Source"
 msgstr "Harita Kaynağı"
 
 #: src/MainWindow.vala:112
@@ -144,9 +137,6 @@ msgstr "Konum hizmetine bağlanamadı"
 
 #~ msgid "App window in the dark mode"
 #~ msgstr "Uygulama penceresi koyu kipte"
-
-#~ msgid "Mapnik"
-#~ msgstr "Mapnik"
 
 #~ msgid "Try changing the search term."
 #~ msgstr "Arama terimini değiştirmeyi deneyin."
