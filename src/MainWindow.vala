@@ -184,6 +184,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         var search_entry_gesture = new Gtk.EventControllerKey ();
         search_entry_gesture.key_pressed.connect (() => {
             search_res_popover.popdown ();
+            return true;
         });
         ((Gtk.Widget) search_res_popover).add_controller (search_entry_gesture);
 
@@ -242,8 +243,8 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
                                          Util.map_source_action_transform_to_cb,
                                          Util.map_source_action_transform_from_cb);
         Application.settings.bind_with_mapping ("map-source", map_widget, "map-source", SettingsBindFlags.DEFAULT,
-                                                Util.map_source_get_mapping_cb,
-                                                Util.map_source_set_mapping_cb,
+                                                (SettingsBindGetMappingShared) Util.map_source_get_mapping_cb,
+                                                (SettingsBindSetMappingShared) Util.map_source_set_mapping_cb,
                                                 null, null);
         add_action (map_source_action);
     }

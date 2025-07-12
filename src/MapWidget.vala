@@ -17,9 +17,13 @@ public class Atlas.MapWidget : Gtk.Box {
 
     private Shumate.SimpleMap map_widget;
     private Shumate.Map base_map;
+    // Displays the "pin" icon at a specified place by search
+    private Shumate.MarkerLayer pin_layer;
+    // Displays the position of current location
+    private Shumate.MarkerLayer location_layer;
+
     private GClue.Location? location = null;
 
-    private MarkerLayerManager manager;
     private bool is_watching_location = false;
 
     // The Royal Observatory
@@ -40,7 +44,11 @@ public class Atlas.MapWidget : Gtk.Box {
     }
 
     public void init_marker_layers () {
-        manager = new MarkerLayerManager (map_widget);
+        pin_layer = new Shumate.MarkerLayer (map_widget.viewport);
+        map_widget.add_overlay_layer (pin_layer);
+
+        location_layer = new Shumate.MarkerLayer (map_widget.viewport);
+        map_widget.add_overlay_layer (location_layer);
     }
 
     // Set the initial location of the map widget.
@@ -101,8 +109,8 @@ public class Atlas.MapWidget : Gtk.Box {
             this.location.longitude = lng;
         }
 
-        manager.clear_markers (MarkerType.LOCATION);
-        manager.new_marker_at_pos (MarkerType.LOCATION, lat, lng);
+        clear_location ();
+        mark_location_at (lat, lng);
     }
 
     // Inspired from https://gitlab.gnome.org/GNOME/gnome-clocks/blob/master/src/geocoding.vala
@@ -130,8 +138,8 @@ public class Atlas.MapWidget : Gtk.Box {
     public void go_to_place (Geocode.Place place) {
         Geocode.Location loc = place.location;
 
-        manager.clear_markers (MarkerType.POINTER);
-        manager.new_marker_at_pos (MarkerType.POINTER, loc.latitude, loc.longitude);
+        clear_pin ();
+        mark_pin_at (loc.latitude, loc.longitude);
         base_map.go_to (loc.latitude, loc.longitude);
     }
 
@@ -140,5 +148,38 @@ public class Atlas.MapWidget : Gtk.Box {
         Atlas.Application.settings.set_double ("latitude", base_map.viewport.latitude);
         Atlas.Application.settings.set_double ("longitude", base_map.viewport.longitude);
         Atlas.Application.settings.set_double ("zoom-level", base_map.viewport.zoom_level);
+    }
+
+    private void clear_location () {
+        location_layer.remove_all ();
+    }
+
+    private void clear_pin () {
+        pin_layer.remove_all ();
+    }
+
+    private void mark_location_at (double latitude, double longitude) {
+        var marker = new Shumate.Point () {
+            latitude = latitude,
+            longitude = longitude,
+            selectable = true
+        };
+
+        location_layer.add_marker (marker);
+    }
+
+    private void mark_pin_at (double latitude, double longitude) {
+        var image = new Gtk.Image.from_icon_name ("pointer") {
+            icon_size = Gtk.IconSize.LARGE
+        };
+
+        var marker = new Shumate.Marker () {
+            latitude = latitude,
+            longitude = longitude,
+            child = image,
+            selectable = true
+        };
+
+        pin_layer.add_marker (marker);
     }
 }
