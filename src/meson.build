@@ -27,6 +27,7 @@ sources = files(
     'Define.vala',
     'MainWindow.vala',
     'MapWidget.vala',
+    'SearchResultItem.vala',
     'Util.vala',
 )
 
