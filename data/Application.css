@@ -1,0 +1,21 @@
+/* Style for Shumate.Point */
+map-point {
+    border: 0.3rem solid @bg_color;
+    background: @BLUEBERRY_500;
+    border-radius: 50%;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    animation: zoom 6s linear infinite;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
