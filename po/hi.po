@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:38+0900\n"
 "PO-Revision-Date: 2024-05-16 13:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/atlas/hi/>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-#: data/atlas.desktop.in:3
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
 msgid "Atlas"
 msgstr ""
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in:3
 msgid "Map"
 msgstr "मानचित्र"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "देखें कि कहां जाना है"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in:10
 msgid "Trip;Explore;"
 msgstr "यात्रा;अन्वेषण;"
 
@@ -76,7 +76,6 @@ msgstr "स्थान खोजें"
 
 #: src/MainWindow.vala:70
 #, fuzzy
-#| msgid "No Search Results"
 msgid "No Results Found"
 msgstr "कोई खोज परिणाम नहीं"
 
@@ -86,42 +85,36 @@ msgstr ""
 
 #: src/MainWindow.vala:99
 #, fuzzy
-#| msgid "System"
-msgid "S_ystem"
+msgid "System"
 msgstr "सिस्टम"
 
 #: src/MainWindow.vala:100
 #, fuzzy
-#| msgid "Light"
-msgid "_Light"
+msgid "Light"
 msgstr "हल्की"
 
 #: src/MainWindow.vala:101
 #, fuzzy
-#| msgid "Dark"
-msgid "_Dark"
+msgid "Dark"
 msgstr "गहरी"
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
-msgstr ""
+msgid "Mapnik"
+msgstr "मैपनिक"
 
 #: src/MainWindow.vala:105
 #, fuzzy
-#| msgid "Transport"
-msgid "_Transport"
+msgid "Transport"
 msgstr "परिवहन"
 
 #: src/MainWindow.vala:108
 #, fuzzy
-#| msgid "Style"
-msgid "_Style"
+msgid "Style"
 msgstr "शैली"
 
 #: src/MainWindow.vala:109
 #, fuzzy
-#| msgid "Map Source"
-msgid "_Map Source"
+msgid "Map Source"
 msgstr "मानचित्र स्रोत"
 
 #: src/MainWindow.vala:112
@@ -140,9 +133,6 @@ msgstr "स्थान सेवा से जुड़ने में वि�
 
 #~ msgid "App window in the dark mode"
 #~ msgstr "ऐप खिड़की गहरे मोड में"
-
-#~ msgid "Mapnik"
-#~ msgstr "मैपनिक"
 
 #~ msgid "Try changing the search term."
 #~ msgstr "खोज शब्द बदलने का प्रयास करें।"

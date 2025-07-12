@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/atlas.desktop.in:3
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
 msgid "Atlas"
 msgstr ""
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in:3
 msgid "Map"
 msgstr ""
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr ""
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in:10
 msgid "Trip;Explore;"
 msgstr ""
 
@@ -80,31 +80,31 @@ msgid "Try a different search"
 msgstr ""
 
 #: src/MainWindow.vala:99
-msgid "S_ystem"
+msgid "System"
 msgstr ""
 
 #: src/MainWindow.vala:100
-msgid "_Light"
+msgid "Light"
 msgstr ""
 
 #: src/MainWindow.vala:101
-msgid "_Dark"
+msgid "Dark"
 msgstr ""
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
+msgid "Mapnik"
 msgstr ""
 
 #: src/MainWindow.vala:105
-msgid "_Transport"
+msgid "Transport"
 msgstr ""
 
 #: src/MainWindow.vala:108
-msgid "_Style"
+msgid "Style"
 msgstr ""
 
 #: src/MainWindow.vala:109
-msgid "_Map Source"
+msgid "Map Source"
 msgstr ""
 
 #: src/MainWindow.vala:112

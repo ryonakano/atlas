@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:38+0900\n"
 "PO-Revision-Date: 2025-07-10 13:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/>"
-"\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/"
+">\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,19 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.13-dev\n"
 
-#: data/atlas.desktop.in:3
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in:3
 msgid "Map"
 msgstr "地図"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "行きたい場所を見ましょう"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in:10
 msgid "Trip;Explore;"
 msgstr "旅行;冒険;探索;"
 
@@ -85,31 +85,37 @@ msgid "Try a different search"
 msgstr "他のキーワードを試してください"
 
 #: src/MainWindow.vala:99
-msgid "S_ystem"
+#, fuzzy
+msgid "System"
 msgstr "システム(_Y)"
 
 #: src/MainWindow.vala:100
-msgid "_Light"
+#, fuzzy
+msgid "Light"
 msgstr "ライト(_L)"
 
 #: src/MainWindow.vala:101
-msgid "_Dark"
+#, fuzzy
+msgid "Dark"
 msgstr "ダーク(_D)"
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
-msgstr "Mapnik(_N)"
+msgid "Mapnik"
+msgstr "Mapnik"
 
 #: src/MainWindow.vala:105
-msgid "_Transport"
+#, fuzzy
+msgid "Transport"
 msgstr "交通(_T)"
 
 #: src/MainWindow.vala:108
-msgid "_Style"
+#, fuzzy
+msgid "Style"
 msgstr "スタイル(_S)"
 
 #: src/MainWindow.vala:109
-msgid "_Map Source"
+#, fuzzy
+msgid "Map Source"
 msgstr "マップ提供元(_M)"
 
 #: src/MainWindow.vala:112
@@ -119,6 +125,9 @@ msgstr "メインメニュー"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "位置情報サービスに接続できませんでした"
+
+#~ msgid "Map_nik"
+#~ msgstr "Mapnik(_N)"
 
 #~ msgid "@APP_NAME@"
 #~ msgstr "@APP_NAME@"
@@ -135,9 +144,6 @@ msgstr "位置情報サービスに接続できませんでした"
 #, c-format
 #~ msgid "_About %s"
 #~ msgstr "%s について(_A)"
-
-#~ msgid "Mapnik"
-#~ msgstr "Mapnik"
 
 #~ msgid "Try changing the search term."
 #~ msgstr "検索用語を変えてみてください。"

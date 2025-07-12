@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:38+0900\n"
 "PO-Revision-Date: 2024-05-08 14:05+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/atlas/ru/>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5.4-rc\n"
 
-#: data/atlas.desktop.in:3
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
 msgid "Atlas"
 msgstr "Atlas"
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in:3
 msgid "Map"
 msgstr "Карта"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "Смотрите куда идти"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in:10
 msgid "Trip;Explore;"
 msgstr "Путешествие;Исследовать;"
 
@@ -78,7 +78,6 @@ msgstr "Искать место"
 
 #: src/MainWindow.vala:70
 #, fuzzy
-#| msgid "No Search Results"
 msgid "No Results Found"
 msgstr "Ничего не найдено"
 
@@ -88,42 +87,36 @@ msgstr ""
 
 #: src/MainWindow.vala:99
 #, fuzzy
-#| msgid "System"
-msgid "S_ystem"
+msgid "System"
 msgstr "Система"
 
 #: src/MainWindow.vala:100
 #, fuzzy
-#| msgid "Light"
-msgid "_Light"
+msgid "Light"
 msgstr "Светлый"
 
 #: src/MainWindow.vala:101
 #, fuzzy
-#| msgid "Dark"
-msgid "_Dark"
+msgid "Dark"
 msgstr "Тёмный"
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
+msgid "Mapnik"
 msgstr ""
 
 #: src/MainWindow.vala:105
 #, fuzzy
-#| msgid "Transport Map"
-msgid "_Transport"
+msgid "Transport"
 msgstr "Карта транспорта"
 
 #: src/MainWindow.vala:108
 #, fuzzy
-#| msgid "Style:"
-msgid "_Style"
+msgid "Style"
 msgstr "Стиль:"
 
 #: src/MainWindow.vala:109
 #, fuzzy
-#| msgid "Map Source:"
-msgid "_Map Source"
+msgid "Map Source"
 msgstr "Источник карты:"
 
 #: src/MainWindow.vala:112

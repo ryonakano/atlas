@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:38+0900\n"
 "PO-Revision-Date: 2025-07-04 15:03+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/atlas/ta/>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13-dev\n"
 
-#: data/atlas.desktop.in:3
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
 msgid "Atlas"
 msgstr ""
 
-#: data/atlas.desktop.in:4
+#: data/atlas.desktop.in:3
 msgid "Map"
 msgstr "வரைபடம்"
 
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "எங்கு செல்ல வேண்டும் என்று பார்க்கவும்"
 
-#: data/atlas.desktop.in:11
+#: data/atlas.desktop.in:10
 msgid "Trip;Explore;"
 msgstr "பயணம்; ஆராயுங்கள்;"
 
@@ -82,31 +82,37 @@ msgid "Try a different search"
 msgstr "வேறு தேடலை முயற்சிக்கவும்"
 
 #: src/MainWindow.vala:99
-msgid "S_ystem"
+#, fuzzy
+msgid "System"
 msgstr "முறைமை"
 
 #: src/MainWindow.vala:100
-msgid "_Light"
+#, fuzzy
+msgid "Light"
 msgstr "விளக்கு"
 
 #: src/MainWindow.vala:101
-msgid "_Dark"
+#, fuzzy
+msgid "Dark"
 msgstr "இருண்ட"
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
-msgstr "வரைபடம்"
+msgid "Mapnik"
+msgstr "மேப்னிக்"
 
 #: src/MainWindow.vala:105
-msgid "_Transport"
+#, fuzzy
+msgid "Transport"
 msgstr "போக்குவரத்து"
 
 #: src/MainWindow.vala:108
-msgid "_Style"
+#, fuzzy
+msgid "Style"
 msgstr "பாணி"
 
 #: src/MainWindow.vala:109
-msgid "_Map Source"
+#, fuzzy
+msgid "Map Source"
 msgstr "வரைபட மூலம்"
 
 #: src/MainWindow.vala:112
@@ -116,6 +122,9 @@ msgstr "பட்டியல் விளையாடுங்கள்"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "இருப்பிட சேவையுடன் இணைக்கத் தவறிவிட்டது"
+
+#~ msgid "Map_nik"
+#~ msgstr "வரைபடம்"
 
 #~ msgid "@APP_NAME@"
 #~ msgstr "@APP_NAME@"
@@ -132,6 +141,3 @@ msgstr "இருப்பிட சேவையுடன் இணைக்க�
 #, c-format
 #~ msgid "_About %s"
 #~ msgstr "%s பற்றி"
-
-#~ msgid "Mapnik"
-#~ msgstr "மேப்னிக்"
