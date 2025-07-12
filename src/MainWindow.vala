@@ -42,7 +42,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
     private MapWidget map_widget;
 
     construct {
-        title = "Atlas";
+        title = _("Atlas");
         add_action_entries (ACTION_ENTRIES, this);
 
         location_store = new ListStore (typeof (Geocode.Place));
