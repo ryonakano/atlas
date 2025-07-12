@@ -1,14 +1,14 @@
-# Turkish translations for com.github.ryonakano.atlas.
+# Turkish translations for extra package.
 # Copyright (C) 2014-2015 Atlas Developers
 # Copyright (C) 2018-2025 Ryo Nakano
-# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# This file is distributed under the same license as the extra package.
 # Oğuz Ersen <oguz@ersen.moe>, 2022, 2023.
 # Sabri Ünal <libreajans@gmail.com>, 2023.
 # Sabri Ünal <yakushabb@gmail.com>, 2024.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-12 16:41+0900\n"
 "PO-Revision-Date: 2024-06-17 12:09+0000\n"
