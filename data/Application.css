@@ -1,6 +1,6 @@
 /* Style for Shumate.Point */
 map-point {
-    border: 0.3rem solid @bg_color;
+    border: 0.3rem solid @theme_bg_color;
     background: @BLUEBERRY_500;
     border-radius: 50%;
     min-height: 1.5rem;
