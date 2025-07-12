@@ -3,9 +3,9 @@ map-point {
     border: 0.3rem solid @theme_bg_color;
     background: @BLUEBERRY_500;
     border-radius: 50%;
-    min-height: 1.5rem;
-    min-width: 1.5rem;
-    animation: zoom 6s linear infinite;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+    animation: zoom 5s linear infinite;
 }
 
 @keyframes zoom {
@@ -13,7 +13,7 @@ map-point {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     100% {
         transform: scale(1);
