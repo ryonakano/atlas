@@ -1,5 +1,6 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Portuguese (Brazil) translations for com.github.ryonakano.atlas package.
+# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2018-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # John Peter Sa <johnppetersa@gmail.com>, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2025.
@@ -7,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
 "PO-Revision-Date: 2025-02-17 04:37+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
@@ -19,50 +20,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.10\n"
 
-#: data/atlas.desktop.in:3
-msgid "Atlas"
-msgstr ""
-
-#: data/atlas.desktop.in:4
-msgid "Map"
-msgstr ""
-
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
-msgid "View where to go"
-msgstr ""
-
-#: data/atlas.desktop.in:11
-msgid "Trip;Explore;"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:13
-msgid "A map app that helps you to see where you want to go."
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:16
-msgid "Features include:"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:18
-msgid "Search any place"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:19
-msgid "Jump to your current location instantly"
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:21
-msgid ""
-"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
-"Schuhmann."
-msgstr ""
-
-#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
-msgid "See locations on a map"
-msgstr ""
-
 #: src/MainWindow.vala:33
 msgid "Unknown"
+msgstr ""
+
+#: src/MainWindow.vala:45
+msgid "Atlas"
 msgstr ""
 
 #: src/MainWindow.vala:51
@@ -82,31 +45,31 @@ msgid "Try a different search"
 msgstr ""
 
 #: src/MainWindow.vala:99
-msgid "S_ystem"
+msgid "System"
 msgstr ""
 
 #: src/MainWindow.vala:100
-msgid "_Light"
+msgid "Light"
 msgstr ""
 
 #: src/MainWindow.vala:101
-msgid "_Dark"
+msgid "Dark"
 msgstr ""
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
+msgid "Mapnik"
 msgstr ""
 
 #: src/MainWindow.vala:105
-msgid "_Transport"
+msgid "Transport"
 msgstr ""
 
 #: src/MainWindow.vala:108
-msgid "_Style"
+msgid "Style"
 msgstr ""
 
 #: src/MainWindow.vala:109
-msgid "_Map Source"
+msgid "Map Source"
 msgstr ""
 
 #: src/MainWindow.vala:112
@@ -116,6 +79,3 @@ msgstr ""
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr ""
-
-#~ msgid "@APP_NAME@"
-#~ msgstr "@APP_NAME@"

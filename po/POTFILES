@@ -1,5 +1,3 @@
-data/atlas.desktop.in
-data/atlas.metainfo.xml.in
 src/Application.vala
 src/MainWindow.vala
 src/SearchResultItem.vala

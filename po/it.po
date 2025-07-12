@@ -1,4 +1,4 @@
-# Italian translations for com.github.ryonakano.atlas.
+# Italian translations for com.github.ryonakano.atlas package.
 # Copyright (C) 2014-2015 Atlas Developers
 # Copyright (C) 2018-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 21:13+0900\n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
 "PO-Revision-Date: 2025-03-31 04:19+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/atlas/it/>\n"
@@ -20,53 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.11-dev\n"
 
-#: data/atlas.desktop.in:3
-msgid "Atlas"
-msgstr "Atlas"
-
-#: data/atlas.desktop.in:4
-msgid "Map"
-msgstr "Mappa"
-
-#: data/atlas.desktop.in:5 data/atlas.metainfo.xml.in:11
-msgid "View where to go"
-msgstr "Visualizza dove vuoi andare"
-
-#: data/atlas.desktop.in:11
-msgid "Trip;Explore;"
-msgstr "Viaggio;Esplora;"
-
-#: data/atlas.metainfo.xml.in:13
-msgid "A map app that helps you to see where you want to go."
-msgstr "Un'app per mappe che ti aiuta a vedere dove vuoi andare."
-
-#: data/atlas.metainfo.xml.in:16
-msgid "Features include:"
-msgstr "Le caratteristiche includono:"
-
-#: data/atlas.metainfo.xml.in:18
-msgid "Search any place"
-msgstr "Cerca qualsiasi luogo"
-
-#: data/atlas.metainfo.xml.in:19
-msgid "Jump to your current location instantly"
-msgstr "Passa istantaneamente alla tua posizione attuale"
-
-#: data/atlas.metainfo.xml.in:21
-msgid ""
-"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
-"Schuhmann."
-msgstr ""
-"Questo è un fork di \"Atlas Maps\" e non esisterebbe senza il lavoro di "
-"Steffen Schuhmann."
-
-#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
-msgid "See locations on a map"
-msgstr ""
-
 #: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "Sconosciuto"
+
+#: src/MainWindow.vala:45
+msgid "Atlas"
+msgstr "Atlas"
 
 #: src/MainWindow.vala:51
 msgid "Move to the current location"
@@ -78,7 +38,6 @@ msgstr "Cerca posizione"
 
 #: src/MainWindow.vala:70
 #, fuzzy
-#| msgid "No Search Results"
 msgid "No Results Found"
 msgstr "Nessun risultato trovato"
 
@@ -88,42 +47,36 @@ msgstr ""
 
 #: src/MainWindow.vala:99
 #, fuzzy
-#| msgid "System"
-msgid "S_ystem"
+msgid "System"
 msgstr "Sistema"
 
 #: src/MainWindow.vala:100
 #, fuzzy
-#| msgid "Light"
-msgid "_Light"
+msgid "Light"
 msgstr "Chiaro"
 
 #: src/MainWindow.vala:101
 #, fuzzy
-#| msgid "Dark"
-msgid "_Dark"
+msgid "Dark"
 msgstr "Scuro"
 
 #: src/MainWindow.vala:104
-msgid "Map_nik"
+msgid "Mapnik"
 msgstr ""
 
 #: src/MainWindow.vala:105
 #, fuzzy
-#| msgid "Transport"
-msgid "_Transport"
+msgid "Transport"
 msgstr "Trasporto"
 
 #: src/MainWindow.vala:108
 #, fuzzy
-#| msgid "Style"
-msgid "_Style"
+msgid "Style"
 msgstr "Stile"
 
 #: src/MainWindow.vala:109
 #, fuzzy
-#| msgid "Map Source"
-msgid "_Map Source"
+msgid "Map Source"
 msgstr "Fonte mappa"
 
 #: src/MainWindow.vala:112
@@ -133,28 +86,3 @@ msgstr "Menu principale"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "Impossibile connettersi al servizio di localizzazione"
-
-#~ msgid "@APP_NAME@"
-#~ msgstr "@APP_NAME@"
-
-#~ msgid "App window in the light mode"
-#~ msgstr "Finestra dell'app in modalità chiara"
-
-#~ msgid "App window in the dark mode"
-#~ msgstr "Finestra dell'app in modalità scura"
-
-#~ msgid "translator-credits"
-#~ msgstr "Albano Battistella <albanobattistella@gmail.com>"
-
-#, c-format
-#~ msgid "_About %s"
-#~ msgstr "_Informazioni su %s"
-
-#~ msgid "Try changing the search term."
-#~ msgstr "Prova a cambiare il termine di ricerca."
-
-#~ msgid "Preferences"
-#~ msgstr "Preferenze"
-
-#~ msgid "Search where to go"
-#~ msgstr "Cerca dove andare"
