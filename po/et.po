@@ -1,5 +1,6 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Estonian translations for com.github.ryonakano.atlas package.
+# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2018-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
 # Priit Jõerüüt <hwlate@joeruut.com>, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
@@ -8,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:38+0900\n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
 "PO-Revision-Date: 2025-07-10 13:01+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/atlas/et/"
@@ -20,53 +21,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13-dev\n"
 
-#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
-msgid "Atlas"
-msgstr "Atlas"
-
-#: data/atlas.desktop.in:3
-msgid "Map"
-msgstr "Kaart"
-
-#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
-msgid "View where to go"
-msgstr "Vaata, kuhu saad jõuda"
-
-#: data/atlas.desktop.in:10
-msgid "Trip;Explore;"
-msgstr "map;atlas;reisima;reisimine;kaart;kaardid;teekond;teekonnad;sõitmine;kõndimine;matkamine;"
-
-#: data/atlas.metainfo.xml.in:13
-msgid "A map app that helps you to see where you want to go."
-msgstr "Kaart, mis aitab sul selgust saada oma teekonnast."
-
-#: data/atlas.metainfo.xml.in:16
-msgid "Features include:"
-msgstr "Funktsionaalsused:"
-
-#: data/atlas.metainfo.xml.in:18
-msgid "Search any place"
-msgstr "Otsi kõiki asukohti"
-
-#: data/atlas.metainfo.xml.in:19
-msgid "Jump to your current location instantly"
-msgstr "Näita lennult praegust asukohta"
-
-#: data/atlas.metainfo.xml.in:21
-msgid ""
-"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
-"Schuhmann."
-msgstr ""
-"See rakendus on edasiarendus rakendusest „Atlas Maps“ ning teda poleks "
-"olemas ilma Steffen Schuhmanni panuseta."
-
-#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
-msgid "See locations on a map"
-msgstr "Vaata asukohti kaardil"
-
 #: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "Teadmata"
+
+#: src/MainWindow.vala:45
+msgid "Atlas"
+msgstr "Atlas"
 
 #: src/MainWindow.vala:51
 msgid "Move to the current location"
@@ -125,25 +86,3 @@ msgstr "Põhimenüü"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "Ei õnnestunud luua ühendust asukoha tuvastamise teenusega"
-
-#~ msgid "Map_nik"
-#~ msgstr "Map_nik"
-
-#~ msgid "@APP_NAME@"
-#~ msgstr "@APP_NAME@"
-
-#~ msgid "App window in the light mode"
-#~ msgstr "Heledas kujunduses rakenduse aken"
-
-#~ msgid "App window in the dark mode"
-#~ msgstr "Tumedas kujunduses rakenduse aken"
-
-#~ msgid "translator-credits"
-#~ msgstr "Priit Jõerüüt 2024-2025"
-
-#, c-format
-#~ msgid "_About %s"
-#~ msgstr "R_akenduse teave: %s"
-
-#~ msgid "Try changing the search term."
-#~ msgstr "Proovi muuta otsingusõna."

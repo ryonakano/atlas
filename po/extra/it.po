@@ -1,0 +1,65 @@
+# Italian translations for extra package.
+# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2018-2025 Ryo Nakano
+# This file is distributed under the same license as the extra package.
+# albanobattistella <albano_battistella@hotmail.com>, 2021, 2022, 2023, 2024, 2025.
+# J. Lavoie <j.lavoie@net-c.ca>, 2022.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"PO-Revision-Date: 2025-03-31 04:19+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/atlas/it/>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
+
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
+msgid "Atlas"
+msgstr "Atlas"
+
+#: data/atlas.desktop.in:3
+msgid "Map"
+msgstr "Mappa"
+
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr "Visualizza dove vuoi andare"
+
+#: data/atlas.desktop.in:10
+msgid "Trip;Explore;"
+msgstr "Viaggio;Esplora;"
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr "Un'app per mappe che ti aiuta a vedere dove vuoi andare."
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "Le caratteristiche includono:"
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr "Cerca qualsiasi luogo"
+
+#: data/atlas.metainfo.xml.in:19
+msgid "Jump to your current location instantly"
+msgstr "Passa istantaneamente alla tua posizione attuale"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+"Questo è un fork di \"Atlas Maps\" e non esisterebbe senza il lavoro di "
+"Steffen Schuhmann."
+
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
+msgstr ""

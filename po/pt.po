@@ -1,4 +1,4 @@
-# Portuguese translations for com.github.ryonakano.atlas.
+# Portuguese translations for com.github.ryonakano.atlas package.
 # Copyright (C) 2014-2015 Atlas Developers
 # Copyright (C) 2018-2025 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.atlas package.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:38+0900\n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/atlas/pt/"
@@ -21,53 +21,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
-msgid "Atlas"
-msgstr "Atlas"
-
-#: data/atlas.desktop.in:3
-msgid "Map"
-msgstr "Mapa"
-
-#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
-msgid "View where to go"
-msgstr "Veja para onde ir"
-
-#: data/atlas.desktop.in:10
-msgid "Trip;Explore;"
-msgstr "Trip;Explore;Viagem;Explorar;"
-
-#: data/atlas.metainfo.xml.in:13
-msgid "A map app that helps you to see where you want to go."
-msgstr "Uma aplicação de mapa que o ajuda a ver para onde quer ir."
-
-#: data/atlas.metainfo.xml.in:16
-msgid "Features include:"
-msgstr "Funcionalidades incluídas:"
-
-#: data/atlas.metainfo.xml.in:18
-msgid "Search any place"
-msgstr "Procurar qualquer lugar"
-
-#: data/atlas.metainfo.xml.in:19
-msgid "Jump to your current location instantly"
-msgstr "Vá instantaneamente para a sua localização atual"
-
-#: data/atlas.metainfo.xml.in:21
-msgid ""
-"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
-"Schuhmann."
-msgstr ""
-"Isto é uma bifurcação do \"Atlas Maps\" e não existiria sem o trabalho de "
-"Steffen Schuhmann."
-
-#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
-msgid "See locations on a map"
-msgstr ""
-
 #: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "Desconhecido"
+
+#: src/MainWindow.vala:45
+msgid "Atlas"
+msgstr "Atlas"
 
 #: src/MainWindow.vala:51
 msgid "Move to the current location"
@@ -127,15 +87,3 @@ msgstr ""
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr ""
-
-#~ msgid "@APP_NAME@"
-#~ msgstr "@APP_NAME@"
-
-#~ msgid "Try changing the search term."
-#~ msgstr "Tente alterar o termo de pesquisa."
-
-#~ msgid "Preferences"
-#~ msgstr "Preferências"
-
-#~ msgid "Search where to go"
-#~ msgstr "Procurar para onde ir"
