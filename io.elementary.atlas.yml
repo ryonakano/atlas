@@ -1,8 +1,8 @@
-id: com.github.ryonakano.atlas
+id: io.elementary.atlas
 runtime: io.elementary.Platform
 runtime-version: '8.2'
 sdk: io.elementary.Sdk
-command: com.github.ryonakano.atlas
+command: io.elementary.atlas
 finish-args:
   - --share=ipc
   - --share=network

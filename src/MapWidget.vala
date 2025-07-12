@@ -118,7 +118,7 @@ public class Atlas.MapWidget : Gtk.Box {
         GClue.Simple? simple = null;
 
         try {
-            simple = yield new GClue.Simple ("com.github.ryonakano.atlas", GClue.AccuracyLevel.EXACT, null);
+            simple = yield new GClue.Simple ("io.elementary.atlas", GClue.AccuracyLevel.EXACT, null);
         } catch (Error e) {
             warning ("Failed to connect to GeoClue2 service: %s", e.message);
         }

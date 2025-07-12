@@ -7,13 +7,13 @@
 Run `flatpak-builder` to configure the build environment, download dependencies, build, and install
 
 ```bash
-    flatpak-builder build com.github.ryonakano.atlas.yml --user --install --force-clean --install-deps-from=appcenter
+    flatpak-builder build io.elementary.atlas.yml --user --install --force-clean --install-deps-from=appcenter
 ```
 
 Then execute with
 
 ```bash
-    flatpak run com.github.ryonakano.atlas
+    flatpak run io.elementary.atlas
 ```
 
 ## History
