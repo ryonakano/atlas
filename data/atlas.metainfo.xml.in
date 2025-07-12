@@ -7,7 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name translate="no">Atlas</name>
+  <name>Atlas</name>
   <summary>View where to go</summary>
   <description>
     <p>
@@ -26,11 +26,11 @@
   <screenshots>
     <screenshot type="default" environment="pantheon">
       <caption>See locations on a map</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.1.0/data/screenshots/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.1.1/data/screenshots/screenshot-light.png</image>
     </screenshot>
     <screenshot environment="pantheon:dark">
       <caption>See locations on a map</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.1.0/data/screenshots/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.1.1/data/screenshots/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -59,6 +59,21 @@
   </developer>
 
   <releases>
+    <release version="3.1.1" date="2025-07-12" urgency="medium">
+      <description translate="no">
+        <ul>
+          <li>Add shadow under the headerbar</li>
+          <li>Animate current location using CSS</li>
+          <li>Use propagate natural height and max content height for the search popover instead of hardcoding its height (thanks to @danirabbit)</li>
+          <li>Optimize for Pantheon and drop support for GNOME</li>
+          <li>Add a workaround for the startup crash with Gtk >= 4.17</li>
+          <li>Flatpak: Update protobuf-c to 1.5.2</li>
+          <li>Flatpak: Update elementary Platform to 8.2</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="3.1.0" date="2025-04-12" urgency="medium">
       <description translate="no">
         <ul>

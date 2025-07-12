@@ -42,7 +42,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
     private MapWidget map_widget;
 
     construct {
-        title = "Atlas";
+        title = _("Atlas");
         add_action_entries (ACTION_ENTRIES, this);
 
         location_store = new ListStore (typeof (Geocode.Place));
@@ -96,17 +96,17 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         search_res_popover.set_parent (search_entry);
 
         var style_submenu = new Menu ();
-        style_submenu.append (_("S_ystem"), "app.color-scheme('%s')".printf (Define.ColorScheme.DEFAULT));
-        style_submenu.append (_("_Light"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_LIGHT));
-        style_submenu.append (_("_Dark"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_DARK));
+        style_submenu.append (_("System"), "app.color-scheme('%s')".printf (Define.ColorScheme.DEFAULT));
+        style_submenu.append (_("Light"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_LIGHT));
+        style_submenu.append (_("Dark"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_DARK));
 
         var map_source_submenu = new Menu ();
-        map_source_submenu.append (_("Map_nik"), "win.map-source('%s')".printf (Define.MapSource.MAPNIK));
-        map_source_submenu.append (_("_Transport"), "win.map-source('%s')".printf (Define.MapSource.TRANSPORT));
+        map_source_submenu.append (_("Mapnik"), "win.map-source('%s')".printf (Define.MapSource.MAPNIK));
+        map_source_submenu.append (_("Transport"), "win.map-source('%s')".printf (Define.MapSource.TRANSPORT));
 
         var main_menu = new Menu ();
-        main_menu.append_submenu (_("_Style"), style_submenu);
-        main_menu.append_submenu (_("_Map Source"), map_source_submenu);
+        main_menu.append_submenu (_("Style"), style_submenu);
+        main_menu.append_submenu (_("Map Source"), map_source_submenu);
 
         var menu_button = new Gtk.MenuButton () {
             tooltip_text = _("Main Menu"),
@@ -184,6 +184,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
         var search_entry_gesture = new Gtk.EventControllerKey ();
         search_entry_gesture.key_pressed.connect (() => {
             search_res_popover.popdown ();
+            return true;
         });
         ((Gtk.Widget) search_res_popover).add_controller (search_entry_gesture);
 
@@ -242,8 +243,8 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
                                          Util.map_source_action_transform_to_cb,
                                          Util.map_source_action_transform_from_cb);
         Application.settings.bind_with_mapping ("map-source", map_widget, "map-source", SettingsBindFlags.DEFAULT,
-                                                Util.map_source_get_mapping_cb,
-                                                Util.map_source_set_mapping_cb,
+                                                (SettingsBindGetMappingShared) Util.map_source_get_mapping_cb,
+                                                (SettingsBindSetMappingShared) Util.map_source_set_mapping_cb,
                                                 null, null);
         add_action (map_source_action);
     }
