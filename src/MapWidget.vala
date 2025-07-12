@@ -4,7 +4,7 @@
  *                         2018-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Atlas.MapWidget : Gtk.Box {
+public class Maps.MapWidget : Gtk.Box {
     public Shumate.MapSource map_source {
         get {
             return map_widget.map_source;
@@ -55,9 +55,9 @@ public class Atlas.MapWidget : Gtk.Box {
     private void set_init_place () {
         Shumate.MapSource map_source = map_widget.map_source;
 
-        double latitude = Atlas.Application.settings.get_double ("latitude");
-        double longitude = Atlas.Application.settings.get_double ("longitude");
-        double zoom_level = Atlas.Application.settings.get_double ("zoom-level");
+        double latitude = Maps.Application.settings.get_double ("latitude");
+        double longitude = Maps.Application.settings.get_double ("longitude");
+        double zoom_level = Maps.Application.settings.get_double ("zoom-level");
         if (zoom_level < map_source.min_zoom_level || map_source.max_zoom_level < zoom_level) {
             zoom_level = DEFAULT_ZOOM_LEVEL;
         }
@@ -102,9 +102,9 @@ public class Atlas.MapWidget : Gtk.Box {
         this.location = location;
 
         // Use fixed latitude and longitude as current location (for debug)
-        if (Atlas.Application.settings.get_boolean ("fixed-location")) {
-            lat = Atlas.Application.settings.get_double ("latitude-fixed");
-            lng = Atlas.Application.settings.get_double ("longitude-fixed");
+        if (Maps.Application.settings.get_boolean ("fixed-location")) {
+            lat = Maps.Application.settings.get_double ("latitude-fixed");
+            lng = Maps.Application.settings.get_double ("longitude-fixed");
             this.location.latitude = lat;
             this.location.longitude = lng;
         }
@@ -118,7 +118,7 @@ public class Atlas.MapWidget : Gtk.Box {
         GClue.Simple? simple = null;
 
         try {
-            simple = yield new GClue.Simple ("io.elementary.atlas", GClue.AccuracyLevel.EXACT, null);
+            simple = yield new GClue.Simple ("io.elementary.maps", GClue.AccuracyLevel.EXACT, null);
         } catch (Error e) {
             warning ("Failed to connect to GeoClue2 service: %s", e.message);
         }
@@ -145,9 +145,9 @@ public class Atlas.MapWidget : Gtk.Box {
 
     // Saves the latest state of the map.
     public void save_map_state () {
-        Atlas.Application.settings.set_double ("latitude", base_map.viewport.latitude);
-        Atlas.Application.settings.set_double ("longitude", base_map.viewport.longitude);
-        Atlas.Application.settings.set_double ("zoom-level", base_map.viewport.zoom_level);
+        Maps.Application.settings.set_double ("latitude", base_map.viewport.latitude);
+        Maps.Application.settings.set_double ("longitude", base_map.viewport.longitude);
+        Maps.Application.settings.set_double ("zoom-level", base_map.viewport.zoom_level);
     }
 
     private void clear_location () {

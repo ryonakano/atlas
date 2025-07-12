@@ -1,4 +1,4 @@
-# Atlas
+# Maps
 ![Screenshot in the light mode](data/screenshots/screenshot-light.png#gh-light-mode-only)
 
 ![Screenshot in the dark mode](data/screenshots/screenshot-dark.png#gh-dark-mode-only)
@@ -7,13 +7,13 @@
 Run `flatpak-builder` to configure the build environment, download dependencies, build, and install
 
 ```bash
-    flatpak-builder build io.elementary.atlas.yml --user --install --force-clean --install-deps-from=appcenter
+    flatpak-builder build io.elementary.maps.yml --user --install --force-clean --install-deps-from=appcenter
 ```
 
 Then execute with
 
 ```bash
-    flatpak run io.elementary.atlas
+    flatpak run io.elementary.maps
 ```
 
 ## History

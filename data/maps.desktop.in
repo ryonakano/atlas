@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Atlas
+Name=Maps
 GenericName=Map
 Comment=View where to go
 Categories=GTK;Utility;Science;Maps;
-Exec=io.elementary.atlas
-Icon=io.elementary.atlas
+Exec=io.elementary.maps
+Icon=io.elementary.maps
 Type=Application
 Terminal=false
 Keywords=Trip;Explore;

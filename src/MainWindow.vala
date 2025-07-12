@@ -4,7 +4,7 @@
  *                         2018-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Atlas.MainWindow : Adw.ApplicationWindow {
+public class Maps.MainWindow : Adw.ApplicationWindow {
     private class PlaceListBoxRow : Gtk.ListBoxRow {
         public Geocode.Place place { get; construct; }
 
@@ -42,7 +42,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
     private MapWidget map_widget;
 
     construct {
-        title = _("Atlas");
+        title = _("Maps");
         add_action_entries (ACTION_ENTRIES, this);
 
         location_store = new ListStore (typeof (Geocode.Place));

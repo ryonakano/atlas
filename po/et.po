@@ -1,13 +1,13 @@
-# Estonian translations for io.elementary.atlas package.
+# Estonian translations for io.elementary.maps package.
 # Copyright (C) 2014-2015 Atlas Developers
 # Copyright (C) 2018-2025 Ryo Nakano
-# This file is distributed under the same license as the io.elementary.atlas package.
+# This file is distributed under the same license as the io.elementary.maps package.
 # Priit Jõerüüt <hwlate@joeruut.com>, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 # Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>, 2025.
 msgid ""
 msgstr ""
-"Project-Id-Version: io.elementary.atlas\n"
+"Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-12 16:41+0900\n"
 "PO-Revision-Date: 2025-07-10 13:01+0000\n"
