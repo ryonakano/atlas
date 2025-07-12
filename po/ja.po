@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-09 21:13+0900\n"
-"PO-Revision-Date: 2025-03-22 15:27+0000\n"
+"PO-Revision-Date: 2025-07-10 13:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/"
-">\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/>"
+"\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: data/atlas.desktop.in:3
 msgid "Atlas"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
 msgid "See locations on a map"
-msgstr ""
+msgstr "地図上で場所を確認します"
 
 #: src/MainWindow.vala:33
 msgid "Unknown"
