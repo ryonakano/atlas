@@ -2,7 +2,7 @@
 
 set -e
 
-flatpak remove --system --noninteractive io.elementary.atlas//stable || true
+flatpak remove --system --noninteractive io.elementary.maps//stable || true
 
 #DEBHELPER#
 

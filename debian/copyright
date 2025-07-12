@@ -1,6 +1,6 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: io.elementary.atlas
-Source: https://github.com/elementary/atlas
+Upstream-Name: io.elementary.maps
+Source: https://github.com/elementary/maps
 
 Files: *
 Copyright: 2025 elementary, Inc. <builds@elementary.io>
