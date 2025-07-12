@@ -63,6 +63,10 @@
       <description translate="no">
         <ul>
           <li>Add shadow under the headerbar</li>
+          <li>Animate current location using CSS</li>
+          <li>Use propagate natural height and max content height for the search popover instead of hardcoding its height (thanks to @danirabbit)</li>
+          <li>Optimize for Pantheon and drop support for GNOME</li>
+          <li>Add a workaround for the startup crash with Gtk >= 4.17</li>
           <li>Flatpak: Update protobuf-c to 1.5.2</li>
           <li>Flatpak: Update elementary Platform to 8.2</li>
           <li>Update translations</li>
