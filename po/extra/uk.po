@@ -1,0 +1,145 @@
+# Ukrainian translations for com.github.ryonakano.atlas.
+# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2018-2025 Ryo Nakano
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024, 2025.
+# Artem <artem@molotov.work>, 2022.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"PO-Revision-Date: 2025-03-25 00:04+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/atlas/uk/"
+">\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.11-dev\n"
+
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
+msgid "Atlas"
+msgstr "Atlas"
+
+#: data/atlas.desktop.in:3
+msgid "Map"
+msgstr "Мапа"
+
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr "Переглядайте, куди йти"
+
+#: data/atlas.desktop.in:10
+msgid "Trip;Explore;"
+msgstr "Подорож;Відкриття;Trip;Explore;"
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr ""
+"Картографічний застосунок, який допоможе вам дізнатися, як дістатися "
+"потрібного місця."
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "До особливостей належать:"
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr "Пошук будь-якого місця"
+
+#: data/atlas.metainfo.xml.in:19
+msgid "Jump to your current location instantly"
+msgstr "Миттєвий перехід до свого поточного місцеперебування"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+"Це відгалуження «Atlas Maps», і проєкт не існував би без роботи Steffen "
+"Schuhmann."
+
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
+msgstr ""
+
+#~ msgid "Unknown"
+#~ msgstr "Невідомо"
+
+#~ msgid "Move to the current location"
+#~ msgstr "Перейти до поточного розташування"
+
+#~ msgid "Search Location"
+#~ msgstr "Пошук розташування"
+
+#~ msgid "No Results Found"
+#~ msgstr "Нічого не знайдено"
+
+#~ msgid "Try a different search"
+#~ msgstr "Введіть інший запит"
+
+#, fuzzy
+#~ msgid "System"
+#~ msgstr "С_истемний"
+
+#, fuzzy
+#~ msgid "Light"
+#~ msgstr "_Світлий"
+
+#, fuzzy
+#~ msgid "Dark"
+#~ msgstr "_Темний"
+
+#~ msgid "Mapnik"
+#~ msgstr "Mapnik"
+
+#, fuzzy
+#~ msgid "Transport"
+#~ msgstr "_Транспорт"
+
+#, fuzzy
+#~ msgid "Style"
+#~ msgstr "_Стиль"
+
+#, fuzzy
+#~ msgid "Map Source"
+#~ msgstr "_Джерело мапи"
+
+#~ msgid "Main Menu"
+#~ msgstr "Головне меню"
+
+#~ msgid "Failed to connect to location service"
+#~ msgstr "Не вдалося під'єднатися до служби визначення розташування"
+
+#~ msgid "Map_nik"
+#~ msgstr "Map_nik"
+
+#~ msgid "@APP_NAME@"
+#~ msgstr "@APP_NAME@"
+
+#~ msgid "App window in the light mode"
+#~ msgstr "Вікно застосунку у світловому режимі"
+
+#~ msgid "App window in the dark mode"
+#~ msgstr "Вікно застосунку у темному режимі"
+
+#~ msgid "translator-credits"
+#~ msgstr "Ihor Hordiichuk"
+
+#, c-format
+#~ msgid "_About %s"
+#~ msgstr "_Про %s"
+
+#~ msgid "Try changing the search term."
+#~ msgstr "Спробуйте змінити пошуковий запит."
+
+#~ msgid "Preferences"
+#~ msgstr "Налаштування"
+
+#~ msgid "Search where to go"
+#~ msgstr "Шукайте, куди йти"

@@ -1,0 +1,114 @@
+# Polish translation for com.github.ryonakano.atlas.
+# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2018-2025 Ryo Nakano
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# PolPolyLingo <paulius.narkevicius@vilniustech.lt>, 2023
+# Eryk Michalak <gnu.ewm@protonmail.com>, 2023.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"PO-Revision-Date: 2024-05-03 10:45+0000\n"
+"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/rosp/atlas/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.5.3\n"
+
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
+msgid "Atlas"
+msgstr "Atlas"
+
+#: data/atlas.desktop.in:3
+msgid "Map"
+msgstr "Mapa"
+
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr "Wyświetl, dokąd iść"
+
+#: data/atlas.desktop.in:10
+msgid "Trip;Explore;"
+msgstr "Wycieczka; Odkryj;"
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr "Aplikacja map, która pomaga zobaczyć, dokąd chcesz iść."
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "Funkcje obejmują:"
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr "Szukaj w dowolnym miejscu"
+
+#: data/atlas.metainfo.xml.in:19
+msgid "Jump to your current location instantly"
+msgstr "Natychmiastowe przejście do bieżącej lokalizacji"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+"To widelec \"Atlas Maps\" i nie istniałby bez pracy Steffena Schuhmanna."
+
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
+msgstr ""
+
+#~ msgid "Unknown"
+#~ msgstr "Nieznane"
+
+#~ msgid "Move to the current location"
+#~ msgstr "Przenieś do bieżącej lokalizacji"
+
+#~ msgid "Search Location"
+#~ msgstr "Lokalizacja wyszukiwania"
+
+#, fuzzy
+#~ msgid "No Results Found"
+#~ msgstr "Brak wyników wyszukiwania"
+
+#, fuzzy
+#~ msgid "System"
+#~ msgstr "System"
+
+#, fuzzy
+#~ msgid "Light"
+#~ msgstr "Jasny"
+
+#, fuzzy
+#~ msgid "Dark"
+#~ msgstr "Ciemny"
+
+#, fuzzy
+#~ msgid "Transport"
+#~ msgstr "Mapa transportu"
+
+#, fuzzy
+#~ msgid "Style"
+#~ msgstr "Styl:"
+
+#, fuzzy
+#~ msgid "Map Source"
+#~ msgstr "Źródło mapy:"
+
+#~ msgid "@APP_NAME@"
+#~ msgstr "@APP_NAME@"
+
+#~ msgid "Try changing the search term."
+#~ msgstr "Spróbuj zmienić zapytanie wyszukiwania."
+
+#~ msgid "Preferences"
+#~ msgstr "Preferencje"
+
+#~ msgid "Search where to go"
+#~ msgstr "Szukaj gdzie iść"

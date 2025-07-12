@@ -1,0 +1,141 @@
+# Japanese translations for com.github.ryonakano.atlas.
+# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2018-2025 Ryo Nakano
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021, 2022, 2023, 2024, 2025.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"PO-Revision-Date: 2025-07-10 13:01+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/"
+">\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.13-dev\n"
+
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
+msgid "Atlas"
+msgstr "Atlas"
+
+#: data/atlas.desktop.in:3
+msgid "Map"
+msgstr "地図"
+
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr "行きたい場所を見ましょう"
+
+#: data/atlas.desktop.in:10
+msgid "Trip;Explore;"
+msgstr "旅行;冒険;探索;"
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr "行き先を探すのに便利な地図アプリです。"
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "含まれる機能:"
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr "場所を検索できます"
+
+#: data/atlas.metainfo.xml.in:19
+msgid "Jump to your current location instantly"
+msgstr "現在地をすぐに表示できます"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+"このアプリは、\"Atlas Maps\" をフォークして開発されました。Steffen Schuhmann "
+"に感謝申し上げます。"
+
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
+msgstr "地図上で場所を確認します"
+
+#~ msgid "Unknown"
+#~ msgstr "不明"
+
+#~ msgid "Move to the current location"
+#~ msgstr "現在地に移動"
+
+#~ msgid "Search Location"
+#~ msgstr "場所を検索"
+
+#~ msgid "No Results Found"
+#~ msgstr "見つかりませんでした"
+
+#~ msgid "Try a different search"
+#~ msgstr "他のキーワードを試してください"
+
+#, fuzzy
+#~ msgid "System"
+#~ msgstr "システム(_Y)"
+
+#, fuzzy
+#~ msgid "Light"
+#~ msgstr "ライト(_L)"
+
+#, fuzzy
+#~ msgid "Dark"
+#~ msgstr "ダーク(_D)"
+
+#~ msgid "Mapnik"
+#~ msgstr "Mapnik"
+
+#, fuzzy
+#~ msgid "Transport"
+#~ msgstr "交通(_T)"
+
+#, fuzzy
+#~ msgid "Style"
+#~ msgstr "スタイル(_S)"
+
+#, fuzzy
+#~ msgid "Map Source"
+#~ msgstr "マップ提供元(_M)"
+
+#~ msgid "Main Menu"
+#~ msgstr "メインメニュー"
+
+#~ msgid "Failed to connect to location service"
+#~ msgstr "位置情報サービスに接続できませんでした"
+
+#~ msgid "Map_nik"
+#~ msgstr "Mapnik(_N)"
+
+#~ msgid "@APP_NAME@"
+#~ msgstr "@APP_NAME@"
+
+#~ msgid "App window in the light mode"
+#~ msgstr "ライトモードのアプリウィンドウ"
+
+#~ msgid "App window in the dark mode"
+#~ msgstr "ダークモードのアプリウィンドウ"
+
+#~ msgid "translator-credits"
+#~ msgstr "Ryo Nakano"
+
+#, c-format
+#~ msgid "_About %s"
+#~ msgstr "%s について(_A)"
+
+#~ msgid "Try changing the search term."
+#~ msgstr "検索用語を変えてみてください。"
+
+#~ msgid "Preferences"
+#~ msgstr "設定"
+
+#~ msgid "Search where to go"
+#~ msgstr "行きたい場所を検索しましょう"

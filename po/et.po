@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:38+0900\n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
 "PO-Revision-Date: 2025-07-10 13:01+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/atlas/et/"
@@ -20,53 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13-dev\n"
 
-#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
-msgid "Atlas"
-msgstr "Atlas"
-
-#: data/atlas.desktop.in:3
-msgid "Map"
-msgstr "Kaart"
-
-#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
-msgid "View where to go"
-msgstr "Vaata, kuhu saad jõuda"
-
-#: data/atlas.desktop.in:10
-msgid "Trip;Explore;"
-msgstr "map;atlas;reisima;reisimine;kaart;kaardid;teekond;teekonnad;sõitmine;kõndimine;matkamine;"
-
-#: data/atlas.metainfo.xml.in:13
-msgid "A map app that helps you to see where you want to go."
-msgstr "Kaart, mis aitab sul selgust saada oma teekonnast."
-
-#: data/atlas.metainfo.xml.in:16
-msgid "Features include:"
-msgstr "Funktsionaalsused:"
-
-#: data/atlas.metainfo.xml.in:18
-msgid "Search any place"
-msgstr "Otsi kõiki asukohti"
-
-#: data/atlas.metainfo.xml.in:19
-msgid "Jump to your current location instantly"
-msgstr "Näita lennult praegust asukohta"
-
-#: data/atlas.metainfo.xml.in:21
-msgid ""
-"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
-"Schuhmann."
-msgstr ""
-"See rakendus on edasiarendus rakendusest „Atlas Maps“ ning teda poleks "
-"olemas ilma Steffen Schuhmanni panuseta."
-
-#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
-msgid "See locations on a map"
-msgstr "Vaata asukohti kaardil"
-
 #: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "Teadmata"
+
+#: src/MainWindow.vala:45
+msgid "Atlas"
+msgstr "Atlas"
 
 #: src/MainWindow.vala:51
 msgid "Move to the current location"
@@ -125,6 +85,37 @@ msgstr "Põhimenüü"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "Ei õnnestunud luua ühendust asukoha tuvastamise teenusega"
+
+#~ msgid "Map"
+#~ msgstr "Kaart"
+
+#~ msgid "View where to go"
+#~ msgstr "Vaata, kuhu saad jõuda"
+
+#~ msgid "Trip;Explore;"
+#~ msgstr "map;atlas;reisima;reisimine;kaart;kaardid;teekond;teekonnad;sõitmine;kõndimine;matkamine;"
+
+#~ msgid "A map app that helps you to see where you want to go."
+#~ msgstr "Kaart, mis aitab sul selgust saada oma teekonnast."
+
+#~ msgid "Features include:"
+#~ msgstr "Funktsionaalsused:"
+
+#~ msgid "Search any place"
+#~ msgstr "Otsi kõiki asukohti"
+
+#~ msgid "Jump to your current location instantly"
+#~ msgstr "Näita lennult praegust asukohta"
+
+#~ msgid ""
+#~ "This is a fork of \"Atlas Maps\" and wouldn't exist without work of "
+#~ "Steffen Schuhmann."
+#~ msgstr ""
+#~ "See rakendus on edasiarendus rakendusest „Atlas Maps“ ning teda poleks "
+#~ "olemas ilma Steffen Schuhmanni panuseta."
+
+#~ msgid "See locations on a map"
+#~ msgstr "Vaata asukohti kaardil"
 
 #~ msgid "Map_nik"
 #~ msgstr "Map_nik"

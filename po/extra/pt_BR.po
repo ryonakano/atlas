@@ -19,64 +19,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.10\n"
 
-#: src/MainWindow.vala:33
-msgid "Unknown"
-msgstr ""
-
-#: src/MainWindow.vala:45
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
 msgid "Atlas"
 msgstr ""
 
-#: src/MainWindow.vala:51
-msgid "Move to the current location"
+#: data/atlas.desktop.in:3
+msgid "Map"
 msgstr ""
 
-#: src/MainWindow.vala:63
-msgid "Search Location"
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
 msgstr ""
 
-#: src/MainWindow.vala:70
-msgid "No Results Found"
+#: data/atlas.desktop.in:10
+msgid "Trip;Explore;"
 msgstr ""
 
-#: src/MainWindow.vala:71
-msgid "Try a different search"
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
 msgstr ""
 
-#: src/MainWindow.vala:99
-msgid "System"
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
 msgstr ""
 
-#: src/MainWindow.vala:100
-msgid "Light"
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
 msgstr ""
 
-#: src/MainWindow.vala:101
-msgid "Dark"
+#: data/atlas.metainfo.xml.in:19
+msgid "Jump to your current location instantly"
 msgstr ""
 
-#: src/MainWindow.vala:104
-msgid "Mapnik"
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
 msgstr ""
 
-#: src/MainWindow.vala:105
-msgid "Transport"
-msgstr ""
-
-#: src/MainWindow.vala:108
-msgid "Style"
-msgstr ""
-
-#: src/MainWindow.vala:109
-msgid "Map Source"
-msgstr ""
-
-#: src/MainWindow.vala:112
-msgid "Main Menu"
-msgstr ""
-
-#: src/MainWindow.vala:150
-msgid "Failed to connect to location service"
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
 msgstr ""
 
 #~ msgid "@APP_NAME@"

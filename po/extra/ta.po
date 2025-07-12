@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# தமிழ்நேரம் <anishprabu.t@gmail.com>, 2025.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"PO-Revision-Date: 2025-07-04 15:03+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/atlas/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
+
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
+msgid "Atlas"
+msgstr ""
+
+#: data/atlas.desktop.in:3
+msgid "Map"
+msgstr "வரைபடம்"
+
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr "எங்கு செல்ல வேண்டும் என்று பார்க்கவும்"
+
+#: data/atlas.desktop.in:10
+msgid "Trip;Explore;"
+msgstr "பயணம்; ஆராயுங்கள்;"
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr "நீங்கள் எங்கு செல்ல விரும்புகிறீர்கள் என்பதைப் பார்க்க உதவும் வரைபட பயன்பாடு."
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "நற்பொருத்தங்கள் பின்வருமாறு:"
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr "எந்த இடத்தையும் தேடுங்கள்"
+
+#: data/atlas.metainfo.xml.in:19
+msgid "Jump to your current location instantly"
+msgstr "உங்கள் தற்போதைய இருப்பிடத்திற்கு உடனடியாக செல்லவும்"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+"இது \"அட்லச் மேப்ச்\" இன் முட்கரண்டி மற்றும் ச்டெஃபென் சுஅ்மானின் வேலை இல்லாமல் இருக்காது."
+
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
+msgstr ""
+
+#~ msgid "Unknown"
+#~ msgstr "தெரியவில்லை"
+
+#~ msgid "Move to the current location"
+#~ msgstr "தற்போதைய இடத்திற்கு செல்லுங்கள்"
+
+#~ msgid "Search Location"
+#~ msgstr "இடம் தேடல்"
+
+#~ msgid "No Results Found"
+#~ msgstr "முடிவுகள் எதுவும் கிடைக்கவில்லை"
+
+#~ msgid "Try a different search"
+#~ msgstr "வேறு தேடலை முயற்சிக்கவும்"
+
+#, fuzzy
+#~ msgid "System"
+#~ msgstr "முறைமை"
+
+#, fuzzy
+#~ msgid "Light"
+#~ msgstr "விளக்கு"
+
+#, fuzzy
+#~ msgid "Dark"
+#~ msgstr "இருண்ட"
+
+#~ msgid "Mapnik"
+#~ msgstr "மேப்னிக்"
+
+#, fuzzy
+#~ msgid "Transport"
+#~ msgstr "போக்குவரத்து"
+
+#, fuzzy
+#~ msgid "Style"
+#~ msgstr "பாணி"
+
+#, fuzzy
+#~ msgid "Map Source"
+#~ msgstr "வரைபட மூலம்"
+
+#~ msgid "Main Menu"
+#~ msgstr "பட்டியல் விளையாடுங்கள்"
+
+#~ msgid "Failed to connect to location service"
+#~ msgstr "இருப்பிட சேவையுடன் இணைக்கத் தவறிவிட்டது"
+
+#~ msgid "Map_nik"
+#~ msgstr "வரைபடம்"
+
+#~ msgid "@APP_NAME@"
+#~ msgstr "@APP_NAME@"
+
+#~ msgid "App window in the light mode"
+#~ msgstr "ஒளி பயன்முறையில் பயன்பாட்டு சாளரம்"
+
+#~ msgid "App window in the dark mode"
+#~ msgstr "இருண்ட பயன்முறையில் பயன்பாட்டு சாளரம்"
+
+#~ msgid "translator-credits"
+#~ msgstr "தமிழ்நேரம் (TamilNeram.github.io)"
+
+#, c-format
+#~ msgid "_About %s"
+#~ msgstr "%s பற்றி"

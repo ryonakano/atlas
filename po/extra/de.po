@@ -1,0 +1,96 @@
+# German translations for com.github.ryonakano.atlas.
+# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2018-2025 Ryo Nakano
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# J. Lavoie <j.lavoie@net-c.ca>, 2022.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"PO-Revision-Date: 2024-05-03 10:45+0000\n"
+"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/rosp/atlas/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.5.3\n"
+
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
+msgid "Atlas"
+msgstr "Atlas"
+
+#: data/atlas.desktop.in:3
+msgid "Map"
+msgstr ""
+
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr ""
+
+#: data/atlas.desktop.in:10
+msgid "Trip;Explore;"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:19
+#, fuzzy
+msgid "Jump to your current location instantly"
+msgstr "Ihr aktueller Standort wird erkennt …"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Move to the current location"
+#~ msgstr "Ihr aktueller Standort wird erkennt …"
+
+#~ msgid "Search Location"
+#~ msgstr "Standort suchen"
+
+#, fuzzy
+#~ msgid "System"
+#~ msgstr "System"
+
+#, fuzzy
+#~ msgid "Light"
+#~ msgstr "Hell"
+
+#, fuzzy
+#~ msgid "Dark"
+#~ msgstr "Dunkel"
+
+#, fuzzy
+#~ msgid "Transport"
+#~ msgstr "Verkehrskarte"
+
+#, fuzzy
+#~ msgid "Style"
+#~ msgstr "Stil:"
+
+#~ msgid "@APP_NAME@"
+#~ msgstr "@APP_NAME@"
+
+#~ msgid "Preferences"
+#~ msgstr "Einstellungen"

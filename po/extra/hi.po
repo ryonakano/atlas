@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"PO-Revision-Date: 2024-05-16 13:01+0000\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/atlas/hi/>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
+
+#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
+msgid "Atlas"
+msgstr ""
+
+#: data/atlas.desktop.in:3
+msgid "Map"
+msgstr "मानचित्र"
+
+#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+msgid "View where to go"
+msgstr "देखें कि कहां जाना है"
+
+#: data/atlas.desktop.in:10
+msgid "Trip;Explore;"
+msgstr "यात्रा;अन्वेषण;"
+
+#: data/atlas.metainfo.xml.in:13
+msgid "A map app that helps you to see where you want to go."
+msgstr "एक मानचित्र ऐप जो आपको यह देखने में मदद करता है कि आप कहां जाना चाहते हैं।"
+
+#: data/atlas.metainfo.xml.in:16
+msgid "Features include:"
+msgstr "शामिल विशेषताएं:"
+
+#: data/atlas.metainfo.xml.in:18
+msgid "Search any place"
+msgstr "कोई भी जगह खोजें"
+
+#: data/atlas.metainfo.xml.in:19
+msgid "Jump to your current location instantly"
+msgstr "तुरंत अपने वर्तमान स्थान पर जाएं"
+
+#: data/atlas.metainfo.xml.in:21
+msgid ""
+"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
+"Schuhmann."
+msgstr ""
+"यह \"Atlas Maps\" का एक फोर्क है और जो स्टीफ़न शूहमैन के काम के बिना अस्तित्व में नहीं "
+"होता।"
+
+#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+msgid "See locations on a map"
+msgstr ""
+
+#~ msgid "Unknown"
+#~ msgstr "अज्ञात"
+
+#~ msgid "Move to the current location"
+#~ msgstr "वर्तमान स्थान पर जाएं"
+
+#~ msgid "Search Location"
+#~ msgstr "स्थान खोजें"
+
+#, fuzzy
+#~ msgid "No Results Found"
+#~ msgstr "कोई खोज परिणाम नहीं"
+
+#, fuzzy
+#~ msgid "System"
+#~ msgstr "सिस्टम"
+
+#, fuzzy
+#~ msgid "Light"
+#~ msgstr "हल्की"
+
+#, fuzzy
+#~ msgid "Dark"
+#~ msgstr "गहरी"
+
+#~ msgid "Mapnik"
+#~ msgstr "मैपनिक"
+
+#, fuzzy
+#~ msgid "Transport"
+#~ msgstr "परिवहन"
+
+#, fuzzy
+#~ msgid "Style"
+#~ msgstr "शैली"
+
+#, fuzzy
+#~ msgid "Map Source"
+#~ msgstr "मानचित्र स्रोत"
+
+#~ msgid "Main Menu"
+#~ msgstr "मुख्य मेनू"
+
+#~ msgid "Failed to connect to location service"
+#~ msgstr "स्थान सेवा से जुड़ने में विफल"
+
+#~ msgid "@APP_NAME@"
+#~ msgstr "@APP_NAME@"
+
+#~ msgid "App window in the light mode"
+#~ msgstr "ऐप खिड़की हल्के मोड में"
+
+#~ msgid "App window in the dark mode"
+#~ msgstr "ऐप खिड़की गहरे मोड में"
+
+#~ msgid "Try changing the search term."
+#~ msgstr "खोज शब्द बदलने का प्रयास करें।"
+
+#~ msgid "Preferences"
+#~ msgstr "प्राथमिकताएं"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.atlas\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:38+0900\n"
+"POT-Creation-Date: 2025-07-12 16:41+0900\n"
 "PO-Revision-Date: 2024-05-08 14:05+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/atlas/ru/>\n"
@@ -20,53 +20,13 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5.4-rc\n"
 
-#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10 src/MainWindow.vala:45
-msgid "Atlas"
-msgstr "Atlas"
-
-#: data/atlas.desktop.in:3
-msgid "Map"
-msgstr "Карта"
-
-#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
-msgid "View where to go"
-msgstr "Смотрите куда идти"
-
-#: data/atlas.desktop.in:10
-msgid "Trip;Explore;"
-msgstr "Путешествие;Исследовать;"
-
-#: data/atlas.metainfo.xml.in:13
-msgid "A map app that helps you to see where you want to go."
-msgstr "Карта, которая помогает вам смотреть куда вы хотите пойти."
-
-#: data/atlas.metainfo.xml.in:16
-msgid "Features include:"
-msgstr "Функции:"
-
-#: data/atlas.metainfo.xml.in:18
-msgid "Search any place"
-msgstr "Ищите любое место"
-
-#: data/atlas.metainfo.xml.in:19
-msgid "Jump to your current location instantly"
-msgstr "Мгновенно переместитесь к вашему текущему местоположению"
-
-#: data/atlas.metainfo.xml.in:21
-msgid ""
-"This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
-"Schuhmann."
-msgstr ""
-"Это форк приложения «Atlas Maps», и оно не могло бы существовать без работы "
-"Steffen Schuhmann."
-
-#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
-msgid "See locations on a map"
-msgstr ""
-
 #: src/MainWindow.vala:33
 msgid "Unknown"
 msgstr "Неизвестно"
+
+#: src/MainWindow.vala:45
+msgid "Atlas"
+msgstr "Atlas"
 
 #: src/MainWindow.vala:51
 msgid "Move to the current location"
@@ -126,6 +86,34 @@ msgstr ""
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "Не удалось подключиться к службе местоположения"
+
+#~ msgid "Map"
+#~ msgstr "Карта"
+
+#~ msgid "View where to go"
+#~ msgstr "Смотрите куда идти"
+
+#~ msgid "Trip;Explore;"
+#~ msgstr "Путешествие;Исследовать;"
+
+#~ msgid "A map app that helps you to see where you want to go."
+#~ msgstr "Карта, которая помогает вам смотреть куда вы хотите пойти."
+
+#~ msgid "Features include:"
+#~ msgstr "Функции:"
+
+#~ msgid "Search any place"
+#~ msgstr "Ищите любое место"
+
+#~ msgid "Jump to your current location instantly"
+#~ msgstr "Мгновенно переместитесь к вашему текущему местоположению"
+
+#~ msgid ""
+#~ "This is a fork of \"Atlas Maps\" and wouldn't exist without work of "
+#~ "Steffen Schuhmann."
+#~ msgstr ""
+#~ "Это форк приложения «Atlas Maps», и оно не могло бы существовать без "
+#~ "работы Steffen Schuhmann."
 
 #~ msgid "@APP_NAME@"
 #~ msgstr "@APP_NAME@"
