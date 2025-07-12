@@ -32,7 +32,7 @@ jobs:
     - name: Update Translation Files
       uses: elementary/actions/gettext-flatpak@main
       with:
-        manifest-path: 'io.elementary.atlas.yml'
+        manifest-path: 'io.elementary.maps.yml'
       env:
         GIT_USER_NAME: "elementaryBot"
         GIT_USER_EMAIL: "builds@elementary.io"
