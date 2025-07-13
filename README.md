@@ -1,4 +1,7 @@
 # Maps
+
+[![Translation status](https://l10n.elementaryos.org/widget/maps/maps/svg-badge.svg)](https://l10n.elementaryos.org/engage/maps/)
+
 ![Screenshot in the light mode](data/screenshots/screenshot-light.png#gh-light-mode-only)
 
 ![Screenshot in the dark mode](data/screenshots/screenshot-dark.png#gh-dark-mode-only)
