@@ -1,5 +1,5 @@
 project(
-    'com.github.ryonakano.atlas',
+    'io.elementary.maps',
     'vala', 'c',
     version: '3.1.1',
     # Version limitation for gnome.post_install()
