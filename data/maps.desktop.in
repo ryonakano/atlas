@@ -1,10 +1,14 @@
 [Desktop Entry]
-Name=Maps
-GenericName=Map
-Comment=View where to go
-Categories=GTK;Utility;Science;Maps;
-Exec=io.elementary.maps
-Icon=io.elementary.maps
+Version=1.5
 Type=Application
+
+Name=Maps
+Comment=View where to go
+Categories=GTK;Utility;Science;Maps
+Keywords=trip;explore;
+
+Icon=io.elementary.maps
+Exec=io.elementary.maps
+SingleMainWindow=true
+StartupNotify=true
 Terminal=false
-Keywords=Trip;Explore;
