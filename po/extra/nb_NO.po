@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"POT-Creation-Date: 2025-07-13 17:35+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -20,39 +20,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
-msgid "Atlas"
-msgstr "Atlas"
+#: data/maps.desktop.in:3 data/maps.metainfo.xml.in:10
+msgid "Maps"
+msgstr ""
 
-#: data/atlas.desktop.in:3
+#: data/maps.desktop.in:4
 msgid "Map"
 msgstr "Kart"
 
-#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+#: data/maps.desktop.in:5 data/maps.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "Vis hvor du skal"
 
-#: data/atlas.desktop.in:10
+#: data/maps.desktop.in:11
 msgid "Trip;Explore;"
 msgstr "Tur;Utforsker;kart;planlegging;"
 
-#: data/atlas.metainfo.xml.in:13
+#: data/maps.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
 msgstr "Et kartprogram som hjelper deg å visualisere hvor du skal."
 
-#: data/atlas.metainfo.xml.in:16
+#: data/maps.metainfo.xml.in:16
 msgid "Features include:"
 msgstr "Funksjoner:"
 
-#: data/atlas.metainfo.xml.in:18
+#: data/maps.metainfo.xml.in:18
 msgid "Search any place"
 msgstr "Søk etter steder"
 
-#: data/atlas.metainfo.xml.in:19
+#: data/maps.metainfo.xml.in:19
 msgid "Jump to your current location instantly"
 msgstr "Hopp til nåværende sted umiddelbart"
 
-#: data/atlas.metainfo.xml.in:21
+#: data/maps.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
@@ -60,6 +60,13 @@ msgstr ""
 "Dette er en forgrening av «Atlas Maps» og ville ikke eksistert uten Steffen "
 "Schuhmann."
 
-#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+#: data/maps.metainfo.xml.in:28 data/maps.metainfo.xml.in:32
 msgid "See locations on a map"
 msgstr ""
+
+#: data/maps.metainfo.xml.in:56
+msgid "elementary, Inc."
+msgstr ""
+
+#~ msgid "Atlas"
+#~ msgstr "Atlas"

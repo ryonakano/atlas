@@ -1,14 +1,14 @@
-# Japanese translations for com.github.ryonakano.atlas package.
+# Japanese translations for io.elementary.maps package.
 # Copyright (C) 2014-2015 Atlas Developers
 # Copyright (C) 2018-2025 Ryo Nakano
-# This file is distributed under the same license as the com.github.ryonakano.atlas package.
+# This file is distributed under the same license as the io.elementary.maps package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2021, 2022, 2023, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.ryonakano.atlas\n"
+"Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"POT-Creation-Date: 2025-07-13 17:35+0000\n"
 "PO-Revision-Date: 2025-07-10 13:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/"
@@ -25,8 +25,8 @@ msgid "Unknown"
 msgstr "不明"
 
 #: src/MainWindow.vala:45
-msgid "Atlas"
-msgstr "Atlas"
+msgid "Maps"
+msgstr ""
 
 #: src/MainWindow.vala:51
 msgid "Move to the current location"
@@ -85,3 +85,6 @@ msgstr "メインメニュー"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "位置情報サービスに接続できませんでした"
+
+#~ msgid "Atlas"
+#~ msgstr "Atlas"

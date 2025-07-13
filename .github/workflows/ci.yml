@@ -28,8 +28,8 @@ jobs:
       - name: Build
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
-          bundle: atlas.flatpak
-          manifest-path: com.github.ryonakano.atlas.yml
+          bundle: maps.flatpak
+          manifest-path: io.elementary.maps.yml
           run-tests: true
           repository-name: appcenter
           repository-url: https://flatpak.elementary.io/repo.flatpakrepo

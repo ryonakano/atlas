@@ -4,7 +4,7 @@
  *                         2018-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Atlas.Application : Adw.Application {
+public class Maps.Application : Adw.Application {
     public static Settings settings { get; private set; }
 
     private const ActionEntry[] ACTION_ENTRIES = {
@@ -14,13 +14,13 @@ public class Atlas.Application : Adw.Application {
 
     public Application () {
         Object (
-            application_id: "com.github.ryonakano.atlas",
+            application_id: "io.elementary.maps",
             flags: ApplicationFlags.DEFAULT_FLAGS
         );
     }
 
     static construct {
-        settings = new Settings ("com.github.ryonakano.atlas");
+        settings = new Settings ("io.elementary.maps");
     }
 
     private void setup_style () {
