@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"POT-Creation-Date: 2025-07-13 17:35+0000\n"
 "PO-Revision-Date: 2025-07-10 13:01+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/atlas/et/"
@@ -26,8 +26,8 @@ msgid "Unknown"
 msgstr "Teadmata"
 
 #: src/MainWindow.vala:45
-msgid "Atlas"
-msgstr "Atlas"
+msgid "Maps"
+msgstr ""
 
 #: src/MainWindow.vala:51
 msgid "Move to the current location"
@@ -86,3 +86,6 @@ msgstr "Põhimenüü"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "Ei õnnestunud luua ühendust asukoha tuvastamise teenusega"
+
+#~ msgid "Atlas"
+#~ msgstr "Atlas"
