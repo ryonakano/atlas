@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 17:35+0000\n"
+"POT-Creation-Date: 2025-07-13 22:26+0000\n"
 "PO-Revision-Date: 2024-05-20 12:01+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/atlas/es/>\n"
@@ -19,20 +19,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-#: data/maps.desktop.in:3 data/maps.metainfo.xml.in:10
+#: data/maps.desktop.in:6 data/maps.metainfo.xml.in:10
 msgid "Maps"
 msgstr ""
 
-#: data/maps.desktop.in:4
-msgid "Map"
-msgstr "Mapa"
-
-#: data/maps.desktop.in:5 data/maps.metainfo.xml.in:11
+#: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "Dónde ir"
 
-#: data/maps.desktop.in:11
-msgid "Trip;Explore;"
+#: data/maps.desktop.in:9
+#, fuzzy
+#| msgid "Trip;Explore;"
+msgid "trip;explore;"
 msgstr "Viaje;Explora;"
 
 #: data/maps.metainfo.xml.in:13
@@ -66,6 +64,9 @@ msgstr ""
 #: data/maps.metainfo.xml.in:56
 msgid "elementary, Inc."
 msgstr ""
+
+#~ msgid "Map"
+#~ msgstr "Mapa"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"
