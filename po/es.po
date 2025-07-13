@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 22:26+0000\n"
+"POT-Creation-Date: 2025-07-13 23:29+0000\n"
 "PO-Revision-Date: 2024-05-20 12:01+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/atlas/es/>\n"
@@ -19,28 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-#: src/MainWindow.vala:33
-msgid "Unknown"
-msgstr "Desconocido"
-
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:50
 msgid "Move to the current location"
 msgstr "Desplazarse a la ubicación actual"
 
-#: src/MainWindow.vala:63
+#: src/MainWindow.vala:62
 msgid "Search Location"
 msgstr "Buscar la ubicación"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:69
 #, fuzzy
 msgid "No Results Found"
 msgstr "No hay resultados"
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:70
 msgid "Try a different search"
 msgstr ""
 
@@ -85,6 +81,10 @@ msgstr "Menú principal"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "Falló la conexión al servicio de localización"
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr "Desconocido"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"
