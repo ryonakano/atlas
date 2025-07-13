@@ -7,7 +7,7 @@
 
 public class Atlas.SearchResultItem : Granite.Bin {
     private Geocode.Place? _place = null;
-    public Geocode.Place? place {
+    public Geocode.Place place {
         get {
             return _place;
         }
