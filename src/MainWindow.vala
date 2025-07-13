@@ -30,7 +30,6 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
     };
     private int current_busy_reason = 0;
     private uint search_begin_timeout = 0;
-    private string unknown_text = _("Unknown");
     private ListStore location_store;
     private Cancellable? search_cancellable = null;
 
@@ -77,6 +76,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         search_res_list = new Gtk.ListBox () {
             selection_mode = Gtk.SelectionMode.BROWSE
         };
+        search_res_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
         search_res_list.bind_model (location_store, construct_search_res);
         search_res_list.set_placeholder (search_placeholder);
 
@@ -288,39 +288,12 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
     private Gtk.Widget construct_search_res (Object item) {
         unowned var place = item as Geocode.Place;
 
-        var icon = new Gtk.Image.from_gicon (place.icon);
-
-        var place_name_label = new Gtk.Label (place.name) {
-            halign = Gtk.Align.START
+        var result_item = new Maps.SearchResultItem () {
+            place = place
         };
-        place_name_label.add_css_class ("title-4");
-
-        string street = place.street ?? unknown_text;
-        string postal_code = place.postal_code ?? unknown_text;
-        string town = place.town ?? unknown_text;
-
-        string info_text = "%s, %s, %s".printf (street, postal_code, town);
-
-        var info_label = new Gtk.Label (info_text) {
-            halign = Gtk.Align.START
-        };
-        info_label.add_css_class ("dim-label");
-
-        var label_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-        label_box.append (place_name_label);
-        label_box.append (info_label);
-
-        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
-            margin_top = 6,
-            margin_bottom = 6,
-            margin_start = 6,
-            margin_end = 6
-        };
-        box.append (icon);
-        box.append (label_box);
 
         var row = new PlaceListBoxRow (place) {
-            child = box
+            child = result_item
         };
 
         return row;
