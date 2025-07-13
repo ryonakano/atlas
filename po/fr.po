@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"POT-Creation-Date: 2025-07-13 22:26+0000\n"
 "PO-Revision-Date: 2025-06-11 12:02+0000\n"
 "Last-Translator: Stella and Charlie <teamcons.carrd.co>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas/fr/>\n"
@@ -28,8 +28,8 @@ msgid "Unknown"
 msgstr "Inconnu"
 
 #: src/MainWindow.vala:45
-msgid "Atlas"
-msgstr "Atlas"
+msgid "Maps"
+msgstr ""
 
 #: src/MainWindow.vala:51
 msgid "Move to the current location"
@@ -88,3 +88,6 @@ msgstr "Menu principal"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "Echec de la connexion au service de localisation"
+
+#~ msgid "Atlas"
+#~ msgstr "Atlas"

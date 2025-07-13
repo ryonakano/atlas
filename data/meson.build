@@ -2,9 +2,14 @@ icon_sizes = ['16', '24', '32', '48', '64', '128']
 
 foreach i : icon_sizes
     install_data(
-        'icons' / i / meson.project_name() + '.png',
-        rename: meson.project_name() + '.png',
-        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps'
+        'icons' / i / meson.project_name() + '.svg',
+        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
+        rename: meson.project_name() + '.svg'
+    )
+    install_data(
+        'icons' / i / meson.project_name() + '.svg',
+        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
+        rename: meson.project_name() + '.svg'
     )
 endforeach
 
@@ -27,7 +32,8 @@ i18n.merge_file(
 
 install_data(
     'maps.gschema.xml',
-    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
+    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
+    rename: meson.project_name() + '.gschema.xml'
 )
 
 asresources = gnome.compile_resources(

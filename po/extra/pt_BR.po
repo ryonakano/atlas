@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"POT-Creation-Date: 2025-07-13 22:26+0000\n"
 "PO-Revision-Date: 2025-02-17 04:37+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
@@ -20,44 +20,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.10\n"
 
-#: data/atlas.desktop.in:2 data/atlas.metainfo.xml.in:10
-msgid "Atlas"
+#: data/maps.desktop.in:6 data/maps.metainfo.xml.in:10
+msgid "Maps"
 msgstr ""
 
-#: data/atlas.desktop.in:3
-msgid "Map"
-msgstr ""
-
-#: data/atlas.desktop.in:4 data/atlas.metainfo.xml.in:11
+#: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
 msgstr ""
 
-#: data/atlas.desktop.in:10
-msgid "Trip;Explore;"
+#: data/maps.desktop.in:9
+msgid "trip;explore;"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:13
+#: data/maps.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:16
+#: data/maps.metainfo.xml.in:16
 msgid "Features include:"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:18
+#: data/maps.metainfo.xml.in:18
 msgid "Search any place"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:19
+#: data/maps.metainfo.xml.in:19
 msgid "Jump to your current location instantly"
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:21
+#: data/maps.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
 
-#: data/atlas.metainfo.xml.in:28 data/atlas.metainfo.xml.in:32
+#: data/maps.metainfo.xml.in:28 data/maps.metainfo.xml.in:32
 msgid "See locations on a map"
+msgstr ""
+
+#: data/maps.metainfo.xml.in:56
+msgid "elementary, Inc."
 msgstr ""
