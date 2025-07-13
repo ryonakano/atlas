@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 16:41+0900\n"
+"POT-Creation-Date: 2025-07-13 17:35+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/atlas/nl/>\n"
@@ -25,8 +25,8 @@ msgid "Unknown"
 msgstr "Onbekend"
 
 #: src/MainWindow.vala:45
-msgid "Atlas"
-msgstr "Atlas"
+msgid "Maps"
+msgstr ""
 
 #: src/MainWindow.vala:51
 msgid "Move to the current location"
@@ -86,3 +86,6 @@ msgstr ""
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr ""
+
+#~ msgid "Atlas"
+#~ msgstr "Atlas"
