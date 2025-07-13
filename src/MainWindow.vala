@@ -288,7 +288,7 @@ public class Atlas.MainWindow : Adw.ApplicationWindow {
     private Gtk.Widget construct_search_res (Object item) {
         unowned var place = item as Geocode.Place;
 
-        var result_item = new SearchResultItem () {
+        var result_item = new Maps.SearchResultItem () {
             place = place
         };
 

@@ -5,7 +5,7 @@
  *                         2014-2015 Atlas Developers
  */
 
-public class Atlas.SearchResultItem : Granite.Bin {
+public class Maps.SearchResultItem : Granite.Bin {
     private Geocode.Place? _place = null;
     public Geocode.Place place {
         get {
