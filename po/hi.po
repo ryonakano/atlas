@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 22:26+0000\n"
+"POT-Creation-Date: 2025-07-13 23:29+0000\n"
 "PO-Revision-Date: 2024-05-16 13:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/atlas/hi/>\n"
@@ -19,28 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-#: src/MainWindow.vala:33
-msgid "Unknown"
-msgstr "अज्ञात"
-
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:50
 msgid "Move to the current location"
 msgstr "वर्तमान स्थान पर जाएं"
 
-#: src/MainWindow.vala:63
+#: src/MainWindow.vala:62
 msgid "Search Location"
 msgstr "स्थान खोजें"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:69
 #, fuzzy
 msgid "No Results Found"
 msgstr "कोई खोज परिणाम नहीं"
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:70
 msgid "Try a different search"
 msgstr ""
 
@@ -85,3 +81,7 @@ msgstr "मुख्य मेनू"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "स्थान सेवा से जुड़ने में विफल"
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr "अज्ञात"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 22:26+0000\n"
+"POT-Creation-Date: 2025-07-13 23:29+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/rosp/atlas/lt/"
@@ -22,30 +22,26 @@ msgstr ""
 "1 : 2);\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: src/MainWindow.vala:33
-msgid "Unknown"
-msgstr ""
-
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:50
 #, fuzzy
 msgid "Move to the current location"
 msgstr ""
 "Nustatyti buvimo vietą (when enabled System Settings > Applications > "
 "Permissions)"
 
-#: src/MainWindow.vala:63
+#: src/MainWindow.vala:62
 msgid "Search Location"
 msgstr "Vietos paieška"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:69
 msgid "No Results Found"
 msgstr ""
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:70
 msgid "Try a different search"
 msgstr ""
 
@@ -88,6 +84,10 @@ msgstr ""
 
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
+msgstr ""
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
 msgstr ""
 
 #~ msgid "Atlas"

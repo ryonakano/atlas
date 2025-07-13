@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 22:26+0000\n"
+"POT-Creation-Date: 2025-07-13 23:29+0000\n"
 "PO-Revision-Date: 2025-07-10 13:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/"
@@ -20,27 +20,23 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.13-dev\n"
 
-#: src/MainWindow.vala:33
-msgid "Unknown"
-msgstr "不明"
-
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:50
 msgid "Move to the current location"
 msgstr "現在地に移動"
 
-#: src/MainWindow.vala:63
+#: src/MainWindow.vala:62
 msgid "Search Location"
 msgstr "場所を検索"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:69
 msgid "No Results Found"
 msgstr "見つかりませんでした"
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:70
 msgid "Try a different search"
 msgstr "他のキーワードを試してください"
 
@@ -85,6 +81,10 @@ msgstr "メインメニュー"
 #: src/MainWindow.vala:150
 msgid "Failed to connect to location service"
 msgstr "位置情報サービスに接続できませんでした"
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr "不明"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"
