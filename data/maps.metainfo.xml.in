@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014-2015 Atlas Developers, 2018-2025 Ryo Nakano -->
 <component type="desktop-application">
-  <id>com.github.ryonakano.atlas</id>
-  <launchable type="desktop-id">com.github.ryonakano.atlas.desktop</launchable>
-  <translation type="gettext">com.github.ryonakano.atlas</translation>
+  <id>io.elementary.maps</id>
+  <launchable type="desktop-id">io.elementary.maps.desktop</launchable>
+  <translation type="gettext">io.elementary.maps</translation>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name>Atlas</name>
+  <name>Maps</name>
   <summary>View where to go</summary>
   <description>
     <p>
@@ -26,11 +26,11 @@
   <screenshots>
     <screenshot type="default" environment="pantheon">
       <caption>See locations on a map</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.1.1/data/screenshots/screenshot-light.png</image>
+      <image>https://raw.githubusercontent.com/elementary/maps/3.1.1/data/screenshots/screenshot-light.png</image>
     </screenshot>
     <screenshot environment="pantheon:dark">
       <caption>See locations on a map</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/atlas/3.1.1/data/screenshots/screenshot-dark.png</image>
+      <image>https://raw.githubusercontent.com/elementary/maps/3.1.1/data/screenshots/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
 
@@ -46,17 +46,16 @@
     <control>keyboard</control>
   </supports>
 
-  <url type="homepage">https://github.com/ryonakano/atlas</url>
-  <url type="bugtracker">https://github.com/ryonakano/atlas/issues</url>
-  <url type="help">https://github.com/ryonakano/atlas/issues</url>
-  <url type="vcs-browser">https://github.com/ryonakano/atlas</url>
-  <url type="translate">https://hosted.weblate.org/projects/rosp</url>
+  <url type="homepage">https://github.com/elementary/maps</url>
+  <url type="bugtracker">https://github.com/elementary/maps/issues</url>
+  <url type="help">https://github.com/elementary/maps/issues</url>
+  <url type="vcs-browser">https://github.com/elementary/maps</url>
+  <url type="translate">https://l10n.elementary.io/projects/maps</url>
 
-  <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name translate="no">Ryo Nakano</developer_name>
-  <developer id="com.github.ryonakano">
-    <name translate="no">Ryo Nakano</name>
+  <developer id="org.elementaryos">
+    <name>elementary, Inc.</name>
   </developer>
+  <project_group>elementary</project_group>
 
   <releases>
     <release version="3.1.1" date="2025-07-12" urgency="medium">

@@ -1,8 +1,8 @@
-id: com.github.ryonakano.atlas
+id: io.elementary.maps
 runtime: io.elementary.Platform
 runtime-version: '8.2'
 sdk: io.elementary.Sdk
-command: com.github.ryonakano.atlas
+command: io.elementary.maps
 finish-args:
   - --share=ipc
   - --share=network
@@ -50,7 +50,7 @@ modules:
               type: git
               tag-pattern: ^v([\d.]+)$
 
-  - name: atlas
+  - name: maps
     buildsystem: meson
     sources:
       - type: dir
