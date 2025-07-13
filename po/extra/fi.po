@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 17:35+0000\n"
+"POT-Creation-Date: 2025-07-13 22:26+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/atlas/fi/>\n"
@@ -19,20 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: data/maps.desktop.in:3 data/maps.metainfo.xml.in:10
+#: data/maps.desktop.in:6 data/maps.metainfo.xml.in:10
 msgid "Maps"
 msgstr ""
 
-#: data/maps.desktop.in:4
-msgid "Map"
-msgstr ""
-
-#: data/maps.desktop.in:5 data/maps.metainfo.xml.in:11
+#: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
 msgstr ""
 
-#: data/maps.desktop.in:11
-msgid "Trip;Explore;"
+#: data/maps.desktop.in:9
+msgid "trip;explore;"
 msgstr ""
 
 #: data/maps.metainfo.xml.in:13
