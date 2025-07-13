@@ -57,7 +57,7 @@
          offset="0" />
       <stop
          id="stop51"
-         style="stop-color:#d4d4d4;stop-opacity:1"
+         style="stop-color:#e7c591;stop-opacity:1"
          offset="1" />
     </linearGradient>
     <radialGradient
@@ -91,17 +91,6 @@
          in="SourceGraphic"
          id="feGaussianBlur21-0-1-8" />
     </filter>
-    <linearGradient
-       id="linearGradient31">
-      <stop
-         style="stop-color:#b6802e;stop-opacity:1"
-         offset="0"
-         id="stop31" />
-      <stop
-         style="stop-color:#7e8087;stop-opacity:1"
-         offset="1"
-         id="stop32" />
-    </linearGradient>
     <linearGradient
        xlink:href="#linearGradient67"
        id="linearGradient68"
@@ -140,15 +129,6 @@
          style="stop-color:#ffffff;stop-opacity:0.39215687"
          offset="1" />
     </linearGradient>
-    <linearGradient
-       xlink:href="#linearGradient31"
-       id="linearGradient32"
-       x1="-5.490252"
-       y1="2.0209336"
-       x2="-5.490252"
-       y2="14.370669"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(14)" />
     <linearGradient
        xlink:href="#linearGradient64"
        id="linearGradient65"
@@ -248,7 +228,7 @@
      x="1.5"
      y="1.499997"
      id="rect5505-21-2-8"
-     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:none;stroke:url(#linearGradient32);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate;font-variation-settings:normal;vector-effect:none;fill-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" />
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:none;stroke:#b6802e;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate;font-variation-settings:normal;vector-effect:none;fill-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" />
   <g
      id="g1"
      transform="translate(0,-1)">
