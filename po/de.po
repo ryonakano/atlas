@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 13:55+0000\n"
+"POT-Creation-Date: 2025-07-14 21:52+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/rosp/atlas/de/>\n"
@@ -28,48 +28,50 @@ msgstr ""
 msgid "Move to the current location"
 msgstr "Ihr aktueller Standort wird erkennt …"
 
-#: src/MainWindow.vala:62
-msgid "Search Location"
+#: src/MainWindow.vala:58
+#, fuzzy
+#| msgid "Search Location"
+msgid "Search Maps"
 msgstr "Standort suchen"
 
-#: src/MainWindow.vala:69
+#: src/MainWindow.vala:66
 msgid "No Results Found"
 msgstr ""
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:67
 msgid "Try a different search"
 msgstr ""
 
-#: src/MainWindow.vala:99
+#: src/MainWindow.vala:96
 #, fuzzy
 msgid "System"
 msgstr "System"
 
-#: src/MainWindow.vala:100
+#: src/MainWindow.vala:97
 #, fuzzy
 msgid "Light"
 msgstr "Hell"
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:98
 #, fuzzy
 msgid "Dark"
 msgstr "Dunkel"
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:101
 msgid "Mapnik"
 msgstr ""
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:102
 #, fuzzy
 msgid "Transport"
 msgstr "Verkehrskarte"
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:105
 #, fuzzy
 msgid "Style"
 msgstr "Stil:"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:106
 msgid "Map Source"
 msgstr ""
 
@@ -77,7 +79,7 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:150
+#: src/MainWindow.vala:146
 msgid "Failed to connect to location service"
 msgstr ""
 
