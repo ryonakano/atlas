@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 13:55+0000\n"
+"POT-Creation-Date: 2025-07-14 21:52+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/atlas/nl/>\n"
@@ -28,49 +28,51 @@ msgstr ""
 msgid "Move to the current location"
 msgstr "Verplaatsen naar huidige locatie"
 
-#: src/MainWindow.vala:62
-msgid "Search Location"
+#: src/MainWindow.vala:58
+#, fuzzy
+#| msgid "Search Location"
+msgid "Search Maps"
 msgstr "Locatie zoeken"
 
-#: src/MainWindow.vala:69
+#: src/MainWindow.vala:66
 #, fuzzy
 msgid "No Results Found"
 msgstr "Er zijn geen zoekresultaten"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:67
 msgid "Try a different search"
 msgstr ""
 
-#: src/MainWindow.vala:99
+#: src/MainWindow.vala:96
 #, fuzzy
 msgid "System"
 msgstr "Systeem"
 
-#: src/MainWindow.vala:100
+#: src/MainWindow.vala:97
 #, fuzzy
 msgid "Light"
 msgstr "Licht"
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:98
 #, fuzzy
 msgid "Dark"
 msgstr "Donker"
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:101
 msgid "Mapnik"
 msgstr ""
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:102
 #, fuzzy
 msgid "Transport"
 msgstr "OV-kaart"
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:105
 #, fuzzy
 msgid "Style"
 msgstr "Thema:"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:106
 #, fuzzy
 msgid "Map Source"
 msgstr "Kaartbron:"
@@ -79,7 +81,7 @@ msgstr "Kaartbron:"
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:150
+#: src/MainWindow.vala:146
 msgid "Failed to connect to location service"
 msgstr ""
 
