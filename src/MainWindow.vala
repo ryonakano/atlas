@@ -29,7 +29,6 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         { "search", on_search_activate },
     };
     private int current_busy_reason = 0;
-    private uint search_begin_timeout = 0;
     private ListStore location_store;
     private Cancellable? search_cancellable = null;
 
@@ -95,6 +94,8 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         };
         search_res_popover.set_parent (search_entry);
 
+        search_entry.set_key_capture_widget (search_res_popover);
+
         var style_submenu = new Menu ();
         style_submenu.append (_("System"), "app.color-scheme('%s')".printf (Define.ColorScheme.DEFAULT));
         style_submenu.append (_("Light"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_LIGHT));
@@ -158,18 +159,12 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         search_entry.search_changed.connect (() => {
             if (search_entry.text == "") {
+                search_res_popover.popdown ();
                 return;
             }
 
-            if (search_begin_timeout != 0) {
-                Source.remove (search_begin_timeout);
-                search_begin_timeout = 0;
-            }
-
-            search_begin_timeout = Timeout.add_once (1000, () => {
-                search_location.begin (search_entry.text, location_store);
-                search_begin_timeout = 0;
-            });
+            search_res_popover.popup ();
+            search_location.begin (search_entry.text, location_store);
         });
 
         search_res_list.row_activated.connect ((row) => {
@@ -179,14 +174,8 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
             }
 
             map_widget.go_to_place (place_row.place);
-        });
-
-        var search_entry_gesture = new Gtk.EventControllerKey ();
-        search_entry_gesture.key_pressed.connect (() => {
             search_res_popover.popdown ();
-            return true;
         });
-        ((Gtk.Widget) search_res_popover).add_controller (search_entry_gesture);
 
         close_request.connect (() => {
             prep_destroy ();
@@ -253,9 +242,6 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         busy_start (BusyReason.SEARCHING);
 
         yield compute_location (term, res);
-
-        search_res_popover.popup ();
-        search_entry.grab_focus ();
 
         busy_end (BusyReason.SEARCHING);
     }
