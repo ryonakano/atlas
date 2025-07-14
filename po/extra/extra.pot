@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 23:29+0000\n"
+"POT-Creation-Date: 2025-07-14 13:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,4 +57,8 @@ msgstr ""
 
 #: data/maps.metainfo.xml.in:56
 msgid "elementary, Inc."
+msgstr ""
+
+#: data/maps.metainfo.xml.in:64
+msgid "Update translations"
 msgstr ""
