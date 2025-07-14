@@ -64,6 +64,9 @@
           <li>Update translations</li>
         </ul>
       </description>
+      <issues>
+        <issue url="https://github.com/elementary/maps/issues/125">Can't navigate from Search to results with the keyboard</issue>
+      </issues>
     </release>
 
     <release version="3.1.1" date="2025-07-12" urgency="medium" />
