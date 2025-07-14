@@ -45,23 +45,20 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         location_store = new ListStore (typeof (Geocode.Place));
 
-        current_location = new Gtk.Button () {
+        current_location = new Gtk.Button.from_icon_name ("find-location-symbolic") {
             tooltip_text = _("Move to the current location"),
-            icon_name = "mark-location-symbolic",
-            margin_start = 6,
-            margin_end = 6
+            valign = CENTER
         };
 
-        spinner = new Gtk.Spinner () {
-            margin_start = 6,
-            margin_end = 6
-        };
+        spinner = new Gtk.Spinner ();
 
         search_entry = new Gtk.SearchEntry () {
-            placeholder_text = _("Search Location"),
-            valign = Gtk.Align.CENTER,
-            margin_start = 6,
-            margin_end = 6
+            hexpand = true,
+            placeholder_text = _("Search Maps")
+        };
+
+        var search_clamp = new Adw.Clamp () {
+            child = search_entry
         };
 
         var search_placeholder = new Adw.StatusPage () {
@@ -110,19 +107,18 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         main_menu.append_submenu (_("Map Source"), map_source_submenu);
 
         var menu_button = new Gtk.MenuButton () {
-            tooltip_text = _("Main Menu"),
-            icon_name = "open-menu",
+            icon_name = "open-menu-symbolic",
             menu_model = main_menu,
-            primary = true
+            primary = true,
+            tooltip_text = _("Main Menu"),
+            valign = CENTER
         };
 
         var headerbar = new Adw.HeaderBar () {
-            hexpand = true,
-            vexpand = true
+            title_widget = search_clamp
         };
         headerbar.pack_start (current_location);
         headerbar.pack_end (menu_button);
-        headerbar.pack_end (search_entry);
         headerbar.pack_end (spinner);
 
         map_widget = new MapWidget ();
@@ -134,7 +130,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         toolbar_view.set_content (map_widget);
 
         content = toolbar_view;
-        width_request = 700;
+        width_request = 450;
         height_request = 500;
 
         setup_map_source_action ();
