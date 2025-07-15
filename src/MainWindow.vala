@@ -283,6 +283,6 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         var list_item = (Gtk.ListItem) object;
 
         var search_result_item = (SearchResultItem) list_item.child;
-        search_result_item.place = (Geocode.Place) list_item.get_item ();
+        search_result_item.place = (Geocode.Place) list_item.item;
     }
 }
