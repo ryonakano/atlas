@@ -92,8 +92,6 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         };
         search_res_popover.set_parent (search_entry);
 
-        search_entry.set_key_capture_widget (search_res_popover);
-
         var style_submenu = new Menu ();
         style_submenu.append (_("System"), "app.color-scheme('%s')".printf (Define.ColorScheme.DEFAULT));
         style_submenu.append (_("Light"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_LIGHT));
@@ -153,6 +151,23 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         current_location.clicked.connect (() => {
             map_widget.go_to_current ();
         });
+
+
+        var search_key_controller = new Gtk.EventControllerKey ();
+        search_key_controller.key_pressed.connect ((keyval, keycode, state) => {
+            switch (keyval) {
+                // Intercept space key so it's not used for list activation: https://github.com/elementary/maps/issues/150
+                case Gdk.Key.KP_Space:
+                case Gdk.Key.space:
+                    search_key_controller.forward (search_entry.get_delegate ());
+                    return Gdk.EVENT_STOP;
+            }
+
+            return Gdk.EVENT_PROPAGATE;
+        });
+        ((Gtk.Widget) search_res_popover).add_controller (search_key_controller);
+
+        search_entry.set_key_capture_widget (search_res_popover);
 
         search_entry.search_changed.connect (() => {
             if (search_entry.text == "") {
