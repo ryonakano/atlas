@@ -20,6 +20,7 @@ map-point {
     }
 }
 
+/* TODO Remove when https://github.com/elementary/granite/issues/897 is fixed */
 button.osd {
     background: @bg_color;
     box-shadow:
