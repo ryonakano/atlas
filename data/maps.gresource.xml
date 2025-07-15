@@ -6,5 +6,7 @@
 
   <gresource prefix="/io/elementary/maps/icons">
     <file compressed="true" preprocess="xml-stripblanks" alias="pointer.svg">icons/pointer.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="map-tile-explore.svg">icons/48/explore.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="map-tile-transit.svg">icons/48/transit.svg</file>
   </gresource>
 </gresources>
