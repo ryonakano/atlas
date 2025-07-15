@@ -1,6 +1,7 @@
 # Ukrainian translations for io.elementary.maps package.
-# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2025 elementary, Inc.
 # Copyright (C) 2018-2025 Ryo Nakano
+# Copyright (C) 2014-2015 Atlas Developers
 # This file is distributed under the same license as the io.elementary.maps package.
 # Ihor Hordiichuk <igor_ck@outlook.com>, 2022, 2023, 2024, 2025.
 # Artem <artem@molotov.work>, 2022.
@@ -9,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 17:35+0000\n"
+"POT-Creation-Date: 2025-07-14 21:52+0000\n"
 "PO-Revision-Date: 2025-03-25 00:04+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/atlas/uk/"
@@ -22,60 +23,58 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.11-dev\n"
 
-#: src/MainWindow.vala:33
-msgid "Unknown"
-msgstr "Невідомо"
-
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:50
 msgid "Move to the current location"
 msgstr "Перейти до поточного розташування"
 
-#: src/MainWindow.vala:63
-msgid "Search Location"
+#: src/MainWindow.vala:58
+#, fuzzy
+#| msgid "Search Location"
+msgid "Search Maps"
 msgstr "Пошук розташування"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:66
 msgid "No Results Found"
 msgstr "Нічого не знайдено"
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:67
 msgid "Try a different search"
 msgstr "Введіть інший запит"
 
-#: src/MainWindow.vala:99
+#: src/MainWindow.vala:96
 #, fuzzy
 msgid "System"
 msgstr "С_истемний"
 
-#: src/MainWindow.vala:100
+#: src/MainWindow.vala:97
 #, fuzzy
 msgid "Light"
 msgstr "_Світлий"
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:98
 #, fuzzy
 msgid "Dark"
 msgstr "_Темний"
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:101
 msgid "Mapnik"
 msgstr "Mapnik"
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:102
 #, fuzzy
 msgid "Transport"
 msgstr "_Транспорт"
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:105
 #, fuzzy
 msgid "Style"
 msgstr "_Стиль"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:106
 #, fuzzy
 msgid "Map Source"
 msgstr "_Джерело мапи"
@@ -84,9 +83,13 @@ msgstr "_Джерело мапи"
 msgid "Main Menu"
 msgstr "Головне меню"
 
-#: src/MainWindow.vala:150
+#: src/MainWindow.vala:146
 msgid "Failed to connect to location service"
 msgstr "Не вдалося під'єднатися до служби визначення розташування"
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr "Невідомо"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

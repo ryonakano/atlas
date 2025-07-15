@@ -1,6 +1,7 @@
 # French translations for io.elementary.maps package.
-# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2025 elementary, Inc.
 # Copyright (C) 2018-2025 Ryo Nakano
+# Copyright (C) 2014-2015 Atlas Developers
 # This file is distributed under the same license as the io.elementary.maps package.
 # Nathan Bonnemains (@NathanBnm), 2021.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
@@ -12,72 +13,63 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 17:35+0000\n"
-"PO-Revision-Date: 2025-06-11 12:02+0000\n"
-"Last-Translator: Stella and Charlie <teamcons.carrd.co>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas/fr/>\n"
+"POT-Creation-Date: 2025-07-14 21:52+0000\n"
+"PO-Revision-Date: 2025-07-15 12:25+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"Language-Team: French <https://l10n.elementaryos.org/projects/maps/maps/fr/>"
+"\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.11.4\n"
 
-#: src/MainWindow.vala:33
-msgid "Unknown"
-msgstr "Inconnu"
-
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Maps"
-msgstr ""
+msgstr "Cartes"
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:50
 msgid "Move to the current location"
 msgstr "Se déplacer à la position actuelle"
 
-#: src/MainWindow.vala:63
-msgid "Search Location"
-msgstr "Rechercher un lieu"
+#: src/MainWindow.vala:58
+msgid "Search Maps"
+msgstr "Rechercher dans Cartes"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:66
 msgid "No Results Found"
 msgstr "Aucun résultat trouvé"
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:67
 msgid "Try a different search"
 msgstr "Essayez une recherche différente"
 
-#: src/MainWindow.vala:99
-#, fuzzy
+#: src/MainWindow.vala:96
 msgid "System"
-msgstr "S_ystème"
+msgstr "Système"
 
-#: src/MainWindow.vala:100
-#, fuzzy
+#: src/MainWindow.vala:97
 msgid "Light"
 msgstr "Clair"
 
-#: src/MainWindow.vala:101
-#, fuzzy
+#: src/MainWindow.vala:98
 msgid "Dark"
 msgstr "Sombre"
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:101
 msgid "Mapnik"
-msgstr ""
+msgstr "Mapnik"
+
+#: src/MainWindow.vala:102
+msgid "Transport"
+msgstr "Transports"
 
 #: src/MainWindow.vala:105
-#, fuzzy
-msgid "Transport"
-msgstr "_Transports"
-
-#: src/MainWindow.vala:108
-#, fuzzy
 msgid "Style"
-msgstr "_Style"
+msgstr "Style"
 
-#: src/MainWindow.vala:109
-#, fuzzy
+#: src/MainWindow.vala:106
 msgid "Map Source"
 msgstr "Source de la carte"
 
@@ -85,9 +77,13 @@ msgstr "Source de la carte"
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: src/MainWindow.vala:150
+#: src/MainWindow.vala:146
 msgid "Failed to connect to location service"
-msgstr "Echec de la connexion au service de localisation"
+msgstr "Échec de la connexion au service de localisation"
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr "Inconnu"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

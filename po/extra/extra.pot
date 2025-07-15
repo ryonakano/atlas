@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 17:35+0000\n"
+"POT-Creation-Date: 2025-07-14 21:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/maps.desktop.in:3 data/maps.metainfo.xml.in:10
+#: data/maps.desktop.in:6 data/maps.metainfo.xml.in:10
 msgid "Maps"
 msgstr ""
 
-#: data/maps.desktop.in:4
-msgid "Map"
-msgstr ""
-
-#: data/maps.desktop.in:5 data/maps.metainfo.xml.in:11
+#: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
 msgstr ""
 
-#: data/maps.desktop.in:11
-msgid "Trip;Explore;"
+#: data/maps.desktop.in:9
+msgid "trip;explore;"
 msgstr ""
 
 #: data/maps.metainfo.xml.in:13
@@ -61,4 +57,8 @@ msgstr ""
 
 #: data/maps.metainfo.xml.in:56
 msgid "elementary, Inc."
+msgstr ""
+
+#: data/maps.metainfo.xml.in:64
+msgid "Update translations"
 msgstr ""

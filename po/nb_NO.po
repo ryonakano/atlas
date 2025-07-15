@@ -1,6 +1,7 @@
 # Norwegian Bokmål translations for io.elementary.maps package.
-# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2025 elementary, Inc.
 # Copyright (C) 2018-2025 Ryo Nakano
+# Copyright (C) 2014-2015 Atlas Developers
 # This file is distributed under the same license as the io.elementary.maps package.
 # Allan Nordhøy <epost@anotheragency.no>, 2024.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
@@ -8,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 17:35+0000\n"
+"POT-Creation-Date: 2025-07-14 21:52+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -20,61 +21,59 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: src/MainWindow.vala:33
-msgid "Unknown"
-msgstr "Ukjent"
-
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:50
 msgid "Move to the current location"
 msgstr "Flytt til nåværende mål"
 
-#: src/MainWindow.vala:63
-msgid "Search Location"
+#: src/MainWindow.vala:58
+#, fuzzy
+#| msgid "Search Location"
+msgid "Search Maps"
 msgstr "Søk etter sted"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:66
 #, fuzzy
 msgid "No Results Found"
 msgstr "Resultatløst"
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:67
 msgid "Try a different search"
 msgstr ""
 
-#: src/MainWindow.vala:99
+#: src/MainWindow.vala:96
 #, fuzzy
 msgid "System"
 msgstr "System"
 
-#: src/MainWindow.vala:100
+#: src/MainWindow.vala:97
 #, fuzzy
 msgid "Light"
 msgstr "Lys"
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:98
 #, fuzzy
 msgid "Dark"
 msgstr "Mørk"
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:101
 msgid "Mapnik"
 msgstr ""
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:102
 #, fuzzy
 msgid "Transport"
 msgstr "Transportkart"
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:105
 #, fuzzy
 msgid "Style"
 msgstr "Drakt"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:106
 #, fuzzy
 msgid "Map Source"
 msgstr "Kartkilde:"
@@ -83,9 +82,13 @@ msgstr "Kartkilde:"
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:150
+#: src/MainWindow.vala:146
 msgid "Failed to connect to location service"
 msgstr ""
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr "Ukjent"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

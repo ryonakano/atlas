@@ -1,6 +1,7 @@
 # Norwegian Bokmål translations for extra package.
-# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2025 elementary, Inc.
 # Copyright (C) 2018-2025 Ryo Nakano
+# Copyright (C) 2014-2015 Atlas Developers
 # This file is distributed under the same license as the extra package.
 # Allan Nordhøy <epost@anotheragency.no>, 2024.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
@@ -8,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 17:35+0000\n"
+"POT-Creation-Date: 2025-07-14 21:52+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -20,20 +21,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: data/maps.desktop.in:3 data/maps.metainfo.xml.in:10
+#: data/maps.desktop.in:6 data/maps.metainfo.xml.in:10
 msgid "Maps"
 msgstr ""
 
-#: data/maps.desktop.in:4
-msgid "Map"
-msgstr "Kart"
-
-#: data/maps.desktop.in:5 data/maps.metainfo.xml.in:11
+#: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
 msgstr "Vis hvor du skal"
 
-#: data/maps.desktop.in:11
-msgid "Trip;Explore;"
+#: data/maps.desktop.in:9
+#, fuzzy
+#| msgid "Trip;Explore;"
+msgid "trip;explore;"
 msgstr "Tur;Utforsker;kart;planlegging;"
 
 #: data/maps.metainfo.xml.in:13
@@ -67,6 +66,13 @@ msgstr ""
 #: data/maps.metainfo.xml.in:56
 msgid "elementary, Inc."
 msgstr ""
+
+#: data/maps.metainfo.xml.in:64
+msgid "Update translations"
+msgstr ""
+
+#~ msgid "Map"
+#~ msgstr "Kart"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

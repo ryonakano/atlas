@@ -1,6 +1,7 @@
 # Japanese translations for io.elementary.maps package.
-# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2025 elementary, Inc.
 # Copyright (C) 2018-2025 Ryo Nakano
+# Copyright (C) 2014-2015 Atlas Developers
 # This file is distributed under the same license as the io.elementary.maps package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2021, 2022, 2023, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
@@ -8,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-13 17:35+0000\n"
+"POT-Creation-Date: 2025-07-14 21:52+0000\n"
 "PO-Revision-Date: 2025-07-10 13:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/"
@@ -20,60 +21,58 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.13-dev\n"
 
-#: src/MainWindow.vala:33
-msgid "Unknown"
-msgstr "不明"
-
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:44
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:51
+#: src/MainWindow.vala:50
 msgid "Move to the current location"
 msgstr "現在地に移動"
 
-#: src/MainWindow.vala:63
-msgid "Search Location"
+#: src/MainWindow.vala:58
+#, fuzzy
+#| msgid "Search Location"
+msgid "Search Maps"
 msgstr "場所を検索"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:66
 msgid "No Results Found"
 msgstr "見つかりませんでした"
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:67
 msgid "Try a different search"
 msgstr "他のキーワードを試してください"
 
-#: src/MainWindow.vala:99
+#: src/MainWindow.vala:96
 #, fuzzy
 msgid "System"
 msgstr "システム(_Y)"
 
-#: src/MainWindow.vala:100
+#: src/MainWindow.vala:97
 #, fuzzy
 msgid "Light"
 msgstr "ライト(_L)"
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:98
 #, fuzzy
 msgid "Dark"
 msgstr "ダーク(_D)"
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:101
 msgid "Mapnik"
 msgstr "Mapnik"
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:102
 #, fuzzy
 msgid "Transport"
 msgstr "交通(_T)"
 
-#: src/MainWindow.vala:108
+#: src/MainWindow.vala:105
 #, fuzzy
 msgid "Style"
 msgstr "スタイル(_S)"
 
-#: src/MainWindow.vala:109
+#: src/MainWindow.vala:106
 #, fuzzy
 msgid "Map Source"
 msgstr "マップ提供元(_M)"
@@ -82,9 +81,13 @@ msgstr "マップ提供元(_M)"
 msgid "Main Menu"
 msgstr "メインメニュー"
 
-#: src/MainWindow.vala:150
+#: src/MainWindow.vala:146
 msgid "Failed to connect to location service"
 msgstr "位置情報サービスに接続できませんでした"
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr "不明"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

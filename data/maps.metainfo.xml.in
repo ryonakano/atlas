@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014-2015 Atlas Developers, 2018-2025 Ryo Nakano -->
+<!-- Copyright 2025 elementary, Inc., 2018-2025 Ryo Nakano, 2014-2015 Atlas Developers -->
 <component type="desktop-application">
   <id>io.elementary.maps</id>
   <launchable type="desktop-id">io.elementary.maps.desktop</launchable>
@@ -58,112 +58,26 @@
   <project_group>elementary</project_group>
 
   <releases>
-    <release version="3.1.1" date="2025-07-12" urgency="medium">
-      <description translate="no">
+    <release version="8.1.0" date="2025-07-14" urgency="medium">
+      <description>
         <ul>
-          <li>Add shadow under the headerbar</li>
-          <li>Animate current location using CSS</li>
-          <li>Use propagate natural height and max content height for the search popover instead of hardcoding its height (thanks to @danirabbit)</li>
-          <li>Optimize for Pantheon and drop support for GNOME</li>
-          <li>Add a workaround for the startup crash with Gtk >= 4.17</li>
-          <li>Flatpak: Update protobuf-c to 1.5.2</li>
-          <li>Flatpak: Update elementary Platform to 8.2</li>
           <li>Update translations</li>
         </ul>
       </description>
+      <issues>
+        <issue url="https://github.com/elementary/maps/issues/125">Can't navigate from Search to results with the keyboard</issue>
+      </issues>
     </release>
 
-    <release version="3.1.0" date="2025-04-12" urgency="medium">
-      <description translate="no">
-        <ul>
-          <li>Improve search</li>
-          <li>Support for GNOME</li>
-          <li>Flatpak: Update protobuf-c to 1.5.1</li>
-          <li>Flatpak: Update elementary Platform to 8.1</li>
-          <li>Flatpak: Update libshumate to 1.4.0</li>
-          <li>Flatpak: Remove unused protobuf</li>
-          <li>Update translations</li>
-        </ul>
-      </description>
-    </release>
-
-    <release version="3.0.2" date="2024-08-12" urgency="low">
-      <description translate="no">
-        <ul>
-          <li>Fix search popover attachment</li>
-          <li>Fix fat titlebar with Adwaita stylesheet</li>
-          <li>Flatpak: Update platform version to 8</li>
-          <li>Flatpak: Update libshumate to 1.2.3</li>
-          <li>Update translations</li>
-        </ul>
-      </description>
-    </release>
-
-    <release version="3.0.1" date="2024-05-02" urgency="low">
-      <description translate="no">
-        <ul>
-          <li>Set current location button insensitive if connecting to location service being failed</li>
-          <li>Allow to use fixed location as current location (debug purpose)</li>
-          <li>Flatpak: Update platform version</li>
-          <li>Flatpak: Update libshumate to 1.1.4</li>
-          <li>Update translations</li>
-        </ul>
-      </description>
-    </release>
-
-    <release version="3.0.0" date="2023-07-07" urgency="high">
-      <description translate="no">
-        <ul>
-          <li>Use newer version of GeoClue which prefers Location Portal if available</li>
-          <li>Update translations</li>
-        </ul>
-      </description>
-    </release>
-
-    <release version="2.0.0" date="2023-04-15" urgency="medium">
-      <description translate="no">
-        <ul>
-          <li>Rewrite the app; now it uses GTK 4 instead of GTK 3 and libshumate instead of libchamplain</li>
-          <li>Add an blue circle indicator that represents your current location</li>
-          <li>Update Flatpak runtime version</li>
-          <li>Update translations</li>
-        </ul>
-      </description>
-    </release>
-
-    <release version="1.0.1" date="2022-08-16">
-      <description translate="no">
-        <ul>
-          <li>Update the dependency geocode-glib from 3.26.2 to 3.26.4</li>
-          <li>Update copyright information</li>
-          <li>Update translations</li>
-        </ul>
-      </description>
-    </release>
-
-    <release version="1.0.0" date="2021-12-28">
-      <description translate="no">
-        <ul>
-          <li>Fix the app being introduced as if sharing your location to someone in AppCenter</li>
-          <li>Show the shortcut key for search entry using tooltip</li>
-          <li>Add the new style switcher</li>
-          <li>Redesigned &amp; vectored app icon (big thanks to @Suzie97)</li>
-          <li>Show your current location if launching the app for the first time</li>
-        </ul>
-        <p>Translation updates:</p>
-        <ul>
-          <li>Add French translation (thanks to @NathanBnm)</li>
-        </ul>
-      </description>
-    </release>
-
-    <release version="0.1.0" date="2021-11-30">
-      <description translate="no">
-        <ul>
-          <li>Initial release</li>
-        </ul>
-      </description>
-    </release>
+    <release version="3.1.1" date="2025-07-12" urgency="medium" />
+    <release version="3.1.0" date="2025-04-12" urgency="medium" />
+    <release version="3.0.2" date="2024-08-12" urgency="low" />
+    <release version="3.0.1" date="2024-05-02" urgency="low" />
+    <release version="3.0.0" date="2023-07-07" urgency="high" />
+    <release version="2.0.0" date="2023-04-15" urgency="medium" />
+    <release version="1.0.1" date="2022-08-16" />
+    <release version="1.0.0" date="2021-12-28" />
+    <release version="0.1.0" date="2021-11-30" />
   </releases>
 
 </component>

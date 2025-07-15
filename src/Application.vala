@@ -1,7 +1,8 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2014-2015 Atlas Developers
+ * SPDX-FileCopyrightText: 2025 elementary, Inc. (https://elementary.io)
  *                         2018-2025 Ryo Nakano <ryonakaknock3@gmail.com>
+ *                         2014-2015 Atlas Developers
  */
 
 public class Maps.Application : Adw.Application {
