@@ -5,14 +5,6 @@
  */
 
 public class Maps.MainWindow : Adw.ApplicationWindow {
-    private class PlaceListBoxRow : Gtk.ListBoxRow {
-        public Geocode.Place place { get; construct; }
-
-        public PlaceListBoxRow (Geocode.Place place) {
-            Object (place: place);
-        }
-    }
-
     [Flags]
     private enum BusyReason {
         /** Busy with locating */
