@@ -1,6 +1,7 @@
 # Estonian translations for extra package.
-# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2025 elementary, Inc.
 # Copyright (C) 2018-2025 Ryo Nakano
+# Copyright (C) 2014-2015 Atlas Developers
 # This file is distributed under the same license as the extra package.
 # Priit Jõerüüt <hwlate@joeruut.com>, 2024, 2025.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.

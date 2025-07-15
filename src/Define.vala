@@ -1,6 +1,7 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018-2025 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2025 elementary, Inc. (https://elementary.io)
+ *                         2018-2025 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 namespace Define {
