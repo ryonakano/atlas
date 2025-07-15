@@ -14,29 +14,28 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-14 21:52+0000\n"
-"PO-Revision-Date: 2025-06-11 12:02+0000\n"
-"Last-Translator: Stella and Charlie <teamcons.carrd.co>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/rosp/atlas/fr/>\n"
+"PO-Revision-Date: 2025-07-15 12:25+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"Language-Team: French <https://l10n.elementaryos.org/projects/maps/maps/fr/>"
+"\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/MainWindow.vala:44
 msgid "Maps"
-msgstr ""
+msgstr "Cartes"
 
 #: src/MainWindow.vala:50
 msgid "Move to the current location"
 msgstr "Se déplacer à la position actuelle"
 
 #: src/MainWindow.vala:58
-#, fuzzy
-#| msgid "Search Location"
 msgid "Search Maps"
-msgstr "Rechercher un lieu"
+msgstr "Rechercher dans Cartes"
 
 #: src/MainWindow.vala:66
 msgid "No Results Found"
@@ -47,36 +46,30 @@ msgid "Try a different search"
 msgstr "Essayez une recherche différente"
 
 #: src/MainWindow.vala:96
-#, fuzzy
 msgid "System"
-msgstr "S_ystème"
+msgstr "Système"
 
 #: src/MainWindow.vala:97
-#, fuzzy
 msgid "Light"
 msgstr "Clair"
 
 #: src/MainWindow.vala:98
-#, fuzzy
 msgid "Dark"
 msgstr "Sombre"
 
 #: src/MainWindow.vala:101
 msgid "Mapnik"
-msgstr ""
+msgstr "Mapnik"
 
 #: src/MainWindow.vala:102
-#, fuzzy
 msgid "Transport"
-msgstr "_Transports"
+msgstr "Transports"
 
 #: src/MainWindow.vala:105
-#, fuzzy
 msgid "Style"
-msgstr "_Style"
+msgstr "Style"
 
 #: src/MainWindow.vala:106
-#, fuzzy
 msgid "Map Source"
 msgstr "Source de la carte"
 
@@ -86,7 +79,7 @@ msgstr "Menu principal"
 
 #: src/MainWindow.vala:146
 msgid "Failed to connect to location service"
-msgstr "Echec de la connexion au service de localisation"
+msgstr "Échec de la connexion au service de localisation"
 
 #: src/SearchResultItem.vala:28
 msgid "Unknown"
