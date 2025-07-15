@@ -1,6 +1,7 @@
 # Slovak translations for extra package.
-# Copyright (C) 2014-2015 Atlas Developers
+# Copyright (C) 2025 elementary, Inc.
 # Copyright (C) 2018-2025 Ryo Nakano
+# Copyright (C) 2014-2015 Atlas Developers
 # This file is distributed under the same license as the extra package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
 # JohnDumpling <john_dumpling@protonmail.com>, 2022, 2023.
