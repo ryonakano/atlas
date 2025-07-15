@@ -259,12 +259,23 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
             places = yield forward.search_async (search_cancellable);
         } catch (Error error) {
             warning (error.message);
+            loc_store.remove_all ();
             return;
         }
 
-        loc_store.remove_all ();
+        // Remove any old results that aren't in the new set
+        for (int i = 0; i < loc_store.n_items; i++) {
+            if (places.find ((Geocode.Place) loc_store.get_item (i)) == null) {
+                loc_store.remove (i);
+            }
+        }
+
+        // Add any missing results from the new set
         foreach (unowned var place in places) {
-            loc_store.append (place);
+            uint pos = -1;
+            if (!loc_store.find (place, out pos)) {
+                loc_store.append (place);
+            }
         }
     }
 
