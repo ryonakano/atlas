@@ -25,9 +25,13 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
     private ListStore location_store;
     private Cancellable? search_cancellable = null;
 
+    private Granite.Placeholder search_placeholder;
     private Gtk.Button current_location;
+    private Gtk.ScrolledWindow search_res_list_scrolled;
+    private Gtk.Spinner search_spinner;
     private Gtk.Spinner spinner;
     private Gtk.SearchEntry search_entry;
+    private Gtk.Stack search_stack;
     private Gtk.Popover search_res_popover;
     private MapWidget map_widget;
 
@@ -53,12 +57,13 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
             child = search_entry
         };
 
-        var search_placeholder = new Adw.StatusPage () {
-            title = _("No Results Found"),
+        search_placeholder = new Granite.Placeholder (_("No Results Found")) {
             description = _("Try a different search"),
-            icon_name = "edit-find-symbolic",
-            margin_start = 12,
-            margin_end = 12
+            icon = new ThemedIcon ("edit-find-symbolic")
+        };
+
+        search_spinner = new Gtk.Spinner () {
+            valign = CENTER
         };
 
         var list_factory = new Gtk.SignalListItemFactory ();
@@ -72,18 +77,20 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         };
         search_listview.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
-        var search_res_list_scrolled = new Gtk.ScrolledWindow () {
+        search_res_list_scrolled = new Gtk.ScrolledWindow () {
             child = search_listview,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
             max_content_height = 500,
             propagate_natural_height = true
         };
 
-        var search_stack = new Gtk.Stack () {
+        search_stack = new Gtk.Stack () {
+            height_request = 100,
             vhomogeneous = false
         };
         search_stack.add_child (search_res_list_scrolled);
         search_stack.add_child (search_placeholder);
+        search_stack.add_child (search_spinner);
 
         search_res_popover = new Gtk.Popover () {
             width_request = 400,
@@ -152,14 +159,6 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
             map_widget.go_to_current ();
         });
 
-        selection_model.items_changed.connect (() => {
-            if (selection_model.get_n_items () == 0) {
-                search_stack.visible_child = search_placeholder;
-            } else {
-                search_stack.visible_child = search_res_list_scrolled;
-            }
-        });
-
         var search_key_controller = new Gtk.EventControllerKey ();
         search_key_controller.key_pressed.connect ((keyval, keycode, state) => {
             switch (keyval) {
@@ -212,15 +211,16 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
     }
 
     private void busy_start (BusyReason new_reason) {
-        // Not busy → Busy
-        if (!(bool)(current_busy_reason & BusyReason.ANY)) {
-            spinner.visible = true;
-            spinner.spinning = true;
-        }
-
         // Not locating → Locating
         if ((bool)(new_reason & BusyReason.LOCATING)) {
             current_location.sensitive = false;
+            spinner.spinning = true;
+        }
+
+        // Not Searching → Searching
+        if ((bool)(new_reason & BusyReason.SEARCHING)) {
+            search_spinner.spinning = true;
+            search_stack.visible_child = search_spinner;
         }
 
         current_busy_reason |= new_reason;
@@ -232,12 +232,12 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         // Locating → Not locating
         if ((bool)(new_reason & BusyReason.LOCATING)) {
             current_location.sensitive = true;
+            spinner.spinning = false;
         }
 
-        // Busy → Not busy
-        if (!(bool)(current_busy_reason & BusyReason.ANY)) {
-            spinner.visible = false;
-            spinner.spinning = false;
+        // Searching → Not locating
+        if (!(bool)(new_reason &  BusyReason.SEARCHING)) {
+            search_spinner.spinning = false;
         }
     }
 
@@ -280,8 +280,10 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         var places = new List<Geocode.Place> ();
         try {
             places = yield forward.search_async (search_cancellable);
+            search_stack.visible_child = search_res_list_scrolled;
         } catch (Error error) {
             warning (error.message);
+            search_stack.visible_child = search_placeholder;
             return;
         }
 
