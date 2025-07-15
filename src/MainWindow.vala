@@ -168,6 +168,9 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
                 case Gdk.Key.space:
                     search_key_controller.forward (search_entry.get_delegate ());
                     return Gdk.EVENT_STOP;
+                default:
+                    // NOP
+                    break;
             }
 
             return Gdk.EVENT_PROPAGATE;
