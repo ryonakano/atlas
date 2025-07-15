@@ -214,7 +214,6 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
     private void busy_start (BusyReason new_reason) {
         // Not busy → Busy
         if (!(bool)(current_busy_reason & BusyReason.ANY)) {
-            spinner.visible = true;
             spinner.spinning = true;
         }
 
@@ -236,7 +235,6 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         // Busy → Not busy
         if (!(bool)(current_busy_reason & BusyReason.ANY)) {
-            spinner.visible = false;
             spinner.spinning = false;
         }
     }
