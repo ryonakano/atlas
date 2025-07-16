@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
   <enum id="map-sources">
-    <value value="0" nick="mapnik"/>
-    <value value="1" nick="transport"/>
+    <value value="0" nick="explore"/>
+    <value value="1" nick="transit"/>
   </enum>
 
   <schema path="/io/elementary/maps/" id="io.elementary.maps">
@@ -37,7 +37,7 @@
       <description>Zoom level of the map last used</description>
     </key>
     <key enum="map-sources" name="map-source">
-      <default>'mapnik'</default>
+      <default>'explore'</default>
       <summary>Active map source</summary>
       <description>The type of the map last used</description>
     </key>

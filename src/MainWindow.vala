@@ -94,7 +94,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         var explore_source_button = new Gtk.ToggleButton () {
             action_name = "win.map-source",
-            action_target = Define.MapSource.MAPNIK,
+            action_target = Define.MapSetting.EXPLORE,
             child = new Gtk.Image.from_icon_name ("map-tile-explore") {
                 pixel_size = 48
             }
@@ -112,8 +112,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
 
         var transit_source_button = new Gtk.ToggleButton () {
             action_name = "win.map-source",
-            action_target = Define.MapSource.TRANSPORT,
-            group = explore_source_button,
+            action_target = Define.MapSetting.TRANSIT,
             child = new Gtk.Image.from_icon_name ("map-tile-transit") {
                 pixel_size = 48
             }
@@ -284,18 +283,15 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
     }
 
     private void setup_map_source_action () {
-        var map_source_action = new SimpleAction.stateful (
-            "map-source", VariantType.STRING, new Variant.string (Define.MapSource.MAPNIK)
-        );
-        map_source_action.bind_property ("state", map_widget, "map-source",
-                                         BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
-                                         Util.map_source_action_transform_to_cb,
-                                         Util.map_source_action_transform_from_cb);
-        Application.settings.bind_with_mapping ("map-source", map_widget, "map-source", SettingsBindFlags.DEFAULT,
-                                                (SettingsBindGetMappingShared) Util.map_source_get_mapping_cb,
-                                                (SettingsBindSetMappingShared) Util.map_source_set_mapping_cb,
-                                                null, null);
+        var map_source_action = Application.settings.create_action ("map-source");
         add_action (map_source_action);
+
+        Application.settings.bind_with_mapping (
+            "map-source", map_widget, "map-source", GET,
+            (SettingsBindGetMappingShared) Util.map_source_get_mapping_cb,
+            () => { return false; },
+            null, null
+        );
     }
 
     private async void search_location (string term, ListStore res) {
