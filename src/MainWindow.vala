@@ -283,10 +283,13 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         }
 
         // Remove any old results that aren't in the new set
-        for (int i = 0; i < loc_store.n_items; i++) {
+        for (int i = 0; i < loc_store.n_items;) {
             if (places.find ((Geocode.Place) loc_store.get_item (i)) == null) {
                 loc_store.remove (i);
+                continue;
             }
+
+            i++;
         }
 
         // Add any missing results from the new set
