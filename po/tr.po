@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 21:52+0000\n"
+"POT-Creation-Date: 2025-07-16 11:38+0000\n"
 "PO-Revision-Date: 2024-06-17 12:09+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/atlas/tr/>\n"
@@ -22,74 +22,76 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 
-#: src/MainWindow.vala:44
+#: src/MainWindow.vala:35
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:50
+#: src/MainWindow.vala:41
 msgid "Move to the current location"
 msgstr "Geçerli konuma git"
 
-#: src/MainWindow.vala:58
+#: src/MainWindow.vala:49
 #, fuzzy
 #| msgid "Search Location"
 msgid "Search Maps"
 msgstr "Konum Ara"
 
-#: src/MainWindow.vala:66
+#: src/MainWindow.vala:57
 #, fuzzy
 msgid "No Results Found"
 msgstr "Arama Sonucu Yok"
 
-#: src/MainWindow.vala:67
+#: src/MainWindow.vala:58
 msgid "Try a different search"
 msgstr ""
 
-#: src/MainWindow.vala:96
+#: src/MainWindow.vala:104
+msgid "Explore"
+msgstr ""
+
+#: src/MainWindow.vala:123
+#, fuzzy
+msgid "Transit"
+msgstr "Ulaşım"
+
+#: src/MainWindow.vala:143
 #, fuzzy
 msgid "System"
 msgstr "Sistem"
 
-#: src/MainWindow.vala:97
+#: src/MainWindow.vala:144
 #, fuzzy
 msgid "Light"
 msgstr "Açık"
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:145
 #, fuzzy
 msgid "Dark"
 msgstr "Koyu"
 
-#: src/MainWindow.vala:101
-msgid "Mapnik"
-msgstr "Mapnik"
-
-#: src/MainWindow.vala:102
-#, fuzzy
-msgid "Transport"
-msgstr "Ulaşım"
-
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:149
 #, fuzzy
 msgid "Style"
 msgstr "Biçem"
 
-#: src/MainWindow.vala:106
-#, fuzzy
-msgid "Map Source"
-msgstr "Harita Kaynağı"
-
-#: src/MainWindow.vala:112
+#: src/MainWindow.vala:155
 msgid "Main Menu"
 msgstr "Ana Menü"
 
-#: src/MainWindow.vala:146
+#: src/MainWindow.vala:190
 msgid "Failed to connect to location service"
 msgstr "Konum hizmetine bağlanamadı"
 
 #: src/SearchResultItem.vala:28
 msgid "Unknown"
 msgstr "Bilinmiyor"
+
+#~ msgid "Mapnik"
+#~ msgstr "Mapnik"
+
+#, fuzzy
+#~ msgid "Map Source"
+#~ msgstr "Harita Kaynağı"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 21:52+0000\n"
+"POT-Creation-Date: 2025-07-16 11:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,59 +17,55 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:44
+#: src/MainWindow.vala:35
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:50
+#: src/MainWindow.vala:41
 msgid "Move to the current location"
 msgstr ""
 
-#: src/MainWindow.vala:58
+#: src/MainWindow.vala:49
 msgid "Search Maps"
 msgstr ""
 
-#: src/MainWindow.vala:66
+#: src/MainWindow.vala:57
 msgid "No Results Found"
 msgstr ""
 
-#: src/MainWindow.vala:67
+#: src/MainWindow.vala:58
 msgid "Try a different search"
 msgstr ""
 
-#: src/MainWindow.vala:96
+#: src/MainWindow.vala:104
+msgid "Explore"
+msgstr ""
+
+#: src/MainWindow.vala:123
+msgid "Transit"
+msgstr ""
+
+#: src/MainWindow.vala:143
 msgid "System"
 msgstr ""
 
-#: src/MainWindow.vala:97
+#: src/MainWindow.vala:144
 msgid "Light"
 msgstr ""
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:145
 msgid "Dark"
 msgstr ""
 
-#: src/MainWindow.vala:101
-msgid "Mapnik"
-msgstr ""
-
-#: src/MainWindow.vala:102
-msgid "Transport"
-msgstr ""
-
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:149
 msgid "Style"
 msgstr ""
 
-#: src/MainWindow.vala:106
-msgid "Map Source"
-msgstr ""
-
-#: src/MainWindow.vala:112
+#: src/MainWindow.vala:155
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:146
+#: src/MainWindow.vala:190
 msgid "Failed to connect to location service"
 msgstr ""
 

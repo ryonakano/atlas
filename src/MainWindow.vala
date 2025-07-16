@@ -92,18 +92,61 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         };
         search_res_popover.set_parent (search_entry);
 
+        var explore_source_button = new Gtk.ToggleButton () {
+            action_name = "win.map-source",
+            action_target = Define.MapSource.MAPNIK,
+            child = new Gtk.Image.from_icon_name ("map-tile-explore") {
+                pixel_size = 48
+            }
+        };
+        explore_source_button.add_css_class ("image-button");
+
+        var explore_source_label = new Gtk.Label (_("Explore")) {
+            mnemonic_widget = explore_source_button
+        };
+        explore_source_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
+
+        var explore_source_box = new Gtk.Box (VERTICAL, 0);
+        explore_source_box.append (explore_source_button);
+        explore_source_box.append (explore_source_label);
+
+        var transit_source_button = new Gtk.ToggleButton () {
+            action_name = "win.map-source",
+            action_target = Define.MapSource.TRANSPORT,
+            group = explore_source_button,
+            child = new Gtk.Image.from_icon_name ("map-tile-transit") {
+                pixel_size = 48
+            }
+        };
+        transit_source_button.add_css_class ("image-button");
+
+        var transit_source_label = new Gtk.Label (_("Transit")) {
+            mnemonic_widget = transit_source_button
+        };
+        transit_source_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
+
+        var transit_source_box = new Gtk.Box (VERTICAL, 0);
+        transit_source_box.append (transit_source_button);
+        transit_source_box.append (transit_source_label);
+
+        var source_box = new Gtk.Box (HORIZONTAL, 12) {
+            halign = CENTER,
+            homogeneous = true
+        };
+        source_box.append (explore_source_box);
+        source_box.append (transit_source_box);
+
+        var map_source_item = new MenuItem (null, null);
+        map_source_item.set_attribute_value ("custom", "source");
+
         var style_submenu = new Menu ();
         style_submenu.append (_("System"), "app.color-scheme('%s')".printf (Define.ColorScheme.DEFAULT));
         style_submenu.append (_("Light"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_LIGHT));
         style_submenu.append (_("Dark"), "app.color-scheme('%s')".printf (Define.ColorScheme.FORCE_DARK));
 
-        var map_source_submenu = new Menu ();
-        map_source_submenu.append (_("Mapnik"), "win.map-source('%s')".printf (Define.MapSource.MAPNIK));
-        map_source_submenu.append (_("Transport"), "win.map-source('%s')".printf (Define.MapSource.TRANSPORT));
-
         var main_menu = new Menu ();
-        main_menu.append_submenu (_("Style"), style_submenu);
-        main_menu.append_submenu (_("Map Source"), map_source_submenu);
+        main_menu.append_item (map_source_item);
+        main_menu.append_section (_("Style"), style_submenu);
 
         var menu_button = new Gtk.MenuButton () {
             icon_name = "open-menu-symbolic",
@@ -112,6 +155,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
             tooltip_text = _("Main Menu"),
             valign = CENTER
         };
+        ((Gtk.PopoverMenu) menu_button.popover).add_child (source_box, "source");
 
         var headerbar = new Adw.HeaderBar () {
             title_widget = search_clamp

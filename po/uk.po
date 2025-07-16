@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 21:52+0000\n"
+"POT-Creation-Date: 2025-07-16 11:38+0000\n"
 "PO-Revision-Date: 2025-03-25 00:04+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/atlas/uk/"
@@ -23,73 +23,75 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.11-dev\n"
 
-#: src/MainWindow.vala:44
+#: src/MainWindow.vala:35
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:50
+#: src/MainWindow.vala:41
 msgid "Move to the current location"
 msgstr "Перейти до поточного розташування"
 
-#: src/MainWindow.vala:58
+#: src/MainWindow.vala:49
 #, fuzzy
 #| msgid "Search Location"
 msgid "Search Maps"
 msgstr "Пошук розташування"
 
-#: src/MainWindow.vala:66
+#: src/MainWindow.vala:57
 msgid "No Results Found"
 msgstr "Нічого не знайдено"
 
-#: src/MainWindow.vala:67
+#: src/MainWindow.vala:58
 msgid "Try a different search"
 msgstr "Введіть інший запит"
 
-#: src/MainWindow.vala:96
+#: src/MainWindow.vala:104
+msgid "Explore"
+msgstr ""
+
+#: src/MainWindow.vala:123
+#, fuzzy
+msgid "Transit"
+msgstr "_Транспорт"
+
+#: src/MainWindow.vala:143
 #, fuzzy
 msgid "System"
 msgstr "С_истемний"
 
-#: src/MainWindow.vala:97
+#: src/MainWindow.vala:144
 #, fuzzy
 msgid "Light"
 msgstr "_Світлий"
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:145
 #, fuzzy
 msgid "Dark"
 msgstr "_Темний"
 
-#: src/MainWindow.vala:101
-msgid "Mapnik"
-msgstr "Mapnik"
-
-#: src/MainWindow.vala:102
-#, fuzzy
-msgid "Transport"
-msgstr "_Транспорт"
-
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:149
 #, fuzzy
 msgid "Style"
 msgstr "_Стиль"
 
-#: src/MainWindow.vala:106
-#, fuzzy
-msgid "Map Source"
-msgstr "_Джерело мапи"
-
-#: src/MainWindow.vala:112
+#: src/MainWindow.vala:155
 msgid "Main Menu"
 msgstr "Головне меню"
 
-#: src/MainWindow.vala:146
+#: src/MainWindow.vala:190
 msgid "Failed to connect to location service"
 msgstr "Не вдалося під'єднатися до служби визначення розташування"
 
 #: src/SearchResultItem.vala:28
 msgid "Unknown"
 msgstr "Невідомо"
+
+#~ msgid "Mapnik"
+#~ msgstr "Mapnik"
+
+#, fuzzy
+#~ msgid "Map Source"
+#~ msgstr "_Джерело мапи"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"
