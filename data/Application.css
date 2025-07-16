@@ -55,7 +55,7 @@ search-result-item image {
         linear-gradient(
             to bottom,
             transparent,
-            alpha(white, 0.1),
+            alpha(white, 0.1)
         );
     color: white;
     min-height: 2.5em;
