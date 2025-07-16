@@ -24,7 +24,7 @@ public class Maps.SearchResultItem : Granite.Bin {
             info_label.label = "%s, %s, %s".printf (street, postal_code, town);
 
             // Not add because this widget gets recycled
-            css_classes = {place.place_type.to_string ().replace ("GEOCODE_PLACE_TYPE_", "").replace ("_", "-").down ()};
+            css_classes = {get_cssclass_for_placetype (place.place_type)};
         }
     }
 
@@ -62,5 +62,77 @@ public class Maps.SearchResultItem : Granite.Bin {
         box.append (label_box);
 
         child = box;
+    }
+
+    private string get_cssclass_for_placetype (Geocode.PlaceType place_type) {
+        var css_name = "";
+        switch (place_type) {
+            case AIRPORT:
+            case BUS_STOP:
+            case LIGHT_RAIL_STATION:
+            case RAILWAY_STATION:
+                css_name = "transit";
+                break;
+
+            case BAR:
+            case RESTAURANT:
+                css_name = "service";
+                break;
+
+            case COLLOQUIAL:
+            case CONTINENT:
+            case COUNTRY:
+            case COUNTY:
+            case ESTATE:
+            case LOCAL_ADMINISTRATIVE_AREA:
+            case POSTAL_CODE:
+            case STATE:
+            case SUBURB:
+            case SUPERNAME:
+            case TIME_ZONE:
+            case TOWN:
+            case ZONE:
+                css_name = "administrative-division";
+                break;
+
+            case DRAINAGE:
+            case ISLAND:
+            case OCEAN:
+            case SEA:
+                css_name = "water";
+                break;
+
+            case HISTORICAL_COUNTY:
+            case HISTORICAL_STATE:
+            case HISTORICAL_TOWN:
+                css_name = "historical";
+                break;
+
+            case LAND_FEATURE:
+                css_name = "land-feature";
+                break;
+
+            case MOTORWAY:
+                css_name = "motorway";
+                break;
+
+            case BUILDING:
+            case PLACE_OF_WORSHIP:
+            case POINT_OF_INTEREST:
+            case SCHOOL:
+                css_name = "point-of-interest";
+                break;
+
+            case STREET:
+                css_name = "street";
+                break;
+
+            case MISCELLANEOUS:
+            case UNKNOWN:
+                // Default style
+                break;
+        }
+
+        return css_name;
     }
 }

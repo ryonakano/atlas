@@ -64,59 +64,15 @@ search-result-item image {
     -gtk-icon-shadow: 0 1px 3px @STRAWBERRY_700;
 }
 
-/*Transit*/
-search-result-item.airport image,
-search-result-item.bus-stop image,
-search-result-item.light-rail-station image,
-search-result-item.railway-station image {
-    background-color: @BLUEBERRY_500;
-    -gtk-icon-shadow: 0 1px 3px @BLUEBERRY_700;
-}
 
-search-result-item.bar image,
-search-result-item.restaurant image {
-    background-color: @ORANGE_500;
-    -gtk-icon-shadow: 0 1px 3px @ORANGE_700;
-}
-
-search-result-item.building image,
-search-result-item.point-of-interest image {
-    background-color: @BUBBLEGUM_500;
-    -gtk-icon-shadow: 0 1px 3px @BUBBLEGUM_700;
-}
-
-/*Administrative Divisions*/
-search-result-item.continent image,
-search-result-item.country image,
-search-result-item.county image,
-search-result-item.estate image,
-search-result-item.historical-county image,
-search-result-item.historical-state image,
-search-result-item.historical-town image,
-search-result-item.local_administrative_area image,
-search-result-item.postal-code image,
-search-result-item.state image,
-search-result-item.suburb image,
-search-result-item.supername image,
-search-result-item.time-zone image,
-search-result-item.town image,
-search-result-item.zone image {
+search-result-item.administrative-division image {
     background-color: @SLATE_300;
     -gtk-icon-shadow: 0 1px 3px @SLATE_500;
 }
 
-/*Water*/
-search-result-item.drainage image,
-search-result-item.sea image,
-search-result-item.ocean image {
-    background-color: @MINT_500;
-    -gtk-icon-shadow: 0 1px 3px @MINT_700;
-}
-
-search-result-item.island image,
-search-result-item.land-feature image {
-    background-color: @LIME_500;
-    -gtk-icon-shadow: 0 1px 3px @LIME_700;
+search-result-item.historical image {
+    background-color: @COCOA_100;
+    -gtk-icon-shadow: 0 1px 3px @COCOA_300;
 }
 
 search-result-item.motorway image {
@@ -124,17 +80,32 @@ search-result-item.motorway image {
     -gtk-icon-shadow: 0 1px 3px @BANANA_900;
 }
 
+search-result-item.point-of-interest image {
+    background-color: @BUBBLEGUM_500;
+    -gtk-icon-shadow: 0 1px 3px @BUBBLEGUM_700;
+}
+
+search-result-item.service image {
+    background-color: @ORANGE_500;
+    -gtk-icon-shadow: 0 1px 3px @ORANGE_700;
+}
+
 search-result-item.street image {
     background-color: @SLATE_300;
     -gtk-icon-shadow: 0 1px 3px @SLATE_500;
 }
 
-search-result-item.school image {
-    background-color: @COCOA_100;
-    -gtk-icon-shadow: 0 1px 3px @COCOA_300;
+search-result-item.transit image {
+    background-color: @BLUEBERRY_500;
+    -gtk-icon-shadow: 0 1px 3px @BLUEBERRY_700;
 }
 
-search-result-item.place-of-worship image {
-    background-color: @GRAPE_500;
-    -gtk-icon-shadow: 0 1px 3px @GRAPE_700;
+search-result-item.water image {
+    background-color: @MINT_500;
+    -gtk-icon-shadow: 0 1px 3px @MINT_700;
+}
+
+search-result-item.land-feature image {
+    background-color: @LIME_500;
+    -gtk-icon-shadow: 0 1px 3px @LIME_700;
 }
