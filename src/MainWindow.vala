@@ -176,7 +176,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         width_request = 450;
         height_request = 500;
 
-        setup_map_source_action ();
+        // setup_map_source_action ();
 
         // Add the marker layer on top after selecting map source
         map_widget.init_marker_layers ();

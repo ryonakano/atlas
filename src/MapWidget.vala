@@ -51,8 +51,8 @@ public class Maps.MapWidget : Gtk.Box {
     }
 
     private void load_vector_tiles () throws Error requires (Shumate.VectorRenderer.is_supported ()) {
-        var bytes = resources_lookup_data ("/io/elementary/maps/tiles/style.json", NONE);
-        var style_json = (string) bytes.get_data ();
+        // var bytes = resources_lookup_data ("/io/elementary/maps/tiles/style.json", NONE);
+        // var style_json = (string) bytes.get_data ();
 
         var sprites_json = resources_lookup_data ("/io/elementary/maps/tiles/sprites.json", NONE);
         var sprites_texture = Gdk.Texture.from_resource ("/io/elementary/maps/tiles/sprites.png");
@@ -60,7 +60,7 @@ public class Maps.MapWidget : Gtk.Box {
         var sprites_2x_json = resources_lookup_data ("/io/elementary/maps/tiles/sprites@2x.json", NONE);
         var sprites_2x_texture = Gdk.Texture.from_resource ("/io/elementary/maps/tiles/sprites@2x.png");
 
-        var renderer = new Shumate.VectorRenderer (Define.MapID.EXPLORE_LIGHT, style_json);
+        var renderer = new Shumate.VectorRenderer (Define.MapID.EXPLORE_LIGHT, MapStyle.get_style ());
         renderer.set_max_zoom_level (22);
         renderer.set_license ("© OpenMapTiles © OpenStreetMap contributors");
 
@@ -70,6 +70,10 @@ public class Maps.MapWidget : Gtk.Box {
 
         var map_source_registry = new Shumate.MapSourceRegistry.with_defaults ();
         map_source_registry.add (renderer);
+
+        map_widget.map_source = map_source_registry.get_by_id (Define.MapID.EXPLORE_LIGHT);
+
+        critical (MapStyle.get_style ());
     }
 
     public void init_marker_layers () {
