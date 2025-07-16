@@ -10,72 +10,65 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: 2024-05-08 14:05+0000\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/atlas/ru/>\n"
+"PO-Revision-Date: 2025-07-17 18:55+0000\n"
+"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
+"Language-Team: Russian <https://l10n.elementaryos.org/projects/maps/maps/ru/>"
+"\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.4-rc\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/MainWindow.vala:35
 msgid "Maps"
-msgstr ""
+msgstr "Карты"
 
 #: src/MainWindow.vala:41
 msgid "Move to the current location"
 msgstr "Переместиться к текущему местоположению"
 
 #: src/MainWindow.vala:49
-#, fuzzy
-#| msgid "Search Location"
 msgid "Search Maps"
-msgstr "Искать место"
+msgstr "Поиск по карте"
 
 #: src/MainWindow.vala:57
-#, fuzzy
 msgid "No Results Found"
 msgstr "Ничего не найдено"
 
 #: src/MainWindow.vala:58
 msgid "Try a different search"
-msgstr ""
+msgstr "Попробуйте найти что-нибудь другое"
 
 #: src/MainWindow.vala:104
 msgid "Explore"
-msgstr ""
+msgstr "Обзор"
 
 #: src/MainWindow.vala:123
-#, fuzzy
 msgid "Transit"
-msgstr "Карта транспорта"
+msgstr "Транспорт"
 
 #: src/MainWindow.vala:143
-#, fuzzy
 msgid "System"
-msgstr "Система"
+msgstr "Системный"
 
 #: src/MainWindow.vala:144
-#, fuzzy
 msgid "Light"
 msgstr "Светлый"
 
 #: src/MainWindow.vala:145
-#, fuzzy
 msgid "Dark"
 msgstr "Тёмный"
 
 #: src/MainWindow.vala:149
-#, fuzzy
 msgid "Style"
-msgstr "Стиль:"
+msgstr "Стиль"
 
 #: src/MainWindow.vala:155
 msgid "Main Menu"
-msgstr ""
+msgstr "Главное меню"
 
 #: src/MainWindow.vala:190
 msgid "Failed to connect to location service"
