@@ -20,7 +20,11 @@ namespace Define {
     }
 
     namespace MapSource {
-        public const string MAPNIK = "mapnik";
+        public const string EXPLORE = "explore";
         public const string TRANSPORT = "transport";
+    }
+
+    namespace MapID {
+        public const string EXPLORE_LIGHT = "explore-light";
     }
 }

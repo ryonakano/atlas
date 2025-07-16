@@ -43,7 +43,7 @@ namespace Util {
         string map_source;
         var val = variant.get_string ();
         switch (val) {
-            case Define.MapSource.MAPNIK:
+            case Define.MapSource.EXPLORE:
                 map_source = Shumate.MAP_SOURCE_OSM_MAPNIK;
                 break;
             case Define.MapSource.TRANSPORT:
@@ -65,7 +65,7 @@ namespace Util {
         string id = val.id;
         switch (id) {
             case Shumate.MAP_SOURCE_OSM_MAPNIK:
-                to_value.set_variant (new Variant.string (Define.MapSource.MAPNIK));
+                to_value.set_variant (new Variant.string (Define.MapSource.EXPLORE));
                 break;
             case Shumate.MAP_SOURCE_OSM_TRANSPORT_MAP:
                 to_value.set_variant (new Variant.string (Define.MapSource.TRANSPORT));
@@ -78,11 +78,11 @@ namespace Util {
         return true;
     }
 
-    public static static bool map_source_get_mapping_cb (Value value, Variant variant, void* user_data) {
+    public static bool map_source_get_mapping_cb (Value value, Variant variant, void* user_data) {
         string map_source;
         var val = (string) variant;
         switch (val) {
-            case Define.MapSource.MAPNIK:
+            case Define.MapSource.EXPLORE:
                 map_source = Shumate.MAP_SOURCE_OSM_MAPNIK;
                 break;
             case Define.MapSource.TRANSPORT:
@@ -99,13 +99,13 @@ namespace Util {
         return true;
     }
 
-    public static static Variant map_source_set_mapping_cb (Value value, VariantType expected_type, void* user_data) {
+    public static Variant map_source_set_mapping_cb (Value value, VariantType expected_type, void* user_data) {
         string map_source;
         var val = (Shumate.MapSource) value;
         unowned var id = val.id;
         switch (id) {
             case Shumate.MAP_SOURCE_OSM_MAPNIK:
-                map_source = Define.MapSource.MAPNIK;
+                map_source = Define.MapSource.EXPLORE;
                 break;
             case Shumate.MAP_SOURCE_OSM_TRANSPORT_MAP:
                 map_source = Define.MapSource.TRANSPORT;
@@ -113,7 +113,7 @@ namespace Util {
             default:
                 warning ("map_source_set_mapping_cb: Invalid map_source: %s", id);
                 // fallback to mapnik
-                map_source = Define.MapSource.MAPNIK;
+                map_source = Define.MapSource.EXPLORE;
                 break;
         }
 
