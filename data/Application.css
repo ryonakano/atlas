@@ -119,7 +119,11 @@ search-result-item.land-feature image {
     -gtk-icon-shadow: 0 1px 3px @LIME_700;
 }
 
-search-result-item.motorway image,
+search-result-item.motorway image {
+    background-color: @BANANA_700;
+    -gtk-icon-shadow: 0 1px 3px @BANANA_900;
+}
+
 search-result-item.street image {
     background-color: @SLATE_300;
     -gtk-icon-shadow: 0 1px 3px @SLATE_500;
