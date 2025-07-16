@@ -207,6 +207,11 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         var search_key_controller = new Gtk.EventControllerKey ();
         search_key_controller.key_pressed.connect ((keyval, keycode, state) => {
             switch (keyval) {
+                // Left/Right navigation for editing search text
+                case Gdk.Key.KP_Left:
+                case Gdk.Key.KP_Right:
+                case Gdk.Key.Left:
+                case Gdk.Key.Right:
                 // Intercept space key so it's not used for list activation: https://github.com/elementary/maps/issues/150
                 case Gdk.Key.KP_Space:
                 case Gdk.Key.space:
