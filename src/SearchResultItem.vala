@@ -19,9 +19,12 @@ public class Maps.SearchResultItem : Granite.Bin {
             var postal_code = place.postal_code ?? unknown_text;
             var town = place.town ?? unknown_text;
 
-            image.gicon = place.icon;
+            image.icon_name = place.icon.to_string () + "-symbolic";
             name_label.label = place.name;
             info_label.label = "%s, %s, %s".printf (street, postal_code, town);
+
+            // Not add because this widget gets recycled
+            css_classes = {place.place_type.to_string ().replace ("GEOCODE_PLACE_TYPE_", "").replace ("_", "-").down ()};
         }
     }
 
@@ -31,9 +34,13 @@ public class Maps.SearchResultItem : Granite.Bin {
     private Gtk.Label name_label;
     private Gtk.Label info_label;
 
+    class construct {
+        set_css_name ("search-result-item");
+    }
+
     construct {
         image = new Gtk.Image () {
-            icon_size = LARGE
+            valign = CENTER
         };
 
         name_label = new Gtk.Label (null) {
