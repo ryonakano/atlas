@@ -13,7 +13,7 @@
     <file compressed="true" preprocess="xml-stripblanks" alias="poi-bar-symbolic.svg">icons/16/bar.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="poi-building-symbolic.svg">icons/16/building.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="poi-bus-stop-symbolic.svg">icons/16/bus.svg</file>
-    <file compressed="true" preprocess="xml-stripblanks" alias="poi-car-symbolic.svg">icons/16/car.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-car-symbolic.svg">icons/16/street.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="poi-light-rail-station-symbolic.svg">icons/16/light-rail.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="poi-marker-symbolic.svg">icons/16/marker.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="poi-place-of-worship-symbolic.svg">icons/16/place-of-worship.svg</file>

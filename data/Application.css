@@ -64,13 +64,11 @@ search-result-item image {
     -gtk-icon-shadow: 0 1px 3px @STRAWBERRY_700;
 }
 
-/*Transportation*/
+/*Transit*/
 search-result-item.airport image,
-search-result-item.motorway image,
 search-result-item.bus-stop image,
 search-result-item.light-rail-station image,
-search-result-item.railway-station image,
-search-result-item.street image {
+search-result-item.railway-station image {
     background-color: @BLUEBERRY_500;
     -gtk-icon-shadow: 0 1px 3px @BLUEBERRY_700;
 }
@@ -119,6 +117,12 @@ search-result-item.island image,
 search-result-item.land-feature image {
     background-color: @LIME_500;
     -gtk-icon-shadow: 0 1px 3px @LIME_700;
+}
+
+search-result-item.motorway image,
+search-result-item.street image {
+    background-color: @SLATE_300;
+    -gtk-icon-shadow: 0 1px 3px @SLATE_500;
 }
 
 search-result-item.school image {
