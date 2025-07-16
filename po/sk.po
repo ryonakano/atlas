@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 21:52+0000\n"
+"POT-Creation-Date: 2025-07-16 11:38+0000\n"
 "PO-Revision-Date: 2024-05-03 10:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/atlas/sk/>\n"
@@ -22,74 +22,73 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: src/MainWindow.vala:44
+#: src/MainWindow.vala:35
 msgid "Maps"
 msgstr ""
 
-#: src/MainWindow.vala:50
+#: src/MainWindow.vala:41
 msgid "Move to the current location"
 msgstr "Presunúť sa na aktuálnu polohu"
 
-#: src/MainWindow.vala:58
+#: src/MainWindow.vala:49
 #, fuzzy
 #| msgid "Search Location"
 msgid "Search Maps"
 msgstr "Vyhľadať miesto"
 
-#: src/MainWindow.vala:66
+#: src/MainWindow.vala:57
 #, fuzzy
 msgid "No Results Found"
 msgstr "Žiadne výsledky vyhľadávania"
 
-#: src/MainWindow.vala:67
+#: src/MainWindow.vala:58
 msgid "Try a different search"
 msgstr ""
 
-#: src/MainWindow.vala:96
+#: src/MainWindow.vala:104
+msgid "Explore"
+msgstr ""
+
+#: src/MainWindow.vala:123
+#, fuzzy
+msgid "Transit"
+msgstr "Dopravná mapa"
+
+#: src/MainWindow.vala:143
 #, fuzzy
 msgid "System"
 msgstr "Systém"
 
-#: src/MainWindow.vala:97
+#: src/MainWindow.vala:144
 #, fuzzy
 msgid "Light"
 msgstr "Svetlý"
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:145
 #, fuzzy
 msgid "Dark"
 msgstr "Tmavý"
 
-#: src/MainWindow.vala:101
-msgid "Mapnik"
-msgstr ""
-
-#: src/MainWindow.vala:102
-#, fuzzy
-msgid "Transport"
-msgstr "Dopravná mapa"
-
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:149
 #, fuzzy
 msgid "Style"
 msgstr "Štýl:"
 
-#: src/MainWindow.vala:106
-#, fuzzy
-msgid "Map Source"
-msgstr "Zdroj mapy:"
-
-#: src/MainWindow.vala:112
+#: src/MainWindow.vala:155
 msgid "Main Menu"
 msgstr ""
 
-#: src/MainWindow.vala:146
+#: src/MainWindow.vala:190
 msgid "Failed to connect to location service"
 msgstr ""
 
 #: src/SearchResultItem.vala:28
 msgid "Unknown"
 msgstr "Neznáme"
+
+#, fuzzy
+#~ msgid "Map Source"
+#~ msgstr "Zdroj mapy:"
 
 #~ msgid "Atlas"
 #~ msgstr "Atlas"
