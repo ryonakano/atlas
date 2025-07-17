@@ -64,7 +64,6 @@ search-result-item image {
     -gtk-icon-shadow: 0 1px 3px @STRAWBERRY_700;
 }
 
-
 search-result-item.administrative-division image {
     background-color: @SLATE_300;
     -gtk-icon-shadow: 0 1px 3px @SLATE_500;

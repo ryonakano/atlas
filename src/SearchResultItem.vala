@@ -24,7 +24,7 @@ public class Maps.SearchResultItem : Granite.Bin {
             info_label.label = "%s, %s, %s".printf (street, postal_code, town);
 
             // Not add because this widget gets recycled
-            css_classes = {get_cssclass_for_placetype (place.place_type)};
+            css_classes = {placetype_to_cssclass () (place.place_type)};
         }
     }
 
@@ -64,7 +64,7 @@ public class Maps.SearchResultItem : Granite.Bin {
         child = box;
     }
 
-    private string get_cssclass_for_placetype (Geocode.PlaceType place_type) {
+    private string placetype_to_cssclass () (Geocode.PlaceType place_type) {
         var css_name = "";
         switch (place_type) {
             case AIRPORT:
