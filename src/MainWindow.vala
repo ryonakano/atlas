@@ -65,7 +65,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         list_factory.setup.connect (setup_factory);
         list_factory.bind.connect (bind_factory);
 
-        var selection_model = new Gtk.NoSelection (location_store);
+        var selection_model = new Gtk.SingleSelection (location_store);
 
         var search_listview = new Gtk.ListView (selection_model, list_factory) {
             single_click_activate = true
@@ -207,6 +207,11 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         var search_key_controller = new Gtk.EventControllerKey ();
         search_key_controller.key_pressed.connect ((keyval, keycode, state) => {
             switch (keyval) {
+                // Left/Right navigation for editing search text
+                case Gdk.Key.KP_Left:
+                case Gdk.Key.KP_Right:
+                case Gdk.Key.Left:
+                case Gdk.Key.Right:
                 // Intercept space key so it's not used for list activation: https://github.com/elementary/maps/issues/150
                 case Gdk.Key.KP_Space:
                 case Gdk.Key.space:
