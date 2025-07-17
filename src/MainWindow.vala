@@ -65,7 +65,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         list_factory.setup.connect (setup_factory);
         list_factory.bind.connect (bind_factory);
 
-        var selection_model = new Gtk.NoSelection (location_store);
+        var selection_model = new Gtk.SingleSelection (location_store);
 
         var search_listview = new Gtk.ListView (selection_model, list_factory) {
             single_click_activate = true
