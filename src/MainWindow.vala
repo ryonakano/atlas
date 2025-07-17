@@ -294,7 +294,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
         Application.settings.bind_with_mapping (
             "map-source", map_widget, "map-source", GET,
             (SettingsBindGetMappingShared) Util.map_source_get_mapping_cb,
-            () => { return false; },
+            (SettingsBindSetMappingShared) null,
             null, null
         );
     }
