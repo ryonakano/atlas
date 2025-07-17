@@ -131,6 +131,7 @@ public class Maps.SearchResultItem : Granite.Bin {
             case UNKNOWN:
                 // Default style
                 break;
+            // No "default" here so that we can detect new value of PlaceType by the build warning
         }
 
         return css_name;
