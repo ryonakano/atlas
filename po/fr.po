@@ -14,10 +14,10 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: 2025-07-15 12:25+0000\n"
+"PO-Revision-Date: 2025-07-17 18:55+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
-"Language-Team: French <https://l10n.elementaryos.org/projects/maps/maps/fr/"
-">\n"
+"Language-Team: French <https://l10n.elementaryos.org/projects/maps/maps/fr/>"
+"\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,11 +47,9 @@ msgstr "Essayez une recherche différente"
 
 #: src/MainWindow.vala:104
 msgid "Explore"
-msgstr ""
+msgstr "Explorer"
 
 #: src/MainWindow.vala:123
-#, fuzzy
-#| msgid "Transport"
 msgid "Transit"
 msgstr "Transports"
 
