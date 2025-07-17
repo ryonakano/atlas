@@ -47,3 +47,64 @@ button.osd:active {
 .linked.vertical button.osd:not(:first-child) {
     margin-top: 0;
 }
+
+search-result-item image {
+    border-radius: 100%;
+    background-color: @STRAWBERRY_500;
+    background-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            alpha(white, 0.1)
+        );
+    color: white;
+    min-height: 2.5em;
+    min-width: 2.5em;
+    padding: 0;
+    -gtk-icon-shadow: 0 1px 3px @STRAWBERRY_700;
+}
+
+search-result-item.administrative-division image {
+    background-color: @SLATE_300;
+    -gtk-icon-shadow: 0 1px 3px @SLATE_500;
+}
+
+search-result-item.historical image {
+    background-color: @COCOA_100;
+    -gtk-icon-shadow: 0 1px 3px @COCOA_300;
+}
+
+search-result-item.motorway image {
+    background-color: @BANANA_700;
+    -gtk-icon-shadow: 0 1px 3px @BANANA_900;
+}
+
+search-result-item.point-of-interest image {
+    background-color: @BUBBLEGUM_500;
+    -gtk-icon-shadow: 0 1px 3px @BUBBLEGUM_700;
+}
+
+search-result-item.service image {
+    background-color: @ORANGE_500;
+    -gtk-icon-shadow: 0 1px 3px @ORANGE_700;
+}
+
+search-result-item.street image {
+    background-color: @SLATE_300;
+    -gtk-icon-shadow: 0 1px 3px @SLATE_500;
+}
+
+search-result-item.transit image {
+    background-color: @BLUEBERRY_500;
+    -gtk-icon-shadow: 0 1px 3px @BLUEBERRY_700;
+}
+
+search-result-item.water image {
+    background-color: @MINT_500;
+    -gtk-icon-shadow: 0 1px 3px @MINT_700;
+}
+
+search-result-item.land-feature image {
+    background-color: @LIME_500;
+    -gtk-icon-shadow: 0 1px 3px @LIME_700;
+}
