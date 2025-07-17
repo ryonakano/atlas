@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <enum id="map-sources">
+  <enum id="map-settings">
     <value value="0" nick="explore"/>
     <value value="1" nick="transit"/>
   </enum>
@@ -36,7 +36,7 @@
       <summary>Zoom level</summary>
       <description>Zoom level of the map last used</description>
     </key>
-    <key enum="map-sources" name="map-source">
+    <key enum="map-settings" name="map-source">
       <default>'explore'</default>
       <summary>Active map source</summary>
       <description>The type of the map last used</description>
