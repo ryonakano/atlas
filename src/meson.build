@@ -28,9 +28,11 @@ sources = files(
     'Define.vala',
     'MainWindow.vala',
     'MapWidget.vala',
-    'MapStyle.vala',
     'SearchResultItem.vala',
     'Util.vala',
+
+    'renderers' / 'JsonObject.vala',
+    'renderers' / 'MapStyle.vala'
 )
 
 executable(

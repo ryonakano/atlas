@@ -223,32 +223,3 @@ public class Maps.MapStyle : Maps.JsonObject {
         }
     }
 }
-
-public class Maps.JsonObject : Object, Json.Serializable {
-    public override Json.Node serialize_property (string prop, Value val, ParamSpec spec) {
-        var type = spec.value_type;
-
-        if (type.is_a (typeof (Gee.ArrayList))) {
-            return serialize_list (prop, val, spec);
-        }
-
-        return default_serialize_property (prop, val, spec);
-    }
-
-    private static Json.Node serialize_list (string prop, Value val, ParamSpec spec) {
-        var list = (Gee.ArrayList<Object>) val;
-        if (list == null) {
-            return new Json.Node (NULL);
-        }
-
-        var array = new Json.Array ();
-        foreach (var object in list) {
-            array.add_element (Json.gobject_serialize (object));
-        }
-
-        var node = new Json.Node (ARRAY);
-        node.set_array (array);
-
-        return node;
-    }
-}
