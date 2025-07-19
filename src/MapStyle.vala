@@ -11,6 +11,7 @@ public class Maps.MapStyle : Maps.JsonObject {
 
     private const string BLUEBERRY_100 = "#8cd5ff";
     private const string LIME_300 = "#9bdb4d";
+    private const string SILVER_300 = "#d4d4d4";
 
     public MapStyle (string name) {
         Object (name: name);
@@ -23,7 +24,7 @@ public class Maps.MapStyle : Maps.JsonObject {
         var background_layer = new Layer () {
             id = "background",
             kind = "background",
-            paint = new Paint () {
+            paint = new Layer.Paint () {
                 background_color = "rgb(239,239,239)"
             }
         };
@@ -33,7 +34,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             kind = "fill",
             source = "vector-tiles",
             source_layer = "park",
-            paint = new Paint () {
+            paint = new Layer.Paint () {
                 fill_color = LIME_300,
                 fill_opacity = 0.7,
                 fill_outline_color = "rgba(95, 208, 100, 1)"
@@ -45,91 +46,96 @@ public class Maps.MapStyle : Maps.JsonObject {
             kind = "fill",
             source = "vector-tiles",
             source_layer = "water",
-            paint = new Paint () {
+          // "filter": ["all", ["!=", "brunnel", "tunnel"]],
+            paint = new Layer.Paint () {
                 fill_color = BLUEBERRY_100
             }
         };
 
-    //     builder.set_member_name ("filter");
-    //     builder.begin_array ();
-    //     builder.add_string_value ("all");
-    //     builder.begin_array ();
-    //     builder.add_string_value ("!=");
-    //     builder.add_string_value ("brunnel");
-    //     builder.add_string_value ("tunnel");
-    //     builder.end_array ();
-    //     builder.end_array ();
+        var road_motorway_layer = new Layer () {
+            id = "road_motorway",
+            kind = "line",
+            source = "vector-tiles",
+            source_layer = "transportation",
+            minzoom = 5,
+        //   "filter": [
+        //     "all",
+        //     ["!in", "brunnel", "bridge", "tunnel"],
+        //     ["==", "class", "motorway"],
+        //     ["!=", "ramp", 1]
+        //   ],
+            layout = new Layer.Layout () {
+                line_cap = "round",
+                line_join = "round"
+            },
+            paint = new Layer.Paint () {
+                line_color = new Layer.Paint.LineColor () {
+                    base = 1
+                    // "stops": [[5, "#ffe16b"], [6, "#ffe16b"]]
+                },
+                line_width = new Layer.Paint.LineWidth () {
+                    base = 1.2
+                    // "stops": [[5, 0], [7, 1], [20, 18]]
+                }
 
-    //     builder.set_member_name ("paint");
-    //     builder.begin_object ();
-    //     builder.set_member_name ("fill-color").add_string_value (BLUEBERRY_100);
-    //     builder.end_object ();
+            }
+        };
 
-    //     builder.end_object ();
+        var building_layer = new Layer () {
+            id = "building",
+            kind = "fill",
+            source = "vector-tiles",
+            source_layer = "building",
+            minzoom = 13,
+            paint = new Layer.Paint () {
+                fill_color = SILVER_300,
+        //     "fill-outline-color": {
+        //       "base": 1,
+        //       "stops": [[13, "hsla(35, 6%, 79%, 0.32)"], [14, "hsl(35, 6%, 79%)"]]
+        //     }
+            }
+        };
 
         var place_city_layer = new Layer () {
             id = "place_city",
             kind = "symbol",
             source = "vector-tiles",
             source_layer = "place",
-            min_zoom = 5,
-            max_zoom = 15,
+            minzoom = 5,
+            maxzoom = 15,
 
-    //     builder.set_member_name ("filter");
-    //     builder.begin_array ();
-    //     builder.add_string_value ("all");
-    //     builder.end_array ();
-    //     builder.add_string_value ("==");
-    //     builder.add_string_value ("class");
-    //     builder.add_string_value ("city");
-    //     builder.end_array ();
-    //     builder.end_array ();
+          // "filter": ["all", ["==", "class", "city"]],
 
-    //     builder.set_member_name ("layout");
-    //     builder.begin_object ();
-    //     builder.set_member_name ("text-anchor").add_string_value ("bottom");
-    //     builder.set_member_name ("text-field").add_string_value ("{name_en}");
-    //     builder.set_member_name ("text-font");
-    //     builder.begin_array ();
-    //     builder.add_string_value ("Inter Medium");
-    //     builder.end_array ();
-    //     builder.set_member_name ("text-size");
-    //     builder.begin_object ();
-    //     builder.set_member_name ("base").add_double_value (1.2);
-    //     builder.set_member_name ("stops");
-    //     builder.begin_array ();
-    //     builder.begin_array ();
-    //     builder.add_int_value (7);
-    //     builder.add_int_value (14);
-    //     builder.end_array ();
-    //     builder.begin_array ();
-    //     builder.add_int_value (11);
-    //     builder.add_int_value (32);
-    //     builder.end_array ();
-    //     builder.end_array ();
-    //     builder.end_object ();
-    //     builder.end_object ();
-    //   // "layout": {
-    //   //   "icon-image": {"base": 1, "stops": [[0, "dot_9"], [8, ""]]},
-    //   //   "text-anchor": "bottom",
-    //   //   "text-field": "{name_en}",
-    //   //   "text-font": ["Inter Medium"],
-    //   //   "text-max-width": 8,
-    //   //   "text-offset": [0, 0],
-    //   //   "text-size": {"base": 1.2, "stops": [[7, 14], [11, 32]]},
-    //   //   "icon-allow-overlap": true,
-    //   //   "icon-optional": false
-    //   // },
-
-            paint = new Paint () {
+            layout = new Layer.Layout () {
+          //   "icon-image": {"base": 1, "stops": [[0, "dot_9"], [8, ""]]},
+                text_anchor = "bottom",
+                text_field = "{name_en}", // FIXME: Localize properly
+                text_font = {"Inter Medium"},
+                text_max_width = 8,
+                text_offset = {0, 0},
+                text_size = new Layer.Layout.TextSize () {
+                    base = 1.2
+                    // "stops": [[7, 14], [11, 32]]
+                },
+                icon_allow_overlap = true,
+                icon_optional = false
+            },
+            paint = new Layer.Paint () {
                 text_color = "#333"
             }
+
+          // "metadata": {
+          //   "libshumate:cursor": "pointer"
+          // }
         };
 
         layers = new Gee.ArrayList<Layer> (null);
         layers.add (background_layer);
         layers.add (park_layer);
         layers.add (water_layer);
+        layers.add (road_motorway_layer);
+        layers.add (building_layer);
+        layers.add (place_city_layer);
 
     //   // "metadata": {
     //   //   "libshumate:cursor": "pointer"
@@ -169,19 +175,52 @@ public class Maps.MapStyle : Maps.JsonObject {
         public string kind { get; set; }
         public string source { get; set; }
         public string source_layer { get; set; }
-        public int max_zoom { get; set; }
-        public int min_zoom { get; set; }
+        public int maxzoom { get; set; }
+        public int minzoom { get; set; }
 
         // public string[] filter { get; set; }
+        public Layout layout { get; set; }
         public Paint paint { get; set; }
-    }
 
-    public class Paint : Maps.JsonObject {
-        public double fill_opacity { get; set; }
-        public string background_color { get; set; }
-        public string fill_color { get; set; }
-        public string fill_outline_color { get; set; }
-        public string text_color { get; set; }
+        public class Paint : Maps.JsonObject {
+            public double fill_opacity { get; set; }
+            public string background_color { get; set; }
+            public string fill_color { get; set; }
+            public string fill_outline_color { get; set; }
+            public string text_color { get; set; }
+            public LineColor line_color { get; set;}
+            public LineWidth line_width { get; set; }
+
+            public class LineColor : Maps.JsonObject {
+                public double base { get; set; }
+            }
+
+            public class LineWidth : Maps.JsonObject {
+                public double base { get; set; }
+            }
+        }
+
+        public class Filter : Maps.JsonObject {
+            
+        }
+
+        public class Layout : Maps.JsonObject {
+            public string line_cap { get; set; }
+            public string line_join { get; set; }
+            public string text_anchor { get; set; }
+            public string text_field { get; set; }
+            public string[] text_font { get; set; }
+            public int text_max_width { get; set; }
+            public int[] text_offset { get; set; } // Type `int[]' can not be used for a GLib.Object property
+            public TextSize text_size { get; set; }
+            public string text_transform { get; set; }
+            public bool icon_allow_overlap { get; set; }
+            public bool icon_optional { get; set; }
+
+            public class TextSize : Maps.JsonObject {
+                public double base { get; set; }
+            }
+        }
     }
 }
 
