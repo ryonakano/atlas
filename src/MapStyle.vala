@@ -3,11 +3,11 @@
  * SPDX-FileCopyrightText: 2025 elementary, Inc. (https://elementary.io)
  */
 
-public class Maps.MapStyle : Object {
+public class Maps.MapStyle : Maps.JsonObject {
     public int version { get; private set; }
     public string name { get; construct set; }
     public Sources sources { get; private set; }
-    public Array<Layer> layers { get; private set; }
+    public Gee.ArrayList<Layer> layers { get; private set; }
 
     private const string BLUEBERRY_100 = "#8cd5ff";
     private const string LIME_300 = "#9bdb4d";
@@ -22,7 +22,7 @@ public class Maps.MapStyle : Object {
 
         var background_layer = new Layer () {
             id = "background",
-            // type = "background",
+            kind = "background",
             paint = new Paint () {
                 background_color = "rgb(239,239,239)"
             }
@@ -30,7 +30,7 @@ public class Maps.MapStyle : Object {
 
         var park_layer = new Layer () {
             id = "park",
-            // type = "fill",
+            kind = "fill",
             source = "vector-tiles",
             source_layer = "park",
             paint = new Paint () {
@@ -42,7 +42,7 @@ public class Maps.MapStyle : Object {
 
         var water_layer = new Layer () {
             id = "water",
-            // type = "fill",
+            kind = "fill",
             source = "vector-tiles",
             source_layer = "water",
             paint = new Paint () {
@@ -50,10 +50,10 @@ public class Maps.MapStyle : Object {
             }
         };
 
-        layers = new Array<Layer> ();
-        layers.append_val (background_layer);
-        layers.append_val (park_layer);
-        layers.append_val (water_layer);
+        layers = new Gee.ArrayList<Layer> (null);
+        layers.add (background_layer);
+        layers.add (park_layer);
+        layers.add (water_layer);
     }
 
     public string to_string () {
@@ -71,8 +71,8 @@ public class Maps.MapStyle : Object {
             vector_tiles = new VectorTiles ();
         }
 
-        public class VectorTiles : Object {
-            // public string type { get; private set; default = "vector"; }
+        public class VectorTiles : Maps.JsonObject {
+            public string kind { get; private set; default = "vector"; }
             public string[] tiles { get; private set; default = {"https://tileserver.gnome.org/data/v3/{z}/{x}/{y}.pbf"}; }
             public int maxzoom { get; private set; }
             public int minzoom { get; private set; }
@@ -84,9 +84,9 @@ public class Maps.MapStyle : Object {
         }
     }
 
-    public class Layer : Object {
+    public class Layer : Maps.JsonObject {
         public string id { get; set; }
-        // public string type { get; set; }
+        public string kind { get; set; }
         public string source { get; set; }
         public string source_layer { get; set; }
         public int max_zoom { get; set; }
@@ -96,7 +96,7 @@ public class Maps.MapStyle : Object {
         public Paint paint { get; set; }
     }
 
-    public class Paint : Object {
+    public class Paint : Maps.JsonObject {
         public double fill_opacity { get; set; }
         public string background_color { get; set; }
         public string fill_color { get; set; }
@@ -292,4 +292,33 @@ public class Maps.MapStyle : Object {
     //         return builder;
     //     }
     // }
+}
+
+public class Maps.JsonObject : Object, Json.Serializable {
+    public override Json.Node serialize_property (string prop, Value val, ParamSpec spec) {
+        var type = spec.value_type;
+
+        if (type.is_a (typeof (Gee.ArrayList))) {
+            return serialize_list (prop, val, spec);
+        }
+
+        return default_serialize_property (prop, val, spec);
+    }
+
+    private static Json.Node serialize_list (string prop, Value val, ParamSpec spec) {
+        var list = (Gee.ArrayList<Object>) val;
+        if (list == null) {
+            return new Json.Node (NULL);
+        }
+
+        var array = new Json.Array ();
+        foreach (var object in list) {
+            array.add_element (Json.gobject_serialize (object));
+        }
+
+        var node = new Json.Node (ARRAY);
+        node.set_array (array);
+
+        return node;
+    }
 }
