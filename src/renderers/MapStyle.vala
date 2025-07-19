@@ -15,6 +15,7 @@ public class Maps.MapStyle : Maps.JsonObject {
     private const string BANANA_300 = "#ffe16b";
     private const string BLUEBERRY_100 = "#8cd5ff";
     private const string LATTE_50 = "#f7f0e3";
+    private const string LATTE_75 = "#f3e7d3";
     private const string LATTE_100 = "#efdfc4";
     private const string LIME_300 = "#9bdb4d";
     private const string SILVER_100 = "#fafafa";
@@ -154,7 +155,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             source_layer = "building",
             minzoom = 13,
             paint = new Layer.Paint () {
-                fill_color = LATTE_100,
+                fill_color = LATTE_75,
         //     "fill-outline-color": {
         //       "base": 1,
         //       "stops": [[13, "hsla(35, 6%, 79%, 0.32)"], [14, "hsl(35, 6%, 79%)"]]
