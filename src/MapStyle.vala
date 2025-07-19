@@ -61,7 +61,9 @@ public class Maps.MapStyle : Maps.JsonObject {
             root = Json.gobject_serialize (this)
         };
 
-        return generator.to_data (null);
+        var json_string = generator.to_data (null);
+
+        return json_string.replace ("kind", "type");
     }
 
     public class Sources : Object {
