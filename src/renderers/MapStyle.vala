@@ -3,12 +3,16 @@
  * SPDX-FileCopyrightText: 2025 elementary, Inc. (https://elementary.io)
  */
 
+
+// https://openmaptiles.org/docs/style/mapbox-gl-style-spec/
+// https://openmaptiles.org/schema/
 public class Maps.MapStyle : Maps.JsonObject {
     public int version { get; private set; }
     public string name { get; construct set; }
     public Sources sources { get; private set; }
     public Gee.ArrayList<Layer> layers { get; private set; }
 
+    private const string BANANA_300 = "#ffe16b";
     private const string BLUEBERRY_100 = "#8cd5ff";
     private const string LIME_300 = "#9bdb4d";
     private const string SILVER_300 = "#d4d4d4";
@@ -69,10 +73,7 @@ public class Maps.MapStyle : Maps.JsonObject {
                 line_join = "round"
             },
             paint = new Layer.Paint () {
-                line_color = new Layer.Paint.LineColor () {
-                    base = 1
-                    // "stops": [[5, "#ffe16b"], [6, "#ffe16b"]]
-                },
+                line_color = BANANA_300,
                 line_width = new Layer.Paint.LineWidth () {
                     base = 1.2
                     // "stops": [[5, 0], [7, 1], [20, 18]]
@@ -170,6 +171,7 @@ public class Maps.MapStyle : Maps.JsonObject {
         }
     }
 
+    // https://docs.maptiler.com/gl-style-specification/layers/
     public class Layer : Maps.JsonObject {
         public string id { get; set; }
         public string kind { get; set; }
@@ -182,26 +184,19 @@ public class Maps.MapStyle : Maps.JsonObject {
         public Layout layout { get; set; }
         public Paint paint { get; set; }
 
+        // https://docs.maptiler.com/gl-style-specification/layers/#paint-property
         public class Paint : Maps.JsonObject {
             public double fill_opacity { get; set; }
             public string background_color { get; set; }
             public string fill_color { get; set; }
             public string fill_outline_color { get; set; }
             public string text_color { get; set; }
-            public LineColor line_color { get; set;}
+            public string line_color { get; set;}
             public LineWidth line_width { get; set; }
-
-            public class LineColor : Maps.JsonObject {
-                public double base { get; set; }
-            }
 
             public class LineWidth : Maps.JsonObject {
                 public double base { get; set; }
             }
-        }
-
-        public class Filter : Maps.JsonObject {
-            
         }
 
         public class Layout : Maps.JsonObject {
@@ -211,7 +206,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             public string text_field { get; set; }
             public string[] text_font { get; set; }
             public int text_max_width { get; set; }
-            public int[] text_offset { get; set; } // Type `int[]' can not be used for a GLib.Object property
+            public double[] text_offset { get; set; }
             public TextSize text_size { get; set; }
             public string text_transform { get; set; }
             public bool icon_allow_overlap { get; set; }
