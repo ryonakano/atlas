@@ -33,59 +33,26 @@ namespace Util {
         }
     }
 
-    public static bool map_source_action_transform_to_cb (Binding binding, Value from_value, ref Value to_value) {
-        Variant? variant = from_value.dup_variant ();
-        if (variant == null) {
-            warning ("Failed to Variant.dup_variant");
-            return false;
-        }
-
-        string map_source;
-        var val = variant.get_string ();
-        switch (val) {
-            case Define.MapSource.EXPLORE:
-                map_source = Shumate.MAP_SOURCE_OSM_MAPNIK;
-                break;
-            case Define.MapSource.TRANSPORT:
-                map_source = Shumate.MAP_SOURCE_OSM_TRANSPORT_MAP;
-                break;
-            default:
-                warning ("map_source_action_transform_to_cb: Invalid map_source: %s", val);
-                return false;
-        }
-
-        var registry = new Shumate.MapSourceRegistry.with_defaults ();
-        to_value.set_object (registry.get_by_id (map_source));
-
-        return true;
-    }
-
-    public static bool map_source_action_transform_from_cb (Binding binding, Value from_value, ref Value to_value) {
-        unowned var val = (Shumate.MapSource) from_value.get_object ();
-        string id = val.id;
-        switch (id) {
-            case Shumate.MAP_SOURCE_OSM_MAPNIK:
-                to_value.set_variant (new Variant.string (Define.MapSource.EXPLORE));
-                break;
-            case Shumate.MAP_SOURCE_OSM_TRANSPORT_MAP:
-                to_value.set_variant (new Variant.string (Define.MapSource.TRANSPORT));
-                break;
-            default:
-                warning ("map_source_action_transform_from_cb: Invalid map_source: %s", id);
-                return false;
-        }
-
-        return true;
-    }
+    private Shumate.MapSourceRegistry registry;
 
     public static bool map_source_get_mapping_cb (Value value, Variant variant, void* user_data) {
+        if (registry == null) {
+            registry = new Shumate.MapSourceRegistry.with_defaults ();
+
+            try {
+                load_vector_tiles ();
+            } catch (Error e) {
+                critical ("Failed to create vector map style: %s", e.message);
+            }
+        }
+
         string map_source;
         var val = (string) variant;
         switch (val) {
-            case Define.MapSource.EXPLORE:
-                map_source = Shumate.MAP_SOURCE_OSM_MAPNIK;
+            case Define.MapSetting.EXPLORE:
+                map_source = Define.MapID.EXPLORE_LIGHT;
                 break;
-            case Define.MapSource.TRANSPORT:
+            case Define.MapSetting.TRANSIT:
                 map_source = Shumate.MAP_SOURCE_OSM_TRANSPORT_MAP;
                 break;
             default:
@@ -93,30 +60,32 @@ namespace Util {
                 return false;
         }
 
-        var registry = new Shumate.MapSourceRegistry.with_defaults ();
+
         value.set_object (registry.get_by_id (map_source));
 
         return true;
     }
 
-    public static Variant map_source_set_mapping_cb (Value value, VariantType expected_type, void* user_data) {
-        string map_source;
-        var val = (Shumate.MapSource) value;
-        unowned var id = val.id;
-        switch (id) {
-            case Shumate.MAP_SOURCE_OSM_MAPNIK:
-                map_source = Define.MapSource.EXPLORE;
-                break;
-            case Shumate.MAP_SOURCE_OSM_TRANSPORT_MAP:
-                map_source = Define.MapSource.TRANSPORT;
-                break;
-            default:
-                warning ("map_source_set_mapping_cb: Invalid map_source: %s", id);
-                // fallback to mapnik
-                map_source = Define.MapSource.EXPLORE;
-                break;
-        }
+    private void load_vector_tiles () throws Error requires (Shumate.VectorRenderer.is_supported ()) {
+        var style_json = new Maps.MapStyle (Define.MapID.EXPLORE_LIGHT).to_string ();
+        critical (style_json);
 
-        return new Variant.string (map_source);
+        var sprites_json = resources_lookup_data ("/io/elementary/maps/tiles/sprites.json", NONE);
+        var sprites_texture = Gdk.Texture.from_resource ("/io/elementary/maps/tiles/sprites.png");
+
+        var sprites_2x_json = resources_lookup_data ("/io/elementary/maps/tiles/sprites@2x.json", NONE);
+        var sprites_2x_texture = Gdk.Texture.from_resource ("/io/elementary/maps/tiles/sprites@2x.png");
+
+        var renderer = new Shumate.VectorRenderer (Define.MapID.EXPLORE_LIGHT, style_json);
+        // FIXME: Map no longer renders past 14
+        renderer.set_max_zoom_level (14);
+        renderer.set_min_zoom_level (2);
+        renderer.set_license ("© OpenMapTiles © OpenStreetMap contributors");
+
+        var sprites = renderer.get_sprite_sheet ();
+        sprites.add_page (sprites_texture, (string) sprites_json.get_data (), 1);
+        sprites.add_page (sprites_2x_texture, (string) sprites_2x_json.get_data (), 1);
+
+        registry.add (renderer);
     }
 }

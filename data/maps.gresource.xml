@@ -4,17 +4,31 @@
     <file alias="Application.css">Application.css</file>
   </gresource>
 
+  <gresource prefix="/io/elementary/maps/tiles">
+    <file preprocess="json-stripblanks" alias="sprites.json">tiles/sprites.json</file>
+    <file preprocess="json-stripblanks" alias="sprites@2x.json">tiles/sprites@2x.json</file>
+    <file alias="sprites.png">tiles/sprites.png</file>
+    <file alias="sprites@2x.png">tiles/sprites@2x.png</file>
+  </gresource>
+
   <gresource prefix="/io/elementary/maps/icons">
     <file compressed="true" preprocess="xml-stripblanks" alias="pointer.svg">icons/pointer.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="map-tile-explore.svg">icons/48/explore.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="map-tile-transit.svg">icons/48/transit.svg</file>
   </gresource>
 
-  <gresource prefix="/io/elementary/maps/tiles">
-    <file preprocess="json-stripblanks" alias="style.json">tiles/style.json</file>
-    <file preprocess="json-stripblanks" alias="sprites.json">tiles/sprites.json</file>
-    <file preprocess="json-stripblanks" alias="sprites@2x.json">tiles/sprites@2x.json</file>
-    <file alias="sprites.png">tiles/sprites.png</file>
-    <file alias="sprites@2x.png">tiles/sprites@2x.png</file>
+  <gresource prefix="/io/elementary/maps/icons/scalable/categories">
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-airport-symbolic.svg">icons/16/airport.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-bar-symbolic.svg">icons/16/bar.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-building-symbolic.svg">icons/16/building.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-bus-stop-symbolic.svg">icons/16/bus.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-car-symbolic.svg">icons/16/street.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-light-rail-station-symbolic.svg">icons/16/light-rail.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-marker-symbolic.svg">icons/16/marker.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-place-of-worship-symbolic.svg">icons/16/place-of-worship.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-railway-station-symbolic.svg">icons/16/train.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-restaurant-symbolic.svg">icons/16/restaurant.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-school-symbolic.svg">icons/16/school.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks" alias="poi-town-symbolic.svg">icons/16/town.svg</file>
   </gresource>
 </gresources>

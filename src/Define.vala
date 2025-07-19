@@ -19,9 +19,9 @@ namespace Define {
         public const string FORCE_DARK = "force-dark";
     }
 
-    namespace MapSource {
+    namespace MapSetting {
         public const string EXPLORE = "explore";
-        public const string TRANSPORT = "transport";
+        public const string TRANSIT = "transit";
     }
 
     namespace MapID {
