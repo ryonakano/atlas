@@ -15,6 +15,7 @@ public class Maps.MapStyle : Maps.JsonObject {
     private const string BANANA_300 = "#ffe16b";
     private const string BLUEBERRY_100 = "#8cd5ff";
     private const string LIME_300 = "#9bdb4d";
+    private const string SILVER_100 = "#fafafa";
     private const string SILVER_300 = "#d4d4d4";
 
     public MapStyle (string name) {
@@ -46,7 +47,7 @@ public class Maps.MapStyle : Maps.JsonObject {
         };
 
         var water_filter = new Maps.Expression ("all");
-        water_filter.add_argument ("!=", "brunnel", "tunnel");
+        water_filter.append ("!=", "brunnel", "tunnel");
 
         var water_layer = new Layer () {
             id = "water",
@@ -59,8 +60,69 @@ public class Maps.MapStyle : Maps.JsonObject {
             }
         };
 
+        var road_minor_filter = new Maps.Expression ("all");
+        // road_minor_filter.append ("==", "$type", "LineString"); // FIXME: segfault
+        // road_minor_filter.append ("!in", "brunnel", "bridge", "tunnel"); // FIXME: segfault
+        road_minor_filter.append ("in", "class", "minor");
+
+        var road_minor_layer = new Layer () {
+            id = "road_minor",
+            kind = "line",
+            source = "vector-tiles",
+            source_layer = "transportation",
+            filter = road_minor_filter,
+            layout = new Layer.Layout () {
+                line_cap = "round",
+                line_join = "round"
+            },
+            paint = new Layer.Paint () {
+                line_color = SILVER_100
+        //     "line-width": {"base": 1.2, "stops": [[13.5, 0], [14, 2.5], [20, 18]]}
+            }
+        };
+
+
+        var road_secondary_tertiary_filter = new Maps.Expression ("all");
+        road_secondary_tertiary_filter.append ("!in", "brunnel", "bridge", "tunnel");
+        road_secondary_tertiary_filter.append ("in", "class", "secondary", "tertiary");
+
+        var road_secondary_tertiary_layer = new Layer () {
+            id = "road_secondary_tertiary",
+            kind = "line",
+            source = "vector-tiles",
+            source_layer = "transportation",
+            filter = road_secondary_tertiary_filter,
+            layout = new Layer.Layout () {
+                line_cap = "round",
+                line_join = "round"
+            },
+            paint = new Layer.Paint () {
+                line_color = SILVER_100
+        //     "line-width": {"base": 1.2, "stops": [[6.5, 0], [8, 0.5], [20, 13]]}
+            }
+        };
+
+        var road_trunk_primary_filter = new Maps.Expression ("all");
+        road_trunk_primary_filter.append ("!in", "brunnel", "bridge", "tunnel");
+        road_trunk_primary_filter.append ("in", "class", "primary", "trunk");
+
+        var road_trunk_primary_layer = new Layer () {
+            id = "road_trunk_primary",
+            kind = "line",
+            source = "vector-tiles",
+            source_layer = "transportation",
+            filter = road_trunk_primary_filter,
+            layout = new Layer.Layout () {
+                line_join = "round"
+            },
+            paint = new Layer.Paint () {
+                line_color = SILVER_100
+        //     "line-width": {"base": 1.2, "stops": [[5, 0], [7, 1], [20, 18]]}
+            }
+        };
+
         var road_motorway_filter = new Maps.Expression ("all");
-        road_motorway_filter.add_argument ("==", "class", "motorway");
+        road_motorway_filter.append ("==", "class", "motorway");
 
         var road_motorway_layer = new Layer () {
             id = "road_motorway",
@@ -99,7 +161,7 @@ public class Maps.MapStyle : Maps.JsonObject {
         };
 
         var place_city_filter = new Maps.Expression ("all");
-        place_city_filter.add_argument ("==", "class", "city");
+        place_city_filter.append ("==", "class", "city");
 
         var place_city_layer = new Layer () {
             id = "place_city",
@@ -136,6 +198,9 @@ public class Maps.MapStyle : Maps.JsonObject {
         layers.add (background_layer);
         layers.add (park_layer);
         layers.add (water_layer);
+        layers.add (road_minor_layer);
+        layers.add (road_secondary_tertiary_layer);
+        layers.add (road_trunk_primary_layer);
         layers.add (road_motorway_layer);
         layers.add (building_layer);
         layers.add (place_city_layer);
@@ -234,7 +299,7 @@ public class Maps.Expression : Maps.JsonObject {
         args = new Gee.ArrayList<Json.Array> (null);
     }
 
-    public void add_argument (string operator, ...) {
+    public void append (string operator, ...) {
         var argument = new Json.Array ();
 
         argument.add_string_element (operator);
@@ -259,6 +324,7 @@ public class Maps.Expression : Maps.JsonObject {
         args.add (argument);
     }
 
+    // FIXME: assertion 'self != NULL' failed
     public Json.Node serialize () {
         var array = new Json.Array ();
 
