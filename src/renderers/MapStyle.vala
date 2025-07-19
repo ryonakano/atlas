@@ -14,6 +14,8 @@ public class Maps.MapStyle : Maps.JsonObject {
 
     private const string BANANA_300 = "#ffe16b";
     private const string BLUEBERRY_100 = "#8cd5ff";
+    private const string LATTE_50 = "#f7f0e3";
+    private const string LATTE_100 = "#efdfc4";
     private const string LIME_300 = "#9bdb4d";
     private const string SILVER_100 = "#fafafa";
     private const string SILVER_300 = "#d4d4d4";
@@ -30,7 +32,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             id = "background",
             kind = "background",
             paint = new Layer.Paint () {
-                background_color = "rgb(239,239,239)"
+                background_color = LATTE_50
             }
         };
 
@@ -42,7 +44,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             paint = new Layer.Paint () {
                 fill_color = LIME_300,
                 fill_opacity = 0.7,
-                fill_outline_color = "rgba(95, 208, 100, 1)"
+                fill_outline_color = LIME_300
             }
         };
 
@@ -116,7 +118,7 @@ public class Maps.MapStyle : Maps.JsonObject {
                 line_join = "round"
             },
             paint = new Layer.Paint () {
-                line_color = SILVER_100
+                line_color = SILVER_300
         //     "line-width": {"base": 1.2, "stops": [[5, 0], [7, 1], [20, 18]]}
             }
         };
@@ -152,7 +154,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             source_layer = "building",
             minzoom = 13,
             paint = new Layer.Paint () {
-                fill_color = SILVER_300,
+                fill_color = LATTE_100,
         //     "fill-outline-color": {
         //       "base": 1,
         //       "stops": [[13, "hsla(35, 6%, 79%, 0.32)"], [14, "hsl(35, 6%, 79%)"]]
