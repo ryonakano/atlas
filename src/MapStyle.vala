@@ -40,13 +40,15 @@ public class Maps.MapStyle : Maps.JsonObject {
             }
         };
 
-    //     var water_layer = new Layer () {
-    //         id = "water",
-    //         layer_type = "fill",
-    //         source = "vector-tiles",
-    //         source_layer = "water"
-    //     };
-    //     water_layer.begin_object (builder);
+        var water_layer = new Layer () {
+            id = "water",
+            kind = "fill",
+            source = "vector-tiles",
+            source_layer = "water",
+            paint = new Paint () {
+                fill_color = BLUEBERRY_100
+            }
+        };
 
     //     builder.set_member_name ("filter");
     //     builder.begin_array ();
@@ -65,25 +67,13 @@ public class Maps.MapStyle : Maps.JsonObject {
 
     //     builder.end_object ();
 
-        var water_layer = new Layer () {
-            id = "water",
-            kind = "fill",
+        var place_city_layer = new Layer () {
+            id = "place_city",
+            kind = "symbol",
             source = "vector-tiles",
-            source_layer = "water",
-            paint = new Paint () {
-                fill_color = BLUEBERRY_100
-            }
-        };
-
-    //     var place_city_layer = new Layer () {
-    //         id = "place_city",
-    //         layer_type = "symbol",
-    //         source = "vector-tiles",
-    //         source_layer = "place",
-    //         min_zoom = 5,
-    //         max_zoom = 15
-    //     };
-    //     place_city_layer.begin_object (builder);
+            source_layer = "place",
+            min_zoom = 5,
+            max_zoom = 15,
 
     //     builder.set_member_name ("filter");
     //     builder.begin_array ();
@@ -131,31 +121,19 @@ public class Maps.MapStyle : Maps.JsonObject {
     //   //   "icon-optional": false
     //   // },
 
-    //     builder.set_member_name ("paint");
-    //     builder.begin_object ();
-    //     builder.set_member_name ("text-color").add_string_value ("#333");
-    //     builder.end_object ();
-
-    //   // "metadata": {
-    //   //   "libshumate:cursor": "pointer"
-    //   // }
-
-    //     builder.end_object ();
-
-
-    //     builder.end_array ().end_object ();
-
-    //     var generator = new Json.Generator () {
-    //     	root = builder.get_root ()
-    //     };
-
-	   //  return generator.to_data (null);
-    // }
+            paint = new Paint () {
+                text_color = "#333"
+            }
+        };
 
         layers = new Gee.ArrayList<Layer> (null);
         layers.add (background_layer);
         layers.add (park_layer);
         layers.add (water_layer);
+
+    //   // "metadata": {
+    //   //   "libshumate:cursor": "pointer"
+    //   // }
     }
 
     public string to_string () {
@@ -203,6 +181,7 @@ public class Maps.MapStyle : Maps.JsonObject {
         public string background_color { get; set; }
         public string fill_color { get; set; }
         public string fill_outline_color { get; set; }
+        public string text_color { get; set; }
     }
 }
 
