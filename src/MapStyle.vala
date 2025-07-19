@@ -40,120 +40,6 @@ public class Maps.MapStyle : Maps.JsonObject {
             }
         };
 
-        var water_layer = new Layer () {
-            id = "water",
-            kind = "fill",
-            source = "vector-tiles",
-            source_layer = "water",
-            paint = new Paint () {
-                fill_color = BLUEBERRY_100
-            }
-        };
-
-        layers = new Gee.ArrayList<Layer> (null);
-        layers.add (background_layer);
-        layers.add (park_layer);
-        layers.add (water_layer);
-    }
-
-    public string to_string () {
-        var generator = new Json.Generator () {
-            root = Json.gobject_serialize (this)
-        };
-
-        var json_string = generator.to_data (null);
-
-        return json_string.replace ("kind", "type");
-    }
-
-    public class Sources : Object {
-        public VectorTiles vector_tiles { get; private set; }
-
-        construct {
-            vector_tiles = new VectorTiles ();
-        }
-
-        public class VectorTiles : Maps.JsonObject {
-            public string kind { get; private set; default = "vector"; }
-            public string[] tiles { get; private set; default = {"https://tileserver.gnome.org/data/v3/{z}/{x}/{y}.pbf"}; }
-            public int maxzoom { get; private set; }
-            public int minzoom { get; private set; }
-
-            construct {
-                maxzoom = 14;
-                minzoom = 0;
-            }
-        }
-    }
-
-    public class Layer : Maps.JsonObject {
-        public string id { get; set; }
-        public string kind { get; set; }
-        public string source { get; set; }
-        public string source_layer { get; set; }
-        public int max_zoom { get; set; }
-        public int min_zoom { get; set; }
-
-        // public string[] filter { get; set; }
-        public Paint paint { get; set; }
-    }
-
-    public class Paint : Maps.JsonObject {
-        public double fill_opacity { get; set; }
-        public string background_color { get; set; }
-        public string fill_color { get; set; }
-        public string fill_outline_color { get; set; }
-    }
-
-    // public static string get_style () {
-    //     string BLUEBERRY_100 = "#8cd5ff";
-    //     string LIME_300 = "#9bdb4d";
-
-    //     var builder = new Json.Builder ().begin_object ();
-
-
-    //     builder.set_member_name ("sources").begin_object ();
-    //     builder.set_member_name ("vector-tiles").begin_object ();
-    //     builder.set_member_name ("type").add_string_value ("vector");
-    //     builder.set_member_name ("tiles").begin_array ();
-    //     builder.add_string_value ("https://tileserver.gnome.org/data/v3/{z}/{x}/{y}.pbf");
-    //     builder.end_array ();
-    //     builder.set_member_name ("minzoom").add_int_value (0);
-    //     builder.set_member_name ("maxzoom").add_int_value (14);
-    //     builder.end_object ().end_object ();
-
-    //     builder.set_member_name ("layers").begin_array ();
-
-    //     var background_layer = new Layer () {
-    //         id = "background",
-    //         layer_type = "background"
-    //     };
-    //     background_layer.begin_object (builder);
-
-    //     builder.set_member_name ("paint");
-    //     builder.begin_object ();
-    //     builder.set_member_name ("background-color").add_string_value ("rgb(239,239,239)");
-    //     builder.end_object ();
-
-    //     builder.end_object ();
-
-    //     var park_layer = new Layer () {
-    //         id = "park",
-    //         layer_type = "fill",
-    //         source = "vector-tiles",
-    //         source_layer = "park"
-    //     };
-    //     park_layer.begin_object (builder);
-
-    //     builder.set_member_name ("paint");
-    //     builder.begin_object ();
-    //     builder.set_member_name ("fill-color").add_string_value (LIME_300);
-    //     builder.set_member_name ("fill-opacity").add_double_value (0.7);
-    //     builder.set_member_name ("fill-outline-color").add_string_value ("rgba(95, 208, 100, 1)");
-    //     builder.end_object ();
-
-    //     builder.end_object ();
-
     //     var water_layer = new Layer () {
     //         id = "water",
     //         layer_type = "fill",
@@ -178,6 +64,16 @@ public class Maps.MapStyle : Maps.JsonObject {
     //     builder.end_object ();
 
     //     builder.end_object ();
+
+        var water_layer = new Layer () {
+            id = "water",
+            kind = "fill",
+            source = "vector-tiles",
+            source_layer = "water",
+            paint = new Paint () {
+                fill_color = BLUEBERRY_100
+            }
+        };
 
     //     var place_city_layer = new Layer () {
     //         id = "place_city",
@@ -256,44 +152,58 @@ public class Maps.MapStyle : Maps.JsonObject {
 	   //  return generator.to_data (null);
     // }
 
-    // private class Layer : Object {
-    //     public int max_zoom { get; set; default = -1; }
-    //     public int min_zoom { get; set; default = -1; }
-    //     public string id { get; set; }
-    //     public string layer_type { get; set; }
-    //     public string source { get; set; }
-    //     public string source_layer { get; set; }
+        layers = new Gee.ArrayList<Layer> (null);
+        layers.add (background_layer);
+        layers.add (park_layer);
+        layers.add (water_layer);
+    }
 
-    //     public Json.Builder begin_object (Json.Builder builder) {
-    //         builder.begin_object ();
+    public string to_string () {
+        var generator = new Json.Generator () {
+            root = Json.gobject_serialize (this)
+        };
 
-    //         if (id != null) {
-    //             builder.set_member_name ("id").add_string_value (id);
-    //         }
+        return generator.to_data (null).replace ("kind", "type");
+    }
 
-    //         if (layer_type != null) {
-    //             builder.set_member_name ("type").add_string_value (layer_type);
-    //         }
+    public class Sources : Object {
+        public VectorTiles vector_tiles { get; private set; }
 
-    //         if (source != null) {
-    //             builder.set_member_name ("source").add_string_value (source);
-    //         }
+        construct {
+            vector_tiles = new VectorTiles ();
+        }
 
-    //         if (source_layer != null) {
-    //             builder.set_member_name ("source-layer").add_string_value (source_layer);
-    //         }
+        public class VectorTiles : Maps.JsonObject {
+            public string kind { get; private set; default = "vector"; }
+            public string[] tiles { get; private set; default = {"https://tileserver.gnome.org/data/v3/{z}/{x}/{y}.pbf"}; }
+            public int maxzoom { get; private set; }
+            public int minzoom { get; private set; }
 
-    //         if (min_zoom != -1) {
-    //             builder.set_member_name ("minzoom").add_int_value (min_zoom);
-    //         }
+            construct {
+                maxzoom = 14;
+                minzoom = 0;
+            }
+        }
+    }
 
-    //         if (max_zoom != -1) {
-    //             builder.set_member_name ("maxzoom").add_int_value (max_zoom);
-    //         }
+    public class Layer : Maps.JsonObject {
+        public string id { get; set; }
+        public string kind { get; set; }
+        public string source { get; set; }
+        public string source_layer { get; set; }
+        public int max_zoom { get; set; }
+        public int min_zoom { get; set; }
 
-    //         return builder;
-    //     }
-    // }
+        // public string[] filter { get; set; }
+        public Paint paint { get; set; }
+    }
+
+    public class Paint : Maps.JsonObject {
+        public double fill_opacity { get; set; }
+        public string background_color { get; set; }
+        public string fill_color { get; set; }
+        public string fill_outline_color { get; set; }
+    }
 }
 
 public class Maps.JsonObject : Object, Json.Serializable {
