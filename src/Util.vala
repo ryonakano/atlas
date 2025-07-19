@@ -70,21 +70,21 @@ namespace Util {
         var style_json = new Maps.MapStyle (Define.MapID.EXPLORE_LIGHT).to_string ();
         critical (style_json);
 
+        var renderer = new Shumate.VectorRenderer (Define.MapID.EXPLORE_LIGHT, style_json) {
+            license = "© OpenMapTiles © OpenStreetMap contributors",
+            max_zoom_level = 14, // FIXME: Map no longer renders past 14
+            min_zoom_level = 2
+        };
+
         var sprites_json = resources_lookup_data ("/io/elementary/maps/tiles/sprites.json", NONE);
         var sprites_texture = Gdk.Texture.from_resource ("/io/elementary/maps/tiles/sprites.png");
 
         var sprites_2x_json = resources_lookup_data ("/io/elementary/maps/tiles/sprites@2x.json", NONE);
         var sprites_2x_texture = Gdk.Texture.from_resource ("/io/elementary/maps/tiles/sprites@2x.png");
 
-        var renderer = new Shumate.VectorRenderer (Define.MapID.EXPLORE_LIGHT, style_json);
-        // FIXME: Map no longer renders past 14
-        renderer.set_max_zoom_level (14);
-        renderer.set_min_zoom_level (2);
-        renderer.set_license ("© OpenMapTiles © OpenStreetMap contributors");
-
         var sprites = renderer.get_sprite_sheet ();
         sprites.add_page (sprites_texture, (string) sprites_json.get_data (), 1);
-        sprites.add_page (sprites_2x_texture, (string) sprites_2x_json.get_data (), 1);
+        sprites.add_page (sprites_2x_texture, (string) sprites_2x_json.get_data (), 2);
 
         registry.add (renderer);
     }
