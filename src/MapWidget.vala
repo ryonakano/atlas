@@ -61,7 +61,9 @@ public class Maps.MapWidget : Gtk.Box {
         var sprites_2x_texture = Gdk.Texture.from_resource ("/io/elementary/maps/tiles/sprites@2x.png");
 
         var renderer = new Shumate.VectorRenderer (Define.MapID.EXPLORE_LIGHT, style_json);
+        // FIXME: Map no longer renders past 14
         renderer.set_max_zoom_level (14);
+        renderer.set_min_zoom_level (2);
         renderer.set_license ("© OpenMapTiles © OpenStreetMap contributors");
 
         var sprites = renderer.get_sprite_sheet ();
