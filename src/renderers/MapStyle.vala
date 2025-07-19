@@ -164,8 +164,8 @@ public class Maps.MapStyle : Maps.JsonObject {
             public int minzoom { get; private set; }
 
             construct {
-                maxzoom = 22;
                 minzoom = 0;
+                maxzoom = 14;
             }
         }
     }

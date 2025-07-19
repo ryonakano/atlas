@@ -72,7 +72,7 @@ namespace Util {
 
         var renderer = new Shumate.VectorRenderer (Define.MapID.EXPLORE_LIGHT, style_json) {
             license = "© OpenMapTiles © OpenStreetMap contributors",
-            max_zoom_level = 14, // FIXME: Map no longer renders past 14
+            max_zoom_level = 19,
             min_zoom_level = 2
         };
 
