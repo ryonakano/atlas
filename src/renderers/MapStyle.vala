@@ -45,16 +45,22 @@ public class Maps.MapStyle : Maps.JsonObject {
             }
         };
 
+        var water_filter = new Maps.Expression ("all");
+        water_filter.add_argument ("!=", "brunnel", "tunnel");
+
         var water_layer = new Layer () {
             id = "water",
             kind = "fill",
             source = "vector-tiles",
             source_layer = "water",
-          // "filter": ["all", ["!=", "brunnel", "tunnel"]],
+            filter = water_filter,
             paint = new Layer.Paint () {
                 fill_color = BLUEBERRY_100
             }
         };
+
+        var road_motorway_filter = new Maps.Expression ("all");
+        road_motorway_filter.add_argument ("==", "class", "motorway");
 
         var road_motorway_layer = new Layer () {
             id = "road_motorway",
@@ -62,12 +68,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             source = "vector-tiles",
             source_layer = "transportation",
             minzoom = 5,
-        //   "filter": [
-        //     "all",
-        //     ["!in", "brunnel", "bridge", "tunnel"],
-        //     ["==", "class", "motorway"],
-        //     ["!=", "ramp", 1]
-        //   ],
+            filter = road_motorway_filter,
             layout = new Layer.Layout () {
                 line_cap = "round",
                 line_join = "round"
@@ -97,6 +98,9 @@ public class Maps.MapStyle : Maps.JsonObject {
             }
         };
 
+        var place_city_filter = new Maps.Expression ("all");
+        place_city_filter.add_argument ("==", "class", "city");
+
         var place_city_layer = new Layer () {
             id = "place_city",
             kind = "symbol",
@@ -104,9 +108,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             source_layer = "place",
             minzoom = 5,
             maxzoom = 15,
-
-          // "filter": ["all", ["==", "class", "city"]],
-
+            filter = place_city_filter,
             layout = new Layer.Layout () {
           //   "icon-image": {"base": 1, "stops": [[0, "dot_9"], [8, ""]]},
                 text_anchor = "bottom",
@@ -180,7 +182,7 @@ public class Maps.MapStyle : Maps.JsonObject {
         public int maxzoom { get; set; }
         public int minzoom { get; set; }
 
-        // public string[] filter { get; set; }
+        public Expression filter { get; set; }
         public Layout layout { get; set; }
         public Paint paint { get; set; }
 
@@ -216,5 +218,59 @@ public class Maps.MapStyle : Maps.JsonObject {
                 public double base { get; set; }
             }
         }
+    }
+}
+
+// https://docs.maptiler.com/gl-style-specification/expressions/
+public class Maps.Expression : Maps.JsonObject {
+    public string name { get; construct set; }
+    public Gee.ArrayList<Json.Array> args { get; set; }
+
+    public Expression (string name) {
+        Object (name: name);
+    }
+
+    construct {
+        args = new Gee.ArrayList<Json.Array> (null);
+    }
+
+    public void add_argument (string operator, ...) {
+        var argument = new Json.Array ();
+
+        argument.add_string_element (operator);
+
+        var list = va_list ();
+        while (true) {
+            string? string_arg = list.arg ();
+            if (string_arg != null) {
+                argument.add_string_element (string_arg);
+                continue;
+            }
+
+            int? int_arg = list.arg ();
+            if (int_arg != null) {
+                argument.add_int_element (int_arg);
+                continue;
+            }
+
+            break;
+        }
+
+        args.add (argument);
+    }
+
+    public Json.Node serialize () {
+        var array = new Json.Array ();
+
+        array.add_string_element (name);
+
+        foreach (var argument in args) {
+            array.add_array_element (argument);
+        }
+
+        var node = new Json.Node (ARRAY);
+        node.set_array (array);
+
+        return node;
     }
 }

@@ -7,6 +7,11 @@ public class Maps.JsonObject : Object, Json.Serializable {
     public override Json.Node serialize_property (string prop, Value val, ParamSpec spec) {
         var type = spec.value_type;
 
+        if (type.is_a (typeof (Maps.Expression))) {
+            var expression = (Maps.Expression) val;
+            return expression.serialize ();
+        }
+
         if (type.is_a (typeof (Gee.ArrayList))) {
             return serialize_list (prop, val, spec);
         }
