@@ -14,6 +14,7 @@ public class Maps.MapStyle : Maps.JsonObject {
 
     private const string BANANA_300 = "#ffe16b";
     private const string BLUEBERRY_100 = "#8cd5ff";
+    private const string LATTE_25 = "#f6f3ed";
     private const string LATTE_50 = "#f7f0e3";
     private const string LATTE_75 = "#f3e7d3";
     private const string LATTE_100 = "#efdfc4";
@@ -33,7 +34,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             id = "background",
             kind = "background",
             paint = new Layer.Paint () {
-                background_color = LATTE_50
+                background_color = LATTE_25
             }
         };
 
