@@ -10,30 +10,28 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: 2025-07-10 13:01+0000\n"
+"PO-Revision-Date: 2025-07-21 00:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/atlas/ja/"
+"Language-Team: Japanese <https://l10n.elementaryos.org/projects/maps/maps/ja/"
 ">\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/MainWindow.vala:35
 msgid "Maps"
-msgstr ""
+msgstr "マップ"
 
 #: src/MainWindow.vala:41
 msgid "Move to the current location"
 msgstr "現在地に移動"
 
 #: src/MainWindow.vala:49
-#, fuzzy
-#| msgid "Search Location"
 msgid "Search Maps"
-msgstr "場所を検索"
+msgstr "マップを検索"
 
 #: src/MainWindow.vala:57
 msgid "No Results Found"
@@ -45,32 +43,27 @@ msgstr "他のキーワードを試してください"
 
 #: src/MainWindow.vala:104
 msgid "Explore"
-msgstr ""
+msgstr "通常表示"
 
 #: src/MainWindow.vala:123
-#, fuzzy
 msgid "Transit"
-msgstr "交通(_T)"
+msgstr "交通機関"
 
 #: src/MainWindow.vala:143
-#, fuzzy
 msgid "System"
-msgstr "システム(_Y)"
+msgstr "システム"
 
 #: src/MainWindow.vala:144
-#, fuzzy
 msgid "Light"
-msgstr "ライト(_L)"
+msgstr "ライト"
 
 #: src/MainWindow.vala:145
-#, fuzzy
 msgid "Dark"
-msgstr "ダーク(_D)"
+msgstr "ダーク"
 
 #: src/MainWindow.vala:149
-#, fuzzy
 msgid "Style"
-msgstr "スタイル(_S)"
+msgstr "スタイル"
 
 #: src/MainWindow.vala:155
 msgid "Main Menu"
