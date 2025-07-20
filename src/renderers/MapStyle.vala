@@ -141,10 +141,10 @@ public class Maps.MapStyle : Maps.JsonObject {
             },
             paint = new Layer.Paint () {
                 line_color = BANANA_300,
-                // line_width = new InterpolateExpression () {
-                //     base = 1.2
+                line_width = new InterpolateExpression () {
+                    base_val = 1.2
                 //     stops = {[5, 0], [7, 1], [20, 18]}
-                // }
+                }
             }
         };
 
@@ -262,7 +262,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             public string fill_outline_color { get; set; }
             public string text_color { get; set; }
             public string line_color { get; set;}
-            // public InterpolateExpression line_width { get; set; }
+            public InterpolateExpression line_width { get; set; }
         }
 
         public class Layout : Maps.JsonObject {
@@ -273,11 +273,21 @@ public class Maps.MapStyle : Maps.JsonObject {
             public string[] text_font { get; set; }
             public int text_max_width { get; set; }
             public double[] text_offset { get; set; }
-            // public InterpolateExpression text_size { get; set; }
+            public InterpolateExpression text_size { get; set; }
             public string text_transform { get; set; }
             public bool icon_allow_overlap { get; set; }
             public bool icon_optional { get; set; }
         }
+    }
+}
+
+// https://docs.maptiler.com/gl-style-specification/expressions/#interpolate
+public class Maps.InterpolateExpression : Maps.JsonObject {
+    public double base_val { get; set; } // Need to serialize as base
+    public Gee.ArrayList<Json.Array> stops { get; set; }
+
+    construct {
+        stops = new Gee.ArrayList<Json.Array> (null);
     }
 }
 
