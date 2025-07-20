@@ -141,11 +141,10 @@ public class Maps.MapStyle : Maps.JsonObject {
             },
             paint = new Layer.Paint () {
                 line_color = BANANA_300,
-                line_width = new Layer.Paint.LineWidth () {
-                    base = 1.2
-                    // "stops": [[5, 0], [7, 1], [20, 18]]
-                }
-
+                // line_width = new InterpolateExpression () {
+                //     base = 1.2
+                //     stops = {[5, 0], [7, 1], [20, 18]}
+                // }
             }
         };
 
@@ -182,10 +181,10 @@ public class Maps.MapStyle : Maps.JsonObject {
                 text_font = {"Inter Medium"},
                 text_max_width = 8,
                 text_offset = {0, 0},
-                text_size = new Layer.Layout.TextSize () {
-                    base = 1.2
-                    // "stops": [[7, 14], [11, 32]]
-                },
+                // text_size = new InterpolateExpression () {
+                //     base = 1.2
+                //     "stops": [[7, 14], [11, 32]]
+                // },
                 icon_allow_overlap = true,
                 icon_optional = false
             },
@@ -263,11 +262,7 @@ public class Maps.MapStyle : Maps.JsonObject {
             public string fill_outline_color { get; set; }
             public string text_color { get; set; }
             public string line_color { get; set;}
-            public LineWidth line_width { get; set; }
-
-            public class LineWidth : Maps.JsonObject {
-                public double base { get; set; }
-            }
+            // public InterpolateExpression line_width { get; set; }
         }
 
         public class Layout : Maps.JsonObject {
@@ -278,14 +273,10 @@ public class Maps.MapStyle : Maps.JsonObject {
             public string[] text_font { get; set; }
             public int text_max_width { get; set; }
             public double[] text_offset { get; set; }
-            public TextSize text_size { get; set; }
+            // public InterpolateExpression text_size { get; set; }
             public string text_transform { get; set; }
             public bool icon_allow_overlap { get; set; }
             public bool icon_optional { get; set; }
-
-            public class TextSize : Maps.JsonObject {
-                public double base { get; set; }
-            }
         }
     }
 }
