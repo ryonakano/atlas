@@ -30,6 +30,7 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
     private Gtk.SearchEntry search_entry;
     private Gtk.Popover search_res_popover;
     private MapWidget map_widget;
+    private Shumate.MapSourceRegistry registry;
 
     construct {
         title = _("Maps");
@@ -288,6 +289,14 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
     }
 
     private void setup_map_source_action () {
+        registry = new Shumate.MapSourceRegistry.with_defaults ();
+
+        try {
+            load_vector_tiles ();
+        } catch (Error e) {
+            critical ("Failed to create vector map style: %s", e.message);
+        }
+
         var map_source_action = Application.settings.create_action ("map-source");
         add_action (map_source_action);
 
@@ -295,8 +304,31 @@ public class Maps.MainWindow : Adw.ApplicationWindow {
             "map-source", map_widget, "map-source", GET,
             (SettingsBindGetMappingShared) Util.map_source_get_mapping_cb,
             (SettingsBindSetMappingShared) null,
-            null, null
+            registry, null
         );
+    }
+
+    private void load_vector_tiles () throws Error requires (Shumate.VectorRenderer.is_supported ()) {
+        var style_json = new Maps.MapStyle (Define.MapID.EXPLORE_LIGHT).to_string ();
+        critical (style_json);
+
+        var renderer = new Shumate.VectorRenderer (Define.MapID.EXPLORE_LIGHT, style_json) {
+            license = "© OpenMapTiles © OpenStreetMap contributors",
+            max_zoom_level = 19,
+            min_zoom_level = 2
+        };
+
+        var sprites_json = resources_lookup_data ("/io/elementary/maps/tiles/sprites.json", NONE);
+        var sprites_texture = Gdk.Texture.from_resource ("/io/elementary/maps/tiles/sprites.png");
+
+        var sprites_2x_json = resources_lookup_data ("/io/elementary/maps/tiles/sprites@2x.json", NONE);
+        var sprites_2x_texture = Gdk.Texture.from_resource ("/io/elementary/maps/tiles/sprites@2x.png");
+
+        var sprites = renderer.get_sprite_sheet ();
+        sprites.add_page (sprites_texture, (string) sprites_json.get_data (), 1);
+        sprites.add_page (sprites_2x_texture, (string) sprites_2x_json.get_data (), 2);
+
+        registry.add (renderer);
     }
 
     private async void search_location (string term, ListStore res) {
