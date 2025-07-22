@@ -17,6 +17,7 @@ dependencies = [
     # Version limitation for Granite.Bin
     dependency('granite-7', version: '>= 7.6.0'),
     dependency('gtk4'),
+    dependency('json-glib-1.0'),
     dependency('libadwaita-1'),
     dependency('libgeoclue-2.0'),
     dependency('shumate-1.0'),
@@ -29,6 +30,9 @@ sources = files(
     'MapWidget.vala',
     'SearchResultItem.vala',
     'Util.vala',
+
+    'renderers' / 'JsonObject.vala',
+    'renderers' / 'MapStyle.vala'
 )
 
 executable(

@@ -4,6 +4,13 @@
     <file alias="Application.css">Application.css</file>
   </gresource>
 
+  <gresource prefix="/io/elementary/maps/tiles">
+    <file preprocess="json-stripblanks" alias="sprites.json">tiles/sprites.json</file>
+    <file preprocess="json-stripblanks" alias="sprites@2x.json">tiles/sprites@2x.json</file>
+    <file alias="sprites.png">tiles/sprites.png</file>
+    <file alias="sprites@2x.png">tiles/sprites@2x.png</file>
+  </gresource>
+
   <gresource prefix="/io/elementary/maps/icons">
     <file compressed="true" preprocess="xml-stripblanks" alias="pointer.svg">icons/pointer.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="map-tile-explore.svg">icons/48/explore.svg</file>

@@ -34,11 +34,17 @@ namespace Util {
     }
 
     public static bool map_source_get_mapping_cb (Value value, Variant variant, void* user_data) {
+        unowned var registry = user_data as Shumate.MapSourceRegistry;
+        if (registry == null) {
+            warning ("map_source_get_mapping_cb: Invalid user_data");
+            return false;
+        }
+
         string map_source;
         var val = (string) variant;
         switch (val) {
             case Define.MapSetting.EXPLORE:
-                map_source = Shumate.MAP_SOURCE_OSM_MAPNIK;
+                map_source = Define.MapID.EXPLORE_LIGHT;
                 break;
             case Define.MapSetting.TRANSIT:
                 map_source = Shumate.MAP_SOURCE_OSM_TRANSPORT_MAP;
@@ -48,7 +54,6 @@ namespace Util {
                 return false;
         }
 
-        var registry = new Shumate.MapSourceRegistry.with_defaults ();
         value.set_object (registry.get_by_id (map_source));
 
         return true;
