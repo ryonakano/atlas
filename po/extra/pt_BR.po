@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
 "PO-Revision-Date: 2025-07-24 20:31+0000\n"
-"Last-Translator: Renato Trevisan <rjltrevisan@gmail.com>\n"
+"Last-Translator: Guilherme Faura <guilhermefaura@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
 "maps/maps-extra/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: data/maps.desktop.in:6 data/maps.metainfo.xml.in:10
 msgid "Maps"
-msgstr ""
+msgstr "Mapas"
 
 #: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
