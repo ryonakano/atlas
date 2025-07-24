@@ -10,69 +10,69 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: 2025-02-17 04:37+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/rosp/"
-"atlas/pt_BR/>\n"
+"PO-Revision-Date: 2025-07-24 20:31+0000\n"
+"Last-Translator: Renato Trevisan <rjltrevisan@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
+"maps/maps/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.10\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/MainWindow.vala:35
 msgid "Maps"
-msgstr ""
+msgstr "Mapas"
 
 #: src/MainWindow.vala:41
 msgid "Move to the current location"
-msgstr ""
+msgstr "Mover para a localização atual"
 
 #: src/MainWindow.vala:49
 msgid "Search Maps"
-msgstr ""
+msgstr "Buscar nos Mapas"
 
 #: src/MainWindow.vala:57
 msgid "No Results Found"
-msgstr ""
+msgstr "Nenhum Resultado Encontrado"
 
 #: src/MainWindow.vala:58
 msgid "Try a different search"
-msgstr ""
+msgstr "Tente uma busca diferente"
 
 #: src/MainWindow.vala:104
 msgid "Explore"
-msgstr ""
+msgstr "Explorar"
 
 #: src/MainWindow.vala:123
 msgid "Transit"
-msgstr ""
+msgstr "Trânsito"
 
 #: src/MainWindow.vala:143
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: src/MainWindow.vala:144
 msgid "Light"
-msgstr ""
+msgstr "Claro"
 
 #: src/MainWindow.vala:145
 msgid "Dark"
-msgstr ""
+msgstr "Escuro"
 
 #: src/MainWindow.vala:149
 msgid "Style"
-msgstr ""
+msgstr "Estilo"
 
 #: src/MainWindow.vala:155
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu Principal"
 
 #: src/MainWindow.vala:190
 msgid "Failed to connect to location service"
-msgstr ""
+msgstr "Falha ao conectar ao serviço de localização"
 
 #: src/SearchResultItem.vala:28
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecido"
