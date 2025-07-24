@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: 2025-07-24 20:31+0000\n"
+"PO-Revision-Date: 2025-07-25 06:38+0000\n"
 "Last-Translator: Guilherme Faura <guilhermefaura@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
 "maps/maps-extra/pt_BR/>\n"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: data/maps.metainfo.xml.in:28 data/maps.metainfo.xml.in:32
 msgid "See locations on a map"
-msgstr "Veja localidade em um mapa"
+msgstr "Veja localidades em um mapa"
 
 #: data/maps.metainfo.xml.in:56
 msgid "elementary, Inc."
