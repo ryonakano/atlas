@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.elementary.maps package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: io.elementary.maps\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-16 11:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.vala:35
+msgid "Maps"
+msgstr ""
+
+#: src/MainWindow.vala:41
+msgid "Move to the current location"
+msgstr ""
+
+#: src/MainWindow.vala:49
+msgid "Search Maps"
+msgstr ""
+
+#: src/MainWindow.vala:57
+msgid "No Results Found"
+msgstr ""
+
+#: src/MainWindow.vala:58
+msgid "Try a different search"
+msgstr ""
+
+#: src/MainWindow.vala:104
+msgid "Explore"
+msgstr ""
+
+#: src/MainWindow.vala:123
+msgid "Transit"
+msgstr ""
+
+#: src/MainWindow.vala:143
+msgid "System"
+msgstr ""
+
+#: src/MainWindow.vala:144
+msgid "Light"
+msgstr ""
+
+#: src/MainWindow.vala:145
+msgid "Dark"
+msgstr ""
+
+#: src/MainWindow.vala:149
+msgid "Style"
+msgstr ""
+
+#: src/MainWindow.vala:155
+msgid "Main Menu"
+msgstr ""
+
+#: src/MainWindow.vala:190
+msgid "Failed to connect to location service"
+msgstr ""
+
+#: src/SearchResultItem.vala:28
+msgid "Unknown"
+msgstr ""
