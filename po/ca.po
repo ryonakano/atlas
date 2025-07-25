@@ -8,66 +8,69 @@ msgstr ""
 "Project-Id-Version: io.elementary.maps\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-07-25 06:41+0000\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
+"Language-Team: Catalan <https://l10n.elementaryos.org/projects/maps/maps/ca/>"
+"\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/MainWindow.vala:35
 msgid "Maps"
-msgstr ""
+msgstr "Mapes"
 
 #: src/MainWindow.vala:41
 msgid "Move to the current location"
-msgstr ""
+msgstr "Desplaça't a la ubicació actual"
 
 #: src/MainWindow.vala:49
 msgid "Search Maps"
-msgstr ""
+msgstr "Cerca als mapes"
 
 #: src/MainWindow.vala:57
 msgid "No Results Found"
-msgstr ""
+msgstr "No s'ha trobat cap resultat."
 
 #: src/MainWindow.vala:58
 msgid "Try a different search"
-msgstr ""
+msgstr "Proveu una cerca diferent."
 
 #: src/MainWindow.vala:104
 msgid "Explore"
-msgstr ""
+msgstr "Explora"
 
 #: src/MainWindow.vala:123
 msgid "Transit"
-msgstr ""
+msgstr "Trànsit"
 
 #: src/MainWindow.vala:143
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: src/MainWindow.vala:144
 msgid "Light"
-msgstr ""
+msgstr "Clar"
 
 #: src/MainWindow.vala:145
 msgid "Dark"
-msgstr ""
+msgstr "Fosc"
 
 #: src/MainWindow.vala:149
 msgid "Style"
-msgstr ""
+msgstr "Estil"
 
 #: src/MainWindow.vala:155
 msgid "Main Menu"
-msgstr ""
+msgstr "Menú principal"
 
 #: src/MainWindow.vala:190
 msgid "Failed to connect to location service"
-msgstr ""
+msgstr "Ha fallat connectar amb el servei de localització."
 
 #: src/SearchResultItem.vala:28
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
