@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-16 11:38+0000\n"
 "PO-Revision-Date: 2025-07-26 06:55+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementaryos.org/projects/maps/"
 "maps-extra/ca/>\n"
 "Language: ca\n"
@@ -25,42 +25,44 @@ msgstr "Mapes"
 
 #: data/maps.desktop.in:7 data/maps.metainfo.xml.in:11
 msgid "View where to go"
-msgstr ""
+msgstr "Vegeu on anar"
 
 #: data/maps.desktop.in:9
 msgid "trip;explore;"
-msgstr ""
+msgstr "viatge;explorar;"
 
 #: data/maps.metainfo.xml.in:13
 msgid "A map app that helps you to see where you want to go."
-msgstr ""
+msgstr "Una aplicació de mapes que us ajuda a veure on voleu anar."
 
 #: data/maps.metainfo.xml.in:16
 msgid "Features include:"
-msgstr ""
+msgstr "Funcions:"
 
 #: data/maps.metainfo.xml.in:18
 msgid "Search any place"
-msgstr ""
+msgstr "Cerca de qualsevol lloc"
 
 #: data/maps.metainfo.xml.in:19
 msgid "Jump to your current location instantly"
-msgstr ""
+msgstr "Salt instantani a la ubicació actual"
 
 #: data/maps.metainfo.xml.in:21
 msgid ""
 "This is a fork of \"Atlas Maps\" and wouldn't exist without work of Steffen "
 "Schuhmann."
 msgstr ""
+"És una bifurcació d'Atlas Maps i no existiria sense la feina de Steffen "
+"Schuhmann."
 
 #: data/maps.metainfo.xml.in:28 data/maps.metainfo.xml.in:32
 msgid "See locations on a map"
-msgstr ""
+msgstr "Vegeu ubicacions en un mapa"
 
 #: data/maps.metainfo.xml.in:56
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/maps.metainfo.xml.in:64
 msgid "Update translations"
-msgstr ""
+msgstr "Actualitza les traduccions"
