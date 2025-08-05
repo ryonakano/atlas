@@ -23,4 +23,8 @@ namespace Define {
         public const string EXPLORE = "explore";
         public const string TRANSIT = "transit";
     }
+
+    namespace MapID {
+        public const string EXPLORE_LIGHT = "explore-light";
+    }
 }
